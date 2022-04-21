@@ -1165,22 +1165,12 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 		outputExportParameters := strings.Join(
 			propertyType.ParameterTypesTransformed(func(ts TypeShape) string {
-				return ts.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
-					CommentOutAnnotations: true,
-					GenericErasure:        true,
-					AppendClassLiteral:    true,
-				})
+				return ts.ToCodeClassLiteral(ctx.imports)
 			}),
 			", ",
 		)
-		outputExportType := propertyType.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
-			SkipAnnotations:    true,
-			GenericErasure:     true,
-			AppendClassLiteral: true,
-		})
-		outputParameterType := propertyType.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
-			CommentOutAnnotations: true,
-		})
+		outputExportType := propertyType.ToCodeClassLiteral(ctx.imports)
+		outputParameterType := propertyType.ToCodeCommentedAnnotations(ctx.imports)
 		printObsoleteAttribute(ctx, prop.DeprecationMessage, "    ")
 		fprintf(w,
 			"    @%s(name=\"%s\", type=%s, parameters={%s})\n",
