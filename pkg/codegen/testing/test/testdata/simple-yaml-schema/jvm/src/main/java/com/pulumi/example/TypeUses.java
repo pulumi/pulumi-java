@@ -18,6 +18,7 @@ import com.pulumi.example.outputs.SomeOtherObject;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::TypeUses")
@@ -25,50 +26,50 @@ public class TypeUses extends com.pulumi.resources.CustomResource {
     @Export(name="alpha", type=OutputOnlyEnumType.class, parameters={})
     private Output</* @Nullable */ OutputOnlyEnumType> alpha;
 
-    public Output</* @Nullable */ OutputOnlyEnumType> alpha() {
-        return this.alpha;
+    public Output<Optional<OutputOnlyEnumType>> alpha() {
+        return Codegen.optional(this.alpha);
     }
     @Export(name="bar", type=SomeOtherObject.class, parameters={})
     private Output</* @Nullable */ SomeOtherObject> bar;
 
-    public Output</* @Nullable */ SomeOtherObject> bar() {
-        return this.bar;
+    public Output<Optional<SomeOtherObject>> bar() {
+        return Codegen.optional(this.bar);
     }
     @Export(name="baz", type=ObjectWithNodeOptionalInputs.class, parameters={})
     private Output</* @Nullable */ ObjectWithNodeOptionalInputs> baz;
 
-    public Output</* @Nullable */ ObjectWithNodeOptionalInputs> baz() {
-        return this.baz;
+    public Output<Optional<ObjectWithNodeOptionalInputs>> baz() {
+        return Codegen.optional(this.baz);
     }
     @Export(name="beta", type=List.class, parameters={OutputOnlyObjectType.class})
     private Output</* @Nullable */ List<OutputOnlyObjectType>> beta;
 
-    public Output</* @Nullable */ List<OutputOnlyObjectType>> beta() {
-        return this.beta;
+    public Output<Optional<List<OutputOnlyObjectType>>> beta() {
+        return Codegen.optional(this.beta);
     }
     @Export(name="foo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> foo;
 
-    public Output</* @Nullable */ Object> foo() {
-        return this.foo;
+    public Output<Optional<Object>> foo() {
+        return Codegen.optional(this.foo);
     }
     @Export(name="gamma", type=Map.class, parameters={String.class, OutputOnlyEnumType.class})
     private Output</* @Nullable */ Map<String,OutputOnlyEnumType>> gamma;
 
-    public Output</* @Nullable */ Map<String,OutputOnlyEnumType>> gamma() {
-        return this.gamma;
+    public Output<Optional<Map<String,OutputOnlyEnumType>>> gamma() {
+        return Codegen.optional(this.gamma);
     }
     @Export(name="qux", type=RubberTreeVariety.class, parameters={})
     private Output</* @Nullable */ RubberTreeVariety> qux;
 
-    public Output</* @Nullable */ RubberTreeVariety> qux() {
-        return this.qux;
+    public Output<Optional<RubberTreeVariety>> qux() {
+        return Codegen.optional(this.qux);
     }
     @Export(name="zed", type=OutputOnlyObjectType.class, parameters={})
     private Output</* @Nullable */ OutputOnlyObjectType> zed;
 
-    public Output</* @Nullable */ OutputOnlyObjectType> zed() {
-        return this.zed;
+    public Output<Optional<OutputOnlyObjectType>> zed() {
+        return Codegen.optional(this.zed);
     }
 
     /**

@@ -29,8 +29,8 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The geo-location where the resource lives
@@ -43,8 +43,8 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<Optional<String>> location() {
-        return Codegen.optional(this.location);
+    public Output<String> location() {
+        return this.location;
     }
     /**
      * The name of the resource
@@ -57,8 +57,8 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<Optional<String>> name() {
-        return Codegen.optional(this.name);
+    public Output<String> name() {
+        return this.name;
     }
     /**
      * Resource tags.
@@ -71,8 +71,8 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
@@ -85,8 +85,8 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
-    public Output<Optional<String>> type() {
-        return Codegen.optional(this.type);
+    public Output<String> type() {
+        return this.type;
     }
 
     /**

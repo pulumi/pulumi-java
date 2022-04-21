@@ -12,6 +12,7 @@ import com.pulumi.example.Utilities;
 import com.pulumi.example.outputs.Pet;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::Person")
@@ -19,14 +20,14 @@ public class Person extends com.pulumi.resources.CustomResource {
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="pets", type=List.class, parameters={Pet.class})
     private Output</* @Nullable */ List<Pet>> pets;
 
-    public Output</* @Nullable */ List<Pet>> pets() {
-        return this.pets;
+    public Output<Optional<List<Pet>>> pets() {
+        return Codegen.optional(this.pets);
     }
 
     /**

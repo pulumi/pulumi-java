@@ -18,8 +18,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
     @Export(name="throughputMibps", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> throughputMibps;
 
-    public Output</* @Nullable */ Double> throughputMibps() {
-        return this.throughputMibps;
+    public Output<Optional<Double>> throughputMibps() {
+        return Codegen.optional(this.throughputMibps);
     }
     /**
      * Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
@@ -32,8 +32,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
      * 
      */
-    public Output<Optional<Double>> usageThreshold() {
-        return Codegen.optional(this.usageThreshold);
+    public Output<Double> usageThreshold() {
+        return this.usageThreshold;
     }
 
     /**

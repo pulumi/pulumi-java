@@ -23,32 +23,32 @@ public class RubberTree extends com.pulumi.resources.CustomResource {
     @Export(name="container", type=Container.class, parameters={})
     private Output</* @Nullable */ Container> container;
 
-    public Output</* @Nullable */ Container> container() {
-        return this.container;
+    public Output<Optional<Container>> container() {
+        return Codegen.optional(this.container);
     }
     @Export(name="diameter", type=Diameter.class, parameters={})
     private Output<Diameter> diameter;
 
-    public Output<Optional<Diameter>> diameter() {
-        return Codegen.optional(this.diameter);
+    public Output<Diameter> diameter() {
+        return this.diameter;
     }
     @Export(name="farm", type=String.class, parameters={})
     private Output</* @Nullable */ String> farm;
 
-    public Output</* @Nullable */ String> farm() {
-        return this.farm;
+    public Output<Optional<String>> farm() {
+        return Codegen.optional(this.farm);
     }
     @Export(name="size", type=TreeSize.class, parameters={})
     private Output</* @Nullable */ TreeSize> size;
 
-    public Output</* @Nullable */ TreeSize> size() {
-        return this.size;
+    public Output<Optional<TreeSize>> size() {
+        return Codegen.optional(this.size);
     }
     @Export(name="type", type=RubberTreeVariety.class, parameters={})
     private Output<RubberTreeVariety> type;
 
-    public Output<Optional<RubberTreeVariety>> type() {
-        return Codegen.optional(this.type);
+    public Output<RubberTreeVariety> type() {
+        return this.type;
     }
 
     /**

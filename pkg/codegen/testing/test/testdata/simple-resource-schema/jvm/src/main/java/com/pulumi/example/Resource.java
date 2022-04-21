@@ -11,6 +11,7 @@ import com.pulumi.example.ResourceArgs;
 import com.pulumi.example.Utilities;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::Resource")
@@ -18,14 +19,14 @@ public class Resource extends com.pulumi.resources.CustomResource {
     @Export(name="bar", type=String.class, parameters={})
     private Output</* @Nullable */ String> bar;
 
-    public Output</* @Nullable */ String> bar() {
-        return this.bar;
+    public Output<Optional<String>> bar() {
+        return Codegen.optional(this.bar);
     }
     @Export(name="baz", type=String.class, parameters={})
     private Output</* @Nullable */ String> baz;
 
-    public Output</* @Nullable */ String> baz() {
-        return this.baz;
+    public Output<Optional<String>> baz() {
+        return Codegen.optional(this.baz);
     }
 
     /**

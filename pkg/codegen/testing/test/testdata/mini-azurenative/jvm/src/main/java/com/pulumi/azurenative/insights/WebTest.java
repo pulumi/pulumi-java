@@ -31,8 +31,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Purpose/user defined descriptive test for this WebTest.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Is the test actively being monitored.
@@ -45,8 +45,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Is the test actively being monitored.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Interval in seconds between test runs for this WebTest. Default value is 300.
@@ -59,8 +59,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Interval in seconds between test runs for this WebTest. Default value is 300.
      * 
      */
-    public Output</* @Nullable */ Integer> frequency() {
-        return this.frequency;
+    public Output<Optional<Integer>> frequency() {
+        return Codegen.optional(this.frequency);
     }
     /**
      * The kind of web test that this web test watches. Choices are ping and multistep.
@@ -73,8 +73,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return The kind of web test that this web test watches. Choices are ping and multistep.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource location
@@ -87,8 +87,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<Optional<String>> location() {
-        return Codegen.optional(this.location);
+    public Output<String> location() {
+        return this.location;
     }
     /**
      * Azure resource name
@@ -101,8 +101,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<Optional<String>> name() {
-        return Codegen.optional(this.name);
+    public Output<String> name() {
+        return this.name;
     }
     /**
      * Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
@@ -115,8 +115,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
      */
-    public Output<Optional<String>> provisioningState() {
-        return Codegen.optional(this.provisioningState);
+    public Output<String> provisioningState() {
+        return this.provisioningState;
     }
     /**
      * Allow for retries should this WebTest fail.
@@ -129,8 +129,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Allow for retries should this WebTest fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> retryEnabled() {
-        return this.retryEnabled;
+    public Output<Optional<Boolean>> retryEnabled() {
+        return Codegen.optional(this.retryEnabled);
     }
     /**
      * Unique ID of this WebTest. This is typically the same value as the Name field.
@@ -143,8 +143,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Unique ID of this WebTest. This is typically the same value as the Name field.
      * 
      */
-    public Output<Optional<String>> syntheticMonitorId() {
-        return Codegen.optional(this.syntheticMonitorId);
+    public Output<String> syntheticMonitorId() {
+        return this.syntheticMonitorId;
     }
     /**
      * Resource tags
@@ -157,8 +157,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Seconds until this WebTest will timeout and fail. Default value is 30.
@@ -171,8 +171,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Seconds until this WebTest will timeout and fail. Default value is 30.
      * 
      */
-    public Output</* @Nullable */ Integer> timeout() {
-        return this.timeout;
+    public Output<Optional<Integer>> timeout() {
+        return Codegen.optional(this.timeout);
     }
     /**
      * Azure resource type
@@ -185,8 +185,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<Optional<String>> type() {
-        return Codegen.optional(this.type);
+    public Output<String> type() {
+        return this.type;
     }
     /**
      * The kind of web test this is, valid choices are ping and multistep.
@@ -199,8 +199,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return The kind of web test this is, valid choices are ping and multistep.
      * 
      */
-    public Output<Optional<String>> webTestKind() {
-        return Codegen.optional(this.webTestKind);
+    public Output<String> webTestKind() {
+        return this.webTestKind;
     }
     /**
      * User defined name if this WebTest.
@@ -213,8 +213,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return User defined name if this WebTest.
      * 
      */
-    public Output<Optional<String>> webTestName() {
-        return Codegen.optional(this.webTestName);
+    public Output<String> webTestName() {
+        return this.webTestName;
     }
 
     /**

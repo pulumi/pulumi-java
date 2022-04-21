@@ -14,6 +14,7 @@ import com.pulumi.example.outputs.Toy;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::Cat")
@@ -21,32 +22,32 @@ public class Cat extends com.pulumi.resources.CustomResource {
     @Export(name="foes", type=Map.class, parameters={String.class, Toy.class})
     private Output</* @Nullable */ Map<String,Toy>> foes;
 
-    public Output</* @Nullable */ Map<String,Toy>> foes() {
-        return this.foes;
+    public Output<Optional<Map<String,Toy>>> foes() {
+        return Codegen.optional(this.foes);
     }
     @Export(name="friends", type=List.class, parameters={Toy.class})
     private Output</* @Nullable */ List<Toy>> friends;
 
-    public Output</* @Nullable */ List<Toy>> friends() {
-        return this.friends;
+    public Output<Optional<List<Toy>>> friends() {
+        return Codegen.optional(this.friends);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="other", type=God.class, parameters={})
     private Output</* @Nullable */ God> other;
 
-    public Output</* @Nullable */ God> other() {
-        return this.other;
+    public Output<Optional<God>> other() {
+        return Codegen.optional(this.other);
     }
     @Export(name="toy", type=Toy.class, parameters={})
     private Output</* @Nullable */ Toy> toy;
 
-    public Output</* @Nullable */ Toy> toy() {
-        return this.toy;
+    public Output<Optional<Toy>> toy() {
+        return Codegen.optional(this.toy);
     }
 
     /**
