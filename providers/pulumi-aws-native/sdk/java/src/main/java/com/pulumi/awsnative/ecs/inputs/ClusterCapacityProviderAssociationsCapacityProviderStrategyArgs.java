@@ -83,6 +83,14 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategyAr
             return capacityProvider(Output.of(capacityProvider));
         }
 
+        public Builder capacityProvider(ClusterCapacityProviderAssociationsCapacityProvider capacityProvider) {
+            return capacityProvider(Either.ofLeft(capacityProvider));
+        }
+
+        public Builder capacityProvider(String capacityProvider) {
+            return capacityProvider(Either.ofRight(capacityProvider));
+        }
+
         public Builder weight(@Nullable Output<Integer> weight) {
             $.weight = weight;
             return this;
