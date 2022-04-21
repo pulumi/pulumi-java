@@ -21,7 +21,6 @@ import com.pulumi.azurenative.storage.enums.Kind;
 import com.pulumi.azurenative.storage.enums.SkuName;
 import com.pulumi.azurenative.storage.inputs.SkuArgs;
 import com.pulumi.azurenative.storage.outputs.EndpointsResponse;
-import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 
 public class App {
@@ -34,10 +33,10 @@ public class App {
         var resourceGroup = new ResourceGroup("resourceGroup");
 
         var storageAccount = new StorageAccount("storageaccount",
-                StorageAccountArgs.builder().kind(Either.ofRight(Kind.StorageV2))
+                StorageAccountArgs.builder().kind(Kind.StorageV2)
                         .resourceGroupName(resourceGroup.name())
                         .sku(SkuArgs.builder()
-                                .name(Either.ofRight(SkuName.Standard_LRS))
+                                .name(SkuName.Standard_LRS)
                                 .build()).build());
 
         var staticWebsite = new StorageAccountStaticWebsite("staticWebsite",
@@ -69,7 +68,7 @@ public class App {
                 ProfileArgs.builder().resourceGroupName(resourceGroup.name())
                         .location("global")
                         .sku(com.pulumi.azurenative.cdn.inputs.SkuArgs.builder()
-                                .name(Either.ofRight(com.pulumi.azurenative.cdn.enums.SkuName.Standard_Microsoft))
+                                .name(com.pulumi.azurenative.cdn.enums.SkuName.Standard_Microsoft)
                                 .build()).build());
 
         var endpointOrigin = storageAccount.primaryEndpoints()
