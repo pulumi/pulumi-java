@@ -25,6 +25,7 @@ import static com.pulumi.core.internal.Environment.getIntegerEnvironmentVariable
 /**
  * Helper functions that may be referenced by generated code but should not be used otherwise.
  */
+// TODO: move to com.pulumi.codegen.internal
 @InternalUse
 public final class Codegen {
 
@@ -87,7 +88,7 @@ public final class Codegen {
          * Helper for Output-typed properties.
          */
         public PropertyBuilder<T, Output<R>> output() {
-            return new PropertyBuilder<T, Output<R>>(
+            return new PropertyBuilder<>(
                     this.propertyName,
                     x -> Output.of(this.finalize.apply(this.convert.apply(x))),
                     this.readFromEnvVar,
