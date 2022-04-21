@@ -93,6 +93,14 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
             return color(Output.of(color));
         }
 
+        public Builder color(ContainerColor color) {
+            return color(Either.ofLeft(color));
+        }
+
+        public Builder color(String color) {
+            return color(Either.ofRight(color));
+        }
+
         public Builder material(@Nullable Output<String> material) {
             $.material = material;
             return this;
