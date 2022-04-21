@@ -486,6 +486,14 @@ public final class JSONSchemaPropsArgs extends com.pulumi.resources.ResourceArgs
             return additionalItems(Output.of(additionalItems));
         }
 
+        public Builder additionalItems(JSONSchemaPropsArgs additionalItems) {
+            return additionalItems(Either.ofLeft(additionalItems));
+        }
+
+        public Builder additionalItems(Boolean additionalItems) {
+            return additionalItems(Either.ofRight(additionalItems));
+        }
+
         public Builder additionalProperties(@Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties) {
             $.additionalProperties = additionalProperties;
             return this;
@@ -493,6 +501,14 @@ public final class JSONSchemaPropsArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder additionalProperties(Either<JSONSchemaPropsArgs,Boolean> additionalProperties) {
             return additionalProperties(Output.of(additionalProperties));
+        }
+
+        public Builder additionalProperties(JSONSchemaPropsArgs additionalProperties) {
+            return additionalProperties(Either.ofLeft(additionalProperties));
+        }
+
+        public Builder additionalProperties(Boolean additionalProperties) {
+            return additionalProperties(Either.ofRight(additionalProperties));
         }
 
         public Builder allOf(@Nullable Output<List<JSONSchemaPropsArgs>> allOf) {
@@ -631,6 +647,14 @@ public final class JSONSchemaPropsArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder items(Either<JSONSchemaPropsArgs,List<JsonElement>> items) {
             return items(Output.of(items));
+        }
+
+        public Builder items(JSONSchemaPropsArgs items) {
+            return items(Either.ofLeft(items));
+        }
+
+        public Builder items(List<JsonElement> items) {
+            return items(Either.ofRight(items));
         }
 
         public Builder maxItems(@Nullable Output<Integer> maxItems) {
