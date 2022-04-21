@@ -103,6 +103,14 @@ public final class CacheKeyQueryStringActionParametersArgs extends com.pulumi.re
             return queryStringBehavior(Output.of(queryStringBehavior));
         }
 
+        public Builder queryStringBehavior(String queryStringBehavior) {
+            return queryStringBehavior(Either.ofLeft(queryStringBehavior));
+        }
+
+        public Builder queryStringBehavior(QueryStringBehavior queryStringBehavior) {
+            return queryStringBehavior(Either.ofRight(queryStringBehavior));
+        }
+
         public CacheKeyQueryStringActionParametersArgs build() {
             $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
             $.queryStringBehavior = Objects.requireNonNull($.queryStringBehavior, "expected parameter 'queryStringBehavior' to be non-null");

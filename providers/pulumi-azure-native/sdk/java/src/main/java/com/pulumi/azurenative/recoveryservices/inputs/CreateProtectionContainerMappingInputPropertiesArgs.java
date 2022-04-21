@@ -99,6 +99,14 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends c
             return providerSpecificInput(Output.of(providerSpecificInput));
         }
 
+        public Builder providerSpecificInput(A2AContainerMappingInputArgs providerSpecificInput) {
+            return providerSpecificInput(Either.ofLeft(providerSpecificInput));
+        }
+
+        public Builder providerSpecificInput(VMwareCbtContainerMappingInputArgs providerSpecificInput) {
+            return providerSpecificInput(Either.ofRight(providerSpecificInput));
+        }
+
         public Builder targetProtectionContainerId(@Nullable Output<String> targetProtectionContainerId) {
             $.targetProtectionContainerId = targetProtectionContainerId;
             return this;

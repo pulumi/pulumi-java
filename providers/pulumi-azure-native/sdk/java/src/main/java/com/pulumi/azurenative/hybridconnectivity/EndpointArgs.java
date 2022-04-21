@@ -188,6 +188,14 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             return createdByType(Output.of(createdByType));
         }
 
+        public Builder createdByType(String createdByType) {
+            return createdByType(Either.ofLeft(createdByType));
+        }
+
+        public Builder createdByType(CreatedByType createdByType) {
+            return createdByType(Either.ofRight(createdByType));
+        }
+
         public Builder endpointName(@Nullable Output<String> endpointName) {
             $.endpointName = endpointName;
             return this;
@@ -224,6 +232,14 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             return lastModifiedByType(Output.of(lastModifiedByType));
         }
 
+        public Builder lastModifiedByType(String lastModifiedByType) {
+            return lastModifiedByType(Either.ofLeft(lastModifiedByType));
+        }
+
+        public Builder lastModifiedByType(CreatedByType lastModifiedByType) {
+            return lastModifiedByType(Either.ofRight(lastModifiedByType));
+        }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
@@ -249,6 +265,14 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder type(Either<String,Type> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(Type type) {
+            return type(Either.ofRight(type));
         }
 
         public EndpointArgs build() {

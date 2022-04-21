@@ -115,6 +115,14 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends com
             return organizationMembershipType(Output.of(organizationMembershipType));
         }
 
+        public Builder organizationMembershipType(String organizationMembershipType) {
+            return organizationMembershipType(Either.ofLeft(organizationMembershipType));
+        }
+
+        public Builder organizationMembershipType(OrganizationMembershipType organizationMembershipType) {
+            return organizationMembershipType(Either.ofRight(organizationMembershipType));
+        }
+
         public Builder parentHierarchyId(@Nullable Output<String> parentHierarchyId) {
             $.parentHierarchyId = parentHierarchyId;
             return this;

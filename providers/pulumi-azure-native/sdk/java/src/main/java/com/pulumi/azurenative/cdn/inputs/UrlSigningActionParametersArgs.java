@@ -87,6 +87,14 @@ public final class UrlSigningActionParametersArgs extends com.pulumi.resources.R
             return algorithm(Output.of(algorithm));
         }
 
+        public Builder algorithm(String algorithm) {
+            return algorithm(Either.ofLeft(algorithm));
+        }
+
+        public Builder algorithm(Algorithm algorithm) {
+            return algorithm(Either.ofRight(algorithm));
+        }
+
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;

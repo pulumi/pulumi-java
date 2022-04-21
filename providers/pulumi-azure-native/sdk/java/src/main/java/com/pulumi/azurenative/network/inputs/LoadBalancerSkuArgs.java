@@ -78,6 +78,14 @@ public final class LoadBalancerSkuArgs extends com.pulumi.resources.ResourceArgs
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(LoadBalancerSkuName name) {
+            return name(Either.ofRight(name));
+        }
+
         public Builder tier(@Nullable Output<Either<String,LoadBalancerSkuTier>> tier) {
             $.tier = tier;
             return this;
@@ -85,6 +93,14 @@ public final class LoadBalancerSkuArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder tier(Either<String,LoadBalancerSkuTier> tier) {
             return tier(Output.of(tier));
+        }
+
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(LoadBalancerSkuTier tier) {
+            return tier(Either.ofRight(tier));
         }
 
         public LoadBalancerSkuArgs build() {

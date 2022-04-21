@@ -141,6 +141,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             return instanceSize(Output.of(instanceSize));
         }
 
+        public Builder instanceSize(String instanceSize) {
+            return instanceSize(Either.ofLeft(instanceSize));
+        }
+
+        public Builder instanceSize(ServiceSize instanceSize) {
+            return instanceSize(Either.ofRight(instanceSize));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
@@ -166,6 +174,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder serviceType(Either<String,ServiceType> serviceType) {
             return serviceType(Output.of(serviceType));
+        }
+
+        public Builder serviceType(String serviceType) {
+            return serviceType(Either.ofLeft(serviceType));
+        }
+
+        public Builder serviceType(ServiceType serviceType) {
+            return serviceType(Either.ofRight(serviceType));
         }
 
         public ServiceArgs build() {

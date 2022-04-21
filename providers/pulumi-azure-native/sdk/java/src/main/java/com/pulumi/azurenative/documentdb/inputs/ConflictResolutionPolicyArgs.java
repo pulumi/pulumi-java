@@ -108,6 +108,14 @@ public final class ConflictResolutionPolicyArgs extends com.pulumi.resources.Res
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(ConflictResolutionMode mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public ConflictResolutionPolicyArgs build() {
             $.mode = Codegen.stringProp("mode").left(ConflictResolutionMode.class).output().arg($.mode).def("LastWriterWins").getNullable();
             return $;

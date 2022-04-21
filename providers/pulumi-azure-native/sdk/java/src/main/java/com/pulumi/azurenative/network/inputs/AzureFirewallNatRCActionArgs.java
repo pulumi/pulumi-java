@@ -65,6 +65,14 @@ public final class AzureFirewallNatRCActionArgs extends com.pulumi.resources.Res
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(AzureFirewallNatRCActionType type) {
+            return type(Either.ofRight(type));
+        }
+
         public AzureFirewallNatRCActionArgs build() {
             return $;
         }

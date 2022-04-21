@@ -183,6 +183,14 @@ public final class ExpressRoutePortArgs extends com.pulumi.resources.ResourceArg
             return encapsulation(Output.of(encapsulation));
         }
 
+        public Builder encapsulation(String encapsulation) {
+            return encapsulation(Either.ofLeft(encapsulation));
+        }
+
+        public Builder encapsulation(ExpressRoutePortsEncapsulation encapsulation) {
+            return encapsulation(Either.ofRight(encapsulation));
+        }
+
         public Builder expressRoutePortName(@Nullable Output<String> expressRoutePortName) {
             $.expressRoutePortName = expressRoutePortName;
             return this;

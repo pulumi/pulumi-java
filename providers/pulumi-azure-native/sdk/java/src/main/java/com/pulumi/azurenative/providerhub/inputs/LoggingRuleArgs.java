@@ -92,6 +92,14 @@ public final class LoggingRuleArgs extends com.pulumi.resources.ResourceArgs {
             return detailLevel(Output.of(detailLevel));
         }
 
+        public Builder detailLevel(String detailLevel) {
+            return detailLevel(Either.ofLeft(detailLevel));
+        }
+
+        public Builder detailLevel(LoggingDetails detailLevel) {
+            return detailLevel(Either.ofRight(detailLevel));
+        }
+
         public Builder direction(Output<Either<String,LoggingDirections>> direction) {
             $.direction = direction;
             return this;
@@ -99,6 +107,14 @@ public final class LoggingRuleArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder direction(Either<String,LoggingDirections> direction) {
             return direction(Output.of(direction));
+        }
+
+        public Builder direction(String direction) {
+            return direction(Either.ofLeft(direction));
+        }
+
+        public Builder direction(LoggingDirections direction) {
+            return direction(Either.ofRight(direction));
         }
 
         public Builder hiddenPropertyPaths(@Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths) {

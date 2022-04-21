@@ -277,6 +277,14 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
             return accountKey(Output.of(accountKey));
         }
 
+        public Builder accountKey(AzureKeyVaultSecretReferenceArgs accountKey) {
+            return accountKey(Either.ofLeft(accountKey));
+        }
+
+        public Builder accountKey(SecureStringArgs accountKey) {
+            return accountKey(Either.ofRight(accountKey));
+        }
+
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
@@ -315,6 +323,14 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
 
         public Builder connectionMode(Either<String,CosmosDbConnectionMode> connectionMode) {
             return connectionMode(Output.of(connectionMode));
+        }
+
+        public Builder connectionMode(String connectionMode) {
+            return connectionMode(Either.ofLeft(connectionMode));
+        }
+
+        public Builder connectionMode(CosmosDbConnectionMode connectionMode) {
+            return connectionMode(Either.ofRight(connectionMode));
         }
 
         public Builder connectionString(@Nullable Output<Object> connectionString) {
@@ -380,6 +396,14 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
             return servicePrincipalCredential(Output.of(servicePrincipalCredential));
         }
 
+        public Builder servicePrincipalCredential(AzureKeyVaultSecretReferenceArgs servicePrincipalCredential) {
+            return servicePrincipalCredential(Either.ofLeft(servicePrincipalCredential));
+        }
+
+        public Builder servicePrincipalCredential(SecureStringArgs servicePrincipalCredential) {
+            return servicePrincipalCredential(Either.ofRight(servicePrincipalCredential));
+        }
+
         public Builder servicePrincipalCredentialType(@Nullable Output<Either<String,CosmosDbServicePrincipalCredentialType>> servicePrincipalCredentialType) {
             $.servicePrincipalCredentialType = servicePrincipalCredentialType;
             return this;
@@ -387,6 +411,14 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
 
         public Builder servicePrincipalCredentialType(Either<String,CosmosDbServicePrincipalCredentialType> servicePrincipalCredentialType) {
             return servicePrincipalCredentialType(Output.of(servicePrincipalCredentialType));
+        }
+
+        public Builder servicePrincipalCredentialType(String servicePrincipalCredentialType) {
+            return servicePrincipalCredentialType(Either.ofLeft(servicePrincipalCredentialType));
+        }
+
+        public Builder servicePrincipalCredentialType(CosmosDbServicePrincipalCredentialType servicePrincipalCredentialType) {
+            return servicePrincipalCredentialType(Either.ofRight(servicePrincipalCredentialType));
         }
 
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {

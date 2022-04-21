@@ -133,6 +133,14 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
             return tier(Output.of(tier));
         }
 
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(Tier tier) {
+            return tier(Either.ofRight(tier));
+        }
+
         public TestBaseAccountSKUArgs build() {
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");

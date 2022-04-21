@@ -126,6 +126,14 @@ public final class EndPointArgs extends com.pulumi.resources.ResourceArgs {
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(Protocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public EndPointArgs build() {
             $.endPointName = Objects.requireNonNull($.endPointName, "expected parameter 'endPointName' to be non-null");
             $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");

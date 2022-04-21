@@ -244,6 +244,14 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
             return this;
         }
 
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
+        }
+
         public Builder subscriptionId(Object subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

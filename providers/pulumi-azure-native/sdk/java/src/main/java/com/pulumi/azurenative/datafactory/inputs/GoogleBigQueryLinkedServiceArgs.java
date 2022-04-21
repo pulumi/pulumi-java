@@ -288,6 +288,14 @@ public final class GoogleBigQueryLinkedServiceArgs extends com.pulumi.resources.
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(GoogleBigQueryAuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder clientId(@Nullable Output<Object> clientId) {
             $.clientId = clientId;
             return this;
@@ -304,6 +312,14 @@ public final class GoogleBigQueryLinkedServiceArgs extends com.pulumi.resources.
 
         public Builder clientSecret(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
             return clientSecret(Output.of(clientSecret));
+        }
+
+        public Builder clientSecret(AzureKeyVaultSecretReferenceArgs clientSecret) {
+            return clientSecret(Either.ofLeft(clientSecret));
+        }
+
+        public Builder clientSecret(SecureStringArgs clientSecret) {
+            return clientSecret(Either.ofRight(clientSecret));
         }
 
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -376,6 +392,14 @@ public final class GoogleBigQueryLinkedServiceArgs extends com.pulumi.resources.
 
         public Builder refreshToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> refreshToken) {
             return refreshToken(Output.of(refreshToken));
+        }
+
+        public Builder refreshToken(AzureKeyVaultSecretReferenceArgs refreshToken) {
+            return refreshToken(Either.ofLeft(refreshToken));
+        }
+
+        public Builder refreshToken(SecureStringArgs refreshToken) {
+            return refreshToken(Either.ofRight(refreshToken));
         }
 
         public Builder requestGoogleDriveScope(@Nullable Output<Object> requestGoogleDriveScope) {

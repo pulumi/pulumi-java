@@ -181,6 +181,14 @@ public final class AzureVMAppContainerProtectionContainerArgs extends com.pulumi
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        public Builder backupManagementType(String backupManagementType) {
+            return backupManagementType(Either.ofLeft(backupManagementType));
+        }
+
+        public Builder backupManagementType(BackupManagementType backupManagementType) {
+            return backupManagementType(Either.ofRight(backupManagementType));
+        }
+
         public Builder containerType(Output<String> containerType) {
             $.containerType = containerType;
             return this;
@@ -235,6 +243,14 @@ public final class AzureVMAppContainerProtectionContainerArgs extends com.pulumi
             return operationType(Output.of(operationType));
         }
 
+        public Builder operationType(String operationType) {
+            return operationType(Either.ofLeft(operationType));
+        }
+
+        public Builder operationType(OperationType operationType) {
+            return operationType(Either.ofRight(operationType));
+        }
+
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
             $.registrationStatus = registrationStatus;
             return this;
@@ -260,6 +276,14 @@ public final class AzureVMAppContainerProtectionContainerArgs extends com.pulumi
 
         public Builder workloadType(Either<String,WorkloadType> workloadType) {
             return workloadType(Output.of(workloadType));
+        }
+
+        public Builder workloadType(String workloadType) {
+            return workloadType(Either.ofLeft(workloadType));
+        }
+
+        public Builder workloadType(WorkloadType workloadType) {
+            return workloadType(Either.ofRight(workloadType));
         }
 
         public AzureVMAppContainerProtectionContainerArgs build() {

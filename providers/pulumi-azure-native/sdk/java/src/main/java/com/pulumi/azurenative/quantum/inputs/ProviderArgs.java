@@ -161,6 +161,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
             return provisioningState(Output.of(provisioningState));
         }
 
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(Status provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
+        }
+
         public Builder resourceUsageId(@Nullable Output<String> resourceUsageId) {
             $.resourceUsageId = resourceUsageId;
             return this;

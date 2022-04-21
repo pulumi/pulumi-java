@@ -589,6 +589,14 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(VariantType type) {
+            return type(Either.ofRight(type));
+        }
+
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;

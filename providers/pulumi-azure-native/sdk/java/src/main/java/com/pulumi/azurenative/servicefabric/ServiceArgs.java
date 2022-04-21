@@ -283,6 +283,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             return defaultMoveCost(Output.of(defaultMoveCost));
         }
 
+        public Builder defaultMoveCost(String defaultMoveCost) {
+            return defaultMoveCost(Either.ofLeft(defaultMoveCost));
+        }
+
+        public Builder defaultMoveCost(MoveCost defaultMoveCost) {
+            return defaultMoveCost(Either.ofRight(defaultMoveCost));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
@@ -337,6 +345,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             return serviceKind(Output.of(serviceKind));
         }
 
+        public Builder serviceKind(String serviceKind) {
+            return serviceKind(Either.ofLeft(serviceKind));
+        }
+
+        public Builder serviceKind(ServiceKind serviceKind) {
+            return serviceKind(Either.ofRight(serviceKind));
+        }
+
         public Builder serviceLoadMetrics(@Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics) {
             $.serviceLoadMetrics = serviceLoadMetrics;
             return this;
@@ -366,6 +382,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder servicePackageActivationMode(Either<String,ArmServicePackageActivationMode> servicePackageActivationMode) {
             return servicePackageActivationMode(Output.of(servicePackageActivationMode));
+        }
+
+        public Builder servicePackageActivationMode(String servicePackageActivationMode) {
+            return servicePackageActivationMode(Either.ofLeft(servicePackageActivationMode));
+        }
+
+        public Builder servicePackageActivationMode(ArmServicePackageActivationMode servicePackageActivationMode) {
+            return servicePackageActivationMode(Either.ofRight(servicePackageActivationMode));
         }
 
         public Builder servicePlacementPolicies(@Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies) {

@@ -143,6 +143,14 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
             return classification(Output.of(classification));
         }
 
+        public Builder classification(String classification) {
+            return classification(Either.ofLeft(classification));
+        }
+
+        public Builder classification(IncidentClassification classification) {
+            return classification(Either.ofRight(classification));
+        }
+
         public Builder classificationComment(@Nullable Output<String> classificationComment) {
             $.classificationComment = classificationComment;
             return this;
@@ -159,6 +167,14 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
 
         public Builder classificationReason(Either<String,IncidentClassificationReason> classificationReason) {
             return classificationReason(Output.of(classificationReason));
+        }
+
+        public Builder classificationReason(String classificationReason) {
+            return classificationReason(Either.ofLeft(classificationReason));
+        }
+
+        public Builder classificationReason(IncidentClassificationReason classificationReason) {
+            return classificationReason(Either.ofRight(classificationReason));
         }
 
         public Builder labels(@Nullable Output<List<IncidentLabelArgs>> labels) {
@@ -192,6 +208,14 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
             return severity(Output.of(severity));
         }
 
+        public Builder severity(String severity) {
+            return severity(Either.ofLeft(severity));
+        }
+
+        public Builder severity(IncidentSeverity severity) {
+            return severity(Either.ofRight(severity));
+        }
+
         public Builder status(@Nullable Output<Either<String,IncidentStatus>> status) {
             $.status = status;
             return this;
@@ -199,6 +223,14 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
 
         public Builder status(Either<String,IncidentStatus> status) {
             return status(Output.of(status));
+        }
+
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(IncidentStatus status) {
+            return status(Either.ofRight(status));
         }
 
         public AutomationRuleModifyPropertiesActionActionConfigurationArgs build() {

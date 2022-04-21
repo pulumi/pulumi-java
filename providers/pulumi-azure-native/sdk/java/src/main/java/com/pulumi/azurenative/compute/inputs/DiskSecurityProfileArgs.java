@@ -65,6 +65,14 @@ public final class DiskSecurityProfileArgs extends com.pulumi.resources.Resource
             return securityType(Output.of(securityType));
         }
 
+        public Builder securityType(String securityType) {
+            return securityType(Either.ofLeft(securityType));
+        }
+
+        public Builder securityType(DiskSecurityTypes securityType) {
+            return securityType(Either.ofRight(securityType));
+        }
+
         public DiskSecurityProfileArgs build() {
             return $;
         }

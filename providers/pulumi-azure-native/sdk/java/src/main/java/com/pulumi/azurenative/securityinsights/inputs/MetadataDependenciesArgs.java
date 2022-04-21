@@ -149,6 +149,14 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(Kind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
@@ -165,6 +173,14 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
 
         public Builder operator(Either<String,Operator> operator) {
             return operator(Output.of(operator));
+        }
+
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(Operator operator) {
+            return operator(Either.ofRight(operator));
         }
 
         public Builder version(@Nullable Output<String> version) {

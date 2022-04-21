@@ -114,6 +114,14 @@ public final class LabAnnouncementPropertiesArgs extends com.pulumi.resources.Re
             return enabled(Output.of(enabled));
         }
 
+        public Builder enabled(String enabled) {
+            return enabled(Either.ofLeft(enabled));
+        }
+
+        public Builder enabled(EnableStatus enabled) {
+            return enabled(Either.ofRight(enabled));
+        }
+
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             $.expirationDate = expirationDate;
             return this;

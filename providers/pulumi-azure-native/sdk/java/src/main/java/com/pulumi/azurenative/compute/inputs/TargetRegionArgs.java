@@ -130,6 +130,14 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
             return storageAccountType(Output.of(storageAccountType));
         }
 
+        public Builder storageAccountType(String storageAccountType) {
+            return storageAccountType(Either.ofLeft(storageAccountType));
+        }
+
+        public Builder storageAccountType(StorageAccountType storageAccountType) {
+            return storageAccountType(Either.ofRight(storageAccountType));
+        }
+
         public TargetRegionArgs build() {
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             return $;

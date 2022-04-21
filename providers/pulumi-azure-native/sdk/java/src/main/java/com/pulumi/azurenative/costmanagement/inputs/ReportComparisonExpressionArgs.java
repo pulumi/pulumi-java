@@ -97,6 +97,14 @@ public final class ReportComparisonExpressionArgs extends com.pulumi.resources.R
             return operator(Output.of(operator));
         }
 
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(OperatorType operator) {
+            return operator(Either.ofRight(operator));
+        }
+
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;

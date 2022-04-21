@@ -223,6 +223,14 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
             return enabledState(Output.of(enabledState));
         }
 
+        public Builder enabledState(String enabledState) {
+            return enabledState(Either.ofLeft(enabledState));
+        }
+
+        public Builder enabledState(FrontDoorEnabledState enabledState) {
+            return enabledState(Either.ofRight(enabledState));
+        }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;

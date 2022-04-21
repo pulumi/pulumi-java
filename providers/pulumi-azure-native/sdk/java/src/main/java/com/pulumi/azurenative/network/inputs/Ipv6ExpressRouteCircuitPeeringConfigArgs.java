@@ -151,6 +151,14 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.r
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(ExpressRouteCircuitPeeringState state) {
+            return state(Either.ofRight(state));
+        }
+
         public Ipv6ExpressRouteCircuitPeeringConfigArgs build() {
             return $;
         }

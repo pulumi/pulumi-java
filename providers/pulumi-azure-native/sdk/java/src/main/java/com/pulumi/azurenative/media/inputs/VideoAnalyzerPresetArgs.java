@@ -135,6 +135,14 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
             return insightsToExtract(Output.of(insightsToExtract));
         }
 
+        public Builder insightsToExtract(String insightsToExtract) {
+            return insightsToExtract(Either.ofLeft(insightsToExtract));
+        }
+
+        public Builder insightsToExtract(InsightsType insightsToExtract) {
+            return insightsToExtract(Either.ofRight(insightsToExtract));
+        }
+
         public Builder mode(@Nullable Output<Either<String,AudioAnalysisMode>> mode) {
             $.mode = mode;
             return this;
@@ -142,6 +150,14 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
 
         public Builder mode(Either<String,AudioAnalysisMode> mode) {
             return mode(Output.of(mode));
+        }
+
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(AudioAnalysisMode mode) {
+            return mode(Either.ofRight(mode));
         }
 
         public Builder odataType(Output<String> odataType) {

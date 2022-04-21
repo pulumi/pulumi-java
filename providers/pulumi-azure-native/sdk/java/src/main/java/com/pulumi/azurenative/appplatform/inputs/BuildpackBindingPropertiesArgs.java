@@ -78,6 +78,14 @@ public final class BuildpackBindingPropertiesArgs extends com.pulumi.resources.R
             return bindingType(Output.of(bindingType));
         }
 
+        public Builder bindingType(String bindingType) {
+            return bindingType(Either.ofLeft(bindingType));
+        }
+
+        public Builder bindingType(BindingType bindingType) {
+            return bindingType(Either.ofRight(bindingType));
+        }
+
         public Builder launchProperties(@Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties) {
             $.launchProperties = launchProperties;
             return this;

@@ -108,6 +108,14 @@ public final class DataDiskPropertiesArgs extends com.pulumi.resources.ResourceA
             return hostCaching(Output.of(hostCaching));
         }
 
+        public Builder hostCaching(String hostCaching) {
+            return hostCaching(Either.ofLeft(hostCaching));
+        }
+
+        public Builder hostCaching(HostCachingOptions hostCaching) {
+            return hostCaching(Either.ofRight(hostCaching));
+        }
+
         public DataDiskPropertiesArgs build() {
             return $;
         }

@@ -153,6 +153,14 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
             return dhGroup(Output.of(dhGroup));
         }
 
+        public Builder dhGroup(String dhGroup) {
+            return dhGroup(Either.ofLeft(dhGroup));
+        }
+
+        public Builder dhGroup(DhGroup dhGroup) {
+            return dhGroup(Either.ofRight(dhGroup));
+        }
+
         public Builder ikeEncryption(Output<Either<String,IkeEncryption>> ikeEncryption) {
             $.ikeEncryption = ikeEncryption;
             return this;
@@ -160,6 +168,14 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder ikeEncryption(Either<String,IkeEncryption> ikeEncryption) {
             return ikeEncryption(Output.of(ikeEncryption));
+        }
+
+        public Builder ikeEncryption(String ikeEncryption) {
+            return ikeEncryption(Either.ofLeft(ikeEncryption));
+        }
+
+        public Builder ikeEncryption(IkeEncryption ikeEncryption) {
+            return ikeEncryption(Either.ofRight(ikeEncryption));
         }
 
         public Builder ikeIntegrity(Output<Either<String,IkeIntegrity>> ikeIntegrity) {
@@ -171,6 +187,14 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
             return ikeIntegrity(Output.of(ikeIntegrity));
         }
 
+        public Builder ikeIntegrity(String ikeIntegrity) {
+            return ikeIntegrity(Either.ofLeft(ikeIntegrity));
+        }
+
+        public Builder ikeIntegrity(IkeIntegrity ikeIntegrity) {
+            return ikeIntegrity(Either.ofRight(ikeIntegrity));
+        }
+
         public Builder ipsecEncryption(Output<Either<String,IpsecEncryption>> ipsecEncryption) {
             $.ipsecEncryption = ipsecEncryption;
             return this;
@@ -178,6 +202,14 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder ipsecEncryption(Either<String,IpsecEncryption> ipsecEncryption) {
             return ipsecEncryption(Output.of(ipsecEncryption));
+        }
+
+        public Builder ipsecEncryption(String ipsecEncryption) {
+            return ipsecEncryption(Either.ofLeft(ipsecEncryption));
+        }
+
+        public Builder ipsecEncryption(IpsecEncryption ipsecEncryption) {
+            return ipsecEncryption(Either.ofRight(ipsecEncryption));
         }
 
         public Builder ipsecIntegrity(Output<Either<String,IpsecIntegrity>> ipsecIntegrity) {
@@ -189,6 +221,14 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
             return ipsecIntegrity(Output.of(ipsecIntegrity));
         }
 
+        public Builder ipsecIntegrity(String ipsecIntegrity) {
+            return ipsecIntegrity(Either.ofLeft(ipsecIntegrity));
+        }
+
+        public Builder ipsecIntegrity(IpsecIntegrity ipsecIntegrity) {
+            return ipsecIntegrity(Either.ofRight(ipsecIntegrity));
+        }
+
         public Builder pfsGroup(Output<Either<String,PfsGroup>> pfsGroup) {
             $.pfsGroup = pfsGroup;
             return this;
@@ -196,6 +236,14 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder pfsGroup(Either<String,PfsGroup> pfsGroup) {
             return pfsGroup(Output.of(pfsGroup));
+        }
+
+        public Builder pfsGroup(String pfsGroup) {
+            return pfsGroup(Either.ofLeft(pfsGroup));
+        }
+
+        public Builder pfsGroup(PfsGroup pfsGroup) {
+            return pfsGroup(Either.ofRight(pfsGroup));
         }
 
         public Builder saDataSizeKilobytes(Output<Integer> saDataSizeKilobytes) {

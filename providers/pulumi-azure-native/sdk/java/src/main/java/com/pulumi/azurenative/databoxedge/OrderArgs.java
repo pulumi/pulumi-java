@@ -138,6 +138,14 @@ public final class OrderArgs extends com.pulumi.resources.ResourceArgs {
             return shipmentType(Output.of(shipmentType));
         }
 
+        public Builder shipmentType(String shipmentType) {
+            return shipmentType(Either.ofLeft(shipmentType));
+        }
+
+        public Builder shipmentType(ShipmentType shipmentType) {
+            return shipmentType(Either.ofRight(shipmentType));
+        }
+
         public Builder shippingAddress(@Nullable Output<AddressArgs> shippingAddress) {
             $.shippingAddress = shippingAddress;
             return this;

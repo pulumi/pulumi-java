@@ -117,6 +117,14 @@ public final class RecoveryPlanGroupArgs extends com.pulumi.resources.ResourceAr
             return groupType(Output.of(groupType));
         }
 
+        public Builder groupType(String groupType) {
+            return groupType(Either.ofLeft(groupType));
+        }
+
+        public Builder groupType(RecoveryPlanGroupType groupType) {
+            return groupType(Either.ofRight(groupType));
+        }
+
         public Builder replicationProtectedItems(@Nullable Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems) {
             $.replicationProtectedItems = replicationProtectedItems;
             return this;

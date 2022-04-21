@@ -330,6 +330,14 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        public Builder identity(AmlTokenResponse identity) {
+            return identity(Either.ofLeft(identity));
+        }
+
+        public Builder identity(ManagedIdentityResponse identity) {
+            return identity(Either.ofRight(identity));
+        }
+
         public Builder interactionEndpoints(Map<String,JobEndpointResponse> interactionEndpoints) {
             $.interactionEndpoints = interactionEndpoints;
             return this;

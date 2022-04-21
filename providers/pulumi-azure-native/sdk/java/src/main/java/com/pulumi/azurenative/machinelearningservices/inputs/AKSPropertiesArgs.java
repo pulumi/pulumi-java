@@ -165,6 +165,14 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
             return clusterPurpose(Output.of(clusterPurpose));
         }
 
+        public Builder clusterPurpose(String clusterPurpose) {
+            return clusterPurpose(Either.ofLeft(clusterPurpose));
+        }
+
+        public Builder clusterPurpose(ClusterPurpose clusterPurpose) {
+            return clusterPurpose(Either.ofRight(clusterPurpose));
+        }
+
         public Builder sslConfiguration(@Nullable Output<SslConfigurationArgs> sslConfiguration) {
             $.sslConfiguration = sslConfiguration;
             return this;

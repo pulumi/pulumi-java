@@ -239,6 +239,14 @@ public final class SharePointOnlineListLinkedServiceArgs extends com.pulumi.reso
             return servicePrincipalKey(Output.of(servicePrincipalKey));
         }
 
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
+        }
+
         public Builder siteUrl(Output<Object> siteUrl) {
             $.siteUrl = siteUrl;
             return this;

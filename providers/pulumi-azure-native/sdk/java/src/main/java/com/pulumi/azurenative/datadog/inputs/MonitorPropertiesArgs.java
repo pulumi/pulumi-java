@@ -100,6 +100,14 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
             return monitoringStatus(Output.of(monitoringStatus));
         }
 
+        public Builder monitoringStatus(String monitoringStatus) {
+            return monitoringStatus(Either.ofLeft(monitoringStatus));
+        }
+
+        public Builder monitoringStatus(MonitoringStatus monitoringStatus) {
+            return monitoringStatus(Either.ofRight(monitoringStatus));
+        }
+
         public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {
             $.userInfo = userInfo;
             return this;

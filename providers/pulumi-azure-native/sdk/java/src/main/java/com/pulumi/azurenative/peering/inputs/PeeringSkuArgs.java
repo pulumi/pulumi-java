@@ -103,6 +103,14 @@ public final class PeeringSkuArgs extends com.pulumi.resources.ResourceArgs {
             return family(Output.of(family));
         }
 
+        public Builder family(String family) {
+            return family(Either.ofLeft(family));
+        }
+
+        public Builder family(Family family) {
+            return family(Either.ofRight(family));
+        }
+
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
@@ -121,6 +129,14 @@ public final class PeeringSkuArgs extends com.pulumi.resources.ResourceArgs {
             return size(Output.of(size));
         }
 
+        public Builder size(String size) {
+            return size(Either.ofLeft(size));
+        }
+
+        public Builder size(Size size) {
+            return size(Either.ofRight(size));
+        }
+
         public Builder tier(@Nullable Output<Either<String,Tier>> tier) {
             $.tier = tier;
             return this;
@@ -128,6 +144,14 @@ public final class PeeringSkuArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder tier(Either<String,Tier> tier) {
             return tier(Output.of(tier));
+        }
+
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(Tier tier) {
+            return tier(Either.ofRight(tier));
         }
 
         public PeeringSkuArgs build() {

@@ -130,6 +130,14 @@ public final class SourcePropertiesArgs extends com.pulumi.resources.ResourceArg
             return sourceControlType(Output.of(sourceControlType));
         }
 
+        public Builder sourceControlType(String sourceControlType) {
+            return sourceControlType(Either.ofLeft(sourceControlType));
+        }
+
+        public Builder sourceControlType(SourceControlType sourceControlType) {
+            return sourceControlType(Either.ofRight(sourceControlType));
+        }
+
         public SourcePropertiesArgs build() {
             $.repositoryUrl = Objects.requireNonNull($.repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
             $.sourceControlType = Objects.requireNonNull($.sourceControlType, "expected parameter 'sourceControlType' to be non-null");

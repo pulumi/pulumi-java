@@ -172,6 +172,14 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends com.pulumi.resourc
             return backupMode(Output.of(backupMode));
         }
 
+        public Builder backupMode(String backupMode) {
+            return backupMode(Either.ofLeft(backupMode));
+        }
+
+        public Builder backupMode(BackupMode backupMode) {
+            return backupMode(Either.ofRight(backupMode));
+        }
+
         public Builder selectedAgentJobs(@Nullable Output<List<String>> selectedAgentJobs) {
             $.selectedAgentJobs = selectedAgentJobs;
             return this;

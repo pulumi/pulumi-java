@@ -137,6 +137,14 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
             return properties(Output.of(properties));
         }
 
+        public Builder properties(VmHostPlacementPolicyPropertiesArgs properties) {
+            return properties(Either.ofLeft(properties));
+        }
+
+        public Builder properties(VmVmPlacementPolicyPropertiesArgs properties) {
+            return properties(Either.ofRight(properties));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -245,6 +245,14 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
             return ssl(Output.of(ssl));
         }
 
+        public Builder ssl(String ssl) {
+            return ssl(Either.ofLeft(ssl));
+        }
+
+        public Builder ssl(SslEnum ssl) {
+            return ssl(Either.ofRight(ssl));
+        }
+
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;

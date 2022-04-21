@@ -248,6 +248,14 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
             return eventDeliverySchema(Output.of(eventDeliverySchema));
         }
 
+        public Builder eventDeliverySchema(String eventDeliverySchema) {
+            return eventDeliverySchema(Either.ofLeft(eventDeliverySchema));
+        }
+
+        public Builder eventDeliverySchema(EventDeliverySchema eventDeliverySchema) {
+            return eventDeliverySchema(Either.ofRight(eventDeliverySchema));
+        }
+
         public Builder eventSubscriptionName(@Nullable Output<String> eventSubscriptionName) {
             $.eventSubscriptionName = eventSubscriptionName;
             return this;

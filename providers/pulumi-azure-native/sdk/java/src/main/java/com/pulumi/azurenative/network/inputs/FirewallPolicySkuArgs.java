@@ -65,6 +65,14 @@ public final class FirewallPolicySkuArgs extends com.pulumi.resources.ResourceAr
             return tier(Output.of(tier));
         }
 
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(FirewallPolicySkuTier tier) {
+            return tier(Either.ofRight(tier));
+        }
+
         public FirewallPolicySkuArgs build() {
             return $;
         }

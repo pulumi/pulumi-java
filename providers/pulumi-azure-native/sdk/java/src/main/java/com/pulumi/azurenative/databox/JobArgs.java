@@ -188,6 +188,14 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             return deliveryType(Output.of(deliveryType));
         }
 
+        public Builder deliveryType(String deliveryType) {
+            return deliveryType(Either.ofLeft(deliveryType));
+        }
+
+        public Builder deliveryType(JobDeliveryType deliveryType) {
+            return deliveryType(Either.ofRight(deliveryType));
+        }
+
         public Builder details(@Nullable Output<Object> details) {
             $.details = details;
             return this;
@@ -258,6 +266,14 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder transferType(Either<String,TransferType> transferType) {
             return transferType(Output.of(transferType));
+        }
+
+        public Builder transferType(String transferType) {
+            return transferType(Either.ofLeft(transferType));
+        }
+
+        public Builder transferType(TransferType transferType) {
+            return transferType(Either.ofRight(transferType));
         }
 
         public JobArgs build() {

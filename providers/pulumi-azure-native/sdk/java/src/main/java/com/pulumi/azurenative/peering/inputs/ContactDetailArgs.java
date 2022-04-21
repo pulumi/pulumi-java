@@ -107,6 +107,14 @@ public final class ContactDetailArgs extends com.pulumi.resources.ResourceArgs {
             return role(Output.of(role));
         }
 
+        public Builder role(String role) {
+            return role(Either.ofLeft(role));
+        }
+
+        public Builder role(Role role) {
+            return role(Either.ofRight(role));
+        }
+
         public ContactDetailArgs build() {
             return $;
         }

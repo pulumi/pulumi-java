@@ -146,6 +146,14 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
             return role(Output.of(role));
         }
 
+        public Builder role(String role) {
+            return role(Either.ofLeft(role));
+        }
+
+        public Builder role(AccessPolicyRole role) {
+            return role(Either.ofRight(role));
+        }
+
         public AccessPolicyArgs build() {
             $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
             $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

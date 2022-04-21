@@ -243,6 +243,14 @@ public final class Db2LinkedServiceArgs extends com.pulumi.resources.ResourceArg
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(Db2AuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder certificateCommonName(@Nullable Output<Object> certificateCommonName) {
             $.certificateCommonName = certificateCommonName;
             return this;
@@ -322,6 +330,14 @@ public final class Db2LinkedServiceArgs extends com.pulumi.resources.ResourceArg
 
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
+        }
+
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
         }
 
         public Builder server(@Nullable Output<Object> server) {

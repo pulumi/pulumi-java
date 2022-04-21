@@ -188,6 +188,14 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
             return resourceDiscoveryMode(Output.of(resourceDiscoveryMode));
         }
 
+        public Builder resourceDiscoveryMode(String resourceDiscoveryMode) {
+            return resourceDiscoveryMode(Either.ofLeft(resourceDiscoveryMode));
+        }
+
+        public Builder resourceDiscoveryMode(ResourceDiscoveryMode resourceDiscoveryMode) {
+            return resourceDiscoveryMode(Either.ofRight(resourceDiscoveryMode));
+        }
+
         public RemediationAtManagementGroupArgs build() {
             $.managementGroupId = Objects.requireNonNull($.managementGroupId, "expected parameter 'managementGroupId' to be non-null");
             $.managementGroupsNamespace = Objects.requireNonNull($.managementGroupsNamespace, "expected parameter 'managementGroupsNamespace' to be non-null");

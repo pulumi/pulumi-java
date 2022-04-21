@@ -265,6 +265,14 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
             return catalogCollation(Output.of(catalogCollation));
         }
 
+        public Builder catalogCollation(String catalogCollation) {
+            return catalogCollation(Either.ofLeft(catalogCollation));
+        }
+
+        public Builder catalogCollation(CatalogCollationType catalogCollation) {
+            return catalogCollation(Either.ofRight(catalogCollation));
+        }
+
         public Builder collation(@Nullable Output<String> collation) {
             $.collation = collation;
             return this;
@@ -281,6 +289,14 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder createMode(Either<String,ManagedDatabaseCreateMode> createMode) {
             return createMode(Output.of(createMode));
+        }
+
+        public Builder createMode(String createMode) {
+            return createMode(Either.ofLeft(createMode));
+        }
+
+        public Builder createMode(ManagedDatabaseCreateMode createMode) {
+            return createMode(Either.ofRight(createMode));
         }
 
         public Builder databaseName(@Nullable Output<String> databaseName) {

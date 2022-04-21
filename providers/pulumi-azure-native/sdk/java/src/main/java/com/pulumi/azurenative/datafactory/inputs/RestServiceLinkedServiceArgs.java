@@ -310,6 +310,14 @@ public final class RestServiceLinkedServiceArgs extends com.pulumi.resources.Res
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(RestServiceAuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder azureCloudType(@Nullable Output<Object> azureCloudType) {
             $.azureCloudType = azureCloudType;
             return this;
@@ -382,6 +390,14 @@ public final class RestServiceLinkedServiceArgs extends com.pulumi.resources.Res
             return password(Output.of(password));
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
             $.servicePrincipalId = servicePrincipalId;
             return this;
@@ -398,6 +414,14 @@ public final class RestServiceLinkedServiceArgs extends com.pulumi.resources.Res
 
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             return servicePrincipalKey(Output.of(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
         public Builder tenant(@Nullable Output<Object> tenant) {

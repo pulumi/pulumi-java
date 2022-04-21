@@ -128,6 +128,14 @@ public final class AzureWorkloadAutoProtectionIntentArgs extends com.pulumi.reso
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        public Builder backupManagementType(String backupManagementType) {
+            return backupManagementType(Either.ofLeft(backupManagementType));
+        }
+
+        public Builder backupManagementType(BackupManagementType backupManagementType) {
+            return backupManagementType(Either.ofRight(backupManagementType));
+        }
+
         public Builder itemId(@Nullable Output<String> itemId) {
             $.itemId = itemId;
             return this;
@@ -162,6 +170,14 @@ public final class AzureWorkloadAutoProtectionIntentArgs extends com.pulumi.reso
 
         public Builder protectionState(Either<String,ProtectionStatus> protectionState) {
             return protectionState(Output.of(protectionState));
+        }
+
+        public Builder protectionState(String protectionState) {
+            return protectionState(Either.ofLeft(protectionState));
+        }
+
+        public Builder protectionState(ProtectionStatus protectionState) {
+            return protectionState(Either.ofRight(protectionState));
         }
 
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {

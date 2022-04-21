@@ -116,6 +116,14 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends com.pulumi.reso
             return failoverDeploymentModel(Output.of(failoverDeploymentModel));
         }
 
+        public Builder failoverDeploymentModel(String failoverDeploymentModel) {
+            return failoverDeploymentModel(Either.ofLeft(failoverDeploymentModel));
+        }
+
+        public Builder failoverDeploymentModel(FailoverDeploymentModel failoverDeploymentModel) {
+            return failoverDeploymentModel(Either.ofRight(failoverDeploymentModel));
+        }
+
         public Builder groups(Output<List<RecoveryPlanGroupArgs>> groups) {
             $.groups = groups;
             return this;

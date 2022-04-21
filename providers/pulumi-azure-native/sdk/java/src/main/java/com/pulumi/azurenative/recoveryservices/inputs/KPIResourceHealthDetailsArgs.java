@@ -65,6 +65,14 @@ public final class KPIResourceHealthDetailsArgs extends com.pulumi.resources.Res
             return resourceHealthStatus(Output.of(resourceHealthStatus));
         }
 
+        public Builder resourceHealthStatus(String resourceHealthStatus) {
+            return resourceHealthStatus(Either.ofLeft(resourceHealthStatus));
+        }
+
+        public Builder resourceHealthStatus(ResourceHealthStatus resourceHealthStatus) {
+            return resourceHealthStatus(Either.ofRight(resourceHealthStatus));
+        }
+
         public KPIResourceHealthDetailsArgs build() {
             return $;
         }

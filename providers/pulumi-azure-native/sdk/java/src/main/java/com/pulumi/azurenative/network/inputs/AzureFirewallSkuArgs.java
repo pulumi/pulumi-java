@@ -78,6 +78,14 @@ public final class AzureFirewallSkuArgs extends com.pulumi.resources.ResourceArg
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(AzureFirewallSkuName name) {
+            return name(Either.ofRight(name));
+        }
+
         public Builder tier(@Nullable Output<Either<String,AzureFirewallSkuTier>> tier) {
             $.tier = tier;
             return this;
@@ -85,6 +93,14 @@ public final class AzureFirewallSkuArgs extends com.pulumi.resources.ResourceArg
 
         public Builder tier(Either<String,AzureFirewallSkuTier> tier) {
             return tier(Output.of(tier));
+        }
+
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(AzureFirewallSkuTier tier) {
+            return tier(Either.ofRight(tier));
         }
 
         public AzureFirewallSkuArgs build() {

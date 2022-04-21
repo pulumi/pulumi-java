@@ -98,6 +98,14 @@ public final class CacheExpirationActionParametersArgs extends com.pulumi.resour
             return cacheBehavior(Output.of(cacheBehavior));
         }
 
+        public Builder cacheBehavior(String cacheBehavior) {
+            return cacheBehavior(Either.ofLeft(cacheBehavior));
+        }
+
+        public Builder cacheBehavior(CacheBehavior cacheBehavior) {
+            return cacheBehavior(Either.ofRight(cacheBehavior));
+        }
+
         public Builder cacheDuration(@Nullable Output<String> cacheDuration) {
             $.cacheDuration = cacheDuration;
             return this;
@@ -114,6 +122,14 @@ public final class CacheExpirationActionParametersArgs extends com.pulumi.resour
 
         public Builder cacheType(Either<String,CacheType> cacheType) {
             return cacheType(Output.of(cacheType));
+        }
+
+        public Builder cacheType(String cacheType) {
+            return cacheType(Either.ofLeft(cacheType));
+        }
+
+        public Builder cacheType(CacheType cacheType) {
+            return cacheType(Either.ofRight(cacheType));
         }
 
         public Builder odataType(Output<String> odataType) {

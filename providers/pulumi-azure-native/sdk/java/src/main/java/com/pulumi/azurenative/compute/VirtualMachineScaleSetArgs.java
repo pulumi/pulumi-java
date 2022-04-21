@@ -390,6 +390,14 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
             return orchestrationMode(Output.of(orchestrationMode));
         }
 
+        public Builder orchestrationMode(String orchestrationMode) {
+            return orchestrationMode(Either.ofLeft(orchestrationMode));
+        }
+
+        public Builder orchestrationMode(OrchestrationMode orchestrationMode) {
+            return orchestrationMode(Either.ofRight(orchestrationMode));
+        }
+
         public Builder overprovision(@Nullable Output<Boolean> overprovision) {
             $.overprovision = overprovision;
             return this;

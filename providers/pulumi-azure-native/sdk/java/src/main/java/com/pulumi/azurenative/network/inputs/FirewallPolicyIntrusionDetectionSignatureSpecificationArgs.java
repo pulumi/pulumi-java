@@ -86,6 +86,14 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(FirewallPolicyIntrusionDetectionStateType mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public FirewallPolicyIntrusionDetectionSignatureSpecificationArgs build() {
             return $;
         }

@@ -119,6 +119,14 @@ public final class SpacecraftLinkArgs extends com.pulumi.resources.ResourceArgs 
             return direction(Output.of(direction));
         }
 
+        public Builder direction(String direction) {
+            return direction(Either.ofLeft(direction));
+        }
+
+        public Builder direction(Direction direction) {
+            return direction(Either.ofRight(direction));
+        }
+
         public Builder polarization(Output<Either<String,Polarization>> polarization) {
             $.polarization = polarization;
             return this;
@@ -126,6 +134,14 @@ public final class SpacecraftLinkArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder polarization(Either<String,Polarization> polarization) {
             return polarization(Output.of(polarization));
+        }
+
+        public Builder polarization(String polarization) {
+            return polarization(Either.ofLeft(polarization));
+        }
+
+        public Builder polarization(Polarization polarization) {
+            return polarization(Either.ofRight(polarization));
         }
 
         public SpacecraftLinkArgs build() {

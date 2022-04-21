@@ -176,6 +176,14 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
             return qosType(Output.of(qosType));
         }
 
+        public Builder qosType(String qosType) {
+            return qosType(Either.ofLeft(qosType));
+        }
+
+        public Builder qosType(QosType qosType) {
+            return qosType(Either.ofRight(qosType));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
@@ -192,6 +200,14 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder serviceLevel(Either<String,ServiceLevel> serviceLevel) {
             return serviceLevel(Output.of(serviceLevel));
+        }
+
+        public Builder serviceLevel(String serviceLevel) {
+            return serviceLevel(Either.ofLeft(serviceLevel));
+        }
+
+        public Builder serviceLevel(ServiceLevel serviceLevel) {
+            return serviceLevel(Either.ofRight(serviceLevel));
         }
 
         public Builder size(Output<Double> size) {

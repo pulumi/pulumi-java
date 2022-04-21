@@ -312,6 +312,14 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        public Builder backupManagementType(String backupManagementType) {
+            return backupManagementType(Either.ofLeft(backupManagementType));
+        }
+
+        public Builder backupManagementType(BackupManagementType backupManagementType) {
+            return backupManagementType(Either.ofRight(backupManagementType));
+        }
+
         public Builder backupSetName(@Nullable Output<String> backupSetName) {
             $.backupSetName = backupSetName;
             return this;
@@ -346,6 +354,14 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
 
         public Builder createMode(Either<String,CreateMode> createMode) {
             return createMode(Output.of(createMode));
+        }
+
+        public Builder createMode(String createMode) {
+            return createMode(Either.ofLeft(createMode));
+        }
+
+        public Builder createMode(CreateMode createMode) {
+            return createMode(Either.ofRight(createMode));
         }
 
         public Builder deferredDeleteSyncTimeInUTC(@Nullable Output<Double> deferredDeleteSyncTimeInUTC) {
@@ -490,6 +506,14 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
 
         public Builder workloadType(Either<String,DataSourceType> workloadType) {
             return workloadType(Output.of(workloadType));
+        }
+
+        public Builder workloadType(String workloadType) {
+            return workloadType(Either.ofLeft(workloadType));
+        }
+
+        public Builder workloadType(DataSourceType workloadType) {
+            return workloadType(Either.ofRight(workloadType));
         }
 
         public MabFileFolderProtectedItemArgs build() {

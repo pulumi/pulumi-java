@@ -106,6 +106,14 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(TriggerEventType kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;

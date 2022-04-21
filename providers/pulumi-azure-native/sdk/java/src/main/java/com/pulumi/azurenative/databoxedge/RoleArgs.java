@@ -106,6 +106,14 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(RoleTypes kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;

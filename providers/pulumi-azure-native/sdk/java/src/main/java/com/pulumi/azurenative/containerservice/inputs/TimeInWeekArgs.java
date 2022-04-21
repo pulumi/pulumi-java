@@ -79,6 +79,14 @@ public final class TimeInWeekArgs extends com.pulumi.resources.ResourceArgs {
             return day(Output.of(day));
         }
 
+        public Builder day(String day) {
+            return day(Either.ofLeft(day));
+        }
+
+        public Builder day(WeekDay day) {
+            return day(Either.ofRight(day));
+        }
+
         public Builder hourSlots(@Nullable Output<List<Integer>> hourSlots) {
             $.hourSlots = hourSlots;
             return this;

@@ -92,6 +92,14 @@ public final class JsonSerializationArgs extends com.pulumi.resources.ResourceAr
             return encoding(Output.of(encoding));
         }
 
+        public Builder encoding(String encoding) {
+            return encoding(Either.ofLeft(encoding));
+        }
+
+        public Builder encoding(Encoding encoding) {
+            return encoding(Either.ofRight(encoding));
+        }
+
         public Builder format(@Nullable Output<Either<String,JsonOutputSerializationFormat>> format) {
             $.format = format;
             return this;
@@ -99,6 +107,14 @@ public final class JsonSerializationArgs extends com.pulumi.resources.ResourceAr
 
         public Builder format(Either<String,JsonOutputSerializationFormat> format) {
             return format(Output.of(format));
+        }
+
+        public Builder format(String format) {
+            return format(Either.ofLeft(format));
+        }
+
+        public Builder format(JsonOutputSerializationFormat format) {
+            return format(Either.ofRight(format));
         }
 
         public Builder type(Output<String> type) {

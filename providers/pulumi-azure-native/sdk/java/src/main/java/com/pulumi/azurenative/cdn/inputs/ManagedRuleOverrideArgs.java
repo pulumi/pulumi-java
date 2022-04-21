@@ -90,6 +90,14 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
             return action(Output.of(action));
         }
 
+        public Builder action(String action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(ActionType action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder enabledState(@Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState) {
             $.enabledState = enabledState;
             return this;
@@ -97,6 +105,14 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
 
         public Builder enabledState(Either<String,ManagedRuleEnabledState> enabledState) {
             return enabledState(Output.of(enabledState));
+        }
+
+        public Builder enabledState(String enabledState) {
+            return enabledState(Either.ofLeft(enabledState));
+        }
+
+        public Builder enabledState(ManagedRuleEnabledState enabledState) {
+            return enabledState(Either.ofRight(enabledState));
         }
 
         public Builder ruleId(Output<String> ruleId) {

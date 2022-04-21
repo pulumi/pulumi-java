@@ -552,6 +552,14 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
             return gpuInstanceProfile(Output.of(gpuInstanceProfile));
         }
 
+        public Builder gpuInstanceProfile(String gpuInstanceProfile) {
+            return gpuInstanceProfile(Either.ofLeft(gpuInstanceProfile));
+        }
+
+        public Builder gpuInstanceProfile(GPUInstanceProfile gpuInstanceProfile) {
+            return gpuInstanceProfile(Either.ofRight(gpuInstanceProfile));
+        }
+
         public Builder kubeletConfig(@Nullable Output<KubeletConfigArgs> kubeletConfig) {
             $.kubeletConfig = kubeletConfig;
             return this;
@@ -568,6 +576,14 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder kubeletDiskType(Either<String,KubeletDiskType> kubeletDiskType) {
             return kubeletDiskType(Output.of(kubeletDiskType));
+        }
+
+        public Builder kubeletDiskType(String kubeletDiskType) {
+            return kubeletDiskType(Either.ofLeft(kubeletDiskType));
+        }
+
+        public Builder kubeletDiskType(KubeletDiskType kubeletDiskType) {
+            return kubeletDiskType(Either.ofRight(kubeletDiskType));
         }
 
         public Builder linuxOSConfig(@Nullable Output<LinuxOSConfigArgs> linuxOSConfig) {
@@ -613,6 +629,14 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder mode(Either<String,AgentPoolMode> mode) {
             return mode(Output.of(mode));
+        }
+
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(AgentPoolMode mode) {
+            return mode(Either.ofRight(mode));
         }
 
         public Builder nodeLabels(@Nullable Output<Map<String,String>> nodeLabels) {
@@ -673,6 +697,14 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
             return osDiskType(Output.of(osDiskType));
         }
 
+        public Builder osDiskType(String osDiskType) {
+            return osDiskType(Either.ofLeft(osDiskType));
+        }
+
+        public Builder osDiskType(OSDiskType osDiskType) {
+            return osDiskType(Either.ofRight(osDiskType));
+        }
+
         public Builder osSKU(@Nullable Output<Either<String,OSSKU>> osSKU) {
             $.osSKU = osSKU;
             return this;
@@ -682,6 +714,14 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
             return osSKU(Output.of(osSKU));
         }
 
+        public Builder osSKU(String osSKU) {
+            return osSKU(Either.ofLeft(osSKU));
+        }
+
+        public Builder osSKU(OSSKU osSKU) {
+            return osSKU(Either.ofRight(osSKU));
+        }
+
         public Builder osType(@Nullable Output<Either<String,OSType>> osType) {
             $.osType = osType;
             return this;
@@ -689,6 +729,14 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder osType(Either<String,OSType> osType) {
             return osType(Output.of(osType));
+        }
+
+        public Builder osType(String osType) {
+            return osType(Either.ofLeft(osType));
+        }
+
+        public Builder osType(OSType osType) {
+            return osType(Either.ofRight(osType));
         }
 
         public Builder podSubnetID(@Nullable Output<String> podSubnetID) {
@@ -736,6 +784,14 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
             return scaleSetEvictionPolicy(Output.of(scaleSetEvictionPolicy));
         }
 
+        public Builder scaleSetEvictionPolicy(String scaleSetEvictionPolicy) {
+            return scaleSetEvictionPolicy(Either.ofLeft(scaleSetEvictionPolicy));
+        }
+
+        public Builder scaleSetEvictionPolicy(ScaleSetEvictionPolicy scaleSetEvictionPolicy) {
+            return scaleSetEvictionPolicy(Either.ofRight(scaleSetEvictionPolicy));
+        }
+
         public Builder scaleSetPriority(@Nullable Output<Either<String,ScaleSetPriority>> scaleSetPriority) {
             $.scaleSetPriority = scaleSetPriority;
             return this;
@@ -743,6 +799,14 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder scaleSetPriority(Either<String,ScaleSetPriority> scaleSetPriority) {
             return scaleSetPriority(Output.of(scaleSetPriority));
+        }
+
+        public Builder scaleSetPriority(String scaleSetPriority) {
+            return scaleSetPriority(Either.ofLeft(scaleSetPriority));
+        }
+
+        public Builder scaleSetPriority(ScaleSetPriority scaleSetPriority) {
+            return scaleSetPriority(Either.ofRight(scaleSetPriority));
         }
 
         public Builder spotMaxPrice(@Nullable Output<Double> spotMaxPrice) {
@@ -770,6 +834,14 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder type(Either<String,AgentPoolType> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(AgentPoolType type) {
+            return type(Either.ofRight(type));
         }
 
         public Builder upgradeSettings(@Nullable Output<AgentPoolUpgradeSettingsArgs> upgradeSettings) {

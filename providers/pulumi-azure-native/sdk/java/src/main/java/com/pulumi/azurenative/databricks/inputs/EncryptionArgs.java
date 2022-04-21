@@ -111,6 +111,14 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
             return keySource(Output.of(keySource));
         }
 
+        public Builder keySource(String keySource) {
+            return keySource(Either.ofLeft(keySource));
+        }
+
+        public Builder keySource(KeySource keySource) {
+            return keySource(Either.ofRight(keySource));
+        }
+
         public Builder keyVaultUri(@Nullable Output<String> keyVaultUri) {
             $.keyVaultUri = keyVaultUri;
             return this;

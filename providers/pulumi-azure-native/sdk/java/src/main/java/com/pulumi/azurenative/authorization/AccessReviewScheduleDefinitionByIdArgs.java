@@ -329,6 +329,14 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
             return defaultDecision(Output.of(defaultDecision));
         }
 
+        public Builder defaultDecision(String defaultDecision) {
+            return defaultDecision(Either.ofLeft(defaultDecision));
+        }
+
+        public Builder defaultDecision(DefaultDecisionType defaultDecision) {
+            return defaultDecision(Either.ofRight(defaultDecision));
+        }
+
         public Builder defaultDecisionEnabled(@Nullable Output<Boolean> defaultDecisionEnabled) {
             $.defaultDecisionEnabled = defaultDecisionEnabled;
             return this;
@@ -497,6 +505,14 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
 
         public Builder type(Either<String,AccessReviewRecurrenceRangeType> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(AccessReviewRecurrenceRangeType type) {
+            return type(Either.ofRight(type));
         }
 
         public AccessReviewScheduleDefinitionByIdArgs build() {

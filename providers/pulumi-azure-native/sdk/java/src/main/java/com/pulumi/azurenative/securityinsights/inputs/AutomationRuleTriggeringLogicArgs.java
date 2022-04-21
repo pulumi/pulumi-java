@@ -148,6 +148,14 @@ public final class AutomationRuleTriggeringLogicArgs extends com.pulumi.resource
             return triggersOn(Output.of(triggersOn));
         }
 
+        public Builder triggersOn(String triggersOn) {
+            return triggersOn(Either.ofLeft(triggersOn));
+        }
+
+        public Builder triggersOn(TriggersOn triggersOn) {
+            return triggersOn(Either.ofRight(triggersOn));
+        }
+
         public Builder triggersWhen(Output<Either<String,TriggersWhen>> triggersWhen) {
             $.triggersWhen = triggersWhen;
             return this;
@@ -155,6 +163,14 @@ public final class AutomationRuleTriggeringLogicArgs extends com.pulumi.resource
 
         public Builder triggersWhen(Either<String,TriggersWhen> triggersWhen) {
             return triggersWhen(Output.of(triggersWhen));
+        }
+
+        public Builder triggersWhen(String triggersWhen) {
+            return triggersWhen(Either.ofLeft(triggersWhen));
+        }
+
+        public Builder triggersWhen(TriggersWhen triggersWhen) {
+            return triggersWhen(Either.ofRight(triggersWhen));
         }
 
         public AutomationRuleTriggeringLogicArgs build() {

@@ -91,6 +91,14 @@ public final class AFDDomainHttpsParametersArgs extends com.pulumi.resources.Res
             return certificateType(Output.of(certificateType));
         }
 
+        public Builder certificateType(String certificateType) {
+            return certificateType(Either.ofLeft(certificateType));
+        }
+
+        public Builder certificateType(AfdCertificateType certificateType) {
+            return certificateType(Either.ofRight(certificateType));
+        }
+
         public Builder minimumTlsVersion(@Nullable Output<AfdMinimumTlsVersion> minimumTlsVersion) {
             $.minimumTlsVersion = minimumTlsVersion;
             return this;

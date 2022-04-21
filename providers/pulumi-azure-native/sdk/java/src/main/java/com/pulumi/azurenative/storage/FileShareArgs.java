@@ -161,6 +161,14 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
             return accessTier(Output.of(accessTier));
         }
 
+        public Builder accessTier(String accessTier) {
+            return accessTier(Either.ofLeft(accessTier));
+        }
+
+        public Builder accessTier(ShareAccessTier accessTier) {
+            return accessTier(Either.ofRight(accessTier));
+        }
+
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
@@ -177,6 +185,14 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder enabledProtocols(Either<String,EnabledProtocols> enabledProtocols) {
             return enabledProtocols(Output.of(enabledProtocols));
+        }
+
+        public Builder enabledProtocols(String enabledProtocols) {
+            return enabledProtocols(Either.ofLeft(enabledProtocols));
+        }
+
+        public Builder enabledProtocols(EnabledProtocols enabledProtocols) {
+            return enabledProtocols(Either.ofRight(enabledProtocols));
         }
 
         public Builder expand(@Nullable Output<String> expand) {
@@ -213,6 +229,14 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder rootSquash(Either<String,RootSquashType> rootSquash) {
             return rootSquash(Output.of(rootSquash));
+        }
+
+        public Builder rootSquash(String rootSquash) {
+            return rootSquash(Either.ofLeft(rootSquash));
+        }
+
+        public Builder rootSquash(RootSquashType rootSquash) {
+            return rootSquash(Either.ofRight(rootSquash));
         }
 
         public Builder shareName(@Nullable Output<String> shareName) {

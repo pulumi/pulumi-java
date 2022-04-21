@@ -131,6 +131,14 @@ public final class WorkloadNetworkDhcpArgs extends com.pulumi.resources.Resource
             return dhcpType(Output.of(dhcpType));
         }
 
+        public Builder dhcpType(String dhcpType) {
+            return dhcpType(Either.ofLeft(dhcpType));
+        }
+
+        public Builder dhcpType(DhcpTypeEnum dhcpType) {
+            return dhcpType(Either.ofRight(dhcpType));
+        }
+
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;

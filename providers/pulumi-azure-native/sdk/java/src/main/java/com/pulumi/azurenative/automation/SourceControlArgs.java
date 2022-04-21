@@ -273,6 +273,14 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
             return sourceType(Output.of(sourceType));
         }
 
+        public Builder sourceType(String sourceType) {
+            return sourceType(Either.ofLeft(sourceType));
+        }
+
+        public Builder sourceType(SourceType sourceType) {
+            return sourceType(Either.ofRight(sourceType));
+        }
+
         public SourceControlArgs build() {
             $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
             $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

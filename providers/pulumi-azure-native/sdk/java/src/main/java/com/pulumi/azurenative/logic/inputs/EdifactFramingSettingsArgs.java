@@ -197,6 +197,14 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
             return characterSet(Output.of(characterSet));
         }
 
+        public Builder characterSet(String characterSet) {
+            return characterSet(Either.ofLeft(characterSet));
+        }
+
+        public Builder characterSet(EdifactCharacterSet characterSet) {
+            return characterSet(Either.ofRight(characterSet));
+        }
+
         public Builder componentSeparator(Output<Integer> componentSeparator) {
             $.componentSeparator = componentSeparator;
             return this;

@@ -136,6 +136,14 @@ public final class ManagedInstanceKeyArgs extends com.pulumi.resources.ResourceA
             return serverKeyType(Output.of(serverKeyType));
         }
 
+        public Builder serverKeyType(String serverKeyType) {
+            return serverKeyType(Either.ofLeft(serverKeyType));
+        }
+
+        public Builder serverKeyType(ServerKeyType serverKeyType) {
+            return serverKeyType(Either.ofRight(serverKeyType));
+        }
+
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;

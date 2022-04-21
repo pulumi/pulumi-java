@@ -135,6 +135,14 @@ public final class MonthlyRetentionScheduleArgs extends com.pulumi.resources.Res
             return retentionScheduleFormatType(Output.of(retentionScheduleFormatType));
         }
 
+        public Builder retentionScheduleFormatType(String retentionScheduleFormatType) {
+            return retentionScheduleFormatType(Either.ofLeft(retentionScheduleFormatType));
+        }
+
+        public Builder retentionScheduleFormatType(RetentionScheduleFormat retentionScheduleFormatType) {
+            return retentionScheduleFormatType(Either.ofRight(retentionScheduleFormatType));
+        }
+
         public Builder retentionScheduleWeekly(@Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly) {
             $.retentionScheduleWeekly = retentionScheduleWeekly;
             return this;

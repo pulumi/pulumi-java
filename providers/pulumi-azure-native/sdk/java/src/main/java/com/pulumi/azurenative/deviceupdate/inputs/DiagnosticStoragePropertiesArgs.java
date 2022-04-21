@@ -89,6 +89,14 @@ public final class DiagnosticStoragePropertiesArgs extends com.pulumi.resources.
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(AuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder connectionString(@Nullable Output<String> connectionString) {
             $.connectionString = connectionString;
             return this;

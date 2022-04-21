@@ -105,6 +105,14 @@ public final class EncryptionPropertyArgs extends com.pulumi.resources.ResourceA
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(EncryptionStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public EncryptionPropertyArgs build() {
             $.keyVaultProperties = Objects.requireNonNull($.keyVaultProperties, "expected parameter 'keyVaultProperties' to be non-null");
             $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");

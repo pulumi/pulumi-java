@@ -142,6 +142,14 @@ public final class FrontDoorManagedRuleSetArgs extends com.pulumi.resources.Reso
             return ruleSetAction(Output.of(ruleSetAction));
         }
 
+        public Builder ruleSetAction(String ruleSetAction) {
+            return ruleSetAction(Either.ofLeft(ruleSetAction));
+        }
+
+        public Builder ruleSetAction(ManagedRuleSetActionType ruleSetAction) {
+            return ruleSetAction(Either.ofRight(ruleSetAction));
+        }
+
         public Builder ruleSetType(Output<String> ruleSetType) {
             $.ruleSetType = ruleSetType;
             return this;

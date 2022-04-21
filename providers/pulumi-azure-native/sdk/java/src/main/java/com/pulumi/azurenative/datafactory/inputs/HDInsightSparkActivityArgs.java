@@ -295,6 +295,14 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
             return getDebugInfo(Output.of(getDebugInfo));
         }
 
+        public Builder getDebugInfo(String getDebugInfo) {
+            return getDebugInfo(Either.ofLeft(getDebugInfo));
+        }
+
+        public Builder getDebugInfo(HDInsightActivityDebugInfoOption getDebugInfo) {
+            return getDebugInfo(Either.ofRight(getDebugInfo));
+        }
+
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;

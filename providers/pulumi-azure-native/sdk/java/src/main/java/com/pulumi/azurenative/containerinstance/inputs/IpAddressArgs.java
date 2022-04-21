@@ -134,6 +134,14 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ContainerGroupIpAddressType type) {
+            return type(Either.ofRight(type));
+        }
+
         public IpAddressArgs build() {
             $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
             $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");

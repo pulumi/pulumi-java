@@ -63,6 +63,14 @@ public final class X12MessageFilterArgs extends com.pulumi.resources.ResourceArg
             return messageFilterType(Output.of(messageFilterType));
         }
 
+        public Builder messageFilterType(String messageFilterType) {
+            return messageFilterType(Either.ofLeft(messageFilterType));
+        }
+
+        public Builder messageFilterType(MessageFilterType messageFilterType) {
+            return messageFilterType(Either.ofRight(messageFilterType));
+        }
+
         public X12MessageFilterArgs build() {
             $.messageFilterType = Objects.requireNonNull($.messageFilterType, "expected parameter 'messageFilterType' to be non-null");
             return $;

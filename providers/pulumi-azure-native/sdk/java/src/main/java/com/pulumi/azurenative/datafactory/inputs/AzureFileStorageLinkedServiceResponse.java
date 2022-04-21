@@ -285,6 +285,14 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder sasToken(@Nullable AzureKeyVaultSecretReferenceResponse sasToken) {
             $.sasToken = sasToken;
             return this;

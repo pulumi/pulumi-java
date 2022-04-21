@@ -96,6 +96,14 @@ public final class TransformOutputArgs extends com.pulumi.resources.ResourceArgs
             return onError(Output.of(onError));
         }
 
+        public Builder onError(String onError) {
+            return onError(Either.ofLeft(onError));
+        }
+
+        public Builder onError(OnErrorType onError) {
+            return onError(Either.ofRight(onError));
+        }
+
         public Builder preset(Output<Object> preset) {
             $.preset = preset;
             return this;
@@ -112,6 +120,14 @@ public final class TransformOutputArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder relativePriority(Either<String,Priority> relativePriority) {
             return relativePriority(Output.of(relativePriority));
+        }
+
+        public Builder relativePriority(String relativePriority) {
+            return relativePriority(Either.ofLeft(relativePriority));
+        }
+
+        public Builder relativePriority(Priority relativePriority) {
+            return relativePriority(Either.ofRight(relativePriority));
         }
 
         public TransformOutputArgs build() {

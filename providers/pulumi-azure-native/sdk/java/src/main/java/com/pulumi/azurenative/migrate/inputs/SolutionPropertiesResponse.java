@@ -159,6 +159,14 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
             return this;
         }
 
+        public Builder summary(DatabasesSolutionSummaryResponse summary) {
+            return summary(Either.ofLeft(summary));
+        }
+
+        public Builder summary(ServersSolutionSummaryResponse summary) {
+            return summary(Either.ofRight(summary));
+        }
+
         public Builder tool(@Nullable String tool) {
             $.tool = tool;
             return this;

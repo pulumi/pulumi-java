@@ -166,6 +166,14 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
             return connectorType(Output.of(connectorType));
         }
 
+        public Builder connectorType(String connectorType) {
+            return connectorType(Either.ofLeft(connectorType));
+        }
+
+        public Builder connectorType(ConnectorTypes connectorType) {
+            return connectorType(Either.ofRight(connectorType));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;

@@ -327,6 +327,14 @@ public final class DynamicsLinkedServiceResponse extends com.pulumi.resources.In
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder port(@Nullable Object port) {
             $.port = port;
             return this;
@@ -335,6 +343,14 @@ public final class DynamicsLinkedServiceResponse extends com.pulumi.resources.In
         public Builder servicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential) {
             $.servicePrincipalCredential = servicePrincipalCredential;
             return this;
+        }
+
+        public Builder servicePrincipalCredential(AzureKeyVaultSecretReferenceResponse servicePrincipalCredential) {
+            return servicePrincipalCredential(Either.ofLeft(servicePrincipalCredential));
+        }
+
+        public Builder servicePrincipalCredential(SecureStringResponse servicePrincipalCredential) {
+            return servicePrincipalCredential(Either.ofRight(servicePrincipalCredential));
         }
 
         public Builder servicePrincipalCredentialType(@Nullable Object servicePrincipalCredentialType) {

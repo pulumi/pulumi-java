@@ -215,6 +215,14 @@ public final class AzureSearchIndexSinkArgs extends com.pulumi.resources.Resourc
             return writeBehavior(Output.of(writeBehavior));
         }
 
+        public Builder writeBehavior(String writeBehavior) {
+            return writeBehavior(Either.ofLeft(writeBehavior));
+        }
+
+        public Builder writeBehavior(AzureSearchIndexWriteBehaviorType writeBehavior) {
+            return writeBehavior(Either.ofRight(writeBehavior));
+        }
+
         public AzureSearchIndexSinkArgs build() {
             $.type = Codegen.stringProp("type").output().arg($.type).require();
             return $;

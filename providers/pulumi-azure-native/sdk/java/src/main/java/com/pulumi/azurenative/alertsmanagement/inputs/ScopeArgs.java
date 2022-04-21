@@ -78,6 +78,14 @@ public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
             return scopeType(Output.of(scopeType));
         }
 
+        public Builder scopeType(String scopeType) {
+            return scopeType(Either.ofLeft(scopeType));
+        }
+
+        public Builder scopeType(ScopeType scopeType) {
+            return scopeType(Either.ofRight(scopeType));
+        }
+
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;

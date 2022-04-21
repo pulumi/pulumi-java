@@ -212,6 +212,14 @@ public final class PolicyDefinitionArgs extends com.pulumi.resources.ResourceArg
             return policyType(Output.of(policyType));
         }
 
+        public Builder policyType(String policyType) {
+            return policyType(Either.ofLeft(policyType));
+        }
+
+        public Builder policyType(PolicyType policyType) {
+            return policyType(Either.ofRight(policyType));
+        }
+
         public PolicyDefinitionArgs build() {
             $.mode = Codegen.stringProp("mode").output().arg($.mode).def("Indexed").getNullable();
             return $;

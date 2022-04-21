@@ -78,6 +78,14 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
             return authorizationType(Output.of(authorizationType));
         }
 
+        public Builder authorizationType(String authorizationType) {
+            return authorizationType(Either.ofLeft(authorizationType));
+        }
+
+        public Builder authorizationType(AuthorizationType authorizationType) {
+            return authorizationType(Either.ofRight(authorizationType));
+        }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;

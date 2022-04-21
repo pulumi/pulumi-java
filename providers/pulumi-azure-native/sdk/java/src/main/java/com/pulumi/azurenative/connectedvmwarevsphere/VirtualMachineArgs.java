@@ -295,6 +295,14 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
             return firmwareType(Output.of(firmwareType));
         }
 
+        public Builder firmwareType(String firmwareType) {
+            return firmwareType(Either.ofLeft(firmwareType));
+        }
+
+        public Builder firmwareType(FirmwareType firmwareType) {
+            return firmwareType(Either.ofRight(firmwareType));
+        }
+
         public Builder hardwareProfile(@Nullable Output<HardwareProfileArgs> hardwareProfile) {
             $.hardwareProfile = hardwareProfile;
             return this;

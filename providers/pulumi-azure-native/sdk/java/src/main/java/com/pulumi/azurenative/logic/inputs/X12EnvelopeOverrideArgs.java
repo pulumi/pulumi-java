@@ -174,6 +174,14 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
             return dateFormat(Output.of(dateFormat));
         }
 
+        public Builder dateFormat(String dateFormat) {
+            return dateFormat(Either.ofLeft(dateFormat));
+        }
+
+        public Builder dateFormat(X12DateFormat dateFormat) {
+            return dateFormat(Either.ofRight(dateFormat));
+        }
+
         public Builder functionalIdentifierCode(@Nullable Output<String> functionalIdentifierCode) {
             $.functionalIdentifierCode = functionalIdentifierCode;
             return this;
@@ -253,6 +261,14 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
 
         public Builder timeFormat(Either<String,X12TimeFormat> timeFormat) {
             return timeFormat(Output.of(timeFormat));
+        }
+
+        public Builder timeFormat(String timeFormat) {
+            return timeFormat(Either.ofLeft(timeFormat));
+        }
+
+        public Builder timeFormat(X12TimeFormat timeFormat) {
+            return timeFormat(Either.ofRight(timeFormat));
         }
 
         public X12EnvelopeOverrideArgs build() {

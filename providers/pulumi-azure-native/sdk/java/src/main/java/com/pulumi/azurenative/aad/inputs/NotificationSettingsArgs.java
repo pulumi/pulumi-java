@@ -104,6 +104,14 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
             return notifyDcAdmins(Output.of(notifyDcAdmins));
         }
 
+        public Builder notifyDcAdmins(String notifyDcAdmins) {
+            return notifyDcAdmins(Either.ofLeft(notifyDcAdmins));
+        }
+
+        public Builder notifyDcAdmins(NotifyDcAdmins notifyDcAdmins) {
+            return notifyDcAdmins(Either.ofRight(notifyDcAdmins));
+        }
+
         public Builder notifyGlobalAdmins(@Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins) {
             $.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
@@ -111,6 +119,14 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
 
         public Builder notifyGlobalAdmins(Either<String,NotifyGlobalAdmins> notifyGlobalAdmins) {
             return notifyGlobalAdmins(Output.of(notifyGlobalAdmins));
+        }
+
+        public Builder notifyGlobalAdmins(String notifyGlobalAdmins) {
+            return notifyGlobalAdmins(Either.ofLeft(notifyGlobalAdmins));
+        }
+
+        public Builder notifyGlobalAdmins(NotifyGlobalAdmins notifyGlobalAdmins) {
+            return notifyGlobalAdmins(Either.ofRight(notifyGlobalAdmins));
         }
 
         public NotificationSettingsArgs build() {

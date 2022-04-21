@@ -117,6 +117,14 @@ public final class VmVmPlacementPolicyPropertiesArgs extends com.pulumi.resource
             return affinityType(Output.of(affinityType));
         }
 
+        public Builder affinityType(String affinityType) {
+            return affinityType(Either.ofLeft(affinityType));
+        }
+
+        public Builder affinityType(AffinityType affinityType) {
+            return affinityType(Either.ofRight(affinityType));
+        }
+
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
@@ -133,6 +141,14 @@ public final class VmVmPlacementPolicyPropertiesArgs extends com.pulumi.resource
 
         public Builder state(Either<String,PlacementPolicyState> state) {
             return state(Output.of(state));
+        }
+
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(PlacementPolicyState state) {
+            return state(Either.ofRight(state));
         }
 
         public Builder type(Output<String> type) {

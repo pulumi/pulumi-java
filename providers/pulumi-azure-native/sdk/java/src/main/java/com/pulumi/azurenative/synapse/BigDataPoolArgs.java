@@ -456,6 +456,14 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
             return nodeSize(Output.of(nodeSize));
         }
 
+        public Builder nodeSize(String nodeSize) {
+            return nodeSize(Either.ofLeft(nodeSize));
+        }
+
+        public Builder nodeSize(NodeSize nodeSize) {
+            return nodeSize(Either.ofRight(nodeSize));
+        }
+
         public Builder nodeSizeFamily(@Nullable Output<Either<String,NodeSizeFamily>> nodeSizeFamily) {
             $.nodeSizeFamily = nodeSizeFamily;
             return this;
@@ -463,6 +471,14 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder nodeSizeFamily(Either<String,NodeSizeFamily> nodeSizeFamily) {
             return nodeSizeFamily(Output.of(nodeSizeFamily));
+        }
+
+        public Builder nodeSizeFamily(String nodeSizeFamily) {
+            return nodeSizeFamily(Either.ofLeft(nodeSizeFamily));
+        }
+
+        public Builder nodeSizeFamily(NodeSizeFamily nodeSizeFamily) {
+            return nodeSizeFamily(Either.ofRight(nodeSizeFamily));
         }
 
         public Builder provisioningState(@Nullable Output<String> provisioningState) {

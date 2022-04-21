@@ -401,6 +401,14 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             return optimizationType(Output.of(optimizationType));
         }
 
+        public Builder optimizationType(String optimizationType) {
+            return optimizationType(Either.ofLeft(optimizationType));
+        }
+
+        public Builder optimizationType(OptimizationType optimizationType) {
+            return optimizationType(Either.ofRight(optimizationType));
+        }
+
         public Builder originGroups(@Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups) {
             $.originGroups = originGroups;
             return this;

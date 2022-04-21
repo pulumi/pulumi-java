@@ -133,6 +133,14 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(InventoryRuleType type) {
+            return type(Either.ofRight(type));
+        }
+
         public BlobInventoryPolicySchemaArgs build() {
             $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
             $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");

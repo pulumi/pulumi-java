@@ -239,6 +239,14 @@ public final class SybaseLinkedServiceResponse extends com.pulumi.resources.Invo
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder schema(@Nullable Object schema) {
             $.schema = schema;
             return this;

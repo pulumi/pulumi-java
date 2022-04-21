@@ -238,6 +238,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
             return applicationType(Output.of(applicationType));
         }
 
+        public Builder applicationType(String applicationType) {
+            return applicationType(Either.ofLeft(applicationType));
+        }
+
+        public Builder applicationType(RemoteApplicationType applicationType) {
+            return applicationType(Either.ofRight(applicationType));
+        }
+
         public Builder commandLineArguments(@Nullable Output<String> commandLineArguments) {
             $.commandLineArguments = commandLineArguments;
             return this;
@@ -254,6 +262,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder commandLineSetting(Either<String,CommandLineSetting> commandLineSetting) {
             return commandLineSetting(Output.of(commandLineSetting));
+        }
+
+        public Builder commandLineSetting(String commandLineSetting) {
+            return commandLineSetting(Either.ofLeft(commandLineSetting));
+        }
+
+        public Builder commandLineSetting(CommandLineSetting commandLineSetting) {
+            return commandLineSetting(Either.ofRight(commandLineSetting));
         }
 
         public Builder description(@Nullable Output<String> description) {

@@ -176,6 +176,14 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
             return defaultPrincipalsModificationKind(Output.of(defaultPrincipalsModificationKind));
         }
 
+        public Builder defaultPrincipalsModificationKind(String defaultPrincipalsModificationKind) {
+            return defaultPrincipalsModificationKind(Either.ofLeft(defaultPrincipalsModificationKind));
+        }
+
+        public Builder defaultPrincipalsModificationKind(DefaultPrincipalsModificationKind defaultPrincipalsModificationKind) {
+            return defaultPrincipalsModificationKind(Either.ofRight(defaultPrincipalsModificationKind));
+        }
+
         public Builder kustoPoolName(Output<String> kustoPoolName) {
             $.kustoPoolName = kustoPoolName;
             return this;

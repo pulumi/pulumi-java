@@ -65,6 +65,14 @@ public final class EncryptionPreferencesArgs extends com.pulumi.resources.Resour
             return doubleEncryptionStatus(Output.of(doubleEncryptionStatus));
         }
 
+        public Builder doubleEncryptionStatus(String doubleEncryptionStatus) {
+            return doubleEncryptionStatus(Either.ofLeft(doubleEncryptionStatus));
+        }
+
+        public Builder doubleEncryptionStatus(DoubleEncryptionStatus doubleEncryptionStatus) {
+            return doubleEncryptionStatus(Either.ofRight(doubleEncryptionStatus));
+        }
+
         public EncryptionPreferencesArgs build() {
             return $;
         }

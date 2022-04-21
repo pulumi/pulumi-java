@@ -201,6 +201,14 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -79,6 +79,14 @@ public final class TrustPolicyArgs extends com.pulumi.resources.ResourceArgs {
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(PolicyStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public Builder type(@Nullable Output<Either<String,TrustPolicyType>> type) {
             $.type = type;
             return this;
@@ -86,6 +94,14 @@ public final class TrustPolicyArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder type(Either<String,TrustPolicyType> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(TrustPolicyType type) {
+            return type(Either.ofRight(type));
         }
 
         public TrustPolicyArgs build() {

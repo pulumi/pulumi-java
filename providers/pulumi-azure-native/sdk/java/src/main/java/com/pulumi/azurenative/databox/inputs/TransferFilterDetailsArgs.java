@@ -124,6 +124,14 @@ public final class TransferFilterDetailsArgs extends com.pulumi.resources.Resour
             return dataAccountType(Output.of(dataAccountType));
         }
 
+        public Builder dataAccountType(String dataAccountType) {
+            return dataAccountType(Either.ofLeft(dataAccountType));
+        }
+
+        public Builder dataAccountType(DataAccountType dataAccountType) {
+            return dataAccountType(Either.ofRight(dataAccountType));
+        }
+
         public Builder filterFileDetails(@Nullable Output<List<FilterFileDetailsArgs>> filterFileDetails) {
             $.filterFileDetails = filterFileDetails;
             return this;

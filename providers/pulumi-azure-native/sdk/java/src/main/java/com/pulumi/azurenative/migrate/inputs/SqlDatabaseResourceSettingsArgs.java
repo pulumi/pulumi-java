@@ -109,6 +109,14 @@ public final class SqlDatabaseResourceSettingsArgs extends com.pulumi.resources.
             return zoneRedundant(Output.of(zoneRedundant));
         }
 
+        public Builder zoneRedundant(String zoneRedundant) {
+            return zoneRedundant(Either.ofLeft(zoneRedundant));
+        }
+
+        public Builder zoneRedundant(ZoneRedundant zoneRedundant) {
+            return zoneRedundant(Either.ofRight(zoneRedundant));
+        }
+
         public SqlDatabaseResourceSettingsArgs build() {
             $.resourceType = Codegen.stringProp("resourceType").output().arg($.resourceType).require();
             $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");

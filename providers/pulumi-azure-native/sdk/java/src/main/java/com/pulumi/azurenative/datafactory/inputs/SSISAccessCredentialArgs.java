@@ -97,6 +97,14 @@ public final class SSISAccessCredentialArgs extends com.pulumi.resources.Resourc
             return password(Output.of(password));
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder userName(Output<Object> userName) {
             $.userName = userName;
             return this;

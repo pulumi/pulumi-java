@@ -151,6 +151,14 @@ public final class NfsAccessRuleArgs extends com.pulumi.resources.ResourceArgs {
             return access(Output.of(access));
         }
 
+        public Builder access(String access) {
+            return access(Either.ofLeft(access));
+        }
+
+        public Builder access(NfsAccessRuleAccess access) {
+            return access(Either.ofRight(access));
+        }
+
         public Builder anonymousGID(@Nullable Output<String> anonymousGID) {
             $.anonymousGID = anonymousGID;
             return this;
@@ -194,6 +202,14 @@ public final class NfsAccessRuleArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder scope(Either<String,NfsAccessRuleScope> scope) {
             return scope(Output.of(scope));
+        }
+
+        public Builder scope(String scope) {
+            return scope(Either.ofLeft(scope));
+        }
+
+        public Builder scope(NfsAccessRuleScope scope) {
+            return scope(Either.ofRight(scope));
         }
 
         public Builder submountAccess(@Nullable Output<Boolean> submountAccess) {

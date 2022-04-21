@@ -158,6 +158,14 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(TokenStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public Builder tokenName(@Nullable Output<String> tokenName) {
             $.tokenName = tokenName;
             return this;

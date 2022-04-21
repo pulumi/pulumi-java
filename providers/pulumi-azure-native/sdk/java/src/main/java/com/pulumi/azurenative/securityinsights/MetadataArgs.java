@@ -292,6 +292,14 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(Kind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder lastPublishDate(@Nullable Output<String> lastPublishDate) {
             $.lastPublishDate = lastPublishDate;
             return this;

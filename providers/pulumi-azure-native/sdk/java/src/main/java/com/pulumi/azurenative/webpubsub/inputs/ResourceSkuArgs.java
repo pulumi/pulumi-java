@@ -116,6 +116,14 @@ public final class ResourceSkuArgs extends com.pulumi.resources.ResourceArgs {
             return tier(Output.of(tier));
         }
 
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(WebPubSubSkuTier tier) {
+            return tier(Either.ofRight(tier));
+        }
+
         public ResourceSkuArgs build() {
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             return $;

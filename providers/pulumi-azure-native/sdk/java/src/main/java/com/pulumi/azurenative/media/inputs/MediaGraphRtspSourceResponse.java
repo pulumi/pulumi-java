@@ -97,6 +97,14 @@ public final class MediaGraphRtspSourceResponse extends com.pulumi.resources.Inv
             return this;
         }
 
+        public Builder endpoint(MediaGraphClearEndpointResponse endpoint) {
+            return endpoint(Either.ofLeft(endpoint));
+        }
+
+        public Builder endpoint(MediaGraphTlsEndpointResponse endpoint) {
+            return endpoint(Either.ofRight(endpoint));
+        }
+
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -122,6 +122,14 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
             return this;
         }
 
+        public Builder importMethod(String importMethod) {
+            return importMethod(Either.ofLeft(importMethod));
+        }
+
+        public Builder importMethod(WsdlImportMethod importMethod) {
+            return importMethod(Either.ofRight(importMethod));
+        }
+
         public Builder location(String location) {
             $.location = location;
             return this;

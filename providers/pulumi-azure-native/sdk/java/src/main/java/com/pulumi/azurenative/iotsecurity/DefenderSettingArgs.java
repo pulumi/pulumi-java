@@ -116,6 +116,14 @@ public final class DefenderSettingArgs extends com.pulumi.resources.ResourceArgs
             return onboardingKind(Output.of(onboardingKind));
         }
 
+        public Builder onboardingKind(String onboardingKind) {
+            return onboardingKind(Either.ofLeft(onboardingKind));
+        }
+
+        public Builder onboardingKind(OnboardingKind onboardingKind) {
+            return onboardingKind(Either.ofRight(onboardingKind));
+        }
+
         public Builder sentinelWorkspaceResourceIds(Output<List<String>> sentinelWorkspaceResourceIds) {
             $.sentinelWorkspaceResourceIds = sentinelWorkspaceResourceIds;
             return this;

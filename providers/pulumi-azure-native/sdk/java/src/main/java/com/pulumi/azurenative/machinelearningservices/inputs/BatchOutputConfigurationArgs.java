@@ -86,6 +86,14 @@ public final class BatchOutputConfigurationArgs extends com.pulumi.resources.Res
             return outputAction(Output.of(outputAction));
         }
 
+        public Builder outputAction(String outputAction) {
+            return outputAction(Either.ofLeft(outputAction));
+        }
+
+        public Builder outputAction(BatchOutputAction outputAction) {
+            return outputAction(Either.ofRight(outputAction));
+        }
+
         public BatchOutputConfigurationArgs build() {
             return $;
         }

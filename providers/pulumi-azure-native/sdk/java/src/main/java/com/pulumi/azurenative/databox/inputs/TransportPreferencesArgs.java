@@ -63,6 +63,14 @@ public final class TransportPreferencesArgs extends com.pulumi.resources.Resourc
             return preferredShipmentType(Output.of(preferredShipmentType));
         }
 
+        public Builder preferredShipmentType(String preferredShipmentType) {
+            return preferredShipmentType(Either.ofLeft(preferredShipmentType));
+        }
+
+        public Builder preferredShipmentType(TransportShipmentTypes preferredShipmentType) {
+            return preferredShipmentType(Either.ofRight(preferredShipmentType));
+        }
+
         public TransportPreferencesArgs build() {
             $.preferredShipmentType = Objects.requireNonNull($.preferredShipmentType, "expected parameter 'preferredShipmentType' to be non-null");
             return $;

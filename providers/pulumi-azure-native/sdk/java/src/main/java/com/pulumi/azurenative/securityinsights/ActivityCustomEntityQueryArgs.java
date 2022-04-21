@@ -268,6 +268,14 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
             return inputEntityType(Output.of(inputEntityType));
         }
 
+        public Builder inputEntityType(String inputEntityType) {
+            return inputEntityType(Either.ofLeft(inputEntityType));
+        }
+
+        public Builder inputEntityType(EntityType inputEntityType) {
+            return inputEntityType(Either.ofRight(inputEntityType));
+        }
+
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;

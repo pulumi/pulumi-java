@@ -291,6 +291,14 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
             return cleanupPreference(Output.of(cleanupPreference));
         }
 
+        public Builder cleanupPreference(String cleanupPreference) {
+            return cleanupPreference(Either.ofLeft(cleanupPreference));
+        }
+
+        public Builder cleanupPreference(CleanupOptions cleanupPreference) {
+            return cleanupPreference(Either.ofRight(cleanupPreference));
+        }
+
         public Builder containerSettings(@Nullable Output<ContainerConfigurationArgs> containerSettings) {
             $.containerSettings = containerSettings;
             return this;

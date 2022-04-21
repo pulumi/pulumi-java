@@ -63,6 +63,14 @@ public final class SystemAssignedServiceIdentityArgs extends com.pulumi.resource
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(SystemAssignedServiceIdentityType type) {
+            return type(Either.ofRight(type));
+        }
+
         public SystemAssignedServiceIdentityArgs build() {
             $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
             return $;

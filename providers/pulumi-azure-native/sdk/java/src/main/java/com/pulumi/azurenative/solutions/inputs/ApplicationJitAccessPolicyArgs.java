@@ -113,6 +113,14 @@ public final class ApplicationJitAccessPolicyArgs extends com.pulumi.resources.R
             return jitApprovalMode(Output.of(jitApprovalMode));
         }
 
+        public Builder jitApprovalMode(String jitApprovalMode) {
+            return jitApprovalMode(Either.ofLeft(jitApprovalMode));
+        }
+
+        public Builder jitApprovalMode(JitApprovalMode jitApprovalMode) {
+            return jitApprovalMode(Either.ofRight(jitApprovalMode));
+        }
+
         public Builder jitApprovers(@Nullable Output<List<JitApproverDefinitionArgs>> jitApprovers) {
             $.jitApprovers = jitApprovers;
             return this;

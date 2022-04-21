@@ -146,6 +146,14 @@ public final class ReportDatasetArgs extends com.pulumi.resources.ResourceArgs {
             return granularity(Output.of(granularity));
         }
 
+        public Builder granularity(String granularity) {
+            return granularity(Either.ofLeft(granularity));
+        }
+
+        public Builder granularity(GranularityType granularity) {
+            return granularity(Either.ofRight(granularity));
+        }
+
         public Builder grouping(@Nullable Output<List<ReportGroupingArgs>> grouping) {
             $.grouping = grouping;
             return this;

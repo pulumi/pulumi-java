@@ -178,6 +178,14 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
+        public Builder retentionPolicy(LongTermRetentionPolicyArgs retentionPolicy) {
+            return retentionPolicy(Either.ofLeft(retentionPolicy));
+        }
+
+        public Builder retentionPolicy(SimpleRetentionPolicyArgs retentionPolicy) {
+            return retentionPolicy(Either.ofRight(retentionPolicy));
+        }
+
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
             $.schedulePolicy = schedulePolicy;
             return this;

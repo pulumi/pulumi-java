@@ -161,6 +161,14 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
             return docker(Output.of(docker));
         }
 
+        public Builder docker(DockerBuildArgs docker) {
+            return docker(Either.ofLeft(docker));
+        }
+
+        public Builder docker(DockerImageArgs docker) {
+            return docker(Either.ofRight(docker));
+        }
+
         public Builder inferenceContainerProperties(@Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties) {
             $.inferenceContainerProperties = inferenceContainerProperties;
             return this;

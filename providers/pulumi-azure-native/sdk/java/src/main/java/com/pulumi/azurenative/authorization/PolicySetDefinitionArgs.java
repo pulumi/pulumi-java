@@ -222,6 +222,14 @@ public final class PolicySetDefinitionArgs extends com.pulumi.resources.Resource
             return policyType(Output.of(policyType));
         }
 
+        public Builder policyType(String policyType) {
+            return policyType(Either.ofLeft(policyType));
+        }
+
+        public Builder policyType(PolicyType policyType) {
+            return policyType(Either.ofRight(policyType));
+        }
+
         public PolicySetDefinitionArgs build() {
             $.policyDefinitions = Objects.requireNonNull($.policyDefinitions, "expected parameter 'policyDefinitions' to be non-null");
             return $;

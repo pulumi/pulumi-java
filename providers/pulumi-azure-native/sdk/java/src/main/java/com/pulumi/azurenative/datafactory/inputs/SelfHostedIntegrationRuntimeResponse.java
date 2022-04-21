@@ -92,6 +92,14 @@ public final class SelfHostedIntegrationRuntimeResponse extends com.pulumi.resou
             return this;
         }
 
+        public Builder linkedInfo(LinkedIntegrationRuntimeKeyAuthorizationResponse linkedInfo) {
+            return linkedInfo(Either.ofLeft(linkedInfo));
+        }
+
+        public Builder linkedInfo(LinkedIntegrationRuntimeRbacAuthorizationResponse linkedInfo) {
+            return linkedInfo(Either.ofRight(linkedInfo));
+        }
+
         public Builder type(String type) {
             $.type = type;
             return this;

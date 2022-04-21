@@ -143,6 +143,14 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
             return minProtocolVersion(Output.of(minProtocolVersion));
         }
 
+        public Builder minProtocolVersion(String minProtocolVersion) {
+            return minProtocolVersion(Either.ofLeft(minProtocolVersion));
+        }
+
+        public Builder minProtocolVersion(ApplicationGatewaySslProtocol minProtocolVersion) {
+            return minProtocolVersion(Either.ofRight(minProtocolVersion));
+        }
+
         public Builder policyName(@Nullable Output<Either<String,ApplicationGatewaySslPolicyName>> policyName) {
             $.policyName = policyName;
             return this;
@@ -152,6 +160,14 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
             return policyName(Output.of(policyName));
         }
 
+        public Builder policyName(String policyName) {
+            return policyName(Either.ofLeft(policyName));
+        }
+
+        public Builder policyName(ApplicationGatewaySslPolicyName policyName) {
+            return policyName(Either.ofRight(policyName));
+        }
+
         public Builder policyType(@Nullable Output<Either<String,ApplicationGatewaySslPolicyType>> policyType) {
             $.policyType = policyType;
             return this;
@@ -159,6 +175,14 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
 
         public Builder policyType(Either<String,ApplicationGatewaySslPolicyType> policyType) {
             return policyType(Output.of(policyType));
+        }
+
+        public Builder policyType(String policyType) {
+            return policyType(Either.ofLeft(policyType));
+        }
+
+        public Builder policyType(ApplicationGatewaySslPolicyType policyType) {
+            return policyType(Either.ofRight(policyType));
         }
 
         public ApplicationGatewaySslPolicyArgs build() {

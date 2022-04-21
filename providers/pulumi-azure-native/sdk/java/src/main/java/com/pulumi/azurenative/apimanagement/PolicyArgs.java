@@ -110,6 +110,14 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
             return format(Output.of(format));
         }
 
+        public Builder format(String format) {
+            return format(Either.ofLeft(format));
+        }
+
+        public Builder format(PolicyContentFormat format) {
+            return format(Either.ofRight(format));
+        }
+
         public Builder policyId(@Nullable Output<String> policyId) {
             $.policyId = policyId;
             return this;

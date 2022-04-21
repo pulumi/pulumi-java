@@ -91,6 +91,14 @@ public final class PatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
             return assessmentMode(Output.of(assessmentMode));
         }
 
+        public Builder assessmentMode(String assessmentMode) {
+            return assessmentMode(Either.ofLeft(assessmentMode));
+        }
+
+        public Builder assessmentMode(WindowsPatchAssessmentMode assessmentMode) {
+            return assessmentMode(Either.ofRight(assessmentMode));
+        }
+
         public Builder enableHotpatching(@Nullable Output<Boolean> enableHotpatching) {
             $.enableHotpatching = enableHotpatching;
             return this;
@@ -107,6 +115,14 @@ public final class PatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder patchMode(Either<String,WindowsVMGuestPatchMode> patchMode) {
             return patchMode(Output.of(patchMode));
+        }
+
+        public Builder patchMode(String patchMode) {
+            return patchMode(Either.ofLeft(patchMode));
+        }
+
+        public Builder patchMode(WindowsVMGuestPatchMode patchMode) {
+            return patchMode(Either.ofRight(patchMode));
         }
 
         public PatchSettingsArgs build() {

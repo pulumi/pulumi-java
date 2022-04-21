@@ -230,6 +230,14 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
             return conflictResolutionPolicy(Output.of(conflictResolutionPolicy));
         }
 
+        public Builder conflictResolutionPolicy(String conflictResolutionPolicy) {
+            return conflictResolutionPolicy(Either.ofLeft(conflictResolutionPolicy));
+        }
+
+        public Builder conflictResolutionPolicy(SyncConflictResolutionPolicy conflictResolutionPolicy) {
+            return conflictResolutionPolicy(Either.ofRight(conflictResolutionPolicy));
+        }
+
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;

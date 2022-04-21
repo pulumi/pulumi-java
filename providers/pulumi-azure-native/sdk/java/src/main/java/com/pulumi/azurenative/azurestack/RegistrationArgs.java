@@ -97,6 +97,14 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        public Builder location(String location) {
+            return location(Either.ofLeft(location));
+        }
+
+        public Builder location(Location location) {
+            return location(Either.ofRight(location));
+        }
+
         public Builder registrationName(@Nullable Output<String> registrationName) {
             $.registrationName = registrationName;
             return this;

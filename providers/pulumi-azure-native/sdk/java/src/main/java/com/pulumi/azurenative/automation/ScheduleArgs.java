@@ -219,6 +219,14 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
             return frequency(Output.of(frequency));
         }
 
+        public Builder frequency(String frequency) {
+            return frequency(Either.ofLeft(frequency));
+        }
+
+        public Builder frequency(ScheduleFrequency frequency) {
+            return frequency(Either.ofRight(frequency));
+        }
+
         public Builder interval(@Nullable Output<Object> interval) {
             $.interval = interval;
             return this;

@@ -134,6 +134,14 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(WebApplicationFirewallMode mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public Builder requestBodyCheck(@Nullable Output<Boolean> requestBodyCheck) {
             $.requestBodyCheck = requestBodyCheck;
             return this;
@@ -150,6 +158,14 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder state(Either<String,WebApplicationFirewallEnabledState> state) {
             return state(Output.of(state));
+        }
+
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(WebApplicationFirewallEnabledState state) {
+            return state(Either.ofRight(state));
         }
 
         public PolicySettingsArgs build() {

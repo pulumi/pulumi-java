@@ -63,6 +63,14 @@ public final class AppSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(AppSku name) {
+            return name(Either.ofRight(name));
+        }
+
         public AppSkuInfoArgs build() {
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             return $;

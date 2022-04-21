@@ -111,6 +111,14 @@ public final class AzureSqlProtectionPolicyArgs extends com.pulumi.resources.Res
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
+        public Builder retentionPolicy(LongTermRetentionPolicyArgs retentionPolicy) {
+            return retentionPolicy(Either.ofLeft(retentionPolicy));
+        }
+
+        public Builder retentionPolicy(SimpleRetentionPolicyArgs retentionPolicy) {
+            return retentionPolicy(Either.ofRight(retentionPolicy));
+        }
+
         public AzureSqlProtectionPolicyArgs build() {
             $.backupManagementType = Codegen.stringProp("backupManagementType").output().arg($.backupManagementType).require();
             return $;

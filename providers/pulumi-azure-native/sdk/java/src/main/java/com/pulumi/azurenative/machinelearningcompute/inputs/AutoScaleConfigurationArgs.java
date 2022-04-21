@@ -143,6 +143,14 @@ public final class AutoScaleConfigurationArgs extends com.pulumi.resources.Resou
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(Status status) {
+            return status(Either.ofRight(status));
+        }
+
         public Builder targetUtilization(@Nullable Output<Double> targetUtilization) {
             $.targetUtilization = targetUtilization;
             return this;

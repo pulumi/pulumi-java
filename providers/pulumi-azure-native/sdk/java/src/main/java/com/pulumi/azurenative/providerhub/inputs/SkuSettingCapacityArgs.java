@@ -109,6 +109,14 @@ public final class SkuSettingCapacityArgs extends com.pulumi.resources.ResourceA
             return scaleType(Output.of(scaleType));
         }
 
+        public Builder scaleType(String scaleType) {
+            return scaleType(Either.ofLeft(scaleType));
+        }
+
+        public Builder scaleType(SkuScaleType scaleType) {
+            return scaleType(Either.ofRight(scaleType));
+        }
+
         public SkuSettingCapacityArgs build() {
             $.minimum = Objects.requireNonNull($.minimum, "expected parameter 'minimum' to be non-null");
             return $;

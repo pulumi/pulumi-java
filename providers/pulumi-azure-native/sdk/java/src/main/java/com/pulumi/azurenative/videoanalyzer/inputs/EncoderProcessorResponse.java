@@ -113,6 +113,14 @@ public final class EncoderProcessorResponse extends com.pulumi.resources.InvokeA
             return this;
         }
 
+        public Builder preset(EncoderCustomPresetResponse preset) {
+            return preset(Either.ofLeft(preset));
+        }
+
+        public Builder preset(EncoderSystemPresetResponse preset) {
+            return preset(Either.ofRight(preset));
+        }
+
         public Builder type(String type) {
             $.type = type;
             return this;

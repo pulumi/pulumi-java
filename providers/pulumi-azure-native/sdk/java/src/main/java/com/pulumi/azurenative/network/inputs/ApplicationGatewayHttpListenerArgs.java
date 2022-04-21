@@ -281,6 +281,14 @@ public final class ApplicationGatewayHttpListenerArgs extends com.pulumi.resourc
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(ApplicationGatewayProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public Builder requireServerNameIndication(@Nullable Output<Boolean> requireServerNameIndication) {
             $.requireServerNameIndication = requireServerNameIndication;
             return this;

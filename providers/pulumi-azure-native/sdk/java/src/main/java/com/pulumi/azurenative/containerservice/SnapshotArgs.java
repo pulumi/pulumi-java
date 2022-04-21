@@ -159,6 +159,14 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
             return snapshotType(Output.of(snapshotType));
         }
 
+        public Builder snapshotType(String snapshotType) {
+            return snapshotType(Either.ofLeft(snapshotType));
+        }
+
+        public Builder snapshotType(SnapshotType snapshotType) {
+            return snapshotType(Either.ofRight(snapshotType));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;

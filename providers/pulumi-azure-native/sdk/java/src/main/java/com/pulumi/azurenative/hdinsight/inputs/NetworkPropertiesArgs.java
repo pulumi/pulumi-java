@@ -78,6 +78,14 @@ public final class NetworkPropertiesArgs extends com.pulumi.resources.ResourceAr
             return privateLink(Output.of(privateLink));
         }
 
+        public Builder privateLink(String privateLink) {
+            return privateLink(Either.ofLeft(privateLink));
+        }
+
+        public Builder privateLink(PrivateLink privateLink) {
+            return privateLink(Either.ofRight(privateLink));
+        }
+
         public Builder resourceProviderConnection(@Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection) {
             $.resourceProviderConnection = resourceProviderConnection;
             return this;
@@ -85,6 +93,14 @@ public final class NetworkPropertiesArgs extends com.pulumi.resources.ResourceAr
 
         public Builder resourceProviderConnection(Either<String,ResourceProviderConnection> resourceProviderConnection) {
             return resourceProviderConnection(Output.of(resourceProviderConnection));
+        }
+
+        public Builder resourceProviderConnection(String resourceProviderConnection) {
+            return resourceProviderConnection(Either.ofLeft(resourceProviderConnection));
+        }
+
+        public Builder resourceProviderConnection(ResourceProviderConnection resourceProviderConnection) {
+            return resourceProviderConnection(Either.ofRight(resourceProviderConnection));
         }
 
         public NetworkPropertiesArgs build() {

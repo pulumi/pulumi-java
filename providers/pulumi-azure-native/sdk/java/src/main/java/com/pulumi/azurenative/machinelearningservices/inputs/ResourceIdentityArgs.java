@@ -79,6 +79,14 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ResourceIdentityAssignment type) {
+            return type(Either.ofRight(type));
+        }
+
         public Builder userAssignedIdentities(@Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

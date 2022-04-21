@@ -279,6 +279,14 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(GoogleAdWordsAuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder clientCustomerID(@Nullable Output<Object> clientCustomerID) {
             $.clientCustomerID = clientCustomerID;
             return this;
@@ -304,6 +312,14 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
 
         public Builder clientSecret(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
             return clientSecret(Output.of(clientSecret));
+        }
+
+        public Builder clientSecret(AzureKeyVaultSecretReferenceArgs clientSecret) {
+            return clientSecret(Either.ofLeft(clientSecret));
+        }
+
+        public Builder clientSecret(SecureStringArgs clientSecret) {
+            return clientSecret(Either.ofRight(clientSecret));
         }
 
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -340,6 +356,14 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
 
         public Builder developerToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> developerToken) {
             return developerToken(Output.of(developerToken));
+        }
+
+        public Builder developerToken(AzureKeyVaultSecretReferenceArgs developerToken) {
+            return developerToken(Either.ofLeft(developerToken));
+        }
+
+        public Builder developerToken(SecureStringArgs developerToken) {
+            return developerToken(Either.ofRight(developerToken));
         }
 
         public Builder email(@Nullable Output<Object> email) {
@@ -385,6 +409,14 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
 
         public Builder refreshToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> refreshToken) {
             return refreshToken(Output.of(refreshToken));
+        }
+
+        public Builder refreshToken(AzureKeyVaultSecretReferenceArgs refreshToken) {
+            return refreshToken(Either.ofLeft(refreshToken));
+        }
+
+        public Builder refreshToken(SecureStringArgs refreshToken) {
+            return refreshToken(Either.ofRight(refreshToken));
         }
 
         public Builder trustedCertPath(@Nullable Output<Object> trustedCertPath) {

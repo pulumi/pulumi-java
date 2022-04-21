@@ -130,6 +130,14 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(Kind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder kustoPoolName(Output<String> kustoPoolName) {
             $.kustoPoolName = kustoPoolName;
             return this;

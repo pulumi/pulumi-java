@@ -84,6 +84,14 @@ public final class FilterFileDetailsArgs extends com.pulumi.resources.ResourceAr
             return filterFileType(Output.of(filterFileType));
         }
 
+        public Builder filterFileType(String filterFileType) {
+            return filterFileType(Either.ofLeft(filterFileType));
+        }
+
+        public Builder filterFileType(FilterFileType filterFileType) {
+            return filterFileType(Either.ofRight(filterFileType));
+        }
+
         public FilterFileDetailsArgs build() {
             $.filterFilePath = Objects.requireNonNull($.filterFilePath, "expected parameter 'filterFilePath' to be non-null");
             $.filterFileType = Objects.requireNonNull($.filterFileType, "expected parameter 'filterFileType' to be non-null");

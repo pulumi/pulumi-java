@@ -359,6 +359,14 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
             return vpnConnectionProtocolType(Output.of(vpnConnectionProtocolType));
         }
 
+        public Builder vpnConnectionProtocolType(String vpnConnectionProtocolType) {
+            return vpnConnectionProtocolType(Either.ofLeft(vpnConnectionProtocolType));
+        }
+
+        public Builder vpnConnectionProtocolType(VirtualNetworkGatewayConnectionProtocol vpnConnectionProtocolType) {
+            return vpnConnectionProtocolType(Either.ofRight(vpnConnectionProtocolType));
+        }
+
         public Builder vpnLinkConnectionMode(@Nullable Output<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode) {
             $.vpnLinkConnectionMode = vpnLinkConnectionMode;
             return this;
@@ -366,6 +374,14 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
 
         public Builder vpnLinkConnectionMode(Either<String,VpnLinkConnectionMode> vpnLinkConnectionMode) {
             return vpnLinkConnectionMode(Output.of(vpnLinkConnectionMode));
+        }
+
+        public Builder vpnLinkConnectionMode(String vpnLinkConnectionMode) {
+            return vpnLinkConnectionMode(Either.ofLeft(vpnLinkConnectionMode));
+        }
+
+        public Builder vpnLinkConnectionMode(VpnLinkConnectionMode vpnLinkConnectionMode) {
+            return vpnLinkConnectionMode(Either.ofRight(vpnLinkConnectionMode));
         }
 
         public Builder vpnSiteLink(@Nullable Output<SubResourceArgs> vpnSiteLink) {

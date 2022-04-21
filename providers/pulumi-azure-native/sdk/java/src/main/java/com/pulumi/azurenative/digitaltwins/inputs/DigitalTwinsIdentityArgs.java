@@ -65,6 +65,14 @@ public final class DigitalTwinsIdentityArgs extends com.pulumi.resources.Resourc
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(DigitalTwinsIdentityType type) {
+            return type(Either.ofRight(type));
+        }
+
         public DigitalTwinsIdentityArgs build() {
             return $;
         }

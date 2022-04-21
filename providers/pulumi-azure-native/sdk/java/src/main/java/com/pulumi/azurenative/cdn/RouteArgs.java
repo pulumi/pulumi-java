@@ -271,6 +271,14 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
             return enabledState(Output.of(enabledState));
         }
 
+        public Builder enabledState(String enabledState) {
+            return enabledState(Either.ofLeft(enabledState));
+        }
+
+        public Builder enabledState(EnabledState enabledState) {
+            return enabledState(Either.ofRight(enabledState));
+        }
+
         public Builder endpointName(Output<String> endpointName) {
             $.endpointName = endpointName;
             return this;
@@ -289,6 +297,14 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
             return forwardingProtocol(Output.of(forwardingProtocol));
         }
 
+        public Builder forwardingProtocol(String forwardingProtocol) {
+            return forwardingProtocol(Either.ofLeft(forwardingProtocol));
+        }
+
+        public Builder forwardingProtocol(ForwardingProtocol forwardingProtocol) {
+            return forwardingProtocol(Either.ofRight(forwardingProtocol));
+        }
+
         public Builder httpsRedirect(@Nullable Output<Either<String,HttpsRedirect>> httpsRedirect) {
             $.httpsRedirect = httpsRedirect;
             return this;
@@ -298,6 +314,14 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
             return httpsRedirect(Output.of(httpsRedirect));
         }
 
+        public Builder httpsRedirect(String httpsRedirect) {
+            return httpsRedirect(Either.ofLeft(httpsRedirect));
+        }
+
+        public Builder httpsRedirect(HttpsRedirect httpsRedirect) {
+            return httpsRedirect(Either.ofRight(httpsRedirect));
+        }
+
         public Builder linkToDefaultDomain(@Nullable Output<Either<String,LinkToDefaultDomain>> linkToDefaultDomain) {
             $.linkToDefaultDomain = linkToDefaultDomain;
             return this;
@@ -305,6 +329,14 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder linkToDefaultDomain(Either<String,LinkToDefaultDomain> linkToDefaultDomain) {
             return linkToDefaultDomain(Output.of(linkToDefaultDomain));
+        }
+
+        public Builder linkToDefaultDomain(String linkToDefaultDomain) {
+            return linkToDefaultDomain(Either.ofLeft(linkToDefaultDomain));
+        }
+
+        public Builder linkToDefaultDomain(LinkToDefaultDomain linkToDefaultDomain) {
+            return linkToDefaultDomain(Either.ofRight(linkToDefaultDomain));
         }
 
         public Builder originGroup(Output<ResourceReferenceArgs> originGroup) {

@@ -174,6 +174,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return billingType(Output.of(billingType));
         }
 
+        public Builder billingType(String billingType) {
+            return billingType(Either.ofLeft(billingType));
+        }
+
+        public Builder billingType(BillingType billingType) {
+            return billingType(Either.ofRight(billingType));
+        }
+
         public Builder clusterName(@Nullable Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;

@@ -257,6 +257,14 @@ public final class SalesforceSinkArgs extends com.pulumi.resources.ResourceArgs 
             return writeBehavior(Output.of(writeBehavior));
         }
 
+        public Builder writeBehavior(String writeBehavior) {
+            return writeBehavior(Either.ofLeft(writeBehavior));
+        }
+
+        public Builder writeBehavior(SalesforceSinkWriteBehavior writeBehavior) {
+            return writeBehavior(Either.ofRight(writeBehavior));
+        }
+
         public SalesforceSinkArgs build() {
             $.type = Codegen.stringProp("type").output().arg($.type).require();
             return $;

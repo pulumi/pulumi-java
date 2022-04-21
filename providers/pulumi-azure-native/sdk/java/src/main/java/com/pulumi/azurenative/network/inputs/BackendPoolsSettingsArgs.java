@@ -79,6 +79,14 @@ public final class BackendPoolsSettingsArgs extends com.pulumi.resources.Resourc
             return enforceCertificateNameCheck(Output.of(enforceCertificateNameCheck));
         }
 
+        public Builder enforceCertificateNameCheck(String enforceCertificateNameCheck) {
+            return enforceCertificateNameCheck(Either.ofLeft(enforceCertificateNameCheck));
+        }
+
+        public Builder enforceCertificateNameCheck(EnforceCertificateNameCheckEnabledState enforceCertificateNameCheck) {
+            return enforceCertificateNameCheck(Either.ofRight(enforceCertificateNameCheck));
+        }
+
         public Builder sendRecvTimeoutSeconds(@Nullable Output<Integer> sendRecvTimeoutSeconds) {
             $.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
             return this;

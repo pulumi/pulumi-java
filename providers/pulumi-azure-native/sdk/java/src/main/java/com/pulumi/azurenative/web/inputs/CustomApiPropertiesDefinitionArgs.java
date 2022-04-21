@@ -213,6 +213,14 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
             return apiType(Output.of(apiType));
         }
 
+        public Builder apiType(String apiType) {
+            return apiType(Either.ofLeft(apiType));
+        }
+
+        public Builder apiType(ApiType apiType) {
+            return apiType(Either.ofRight(apiType));
+        }
+
         public Builder backendService(@Nullable Output<ApiResourceBackendServiceArgs> backendService) {
             $.backendService = backendService;
             return this;

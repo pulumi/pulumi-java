@@ -255,6 +255,14 @@ public final class JpgImageArgs extends com.pulumi.resources.ResourceArgs {
             return stretchMode(Output.of(stretchMode));
         }
 
+        public Builder stretchMode(String stretchMode) {
+            return stretchMode(Either.ofLeft(stretchMode));
+        }
+
+        public Builder stretchMode(StretchMode stretchMode) {
+            return stretchMode(Either.ofRight(stretchMode));
+        }
+
         public Builder syncMode(@Nullable Output<Either<String,VideoSyncMode>> syncMode) {
             $.syncMode = syncMode;
             return this;
@@ -262,6 +270,14 @@ public final class JpgImageArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder syncMode(Either<String,VideoSyncMode> syncMode) {
             return syncMode(Output.of(syncMode));
+        }
+
+        public Builder syncMode(String syncMode) {
+            return syncMode(Either.ofLeft(syncMode));
+        }
+
+        public Builder syncMode(VideoSyncMode syncMode) {
+            return syncMode(Either.ofRight(syncMode));
         }
 
         public JpgImageArgs build() {

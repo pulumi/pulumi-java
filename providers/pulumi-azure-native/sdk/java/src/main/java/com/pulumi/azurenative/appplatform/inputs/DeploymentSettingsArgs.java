@@ -173,6 +173,14 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
             return runtimeVersion(Output.of(runtimeVersion));
         }
 
+        public Builder runtimeVersion(String runtimeVersion) {
+            return runtimeVersion(Either.ofLeft(runtimeVersion));
+        }
+
+        public Builder runtimeVersion(RuntimeVersion runtimeVersion) {
+            return runtimeVersion(Either.ofRight(runtimeVersion));
+        }
+
         public DeploymentSettingsArgs build() {
             $.cpu = Codegen.integerProp("cpu").output().arg($.cpu).def(1).getNullable();
             $.memoryInGB = Codegen.integerProp("memoryInGB").output().arg($.memoryInGB).def(1).getNullable();

@@ -123,6 +123,14 @@ public final class KeyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
             return curveName(Output.of(curveName));
         }
 
+        public Builder curveName(String curveName) {
+            return curveName(Either.ofLeft(curveName));
+        }
+
+        public Builder curveName(JsonWebKeyCurveName curveName) {
+            return curveName(Either.ofRight(curveName));
+        }
+
         public Builder keyOps(@Nullable Output<List<Either<String,JsonWebKeyOperation>>> keyOps) {
             $.keyOps = keyOps;
             return this;
@@ -152,6 +160,14 @@ public final class KeyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder kty(Either<String,JsonWebKeyType> kty) {
             return kty(Output.of(kty));
+        }
+
+        public Builder kty(String kty) {
+            return kty(Either.ofLeft(kty));
+        }
+
+        public Builder kty(JsonWebKeyType kty) {
+            return kty(Either.ofRight(kty));
         }
 
         public KeyPropertiesArgs build() {

@@ -159,6 +159,14 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
             return hostPlatform(Output.of(hostPlatform));
         }
 
+        public Builder hostPlatform(String hostPlatform) {
+            return hostPlatform(Either.ofLeft(hostPlatform));
+        }
+
+        public Builder hostPlatform(PlatformType hostPlatform) {
+            return hostPlatform(Either.ofRight(hostPlatform));
+        }
+
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
@@ -211,6 +219,14 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
             return roleStatus(Output.of(roleStatus));
+        }
+
+        public Builder roleStatus(String roleStatus) {
+            return roleStatus(Either.ofLeft(roleStatus));
+        }
+
+        public Builder roleStatus(RoleStatus roleStatus) {
+            return roleStatus(Either.ofRight(roleStatus));
         }
 
         public KubernetesRoleArgs build() {

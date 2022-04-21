@@ -101,6 +101,14 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends com.pulumi.r
             return networkApiVersion(Output.of(networkApiVersion));
         }
 
+        public Builder networkApiVersion(String networkApiVersion) {
+            return networkApiVersion(Either.ofLeft(networkApiVersion));
+        }
+
+        public Builder networkApiVersion(NetworkApiVersion networkApiVersion) {
+            return networkApiVersion(Either.ofRight(networkApiVersion));
+        }
+
         public Builder networkInterfaceConfigurations(@Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
             $.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;

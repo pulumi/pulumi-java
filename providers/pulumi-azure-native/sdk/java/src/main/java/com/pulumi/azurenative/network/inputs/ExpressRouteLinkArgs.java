@@ -102,6 +102,14 @@ public final class ExpressRouteLinkArgs extends com.pulumi.resources.ResourceArg
             return adminState(Output.of(adminState));
         }
 
+        public Builder adminState(String adminState) {
+            return adminState(Either.ofLeft(adminState));
+        }
+
+        public Builder adminState(ExpressRouteLinkAdminState adminState) {
+            return adminState(Either.ofRight(adminState));
+        }
+
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;

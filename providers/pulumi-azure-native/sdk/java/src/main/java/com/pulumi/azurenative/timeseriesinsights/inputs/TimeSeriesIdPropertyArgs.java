@@ -86,6 +86,14 @@ public final class TimeSeriesIdPropertyArgs extends com.pulumi.resources.Resourc
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(PropertyType type) {
+            return type(Either.ofRight(type));
+        }
+
         public TimeSeriesIdPropertyArgs build() {
             return $;
         }

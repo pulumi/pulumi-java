@@ -120,6 +120,14 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends com.pulumi.reso
             return catalogPricingTier(Output.of(catalogPricingTier));
         }
 
+        public Builder catalogPricingTier(String catalogPricingTier) {
+            return catalogPricingTier(Either.ofLeft(catalogPricingTier));
+        }
+
+        public Builder catalogPricingTier(IntegrationRuntimeSsisCatalogPricingTier catalogPricingTier) {
+            return catalogPricingTier(Either.ofRight(catalogPricingTier));
+        }
+
         public Builder catalogServerEndpoint(@Nullable Output<String> catalogServerEndpoint) {
             $.catalogServerEndpoint = catalogServerEndpoint;
             return this;

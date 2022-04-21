@@ -180,6 +180,14 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
             return indexingMode(Output.of(indexingMode));
         }
 
+        public Builder indexingMode(String indexingMode) {
+            return indexingMode(Either.ofLeft(indexingMode));
+        }
+
+        public Builder indexingMode(IndexingMode indexingMode) {
+            return indexingMode(Either.ofRight(indexingMode));
+        }
+
         public Builder spatialIndexes(@Nullable Output<List<SpatialSpecArgs>> spatialIndexes) {
             $.spatialIndexes = spatialIndexes;
             return this;

@@ -65,6 +65,14 @@ public final class FirewallPolicyFilterRuleCollectionActionArgs extends com.pulu
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(FirewallPolicyFilterRuleCollectionActionType type) {
+            return type(Either.ofRight(type));
+        }
+
         public FirewallPolicyFilterRuleCollectionActionArgs build() {
             return $;
         }

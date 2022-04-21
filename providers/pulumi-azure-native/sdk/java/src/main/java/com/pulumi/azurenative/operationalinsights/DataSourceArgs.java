@@ -132,6 +132,14 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(DataSourceKind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder properties(Output<Object> properties) {
             $.properties = properties;
             return this;

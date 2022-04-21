@@ -114,6 +114,14 @@ public final class TestArgs extends com.pulumi.resources.ResourceArgs {
             return testType(Output.of(testType));
         }
 
+        public Builder testType(String testType) {
+            return testType(Either.ofLeft(testType));
+        }
+
+        public Builder testType(TestType testType) {
+            return testType(Either.ofRight(testType));
+        }
+
         public TestArgs build() {
             $.commands = Objects.requireNonNull($.commands, "expected parameter 'commands' to be non-null");
             $.testType = Objects.requireNonNull($.testType, "expected parameter 'testType' to be non-null");

@@ -113,6 +113,14 @@ public final class GraphParameterArgs extends com.pulumi.resources.ResourceArgs 
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ParameterType type) {
+            return type(Either.ofRight(type));
+        }
+
         public GraphParameterArgs build() {
             $.links = Objects.requireNonNull($.links, "expected parameter 'links' to be non-null");
             $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");

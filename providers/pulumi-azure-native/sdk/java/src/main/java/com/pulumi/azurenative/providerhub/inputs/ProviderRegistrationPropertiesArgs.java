@@ -261,6 +261,14 @@ public final class ProviderRegistrationPropertiesArgs extends com.pulumi.resourc
             return providerType(Output.of(providerType));
         }
 
+        public Builder providerType(String providerType) {
+            return providerType(Either.ofLeft(providerType));
+        }
+
+        public Builder providerType(ResourceProviderType providerType) {
+            return providerType(Either.ofRight(providerType));
+        }
+
         public Builder providerVersion(@Nullable Output<String> providerVersion) {
             $.providerVersion = providerVersion;
             return this;
@@ -277,6 +285,14 @@ public final class ProviderRegistrationPropertiesArgs extends com.pulumi.resourc
 
         public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
             return provisioningState(Output.of(provisioningState));
+        }
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
         }
 
         public Builder requestHeaderOptions(@Nullable Output<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions) {

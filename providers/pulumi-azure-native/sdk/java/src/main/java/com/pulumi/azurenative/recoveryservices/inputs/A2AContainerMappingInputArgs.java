@@ -91,6 +91,14 @@ public final class A2AContainerMappingInputArgs extends com.pulumi.resources.Res
             return agentAutoUpdateStatus(Output.of(agentAutoUpdateStatus));
         }
 
+        public Builder agentAutoUpdateStatus(String agentAutoUpdateStatus) {
+            return agentAutoUpdateStatus(Either.ofLeft(agentAutoUpdateStatus));
+        }
+
+        public Builder agentAutoUpdateStatus(AgentAutoUpdateStatus agentAutoUpdateStatus) {
+            return agentAutoUpdateStatus(Either.ofRight(agentAutoUpdateStatus));
+        }
+
         public Builder automationAccountArmId(@Nullable Output<String> automationAccountArmId) {
             $.automationAccountArmId = automationAccountArmId;
             return this;

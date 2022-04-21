@@ -77,6 +77,14 @@ public final class EncoderSystemPresetArgs extends com.pulumi.resources.Resource
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(EncoderSystemPresetType name) {
+            return name(Either.ofRight(name));
+        }
+
         public Builder type(Output<String> type) {
             $.type = type;
             return this;

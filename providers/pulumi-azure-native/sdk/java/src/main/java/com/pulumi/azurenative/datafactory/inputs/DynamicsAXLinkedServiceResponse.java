@@ -227,6 +227,14 @@ public final class DynamicsAXLinkedServiceResponse extends com.pulumi.resources.
             return this;
         }
 
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
+        }
+
         public Builder tenant(Object tenant) {
             $.tenant = tenant;
             return this;

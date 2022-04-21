@@ -151,6 +151,14 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(AuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder connectionStringPrimaryKey(@Nullable Output<String> connectionStringPrimaryKey) {
             $.connectionStringPrimaryKey = connectionStringPrimaryKey;
             return this;

@@ -280,6 +280,14 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
             return publicIPAddressVersion(Output.of(publicIPAddressVersion));
         }
 
+        public Builder publicIPAddressVersion(String publicIPAddressVersion) {
+            return publicIPAddressVersion(Either.ofLeft(publicIPAddressVersion));
+        }
+
+        public Builder publicIPAddressVersion(IPVersion publicIPAddressVersion) {
+            return publicIPAddressVersion(Either.ofRight(publicIPAddressVersion));
+        }
+
         public Builder publicIpPrefixName(@Nullable Output<String> publicIpPrefixName) {
             $.publicIpPrefixName = publicIpPrefixName;
             return this;

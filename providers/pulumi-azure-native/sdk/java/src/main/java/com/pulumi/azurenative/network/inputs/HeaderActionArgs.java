@@ -89,6 +89,14 @@ public final class HeaderActionArgs extends com.pulumi.resources.ResourceArgs {
             return headerActionType(Output.of(headerActionType));
         }
 
+        public Builder headerActionType(String headerActionType) {
+            return headerActionType(Either.ofLeft(headerActionType));
+        }
+
+        public Builder headerActionType(HeaderActionType headerActionType) {
+            return headerActionType(Either.ofRight(headerActionType));
+        }
+
         public Builder headerName(Output<String> headerName) {
             $.headerName = headerName;
             return this;

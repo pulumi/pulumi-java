@@ -177,6 +177,14 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
             return exemptionCategory(Output.of(exemptionCategory));
         }
 
+        public Builder exemptionCategory(String exemptionCategory) {
+            return exemptionCategory(Either.ofLeft(exemptionCategory));
+        }
+
+        public Builder exemptionCategory(ExemptionCategory exemptionCategory) {
+            return exemptionCategory(Either.ofRight(exemptionCategory));
+        }
+
         public Builder expiresOn(@Nullable Output<String> expiresOn) {
             $.expiresOn = expiresOn;
             return this;

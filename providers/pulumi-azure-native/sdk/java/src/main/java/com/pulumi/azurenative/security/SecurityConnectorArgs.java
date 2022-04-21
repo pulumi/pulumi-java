@@ -164,6 +164,14 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
             return cloudName(Output.of(cloudName));
         }
 
+        public Builder cloudName(String cloudName) {
+            return cloudName(Either.ofLeft(cloudName));
+        }
+
+        public Builder cloudName(CloudName cloudName) {
+            return cloudName(Either.ofRight(cloudName));
+        }
+
         public Builder hierarchyIdentifier(@Nullable Output<String> hierarchyIdentifier) {
             $.hierarchyIdentifier = hierarchyIdentifier;
             return this;

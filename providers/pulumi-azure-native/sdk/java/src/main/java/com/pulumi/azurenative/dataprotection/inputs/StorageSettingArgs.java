@@ -78,6 +78,14 @@ public final class StorageSettingArgs extends com.pulumi.resources.ResourceArgs 
             return datastoreType(Output.of(datastoreType));
         }
 
+        public Builder datastoreType(String datastoreType) {
+            return datastoreType(Either.ofLeft(datastoreType));
+        }
+
+        public Builder datastoreType(StorageSettingStoreTypes datastoreType) {
+            return datastoreType(Either.ofRight(datastoreType));
+        }
+
         public Builder type(@Nullable Output<Either<String,StorageSettingTypes>> type) {
             $.type = type;
             return this;
@@ -85,6 +93,14 @@ public final class StorageSettingArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder type(Either<String,StorageSettingTypes> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(StorageSettingTypes type) {
+            return type(Either.ofRight(type));
         }
 
         public StorageSettingArgs build() {

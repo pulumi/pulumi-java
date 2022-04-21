@@ -208,6 +208,14 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
+        }
+
         public Builder repoConfiguration(@Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration) {
             $.repoConfiguration = repoConfiguration;
             return this;
@@ -215,6 +223,14 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder repoConfiguration(Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs> repoConfiguration) {
             return repoConfiguration(Output.of(repoConfiguration));
+        }
+
+        public Builder repoConfiguration(FactoryGitHubConfigurationArgs repoConfiguration) {
+            return repoConfiguration(Either.ofLeft(repoConfiguration));
+        }
+
+        public Builder repoConfiguration(FactoryVSTSConfigurationArgs repoConfiguration) {
+            return repoConfiguration(Either.ofRight(repoConfiguration));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {

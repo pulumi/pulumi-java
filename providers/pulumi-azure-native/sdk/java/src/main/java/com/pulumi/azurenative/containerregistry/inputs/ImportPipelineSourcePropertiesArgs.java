@@ -101,6 +101,14 @@ public final class ImportPipelineSourcePropertiesArgs extends com.pulumi.resourc
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(PipelineSourceType type) {
+            return type(Either.ofRight(type));
+        }
+
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;

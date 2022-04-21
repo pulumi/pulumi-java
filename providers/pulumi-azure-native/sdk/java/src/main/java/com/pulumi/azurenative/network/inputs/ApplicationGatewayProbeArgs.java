@@ -281,6 +281,14 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(ApplicationGatewayProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public Builder timeout(@Nullable Output<Integer> timeout) {
             $.timeout = timeout;
             return this;

@@ -127,6 +127,14 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(SubscriptionFeatureRegistrationState state) {
+            return state(Either.ofRight(state));
+        }
+
         public SubscriptionFeatureRegistrationPropertiesArgs build() {
             $.shouldFeatureDisplayInPortal = Codegen.booleanProp("shouldFeatureDisplayInPortal").output().arg($.shouldFeatureDisplayInPortal).def(false).getNullable();
             return $;

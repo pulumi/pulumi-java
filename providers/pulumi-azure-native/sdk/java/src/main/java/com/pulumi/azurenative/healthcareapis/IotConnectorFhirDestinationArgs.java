@@ -200,6 +200,14 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
             return resourceIdentityResolutionType(Output.of(resourceIdentityResolutionType));
         }
 
+        public Builder resourceIdentityResolutionType(String resourceIdentityResolutionType) {
+            return resourceIdentityResolutionType(Either.ofLeft(resourceIdentityResolutionType));
+        }
+
+        public Builder resourceIdentityResolutionType(IotIdentityResolutionType resourceIdentityResolutionType) {
+            return resourceIdentityResolutionType(Either.ofRight(resourceIdentityResolutionType));
+        }
+
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;

@@ -154,6 +154,14 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
             return minimumTlsVersion(Output.of(minimumTlsVersion));
         }
 
+        public Builder minimumTlsVersion(String minimumTlsVersion) {
+            return minimumTlsVersion(Either.ofLeft(minimumTlsVersion));
+        }
+
+        public Builder minimumTlsVersion(TlsVersion minimumTlsVersion) {
+            return minimumTlsVersion(Either.ofRight(minimumTlsVersion));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

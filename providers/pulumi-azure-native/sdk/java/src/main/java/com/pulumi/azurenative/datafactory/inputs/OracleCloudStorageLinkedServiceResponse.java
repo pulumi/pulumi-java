@@ -198,6 +198,14 @@ public final class OracleCloudStorageLinkedServiceResponse extends com.pulumi.re
             return this;
         }
 
+        public Builder secretAccessKey(AzureKeyVaultSecretReferenceResponse secretAccessKey) {
+            return secretAccessKey(Either.ofLeft(secretAccessKey));
+        }
+
+        public Builder secretAccessKey(SecureStringResponse secretAccessKey) {
+            return secretAccessKey(Either.ofRight(secretAccessKey));
+        }
+
         public Builder serviceUrl(@Nullable Object serviceUrl) {
             $.serviceUrl = serviceUrl;
             return this;

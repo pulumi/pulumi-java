@@ -100,6 +100,14 @@ public final class ApplicationGatewaySkuArgs extends com.pulumi.resources.Resour
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(ApplicationGatewaySkuName name) {
+            return name(Either.ofRight(name));
+        }
+
         public Builder tier(@Nullable Output<Either<String,ApplicationGatewayTier>> tier) {
             $.tier = tier;
             return this;
@@ -107,6 +115,14 @@ public final class ApplicationGatewaySkuArgs extends com.pulumi.resources.Resour
 
         public Builder tier(Either<String,ApplicationGatewayTier> tier) {
             return tier(Output.of(tier));
+        }
+
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(ApplicationGatewayTier tier) {
+            return tier(Either.ofRight(tier));
         }
 
         public ApplicationGatewaySkuArgs build() {

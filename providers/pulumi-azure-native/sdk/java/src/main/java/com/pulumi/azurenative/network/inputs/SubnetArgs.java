@@ -340,6 +340,14 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
             return privateEndpointNetworkPolicies(Output.of(privateEndpointNetworkPolicies));
         }
 
+        public Builder privateEndpointNetworkPolicies(String privateEndpointNetworkPolicies) {
+            return privateEndpointNetworkPolicies(Either.ofLeft(privateEndpointNetworkPolicies));
+        }
+
+        public Builder privateEndpointNetworkPolicies(VirtualNetworkPrivateEndpointNetworkPolicies privateEndpointNetworkPolicies) {
+            return privateEndpointNetworkPolicies(Either.ofRight(privateEndpointNetworkPolicies));
+        }
+
         public Builder privateLinkServiceNetworkPolicies(@Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies) {
             $.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies;
             return this;
@@ -347,6 +355,14 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder privateLinkServiceNetworkPolicies(Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies> privateLinkServiceNetworkPolicies) {
             return privateLinkServiceNetworkPolicies(Output.of(privateLinkServiceNetworkPolicies));
+        }
+
+        public Builder privateLinkServiceNetworkPolicies(String privateLinkServiceNetworkPolicies) {
+            return privateLinkServiceNetworkPolicies(Either.ofLeft(privateLinkServiceNetworkPolicies));
+        }
+
+        public Builder privateLinkServiceNetworkPolicies(VirtualNetworkPrivateLinkServiceNetworkPolicies privateLinkServiceNetworkPolicies) {
+            return privateLinkServiceNetworkPolicies(Either.ofRight(privateLinkServiceNetworkPolicies));
         }
 
         public Builder routeTable(@Nullable Output<RouteTableArgs> routeTable) {

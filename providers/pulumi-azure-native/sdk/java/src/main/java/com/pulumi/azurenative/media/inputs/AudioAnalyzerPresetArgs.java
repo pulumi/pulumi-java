@@ -122,6 +122,14 @@ public final class AudioAnalyzerPresetArgs extends com.pulumi.resources.Resource
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(AudioAnalysisMode mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;

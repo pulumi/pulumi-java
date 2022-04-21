@@ -133,6 +133,14 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
             return probeProtocol(Output.of(probeProtocol));
         }
 
+        public Builder probeProtocol(String probeProtocol) {
+            return probeProtocol(Either.ofLeft(probeProtocol));
+        }
+
+        public Builder probeProtocol(ProbeProtocol probeProtocol) {
+            return probeProtocol(Either.ofRight(probeProtocol));
+        }
+
         public Builder probeRequestPath(@Nullable Output<String> probeRequestPath) {
             $.probeRequestPath = probeRequestPath;
             return this;
@@ -149,6 +157,14 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
 
         public Builder protocol(Either<String,Protocol> protocol) {
             return protocol(Output.of(protocol));
+        }
+
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(Protocol protocol) {
+            return protocol(Either.ofRight(protocol));
         }
 
         public LoadBalancingRuleArgs build() {

@@ -102,6 +102,14 @@ public final class ProtocolCustomSettingsFormatArgs extends com.pulumi.resources
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(DdosCustomPolicyProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public Builder sourceRateOverride(@Nullable Output<String> sourceRateOverride) {
             $.sourceRateOverride = sourceRateOverride;
             return this;
@@ -127,6 +135,14 @@ public final class ProtocolCustomSettingsFormatArgs extends com.pulumi.resources
 
         public Builder triggerSensitivityOverride(Either<String,DdosCustomPolicyTriggerSensitivityOverride> triggerSensitivityOverride) {
             return triggerSensitivityOverride(Output.of(triggerSensitivityOverride));
+        }
+
+        public Builder triggerSensitivityOverride(String triggerSensitivityOverride) {
+            return triggerSensitivityOverride(Either.ofLeft(triggerSensitivityOverride));
+        }
+
+        public Builder triggerSensitivityOverride(DdosCustomPolicyTriggerSensitivityOverride triggerSensitivityOverride) {
+            return triggerSensitivityOverride(Either.ofRight(triggerSensitivityOverride));
         }
 
         public ProtocolCustomSettingsFormatArgs build() {

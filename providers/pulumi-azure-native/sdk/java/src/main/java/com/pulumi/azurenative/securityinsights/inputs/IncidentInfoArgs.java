@@ -119,6 +119,14 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
             return severity(Output.of(severity));
         }
 
+        public Builder severity(String severity) {
+            return severity(Either.ofLeft(severity));
+        }
+
+        public Builder severity(IncidentSeverity severity) {
+            return severity(Either.ofRight(severity));
+        }
+
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;

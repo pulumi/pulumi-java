@@ -238,6 +238,14 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
             return dataFormat(Output.of(dataFormat));
         }
 
+        public Builder dataFormat(String dataFormat) {
+            return dataFormat(Either.ofLeft(dataFormat));
+        }
+
+        public Builder dataFormat(IotHubDataFormat dataFormat) {
+            return dataFormat(Either.ofRight(dataFormat));
+        }
+
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;

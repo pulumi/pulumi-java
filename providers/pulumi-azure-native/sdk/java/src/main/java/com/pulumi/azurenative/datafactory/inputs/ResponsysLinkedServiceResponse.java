@@ -214,6 +214,14 @@ public final class ResponsysLinkedServiceResponse extends com.pulumi.resources.I
             return this;
         }
 
+        public Builder clientSecret(AzureKeyVaultSecretReferenceResponse clientSecret) {
+            return clientSecret(Either.ofLeft(clientSecret));
+        }
+
+        public Builder clientSecret(SecureStringResponse clientSecret) {
+            return clientSecret(Either.ofRight(clientSecret));
+        }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
