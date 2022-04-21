@@ -20,9 +20,9 @@ public class App {
             var storageAccount = new StorageAccount("sa", StorageAccountArgs.builder()
                     .resourceGroupName(resourceGroup.name())
                     .sku(SkuArgs.builder()
-                            .name(Either.ofRight(SkuName.Standard_LRS))
+                            .name(SkuName.Standard_LRS)
                             .build())
-                    .kind(Either.ofRight(Kind.StorageV2))
+                    .kind(Kind.StorageV2)
                     .build());
 
             var primaryStorageKey = getStorageAccountPrimaryKey(
