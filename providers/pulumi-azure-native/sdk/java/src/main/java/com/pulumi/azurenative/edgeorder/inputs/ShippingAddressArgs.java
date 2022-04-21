@@ -173,6 +173,14 @@ public final class ShippingAddressArgs extends com.pulumi.resources.ResourceArgs
             return addressType(Output.of(addressType));
         }
 
+        public Builder addressType(String addressType) {
+            return addressType(Either.ofLeft(addressType));
+        }
+
+        public Builder addressType(AddressType addressType) {
+            return addressType(Either.ofRight(addressType));
+        }
+
         public Builder city(@Nullable Output<String> city) {
             $.city = city;
             return this;

@@ -218,6 +218,14 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
             return enforcementMode(Output.of(enforcementMode));
         }
 
+        public Builder enforcementMode(String enforcementMode) {
+            return enforcementMode(Either.ofLeft(enforcementMode));
+        }
+
+        public Builder enforcementMode(EnforcementMode enforcementMode) {
+            return enforcementMode(Either.ofRight(enforcementMode));
+        }
+
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;

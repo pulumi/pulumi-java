@@ -129,6 +129,14 @@ public final class SslConfigurationArgs extends com.pulumi.resources.ResourceArg
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(Status status) {
+            return status(Either.ofRight(status));
+        }
+
         public SslConfigurationArgs build() {
             $.status = Codegen.stringProp("status").left(Status.class).output().arg($.status).def("Enabled").getNullable();
             return $;

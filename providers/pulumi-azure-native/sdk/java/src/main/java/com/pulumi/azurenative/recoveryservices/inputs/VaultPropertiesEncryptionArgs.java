@@ -91,6 +91,14 @@ public final class VaultPropertiesEncryptionArgs extends com.pulumi.resources.Re
             return infrastructureEncryption(Output.of(infrastructureEncryption));
         }
 
+        public Builder infrastructureEncryption(String infrastructureEncryption) {
+            return infrastructureEncryption(Either.ofLeft(infrastructureEncryption));
+        }
+
+        public Builder infrastructureEncryption(InfrastructureEncryptionState infrastructureEncryption) {
+            return infrastructureEncryption(Either.ofRight(infrastructureEncryption));
+        }
+
         public Builder kekIdentity(@Nullable Output<CmkKekIdentityArgs> kekIdentity) {
             $.kekIdentity = kekIdentity;
             return this;

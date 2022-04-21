@@ -143,6 +143,14 @@ public final class QueryStringMatchConditionParametersArgs extends com.pulumi.re
             return operator(Output.of(operator));
         }
 
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(QueryStringOperator operator) {
+            return operator(Either.ofRight(operator));
+        }
+
         public Builder transforms(@Nullable Output<List<Either<String,Transform>>> transforms) {
             $.transforms = transforms;
             return this;

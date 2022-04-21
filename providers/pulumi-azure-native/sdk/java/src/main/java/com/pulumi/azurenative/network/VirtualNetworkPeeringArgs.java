@@ -287,6 +287,14 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
             return peeringState(Output.of(peeringState));
         }
 
+        public Builder peeringState(String peeringState) {
+            return peeringState(Either.ofLeft(peeringState));
+        }
+
+        public Builder peeringState(VirtualNetworkPeeringState peeringState) {
+            return peeringState(Either.ofRight(peeringState));
+        }
+
         public Builder remoteAddressSpace(@Nullable Output<AddressSpaceArgs> remoteAddressSpace) {
             $.remoteAddressSpace = remoteAddressSpace;
             return this;

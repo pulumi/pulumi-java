@@ -146,6 +146,14 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
             return userType(Output.of(userType));
         }
 
+        public Builder userType(String userType) {
+            return userType(Either.ofLeft(userType));
+        }
+
+        public Builder userType(UserType userType) {
+            return userType(Either.ofRight(userType));
+        }
+
         public UserArgs build() {
             $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
             $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

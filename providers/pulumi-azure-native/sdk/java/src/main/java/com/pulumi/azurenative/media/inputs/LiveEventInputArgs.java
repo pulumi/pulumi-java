@@ -156,6 +156,14 @@ public final class LiveEventInputArgs extends com.pulumi.resources.ResourceArgs 
             return streamingProtocol(Output.of(streamingProtocol));
         }
 
+        public Builder streamingProtocol(String streamingProtocol) {
+            return streamingProtocol(Either.ofLeft(streamingProtocol));
+        }
+
+        public Builder streamingProtocol(LiveEventInputProtocol streamingProtocol) {
+            return streamingProtocol(Either.ofRight(streamingProtocol));
+        }
+
         public LiveEventInputArgs build() {
             $.streamingProtocol = Objects.requireNonNull($.streamingProtocol, "expected parameter 'streamingProtocol' to be non-null");
             return $;

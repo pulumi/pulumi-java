@@ -149,6 +149,14 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
             return coverageLevel(Output.of(coverageLevel));
         }
 
+        public Builder coverageLevel(String coverageLevel) {
+            return coverageLevel(Either.ofLeft(coverageLevel));
+        }
+
+        public Builder coverageLevel(CoverageLevel coverageLevel) {
+            return coverageLevel(Either.ofRight(coverageLevel));
+        }
+
         public Builder filter(@Nullable Output<ConnectionMonitorEndpointFilterArgs> filter) {
             $.filter = filter;
             return this;
@@ -192,6 +200,14 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
 
         public Builder type(Either<String,EndpointType> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(EndpointType type) {
+            return type(Either.ofRight(type));
         }
 
         public ConnectionMonitorEndpointArgs build() {

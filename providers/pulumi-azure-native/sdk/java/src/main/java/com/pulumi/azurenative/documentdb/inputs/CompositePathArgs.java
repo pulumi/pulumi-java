@@ -73,6 +73,14 @@ public final class CompositePathArgs extends com.pulumi.resources.ResourceArgs {
             return order(Output.of(order));
         }
 
+        public Builder order(String order) {
+            return order(Either.ofLeft(order));
+        }
+
+        public Builder order(CompositePathSortOrder order) {
+            return order(Either.ofRight(order));
+        }
+
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;

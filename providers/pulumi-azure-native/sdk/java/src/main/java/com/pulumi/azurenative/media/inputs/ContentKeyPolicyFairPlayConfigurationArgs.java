@@ -186,6 +186,14 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends com.pulumi.
             return rentalAndLeaseKeyType(Output.of(rentalAndLeaseKeyType));
         }
 
+        public Builder rentalAndLeaseKeyType(String rentalAndLeaseKeyType) {
+            return rentalAndLeaseKeyType(Either.ofLeft(rentalAndLeaseKeyType));
+        }
+
+        public Builder rentalAndLeaseKeyType(ContentKeyPolicyFairPlayRentalAndLeaseKeyType rentalAndLeaseKeyType) {
+            return rentalAndLeaseKeyType(Either.ofRight(rentalAndLeaseKeyType));
+        }
+
         public Builder rentalDuration(Output<Double> rentalDuration) {
             $.rentalDuration = rentalDuration;
             return this;

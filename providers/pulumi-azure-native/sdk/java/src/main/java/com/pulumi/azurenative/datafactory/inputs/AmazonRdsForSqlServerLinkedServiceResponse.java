@@ -216,6 +216,14 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends com.pulumi
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder type(String type) {
             $.type = type;
             return this;

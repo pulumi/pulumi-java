@@ -169,6 +169,14 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends com.pu
             return deleteOption(Output.of(deleteOption));
         }
 
+        public Builder deleteOption(String deleteOption) {
+            return deleteOption(Either.ofLeft(deleteOption));
+        }
+
+        public Builder deleteOption(DeleteOptions deleteOption) {
+            return deleteOption(Either.ofRight(deleteOption));
+        }
+
         public Builder dnsSettings(@Nullable Output<VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs> dnsSettings) {
             $.dnsSettings = dnsSettings;
             return this;
@@ -218,6 +226,14 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends com.pu
             return publicIPAddressVersion(Output.of(publicIPAddressVersion));
         }
 
+        public Builder publicIPAddressVersion(String publicIPAddressVersion) {
+            return publicIPAddressVersion(Either.ofLeft(publicIPAddressVersion));
+        }
+
+        public Builder publicIPAddressVersion(IPVersions publicIPAddressVersion) {
+            return publicIPAddressVersion(Either.ofRight(publicIPAddressVersion));
+        }
+
         public Builder publicIPAllocationMethod(@Nullable Output<Either<String,PublicIPAllocationMethod>> publicIPAllocationMethod) {
             $.publicIPAllocationMethod = publicIPAllocationMethod;
             return this;
@@ -225,6 +241,14 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends com.pu
 
         public Builder publicIPAllocationMethod(Either<String,PublicIPAllocationMethod> publicIPAllocationMethod) {
             return publicIPAllocationMethod(Output.of(publicIPAllocationMethod));
+        }
+
+        public Builder publicIPAllocationMethod(String publicIPAllocationMethod) {
+            return publicIPAllocationMethod(Either.ofLeft(publicIPAllocationMethod));
+        }
+
+        public Builder publicIPAllocationMethod(PublicIPAllocationMethod publicIPAllocationMethod) {
+            return publicIPAllocationMethod(Either.ofRight(publicIPAllocationMethod));
         }
 
         public Builder publicIPPrefix(@Nullable Output<SubResourceArgs> publicIPPrefix) {

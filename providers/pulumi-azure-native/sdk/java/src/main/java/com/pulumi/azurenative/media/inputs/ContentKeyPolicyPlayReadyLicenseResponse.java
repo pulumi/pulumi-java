@@ -181,6 +181,14 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
             return this;
         }
 
+        public Builder contentKeyLocation(ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse contentKeyLocation) {
+            return contentKeyLocation(Either.ofLeft(contentKeyLocation));
+        }
+
+        public Builder contentKeyLocation(ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse contentKeyLocation) {
+            return contentKeyLocation(Either.ofRight(contentKeyLocation));
+        }
+
         public Builder contentType(String contentType) {
             $.contentType = contentType;
             return this;

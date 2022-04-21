@@ -417,6 +417,14 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
             return serviceProviderProvisioningState(Output.of(serviceProviderProvisioningState));
         }
 
+        public Builder serviceProviderProvisioningState(String serviceProviderProvisioningState) {
+            return serviceProviderProvisioningState(Either.ofLeft(serviceProviderProvisioningState));
+        }
+
+        public Builder serviceProviderProvisioningState(ServiceProviderProvisioningState serviceProviderProvisioningState) {
+            return serviceProviderProvisioningState(Either.ofRight(serviceProviderProvisioningState));
+        }
+
         public Builder sku(@Nullable Output<ExpressRouteCircuitSkuArgs> sku) {
             $.sku = sku;
             return this;

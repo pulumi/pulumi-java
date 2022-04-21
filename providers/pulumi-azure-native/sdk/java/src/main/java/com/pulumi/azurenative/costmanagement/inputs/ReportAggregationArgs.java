@@ -75,6 +75,14 @@ public final class ReportAggregationArgs extends com.pulumi.resources.ResourceAr
             return function(Output.of(function));
         }
 
+        public Builder function(String function) {
+            return function(Either.ofLeft(function));
+        }
+
+        public Builder function(FunctionType function) {
+            return function(Either.ofRight(function));
+        }
+
         public Builder name(Output<String> name) {
             $.name = name;
             return this;

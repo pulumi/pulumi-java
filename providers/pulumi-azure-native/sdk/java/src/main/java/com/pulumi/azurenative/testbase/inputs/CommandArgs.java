@@ -176,6 +176,14 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
             return action(Output.of(action));
         }
 
+        public Builder action(String action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(Action action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder alwaysRun(@Nullable Output<Boolean> alwaysRun) {
             $.alwaysRun = alwaysRun;
             return this;
@@ -210,6 +218,14 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder contentType(Either<String,ContentType> contentType) {
             return contentType(Output.of(contentType));
+        }
+
+        public Builder contentType(String contentType) {
+            return contentType(Either.ofLeft(contentType));
+        }
+
+        public Builder contentType(ContentType contentType) {
+            return contentType(Either.ofRight(contentType));
         }
 
         public Builder maxRunTime(@Nullable Output<Integer> maxRunTime) {

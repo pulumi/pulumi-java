@@ -255,6 +255,14 @@ public final class ServiceNowLinkedServiceResponse extends com.pulumi.resources.
             return this;
         }
 
+        public Builder clientSecret(AzureKeyVaultSecretReferenceResponse clientSecret) {
+            return clientSecret(Either.ofLeft(clientSecret));
+        }
+
+        public Builder clientSecret(SecureStringResponse clientSecret) {
+            return clientSecret(Either.ofRight(clientSecret));
+        }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
@@ -283,6 +291,14 @@ public final class ServiceNowLinkedServiceResponse extends com.pulumi.resources.
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
+        }
+
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
         }
 
         public Builder type(String type) {

@@ -207,6 +207,14 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(FirewallPolicyIntrusionDetectionProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
             $.sourceAddresses = sourceAddresses;
             return this;

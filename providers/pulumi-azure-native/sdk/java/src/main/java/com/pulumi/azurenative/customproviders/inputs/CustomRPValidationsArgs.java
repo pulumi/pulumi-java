@@ -86,6 +86,14 @@ public final class CustomRPValidationsArgs extends com.pulumi.resources.Resource
             return validationType(Output.of(validationType));
         }
 
+        public Builder validationType(String validationType) {
+            return validationType(Either.ofLeft(validationType));
+        }
+
+        public Builder validationType(ValidationType validationType) {
+            return validationType(Either.ofRight(validationType));
+        }
+
         public CustomRPValidationsArgs build() {
             $.specification = Objects.requireNonNull($.specification, "expected parameter 'specification' to be non-null");
             return $;

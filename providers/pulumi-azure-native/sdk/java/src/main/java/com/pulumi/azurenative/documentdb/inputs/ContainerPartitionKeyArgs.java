@@ -92,6 +92,14 @@ public final class ContainerPartitionKeyArgs extends com.pulumi.resources.Resour
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(PartitionKind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder paths(@Nullable Output<List<String>> paths) {
             $.paths = paths;
             return this;

@@ -87,6 +87,14 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends com.pulumi.
             return directoryServiceOptions(Output.of(directoryServiceOptions));
         }
 
+        public Builder directoryServiceOptions(String directoryServiceOptions) {
+            return directoryServiceOptions(Either.ofLeft(directoryServiceOptions));
+        }
+
+        public Builder directoryServiceOptions(DirectoryServiceOptions directoryServiceOptions) {
+            return directoryServiceOptions(Either.ofRight(directoryServiceOptions));
+        }
+
         public AzureFilesIdentityBasedAuthenticationArgs build() {
             $.directoryServiceOptions = Objects.requireNonNull($.directoryServiceOptions, "expected parameter 'directoryServiceOptions' to be non-null");
             return $;

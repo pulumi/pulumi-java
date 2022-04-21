@@ -108,6 +108,14 @@ public final class TimerTriggerArgs extends com.pulumi.resources.ResourceArgs {
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(TriggerStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public TimerTriggerArgs build() {
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");

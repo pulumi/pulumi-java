@@ -104,6 +104,14 @@ public final class RulesEngineActionResponse extends com.pulumi.resources.Invoke
             return this;
         }
 
+        public Builder routeConfigurationOverride(ForwardingConfigurationResponse routeConfigurationOverride) {
+            return routeConfigurationOverride(Either.ofLeft(routeConfigurationOverride));
+        }
+
+        public Builder routeConfigurationOverride(RedirectConfigurationResponse routeConfigurationOverride) {
+            return routeConfigurationOverride(Either.ofRight(routeConfigurationOverride));
+        }
+
         public RulesEngineActionResponse build() {
             return $;
         }

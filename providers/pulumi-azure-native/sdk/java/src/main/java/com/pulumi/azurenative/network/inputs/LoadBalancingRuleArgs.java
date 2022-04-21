@@ -294,6 +294,14 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
             return loadDistribution(Output.of(loadDistribution));
         }
 
+        public Builder loadDistribution(String loadDistribution) {
+            return loadDistribution(Either.ofLeft(loadDistribution));
+        }
+
+        public Builder loadDistribution(LoadDistribution loadDistribution) {
+            return loadDistribution(Either.ofRight(loadDistribution));
+        }
+
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
@@ -319,6 +327,14 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
 
         public Builder protocol(Either<String,TransportProtocol> protocol) {
             return protocol(Output.of(protocol));
+        }
+
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(TransportProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
         }
 
         public LoadBalancingRuleArgs build() {

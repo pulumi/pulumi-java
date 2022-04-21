@@ -381,6 +381,14 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
             return osType(Output.of(osType));
         }
 
+        public Builder osType(String osType) {
+            return osType(Either.ofLeft(osType));
+        }
+
+        public Builder osType(OperatingSystemTypes osType) {
+            return osType(Either.ofRight(osType));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
@@ -399,6 +407,14 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
             return restartPolicy(Output.of(restartPolicy));
         }
 
+        public Builder restartPolicy(String restartPolicy) {
+            return restartPolicy(Either.ofLeft(restartPolicy));
+        }
+
+        public Builder restartPolicy(ContainerGroupRestartPolicy restartPolicy) {
+            return restartPolicy(Either.ofRight(restartPolicy));
+        }
+
         public Builder sku(@Nullable Output<Either<String,ContainerGroupSku>> sku) {
             $.sku = sku;
             return this;
@@ -406,6 +422,14 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder sku(Either<String,ContainerGroupSku> sku) {
             return sku(Output.of(sku));
+        }
+
+        public Builder sku(String sku) {
+            return sku(Either.ofLeft(sku));
+        }
+
+        public Builder sku(ContainerGroupSku sku) {
+            return sku(Either.ofRight(sku));
         }
 
         public Builder tags(@Nullable Output<Map<String,String>> tags) {

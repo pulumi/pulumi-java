@@ -224,6 +224,14 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
             return hostType(Output.of(hostType));
         }
 
+        public Builder hostType(String hostType) {
+            return hostType(Either.ofLeft(hostType));
+        }
+
+        public Builder hostType(HostType hostType) {
+            return hostType(Either.ofRight(hostType));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;

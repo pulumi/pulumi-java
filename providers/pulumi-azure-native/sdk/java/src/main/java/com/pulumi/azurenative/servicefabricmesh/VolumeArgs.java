@@ -162,6 +162,14 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
             return provider(Output.of(provider));
         }
 
+        public Builder provider(String provider) {
+            return provider(Either.ofLeft(provider));
+        }
+
+        public Builder provider(VolumeProvider provider) {
+            return provider(Either.ofRight(provider));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

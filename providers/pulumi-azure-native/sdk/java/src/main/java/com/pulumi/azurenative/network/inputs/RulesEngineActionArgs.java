@@ -117,6 +117,14 @@ public final class RulesEngineActionArgs extends com.pulumi.resources.ResourceAr
             return routeConfigurationOverride(Output.of(routeConfigurationOverride));
         }
 
+        public Builder routeConfigurationOverride(ForwardingConfigurationArgs routeConfigurationOverride) {
+            return routeConfigurationOverride(Either.ofLeft(routeConfigurationOverride));
+        }
+
+        public Builder routeConfigurationOverride(RedirectConfigurationArgs routeConfigurationOverride) {
+            return routeConfigurationOverride(Either.ofRight(routeConfigurationOverride));
+        }
+
         public RulesEngineActionArgs build() {
             return $;
         }

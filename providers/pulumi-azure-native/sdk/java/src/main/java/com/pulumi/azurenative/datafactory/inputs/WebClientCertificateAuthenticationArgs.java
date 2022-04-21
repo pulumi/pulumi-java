@@ -112,6 +112,14 @@ public final class WebClientCertificateAuthenticationArgs extends com.pulumi.res
             return password(Output.of(password));
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder pfx(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
             $.pfx = pfx;
             return this;
@@ -119,6 +127,14 @@ public final class WebClientCertificateAuthenticationArgs extends com.pulumi.res
 
         public Builder pfx(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> pfx) {
             return pfx(Output.of(pfx));
+        }
+
+        public Builder pfx(AzureKeyVaultSecretReferenceArgs pfx) {
+            return pfx(Either.ofLeft(pfx));
+        }
+
+        public Builder pfx(SecureStringArgs pfx) {
+            return pfx(Either.ofRight(pfx));
         }
 
         public Builder url(Output<Object> url) {

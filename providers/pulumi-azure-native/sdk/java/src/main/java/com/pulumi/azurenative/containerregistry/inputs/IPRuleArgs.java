@@ -78,6 +78,14 @@ public final class IPRuleArgs extends com.pulumi.resources.ResourceArgs {
             return action(Output.of(action));
         }
 
+        public Builder action(String action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(Action action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder iPAddressOrRange(Output<String> iPAddressOrRange) {
             $.iPAddressOrRange = iPAddressOrRange;
             return this;

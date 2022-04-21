@@ -150,6 +150,14 @@ public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources
             return provisioningState(Output.of(provisioningState));
         }
 
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ManagedCassandraProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
+        }
+
         public DataCenterResourcePropertiesArgs build() {
             return $;
         }

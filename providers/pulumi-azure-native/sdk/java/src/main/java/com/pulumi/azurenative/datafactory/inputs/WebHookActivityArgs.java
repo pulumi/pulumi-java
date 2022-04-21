@@ -253,6 +253,14 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
             return method(Output.of(method));
         }
 
+        public Builder method(String method) {
+            return method(Either.ofLeft(method));
+        }
+
+        public Builder method(WebHookActivityMethod method) {
+            return method(Either.ofRight(method));
+        }
+
         public Builder name(Output<String> name) {
             $.name = name;
             return this;

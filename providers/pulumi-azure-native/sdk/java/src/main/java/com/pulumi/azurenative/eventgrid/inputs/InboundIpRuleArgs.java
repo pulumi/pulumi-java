@@ -73,6 +73,14 @@ public final class InboundIpRuleArgs extends com.pulumi.resources.ResourceArgs {
             return action(Output.of(action));
         }
 
+        public Builder action(String action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(IpActionType action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder ipMask(@Nullable Output<String> ipMask) {
             $.ipMask = ipMask;
             return this;

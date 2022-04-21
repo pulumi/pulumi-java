@@ -91,6 +91,14 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
             return this;
         }
 
+        public Builder authenticationMethod(String authenticationMethod) {
+            return authenticationMethod(Either.ofLeft(authenticationMethod));
+        }
+
+        public Builder authenticationMethod(AuthenticationMethod authenticationMethod) {
+            return authenticationMethod(Either.ofRight(authenticationMethod));
+        }
+
         public Builder clientProxy(Boolean clientProxy) {
             $.clientProxy = clientProxy;
             return this;

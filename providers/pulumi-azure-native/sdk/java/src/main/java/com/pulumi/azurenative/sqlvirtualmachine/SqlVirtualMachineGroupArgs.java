@@ -162,6 +162,14 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
             return sqlImageSku(Output.of(sqlImageSku));
         }
 
+        public Builder sqlImageSku(String sqlImageSku) {
+            return sqlImageSku(Either.ofLeft(sqlImageSku));
+        }
+
+        public Builder sqlImageSku(SqlVmGroupImageSku sqlImageSku) {
+            return sqlImageSku(Either.ofRight(sqlImageSku));
+        }
+
         public Builder sqlVirtualMachineGroupName(@Nullable Output<String> sqlVirtualMachineGroupName) {
             $.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
             return this;

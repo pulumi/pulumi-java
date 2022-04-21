@@ -93,6 +93,14 @@ public final class DataExportDetailsArgs extends com.pulumi.resources.ResourceAr
             return accountDetails(Output.of(accountDetails));
         }
 
+        public Builder accountDetails(ManagedDiskDetailsArgs accountDetails) {
+            return accountDetails(Either.ofLeft(accountDetails));
+        }
+
+        public Builder accountDetails(StorageAccountDetailsArgs accountDetails) {
+            return accountDetails(Either.ofRight(accountDetails));
+        }
+
         public Builder logCollectionLevel(@Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel) {
             $.logCollectionLevel = logCollectionLevel;
             return this;
@@ -100,6 +108,14 @@ public final class DataExportDetailsArgs extends com.pulumi.resources.ResourceAr
 
         public Builder logCollectionLevel(Either<String,LogCollectionLevel> logCollectionLevel) {
             return logCollectionLevel(Output.of(logCollectionLevel));
+        }
+
+        public Builder logCollectionLevel(String logCollectionLevel) {
+            return logCollectionLevel(Either.ofLeft(logCollectionLevel));
+        }
+
+        public Builder logCollectionLevel(LogCollectionLevel logCollectionLevel) {
+            return logCollectionLevel(Either.ofRight(logCollectionLevel));
         }
 
         public Builder transferConfiguration(Output<TransferConfigurationArgs> transferConfiguration) {

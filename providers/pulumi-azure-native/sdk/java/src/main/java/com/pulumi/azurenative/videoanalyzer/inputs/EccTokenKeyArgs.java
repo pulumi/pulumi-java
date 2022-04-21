@@ -113,6 +113,14 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
             return alg(Output.of(alg));
         }
 
+        public Builder alg(String alg) {
+            return alg(Either.ofLeft(alg));
+        }
+
+        public Builder alg(AccessPolicyEccAlgo alg) {
+            return alg(Either.ofRight(alg));
+        }
+
         public Builder kid(Output<String> kid) {
             $.kid = kid;
             return this;

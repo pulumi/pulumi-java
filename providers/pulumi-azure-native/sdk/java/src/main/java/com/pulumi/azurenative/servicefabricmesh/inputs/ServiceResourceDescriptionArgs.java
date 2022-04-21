@@ -221,6 +221,14 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
             return osType(Output.of(osType));
         }
 
+        public Builder osType(String osType) {
+            return osType(Either.ofLeft(osType));
+        }
+
+        public Builder osType(OperatingSystemType osType) {
+            return osType(Either.ofRight(osType));
+        }
+
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
             $.replicaCount = replicaCount;
             return this;

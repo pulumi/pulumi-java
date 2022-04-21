@@ -176,6 +176,14 @@ public final class AzureSearchLinkedServiceResponse extends com.pulumi.resources
             return this;
         }
 
+        public Builder key(AzureKeyVaultSecretReferenceResponse key) {
+            return key(Either.ofLeft(key));
+        }
+
+        public Builder key(SecureStringResponse key) {
+            return key(Either.ofRight(key));
+        }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;

@@ -152,6 +152,14 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
             return operationType(Output.of(operationType));
         }
 
+        public Builder operationType(String operationType) {
+            return operationType(Either.ofLeft(operationType));
+        }
+
+        public Builder operationType(AccountResourceRequestOperationType operationType) {
+            return operationType(Either.ofRight(operationType));
+        }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;

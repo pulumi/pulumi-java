@@ -134,6 +134,14 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
             return vmSwitchType(Output.of(vmSwitchType));
         }
 
+        public Builder vmSwitchType(String vmSwitchType) {
+            return vmSwitchType(Either.ofLeft(vmSwitchType));
+        }
+
+        public Builder vmSwitchType(VMSwitchType vmSwitchType) {
+            return vmSwitchType(Either.ofRight(vmSwitchType));
+        }
+
         public NetworkInterfaceArgs build() {
             return $;
         }

@@ -373,6 +373,14 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
             return gatewayType(Output.of(gatewayType));
         }
 
+        public Builder gatewayType(String gatewayType) {
+            return gatewayType(Either.ofLeft(gatewayType));
+        }
+
+        public Builder gatewayType(VirtualNetworkGatewayType gatewayType) {
+            return gatewayType(Either.ofRight(gatewayType));
+        }
+
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
@@ -467,6 +475,14 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
             return vpnGatewayGeneration(Output.of(vpnGatewayGeneration));
         }
 
+        public Builder vpnGatewayGeneration(String vpnGatewayGeneration) {
+            return vpnGatewayGeneration(Either.ofLeft(vpnGatewayGeneration));
+        }
+
+        public Builder vpnGatewayGeneration(VpnGatewayGeneration vpnGatewayGeneration) {
+            return vpnGatewayGeneration(Either.ofRight(vpnGatewayGeneration));
+        }
+
         public Builder vpnType(@Nullable Output<Either<String,VpnType>> vpnType) {
             $.vpnType = vpnType;
             return this;
@@ -474,6 +490,14 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
 
         public Builder vpnType(Either<String,VpnType> vpnType) {
             return vpnType(Output.of(vpnType));
+        }
+
+        public Builder vpnType(String vpnType) {
+            return vpnType(Either.ofLeft(vpnType));
+        }
+
+        public Builder vpnType(VpnType vpnType) {
+            return vpnType(Either.ofRight(vpnType));
         }
 
         public VirtualNetworkGatewayArgs build() {

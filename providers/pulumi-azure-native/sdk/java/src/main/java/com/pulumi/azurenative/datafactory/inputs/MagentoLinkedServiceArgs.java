@@ -193,6 +193,14 @@ public final class MagentoLinkedServiceArgs extends com.pulumi.resources.Resourc
             return accessToken(Output.of(accessToken));
         }
 
+        public Builder accessToken(AzureKeyVaultSecretReferenceArgs accessToken) {
+            return accessToken(Either.ofLeft(accessToken));
+        }
+
+        public Builder accessToken(SecureStringArgs accessToken) {
+            return accessToken(Either.ofRight(accessToken));
+        }
+
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;

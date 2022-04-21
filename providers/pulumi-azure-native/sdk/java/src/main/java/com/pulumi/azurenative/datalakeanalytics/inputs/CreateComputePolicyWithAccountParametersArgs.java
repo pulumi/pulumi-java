@@ -150,6 +150,14 @@ public final class CreateComputePolicyWithAccountParametersArgs extends com.pulu
             return objectType(Output.of(objectType));
         }
 
+        public Builder objectType(String objectType) {
+            return objectType(Either.ofLeft(objectType));
+        }
+
+        public Builder objectType(AADObjectType objectType) {
+            return objectType(Either.ofRight(objectType));
+        }
+
         public CreateComputePolicyWithAccountParametersArgs build() {
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");

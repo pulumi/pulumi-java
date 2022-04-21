@@ -119,6 +119,14 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
             return rights(Output.of(rights));
         }
 
+        public Builder rights(String rights) {
+            return rights(Either.ofLeft(rights));
+        }
+
+        public Builder rights(AccessRightsDescription rights) {
+            return rights(Either.ofRight(rights));
+        }
+
         public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
             $.secondaryKey = secondaryKey;
             return this;

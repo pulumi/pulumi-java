@@ -143,6 +143,14 @@ public final class A2APolicyCreationInputArgs extends com.pulumi.resources.Resou
             return multiVmSyncStatus(Output.of(multiVmSyncStatus));
         }
 
+        public Builder multiVmSyncStatus(String multiVmSyncStatus) {
+            return multiVmSyncStatus(Either.ofLeft(multiVmSyncStatus));
+        }
+
+        public Builder multiVmSyncStatus(SetMultiVmSyncStatus multiVmSyncStatus) {
+            return multiVmSyncStatus(Either.ofRight(multiVmSyncStatus));
+        }
+
         public Builder recoveryPointHistory(@Nullable Output<Integer> recoveryPointHistory) {
             $.recoveryPointHistory = recoveryPointHistory;
             return this;

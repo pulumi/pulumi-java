@@ -114,6 +114,14 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends com.pulumi.resou
             return this;
         }
 
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
+        }
+
         public SqlAlwaysEncryptedPropertiesResponse build() {
             $.alwaysEncryptedAkvAuthType = Objects.requireNonNull($.alwaysEncryptedAkvAuthType, "expected parameter 'alwaysEncryptedAkvAuthType' to be non-null");
             return $;

@@ -139,6 +139,14 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
             return datasetType(Output.of(datasetType));
         }
 
+        public Builder datasetType(String datasetType) {
+            return datasetType(Either.ofLeft(datasetType));
+        }
+
+        public Builder datasetType(DatasetType datasetType) {
+            return datasetType(Either.ofRight(datasetType));
+        }
+
         public Builder datastoreId(@Nullable Output<String> datastoreId) {
             $.datastoreId = datastoreId;
             return this;

@@ -251,6 +251,14 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
             return password(Output.of(password));
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder server(Output<Object> server) {
             $.server = server;
             return this;

@@ -314,6 +314,14 @@ public final class VaultPropertiesArgs extends com.pulumi.resources.ResourceArgs
             return provisioningState(Output.of(provisioningState));
         }
 
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(VaultProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
+        }
+
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;

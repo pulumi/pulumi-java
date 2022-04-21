@@ -108,6 +108,14 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(SkuNameEnum name) {
+            return name(Either.ofRight(name));
+        }
+
         public SkuArgs build() {
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             return $;

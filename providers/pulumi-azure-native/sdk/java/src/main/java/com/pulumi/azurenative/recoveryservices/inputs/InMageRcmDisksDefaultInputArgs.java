@@ -98,6 +98,14 @@ public final class InMageRcmDisksDefaultInputArgs extends com.pulumi.resources.R
             return diskType(Output.of(diskType));
         }
 
+        public Builder diskType(String diskType) {
+            return diskType(Either.ofLeft(diskType));
+        }
+
+        public Builder diskType(DiskAccountType diskType) {
+            return diskType(Either.ofRight(diskType));
+        }
+
         public Builder logStorageAccountId(@Nullable Output<String> logStorageAccountId) {
             $.logStorageAccountId = logStorageAccountId;
             return this;

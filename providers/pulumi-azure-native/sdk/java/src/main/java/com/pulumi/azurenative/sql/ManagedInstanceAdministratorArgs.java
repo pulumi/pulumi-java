@@ -138,6 +138,14 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
             return administratorType(Output.of(administratorType));
         }
 
+        public Builder administratorType(String administratorType) {
+            return administratorType(Either.ofLeft(administratorType));
+        }
+
+        public Builder administratorType(ManagedInstanceAdministratorType administratorType) {
+            return administratorType(Either.ofRight(administratorType));
+        }
+
         public Builder login(Output<String> login) {
             $.login = login;
             return this;

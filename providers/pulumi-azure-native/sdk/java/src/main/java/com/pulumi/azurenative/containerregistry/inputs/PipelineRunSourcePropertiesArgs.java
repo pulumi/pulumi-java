@@ -83,6 +83,14 @@ public final class PipelineRunSourcePropertiesArgs extends com.pulumi.resources.
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(PipelineRunSourceType type) {
+            return type(Either.ofRight(type));
+        }
+
         public PipelineRunSourcePropertiesArgs build() {
             $.type = Codegen.stringProp("type").left(PipelineRunSourceType.class).output().arg($.type).def("AzureStorageBlob").getNullable();
             return $;

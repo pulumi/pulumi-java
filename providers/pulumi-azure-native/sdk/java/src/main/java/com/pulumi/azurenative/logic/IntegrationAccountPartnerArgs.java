@@ -193,6 +193,14 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
             return partnerType(Output.of(partnerType));
         }
 
+        public Builder partnerType(String partnerType) {
+            return partnerType(Either.ofLeft(partnerType));
+        }
+
+        public Builder partnerType(PartnerType partnerType) {
+            return partnerType(Either.ofRight(partnerType));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

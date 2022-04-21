@@ -65,6 +65,14 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends com.pulum
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(PublicNetworkAccessType publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
+        }
+
         public HybridComputePrivateLinkScopePropertiesArgs build() {
             return $;
         }

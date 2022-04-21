@@ -228,6 +228,14 @@ public final class AzureFunctionLinkedServiceResponse extends com.pulumi.resourc
             return this;
         }
 
+        public Builder functionKey(AzureKeyVaultSecretReferenceResponse functionKey) {
+            return functionKey(Either.ofLeft(functionKey));
+        }
+
+        public Builder functionKey(SecureStringResponse functionKey) {
+            return functionKey(Either.ofRight(functionKey));
+        }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;

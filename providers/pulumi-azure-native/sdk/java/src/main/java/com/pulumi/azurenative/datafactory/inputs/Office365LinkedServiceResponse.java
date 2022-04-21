@@ -215,6 +215,14 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
             return this;
         }
 
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
+        }
+
         public Builder servicePrincipalTenantId(Object servicePrincipalTenantId) {
             $.servicePrincipalTenantId = servicePrincipalTenantId;
             return this;

@@ -132,6 +132,14 @@ public final class PacketCaptureFilterArgs extends com.pulumi.resources.Resource
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(PcProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public Builder remoteIPAddress(@Nullable Output<String> remoteIPAddress) {
             $.remoteIPAddress = remoteIPAddress;
             return this;

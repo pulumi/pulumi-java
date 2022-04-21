@@ -109,6 +109,14 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends com.p
             return this;
         }
 
+        public Builder keyType(String keyType) {
+            return keyType(Either.ofLeft(keyType));
+        }
+
+        public Builder keyType(KeyType keyType) {
+            return keyType(Either.ofRight(keyType));
+        }
+
         public Builder mapName(String mapName) {
             $.mapName = mapName;
             return this;

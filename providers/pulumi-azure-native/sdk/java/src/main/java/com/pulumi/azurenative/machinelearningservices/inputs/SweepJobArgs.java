@@ -260,6 +260,14 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
             return algorithm(Output.of(algorithm));
         }
 
+        public Builder algorithm(String algorithm) {
+            return algorithm(Either.ofLeft(algorithm));
+        }
+
+        public Builder algorithm(SamplingAlgorithm algorithm) {
+            return algorithm(Either.ofRight(algorithm));
+        }
+
         public Builder compute(Output<ComputeConfigurationArgs> compute) {
             $.compute = compute;
             return this;
@@ -303,6 +311,14 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder identity(Either<AmlTokenArgs,ManagedIdentityArgs> identity) {
             return identity(Output.of(identity));
+        }
+
+        public Builder identity(AmlTokenArgs identity) {
+            return identity(Either.ofLeft(identity));
+        }
+
+        public Builder identity(ManagedIdentityArgs identity) {
+            return identity(Either.ofRight(identity));
         }
 
         public Builder jobType(Output<String> jobType) {

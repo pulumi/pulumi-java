@@ -178,6 +178,14 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends com.pu
             return deleteOption(Output.of(deleteOption));
         }
 
+        public Builder deleteOption(String deleteOption) {
+            return deleteOption(Either.ofLeft(deleteOption));
+        }
+
+        public Builder deleteOption(DeleteOptions deleteOption) {
+            return deleteOption(Either.ofRight(deleteOption));
+        }
+
         public Builder dnsSettings(@Nullable Output<VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs> dnsSettings) {
             $.dnsSettings = dnsSettings;
             return this;

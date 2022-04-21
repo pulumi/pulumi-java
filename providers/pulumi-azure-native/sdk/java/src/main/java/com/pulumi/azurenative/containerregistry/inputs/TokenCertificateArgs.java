@@ -115,6 +115,14 @@ public final class TokenCertificateArgs extends com.pulumi.resources.ResourceArg
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(TokenCertificateName name) {
+            return name(Either.ofRight(name));
+        }
+
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             $.thumbprint = thumbprint;
             return this;

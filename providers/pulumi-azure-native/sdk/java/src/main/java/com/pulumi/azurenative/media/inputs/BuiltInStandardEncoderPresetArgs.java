@@ -86,6 +86,14 @@ public final class BuiltInStandardEncoderPresetArgs extends com.pulumi.resources
             return presetName(Output.of(presetName));
         }
 
+        public Builder presetName(String presetName) {
+            return presetName(Either.ofLeft(presetName));
+        }
+
+        public Builder presetName(EncoderNamedPreset presetName) {
+            return presetName(Either.ofRight(presetName));
+        }
+
         public BuiltInStandardEncoderPresetArgs build() {
             $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
             $.presetName = Objects.requireNonNull($.presetName, "expected parameter 'presetName' to be non-null");

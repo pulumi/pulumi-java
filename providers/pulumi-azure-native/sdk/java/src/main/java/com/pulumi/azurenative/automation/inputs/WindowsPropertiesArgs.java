@@ -128,6 +128,14 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
             return includedUpdateClassifications(Output.of(includedUpdateClassifications));
         }
 
+        public Builder includedUpdateClassifications(String includedUpdateClassifications) {
+            return includedUpdateClassifications(Either.ofLeft(includedUpdateClassifications));
+        }
+
+        public Builder includedUpdateClassifications(WindowsUpdateClasses includedUpdateClassifications) {
+            return includedUpdateClassifications(Either.ofRight(includedUpdateClassifications));
+        }
+
         public Builder rebootSetting(@Nullable Output<String> rebootSetting) {
             $.rebootSetting = rebootSetting;
             return this;

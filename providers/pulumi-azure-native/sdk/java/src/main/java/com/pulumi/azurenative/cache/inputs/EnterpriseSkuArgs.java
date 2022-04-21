@@ -87,6 +87,14 @@ public final class EnterpriseSkuArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(SkuName name) {
+            return name(Either.ofRight(name));
+        }
+
         public EnterpriseSkuArgs build() {
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             return $;

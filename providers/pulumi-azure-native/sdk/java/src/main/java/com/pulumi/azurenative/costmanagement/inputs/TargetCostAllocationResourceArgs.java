@@ -111,6 +111,14 @@ public final class TargetCostAllocationResourceArgs extends com.pulumi.resources
             return policyType(Output.of(policyType));
         }
 
+        public Builder policyType(String policyType) {
+            return policyType(Either.ofLeft(policyType));
+        }
+
+        public Builder policyType(CostAllocationPolicyType policyType) {
+            return policyType(Either.ofRight(policyType));
+        }
+
         public Builder resourceType(Output<Either<String,CostAllocationResourceType>> resourceType) {
             $.resourceType = resourceType;
             return this;
@@ -118,6 +126,14 @@ public final class TargetCostAllocationResourceArgs extends com.pulumi.resources
 
         public Builder resourceType(Either<String,CostAllocationResourceType> resourceType) {
             return resourceType(Output.of(resourceType));
+        }
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Either.ofLeft(resourceType));
+        }
+
+        public Builder resourceType(CostAllocationResourceType resourceType) {
+            return resourceType(Either.ofRight(resourceType));
         }
 
         public Builder values(Output<List<CostAllocationProportionArgs>> values) {

@@ -143,6 +143,14 @@ public final class GenericContainerArgs extends com.pulumi.resources.ResourceArg
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        public Builder backupManagementType(String backupManagementType) {
+            return backupManagementType(Either.ofLeft(backupManagementType));
+        }
+
+        public Builder backupManagementType(BackupManagementType backupManagementType) {
+            return backupManagementType(Either.ofRight(backupManagementType));
+        }
+
         public Builder containerType(Output<String> containerType) {
             $.containerType = containerType;
             return this;

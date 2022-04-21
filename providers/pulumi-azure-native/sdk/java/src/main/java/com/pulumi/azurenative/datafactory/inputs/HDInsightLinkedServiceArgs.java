@@ -312,6 +312,14 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
             return password(Output.of(password));
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder type(Output<String> type) {
             $.type = type;
             return this;

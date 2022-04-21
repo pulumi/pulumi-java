@@ -159,6 +159,14 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
             return access(Output.of(access));
         }
 
+        public Builder access(String access) {
+            return access(Either.ofLeft(access));
+        }
+
+        public Builder access(Access access) {
+            return access(Either.ofRight(access));
+        }
+
         public Builder communities(Output<List<String>> communities) {
             $.communities = communities;
             return this;
@@ -224,6 +232,14 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder routeFilterRuleType(Either<String,RouteFilterRuleType> routeFilterRuleType) {
             return routeFilterRuleType(Output.of(routeFilterRuleType));
+        }
+
+        public Builder routeFilterRuleType(String routeFilterRuleType) {
+            return routeFilterRuleType(Either.ofLeft(routeFilterRuleType));
+        }
+
+        public Builder routeFilterRuleType(RouteFilterRuleType routeFilterRuleType) {
+            return routeFilterRuleType(Either.ofRight(routeFilterRuleType));
         }
 
         public Builder ruleName(@Nullable Output<String> ruleName) {

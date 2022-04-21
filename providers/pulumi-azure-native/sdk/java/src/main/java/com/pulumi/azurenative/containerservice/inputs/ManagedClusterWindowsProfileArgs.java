@@ -129,6 +129,14 @@ public final class ManagedClusterWindowsProfileArgs extends com.pulumi.resources
             return licenseType(Output.of(licenseType));
         }
 
+        public Builder licenseType(String licenseType) {
+            return licenseType(Either.ofLeft(licenseType));
+        }
+
+        public Builder licenseType(LicenseType licenseType) {
+            return licenseType(Either.ofRight(licenseType));
+        }
+
         public ManagedClusterWindowsProfileArgs build() {
             $.adminUsername = Objects.requireNonNull($.adminUsername, "expected parameter 'adminUsername' to be non-null");
             return $;

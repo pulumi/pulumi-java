@@ -152,6 +152,14 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
             return maintenanceScope(Output.of(maintenanceScope));
         }
 
+        public Builder maintenanceScope(String maintenanceScope) {
+            return maintenanceScope(Either.ofLeft(maintenanceScope));
+        }
+
+        public Builder maintenanceScope(MaintenanceScope maintenanceScope) {
+            return maintenanceScope(Either.ofRight(maintenanceScope));
+        }
+
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;

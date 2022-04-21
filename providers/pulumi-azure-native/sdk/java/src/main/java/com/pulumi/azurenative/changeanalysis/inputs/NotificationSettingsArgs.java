@@ -78,6 +78,14 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
             return activationState(Output.of(activationState));
         }
 
+        public Builder activationState(String activationState) {
+            return activationState(Either.ofLeft(activationState));
+        }
+
+        public Builder activationState(NotificationsState activationState) {
+            return activationState(Either.ofRight(activationState));
+        }
+
         public Builder azureMonitorWorkspaceProperties(@Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties) {
             $.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
             return this;

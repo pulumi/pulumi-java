@@ -114,6 +114,14 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
             return this;
         }
 
+        public Builder keyType(String keyType) {
+            return keyType(Either.ofLeft(keyType));
+        }
+
+        public Builder keyType(KeyType keyType) {
+            return keyType(Either.ofRight(keyType));
+        }
+
         public Builder notAfter(@Nullable String notAfter) {
             $.notAfter = notAfter;
             return this;

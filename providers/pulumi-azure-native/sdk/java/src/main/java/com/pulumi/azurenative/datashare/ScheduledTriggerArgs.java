@@ -166,6 +166,14 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
             return recurrenceInterval(Output.of(recurrenceInterval));
         }
 
+        public Builder recurrenceInterval(String recurrenceInterval) {
+            return recurrenceInterval(Either.ofLeft(recurrenceInterval));
+        }
+
+        public Builder recurrenceInterval(RecurrenceInterval recurrenceInterval) {
+            return recurrenceInterval(Either.ofRight(recurrenceInterval));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
@@ -191,6 +199,14 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
 
         public Builder synchronizationMode(Either<String,SynchronizationMode> synchronizationMode) {
             return synchronizationMode(Output.of(synchronizationMode));
+        }
+
+        public Builder synchronizationMode(String synchronizationMode) {
+            return synchronizationMode(Either.ofLeft(synchronizationMode));
+        }
+
+        public Builder synchronizationMode(SynchronizationMode synchronizationMode) {
+            return synchronizationMode(Either.ofRight(synchronizationMode));
         }
 
         public Builder synchronizationTime(Output<String> synchronizationTime) {

@@ -378,6 +378,14 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
             return getDebugInfo(Output.of(getDebugInfo));
         }
 
+        public Builder getDebugInfo(String getDebugInfo) {
+            return getDebugInfo(Either.ofLeft(getDebugInfo));
+        }
+
+        public Builder getDebugInfo(HDInsightActivityDebugInfoOption getDebugInfo) {
+            return getDebugInfo(Either.ofRight(getDebugInfo));
+        }
+
         public Builder input(Output<Object> input) {
             $.input = input;
             return this;

@@ -78,6 +78,14 @@ public final class VirtualNetworkGatewaySkuArgs extends com.pulumi.resources.Res
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(VirtualNetworkGatewaySkuName name) {
+            return name(Either.ofRight(name));
+        }
+
         public Builder tier(@Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier) {
             $.tier = tier;
             return this;
@@ -85,6 +93,14 @@ public final class VirtualNetworkGatewaySkuArgs extends com.pulumi.resources.Res
 
         public Builder tier(Either<String,VirtualNetworkGatewaySkuTier> tier) {
             return tier(Output.of(tier));
+        }
+
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(VirtualNetworkGatewaySkuTier tier) {
+            return tier(Either.ofRight(tier));
         }
 
         public VirtualNetworkGatewaySkuArgs build() {

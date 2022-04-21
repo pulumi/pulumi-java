@@ -86,6 +86,14 @@ public final class MigrationRequestPropertiesArgs extends com.pulumi.resources.R
             return operation(Output.of(operation));
         }
 
+        public Builder operation(String operation) {
+            return operation(Either.ofLeft(operation));
+        }
+
+        public Builder operation(Operation operation) {
+            return operation(Either.ofRight(operation));
+        }
+
         public MigrationRequestPropertiesArgs build() {
             return $;
         }

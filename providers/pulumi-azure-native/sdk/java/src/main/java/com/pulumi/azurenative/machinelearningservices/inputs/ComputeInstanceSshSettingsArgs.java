@@ -87,6 +87,14 @@ public final class ComputeInstanceSshSettingsArgs extends com.pulumi.resources.R
             return sshPublicAccess(Output.of(sshPublicAccess));
         }
 
+        public Builder sshPublicAccess(String sshPublicAccess) {
+            return sshPublicAccess(Either.ofLeft(sshPublicAccess));
+        }
+
+        public Builder sshPublicAccess(SshPublicAccess sshPublicAccess) {
+            return sshPublicAccess(Either.ofRight(sshPublicAccess));
+        }
+
         public ComputeInstanceSshSettingsArgs build() {
             $.sshPublicAccess = Codegen.stringProp("sshPublicAccess").left(SshPublicAccess.class).output().arg($.sshPublicAccess).def("Disabled").getNullable();
             return $;

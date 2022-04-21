@@ -130,6 +130,14 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
             return format(Output.of(format));
         }
 
+        public Builder format(String format) {
+            return format(Either.ofLeft(format));
+        }
+
+        public Builder format(ColumnFormat format) {
+            return format(Either.ofRight(format));
+        }
+
         public Builder type(Output<Either<String,ColumnType>> type) {
             $.type = type;
             return this;
@@ -137,6 +145,14 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
 
         public Builder type(Either<String,ColumnType> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ColumnType type) {
+            return type(Either.ofRight(type));
         }
 
         public Builder xMsIsnullable(@Nullable Output<Boolean> xMsIsnullable) {

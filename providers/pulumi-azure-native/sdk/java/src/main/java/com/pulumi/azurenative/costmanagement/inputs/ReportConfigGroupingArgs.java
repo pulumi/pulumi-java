@@ -84,6 +84,14 @@ public final class ReportConfigGroupingArgs extends com.pulumi.resources.Resourc
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ReportConfigColumnType type) {
+            return type(Either.ofRight(type));
+        }
+
         public ReportConfigGroupingArgs build() {
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");

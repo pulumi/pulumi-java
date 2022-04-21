@@ -132,6 +132,14 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends com.pulumi.r
             return privateIPAllocationMethod(Output.of(privateIPAllocationMethod));
         }
 
+        public Builder privateIPAllocationMethod(String privateIPAllocationMethod) {
+            return privateIPAllocationMethod(Either.ofLeft(privateIPAllocationMethod));
+        }
+
+        public Builder privateIPAllocationMethod(IPAllocationMethod privateIPAllocationMethod) {
+            return privateIPAllocationMethod(Either.ofRight(privateIPAllocationMethod));
+        }
+
         public Builder publicIPAddress(@Nullable Output<SubResourceArgs> publicIPAddress) {
             $.publicIPAddress = publicIPAddress;
             return this;

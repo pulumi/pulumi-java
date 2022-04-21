@@ -158,6 +158,14 @@ public final class RemediationAtResourceArgs extends com.pulumi.resources.Resour
             return resourceDiscoveryMode(Output.of(resourceDiscoveryMode));
         }
 
+        public Builder resourceDiscoveryMode(String resourceDiscoveryMode) {
+            return resourceDiscoveryMode(Either.ofLeft(resourceDiscoveryMode));
+        }
+
+        public Builder resourceDiscoveryMode(ResourceDiscoveryMode resourceDiscoveryMode) {
+            return resourceDiscoveryMode(Either.ofRight(resourceDiscoveryMode));
+        }
+
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;

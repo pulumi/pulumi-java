@@ -550,6 +550,14 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
             return this;
         }
 
+        public Builder clusterPassword(AzureKeyVaultSecretReferenceResponse clusterPassword) {
+            return clusterPassword(Either.ofLeft(clusterPassword));
+        }
+
+        public Builder clusterPassword(SecureStringResponse clusterPassword) {
+            return clusterPassword(Either.ofRight(clusterPassword));
+        }
+
         public Builder clusterResourceGroup(Object clusterResourceGroup) {
             $.clusterResourceGroup = clusterResourceGroup;
             return this;
@@ -563,6 +571,14 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
         public Builder clusterSshPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword) {
             $.clusterSshPassword = clusterSshPassword;
             return this;
+        }
+
+        public Builder clusterSshPassword(AzureKeyVaultSecretReferenceResponse clusterSshPassword) {
+            return clusterSshPassword(Either.ofLeft(clusterSshPassword));
+        }
+
+        public Builder clusterSshPassword(SecureStringResponse clusterSshPassword) {
+            return clusterSshPassword(Either.ofRight(clusterSshPassword));
         }
 
         public Builder clusterSshUserName(@Nullable Object clusterSshUserName) {
@@ -677,6 +693,14 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
+        }
+
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
         public Builder sparkVersion(@Nullable Object sparkVersion) {

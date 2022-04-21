@@ -105,6 +105,14 @@ public final class LocationThresholdRuleConditionArgs extends com.pulumi.resourc
             return dataSource(Output.of(dataSource));
         }
 
+        public Builder dataSource(RuleManagementEventDataSourceArgs dataSource) {
+            return dataSource(Either.ofLeft(dataSource));
+        }
+
+        public Builder dataSource(RuleMetricDataSourceArgs dataSource) {
+            return dataSource(Either.ofRight(dataSource));
+        }
+
         public Builder failedLocationCount(Output<Integer> failedLocationCount) {
             $.failedLocationCount = failedLocationCount;
             return this;

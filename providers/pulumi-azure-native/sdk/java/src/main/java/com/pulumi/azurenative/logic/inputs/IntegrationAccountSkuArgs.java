@@ -63,6 +63,14 @@ public final class IntegrationAccountSkuArgs extends com.pulumi.resources.Resour
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(IntegrationAccountSkuName name) {
+            return name(Either.ofRight(name));
+        }
+
         public IntegrationAccountSkuArgs build() {
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             return $;

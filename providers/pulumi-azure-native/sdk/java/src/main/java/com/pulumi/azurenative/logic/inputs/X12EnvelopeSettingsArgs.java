@@ -408,6 +408,14 @@ public final class X12EnvelopeSettingsArgs extends com.pulumi.resources.Resource
             return groupHeaderDateFormat(Output.of(groupHeaderDateFormat));
         }
 
+        public Builder groupHeaderDateFormat(String groupHeaderDateFormat) {
+            return groupHeaderDateFormat(Either.ofLeft(groupHeaderDateFormat));
+        }
+
+        public Builder groupHeaderDateFormat(X12DateFormat groupHeaderDateFormat) {
+            return groupHeaderDateFormat(Either.ofRight(groupHeaderDateFormat));
+        }
+
         public Builder groupHeaderTimeFormat(Output<Either<String,X12TimeFormat>> groupHeaderTimeFormat) {
             $.groupHeaderTimeFormat = groupHeaderTimeFormat;
             return this;
@@ -415,6 +423,14 @@ public final class X12EnvelopeSettingsArgs extends com.pulumi.resources.Resource
 
         public Builder groupHeaderTimeFormat(Either<String,X12TimeFormat> groupHeaderTimeFormat) {
             return groupHeaderTimeFormat(Output.of(groupHeaderTimeFormat));
+        }
+
+        public Builder groupHeaderTimeFormat(String groupHeaderTimeFormat) {
+            return groupHeaderTimeFormat(Either.ofLeft(groupHeaderTimeFormat));
+        }
+
+        public Builder groupHeaderTimeFormat(X12TimeFormat groupHeaderTimeFormat) {
+            return groupHeaderTimeFormat(Either.ofRight(groupHeaderTimeFormat));
         }
 
         public Builder groupHeaderVersion(Output<String> groupHeaderVersion) {
@@ -541,6 +557,14 @@ public final class X12EnvelopeSettingsArgs extends com.pulumi.resources.Resource
 
         public Builder usageIndicator(Either<String,UsageIndicator> usageIndicator) {
             return usageIndicator(Output.of(usageIndicator));
+        }
+
+        public Builder usageIndicator(String usageIndicator) {
+            return usageIndicator(Either.ofLeft(usageIndicator));
+        }
+
+        public Builder usageIndicator(UsageIndicator usageIndicator) {
+            return usageIndicator(Either.ofRight(usageIndicator));
         }
 
         public Builder useControlStandardsIdAsRepetitionCharacter(Output<Boolean> useControlStandardsIdAsRepetitionCharacter) {

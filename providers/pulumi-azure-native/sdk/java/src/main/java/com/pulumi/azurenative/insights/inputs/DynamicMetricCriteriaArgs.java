@@ -193,6 +193,14 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
             return alertSensitivity(Output.of(alertSensitivity));
         }
 
+        public Builder alertSensitivity(String alertSensitivity) {
+            return alertSensitivity(Either.ofLeft(alertSensitivity));
+        }
+
+        public Builder alertSensitivity(DynamicThresholdSensitivity alertSensitivity) {
+            return alertSensitivity(Either.ofRight(alertSensitivity));
+        }
+
         public Builder criterionType(Output<String> criterionType) {
             $.criterionType = criterionType;
             return this;
@@ -269,6 +277,14 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
             return operator(Output.of(operator));
         }
 
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(DynamicThresholdOperator operator) {
+            return operator(Either.ofRight(operator));
+        }
+
         public Builder skipMetricValidation(@Nullable Output<Boolean> skipMetricValidation) {
             $.skipMetricValidation = skipMetricValidation;
             return this;
@@ -285,6 +301,14 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
 
         public Builder timeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
             return timeAggregation(Output.of(timeAggregation));
+        }
+
+        public Builder timeAggregation(String timeAggregation) {
+            return timeAggregation(Either.ofLeft(timeAggregation));
+        }
+
+        public Builder timeAggregation(AggregationTypeEnum timeAggregation) {
+            return timeAggregation(Either.ofRight(timeAggregation));
         }
 
         public DynamicMetricCriteriaArgs build() {

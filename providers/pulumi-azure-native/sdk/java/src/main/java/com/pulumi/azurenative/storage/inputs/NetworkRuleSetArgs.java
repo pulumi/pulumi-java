@@ -119,6 +119,14 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
             return bypass(Output.of(bypass));
         }
 
+        public Builder bypass(String bypass) {
+            return bypass(Either.ofLeft(bypass));
+        }
+
+        public Builder bypass(Bypass bypass) {
+            return bypass(Either.ofRight(bypass));
+        }
+
         public Builder defaultAction(Output<DefaultAction> defaultAction) {
             $.defaultAction = defaultAction;
             return this;

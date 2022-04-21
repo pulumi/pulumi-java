@@ -108,6 +108,14 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
             return transportProtocol(Output.of(transportProtocol));
         }
 
+        public Builder transportProtocol(String transportProtocol) {
+            return transportProtocol(Either.ofLeft(transportProtocol));
+        }
+
+        public Builder transportProtocol(TransportProtocol transportProtocol) {
+            return transportProtocol(Either.ofRight(transportProtocol));
+        }
+
         public InboundNatRuleArgs build() {
             return $;
         }

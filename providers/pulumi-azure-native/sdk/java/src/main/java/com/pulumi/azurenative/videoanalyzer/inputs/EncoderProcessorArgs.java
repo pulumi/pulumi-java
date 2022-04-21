@@ -126,6 +126,14 @@ public final class EncoderProcessorArgs extends com.pulumi.resources.ResourceArg
             return preset(Output.of(preset));
         }
 
+        public Builder preset(EncoderCustomPresetArgs preset) {
+            return preset(Either.ofLeft(preset));
+        }
+
+        public Builder preset(EncoderSystemPresetArgs preset) {
+            return preset(Either.ofRight(preset));
+        }
+
         public Builder type(Output<String> type) {
             $.type = type;
             return this;

@@ -267,6 +267,14 @@ public final class SftpServerLinkedServiceArgs extends com.pulumi.resources.Reso
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(SftpAuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
@@ -330,6 +338,14 @@ public final class SftpServerLinkedServiceArgs extends com.pulumi.resources.Reso
             return passPhrase(Output.of(passPhrase));
         }
 
+        public Builder passPhrase(AzureKeyVaultSecretReferenceArgs passPhrase) {
+            return passPhrase(Either.ofLeft(passPhrase));
+        }
+
+        public Builder passPhrase(SecureStringArgs passPhrase) {
+            return passPhrase(Either.ofRight(passPhrase));
+        }
+
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             $.password = password;
             return this;
@@ -337,6 +353,14 @@ public final class SftpServerLinkedServiceArgs extends com.pulumi.resources.Reso
 
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
+        }
+
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
         }
 
         public Builder port(@Nullable Output<Object> port) {
@@ -355,6 +379,14 @@ public final class SftpServerLinkedServiceArgs extends com.pulumi.resources.Reso
 
         public Builder privateKeyContent(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> privateKeyContent) {
             return privateKeyContent(Output.of(privateKeyContent));
+        }
+
+        public Builder privateKeyContent(AzureKeyVaultSecretReferenceArgs privateKeyContent) {
+            return privateKeyContent(Either.ofLeft(privateKeyContent));
+        }
+
+        public Builder privateKeyContent(SecureStringArgs privateKeyContent) {
+            return privateKeyContent(Either.ofRight(privateKeyContent));
         }
 
         public Builder privateKeyPath(@Nullable Output<Object> privateKeyPath) {

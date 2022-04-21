@@ -149,6 +149,14 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
             return deploymentMode(Output.of(deploymentMode));
         }
 
+        public Builder deploymentMode(String deploymentMode) {
+            return deploymentMode(Either.ofLeft(deploymentMode));
+        }
+
+        public Builder deploymentMode(SkuDeploymentMode deploymentMode) {
+            return deploymentMode(Either.ofRight(deploymentMode));
+        }
+
         public Builder managedApplicationParameters(@Nullable Output<Object> managedApplicationParameters) {
             $.managedApplicationParameters = managedApplicationParameters;
             return this;
@@ -201,6 +209,14 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder skuType(Either<String,SkuType> skuType) {
             return skuType(Output.of(skuType));
+        }
+
+        public Builder skuType(String skuType) {
+            return skuType(Either.ofLeft(skuType));
+        }
+
+        public Builder skuType(SkuType skuType) {
+            return skuType(Either.ofRight(skuType));
         }
 
         public Builder vendorName(Output<String> vendorName) {

@@ -141,6 +141,14 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
             return enabledState(Output.of(enabledState));
         }
 
+        public Builder enabledState(String enabledState) {
+            return enabledState(Either.ofLeft(enabledState));
+        }
+
+        public Builder enabledState(HealthProbeEnabled enabledState) {
+            return enabledState(Either.ofRight(enabledState));
+        }
+
         public Builder healthProbeMethod(@Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod) {
             $.healthProbeMethod = healthProbeMethod;
             return this;
@@ -148,6 +156,14 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
 
         public Builder healthProbeMethod(Either<String,FrontDoorHealthProbeMethod> healthProbeMethod) {
             return healthProbeMethod(Output.of(healthProbeMethod));
+        }
+
+        public Builder healthProbeMethod(String healthProbeMethod) {
+            return healthProbeMethod(Either.ofLeft(healthProbeMethod));
+        }
+
+        public Builder healthProbeMethod(FrontDoorHealthProbeMethod healthProbeMethod) {
+            return healthProbeMethod(Either.ofRight(healthProbeMethod));
         }
 
         public Builder id(@Nullable Output<String> id) {
@@ -193,6 +209,14 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
 
         public Builder protocol(Either<String,FrontDoorProtocol> protocol) {
             return protocol(Output.of(protocol));
+        }
+
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(FrontDoorProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
         }
 
         public HealthProbeSettingsModelArgs build() {

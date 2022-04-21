@@ -78,6 +78,14 @@ public final class DeinterlaceArgs extends com.pulumi.resources.ResourceArgs {
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(DeinterlaceMode mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public Builder parity(@Nullable Output<Either<String,DeinterlaceParity>> parity) {
             $.parity = parity;
             return this;
@@ -85,6 +93,14 @@ public final class DeinterlaceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder parity(Either<String,DeinterlaceParity> parity) {
             return parity(Output.of(parity));
+        }
+
+        public Builder parity(String parity) {
+            return parity(Either.ofLeft(parity));
+        }
+
+        public Builder parity(DeinterlaceParity parity) {
+            return parity(Either.ofRight(parity));
         }
 
         public DeinterlaceArgs build() {

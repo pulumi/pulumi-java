@@ -164,6 +164,14 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
             return sessionAddressProvider(Output.of(sessionAddressProvider));
         }
 
+        public Builder sessionAddressProvider(String sessionAddressProvider) {
+            return sessionAddressProvider(Either.ofLeft(sessionAddressProvider));
+        }
+
+        public Builder sessionAddressProvider(SessionAddressProvider sessionAddressProvider) {
+            return sessionAddressProvider(Either.ofRight(sessionAddressProvider));
+        }
+
         public Builder useForPeeringService(@Nullable Output<Boolean> useForPeeringService) {
             $.useForPeeringService = useForPeeringService;
             return this;

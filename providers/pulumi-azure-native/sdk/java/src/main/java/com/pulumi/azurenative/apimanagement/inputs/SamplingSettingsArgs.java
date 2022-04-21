@@ -87,6 +87,14 @@ public final class SamplingSettingsArgs extends com.pulumi.resources.ResourceArg
             return samplingType(Output.of(samplingType));
         }
 
+        public Builder samplingType(String samplingType) {
+            return samplingType(Either.ofLeft(samplingType));
+        }
+
+        public Builder samplingType(SamplingType samplingType) {
+            return samplingType(Either.ofRight(samplingType));
+        }
+
         public SamplingSettingsArgs build() {
             return $;
         }

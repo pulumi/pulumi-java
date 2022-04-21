@@ -97,6 +97,14 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
             return operator(Output.of(operator));
         }
 
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(Operator operator) {
+            return operator(Either.ofRight(operator));
+        }
+
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;

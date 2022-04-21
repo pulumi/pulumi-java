@@ -97,6 +97,14 @@ public final class HeaderActionParametersArgs extends com.pulumi.resources.Resou
             return headerAction(Output.of(headerAction));
         }
 
+        public Builder headerAction(String headerAction) {
+            return headerAction(Either.ofLeft(headerAction));
+        }
+
+        public Builder headerAction(HeaderAction headerAction) {
+            return headerAction(Either.ofRight(headerAction));
+        }
+
         public Builder headerName(Output<String> headerName) {
             $.headerName = headerName;
             return this;

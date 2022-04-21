@@ -140,6 +140,14 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        public Builder backupManagementType(String backupManagementType) {
+            return backupManagementType(Either.ofLeft(backupManagementType));
+        }
+
+        public Builder backupManagementType(BackupManagementType backupManagementType) {
+            return backupManagementType(Either.ofRight(backupManagementType));
+        }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
@@ -183,6 +191,14 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
 
         public Builder protectionState(Either<String,ProtectionStatus> protectionState) {
             return protectionState(Output.of(protectionState));
+        }
+
+        public Builder protectionState(String protectionState) {
+            return protectionState(Either.ofLeft(protectionState));
+        }
+
+        public Builder protectionState(ProtectionStatus protectionState) {
+            return protectionState(Either.ofRight(protectionState));
         }
 
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {

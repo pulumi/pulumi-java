@@ -89,6 +89,14 @@ public final class RestRequestArgs extends com.pulumi.resources.ResourceArgs {
             return authentication(Output.of(authentication));
         }
 
+        public Builder authentication(ApiKeyAuthenticationArgs authentication) {
+            return authentication(Either.ofLeft(authentication));
+        }
+
+        public Builder authentication(RolloutIdentityAuthenticationArgs authentication) {
+            return authentication(Either.ofRight(authentication));
+        }
+
         public Builder method(Output<RestRequestMethod> method) {
             $.method = method;
             return this;

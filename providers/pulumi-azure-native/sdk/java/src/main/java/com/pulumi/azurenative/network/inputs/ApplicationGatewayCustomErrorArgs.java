@@ -86,6 +86,14 @@ public final class ApplicationGatewayCustomErrorArgs extends com.pulumi.resource
             return statusCode(Output.of(statusCode));
         }
 
+        public Builder statusCode(String statusCode) {
+            return statusCode(Either.ofLeft(statusCode));
+        }
+
+        public Builder statusCode(ApplicationGatewayCustomErrorStatusCode statusCode) {
+            return statusCode(Either.ofRight(statusCode));
+        }
+
         public ApplicationGatewayCustomErrorArgs build() {
             return $;
         }

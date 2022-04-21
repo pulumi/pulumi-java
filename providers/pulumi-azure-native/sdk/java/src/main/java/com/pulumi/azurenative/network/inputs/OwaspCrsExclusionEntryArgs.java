@@ -88,6 +88,14 @@ public final class OwaspCrsExclusionEntryArgs extends com.pulumi.resources.Resou
             return matchVariable(Output.of(matchVariable));
         }
 
+        public Builder matchVariable(String matchVariable) {
+            return matchVariable(Either.ofLeft(matchVariable));
+        }
+
+        public Builder matchVariable(OwaspCrsExclusionEntryMatchVariable matchVariable) {
+            return matchVariable(Either.ofRight(matchVariable));
+        }
+
         public Builder selector(Output<String> selector) {
             $.selector = selector;
             return this;
@@ -104,6 +112,14 @@ public final class OwaspCrsExclusionEntryArgs extends com.pulumi.resources.Resou
 
         public Builder selectorMatchOperator(Either<String,OwaspCrsExclusionEntrySelectorMatchOperator> selectorMatchOperator) {
             return selectorMatchOperator(Output.of(selectorMatchOperator));
+        }
+
+        public Builder selectorMatchOperator(String selectorMatchOperator) {
+            return selectorMatchOperator(Either.ofLeft(selectorMatchOperator));
+        }
+
+        public Builder selectorMatchOperator(OwaspCrsExclusionEntrySelectorMatchOperator selectorMatchOperator) {
+            return selectorMatchOperator(Either.ofRight(selectorMatchOperator));
         }
 
         public OwaspCrsExclusionEntryArgs build() {

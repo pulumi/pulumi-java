@@ -76,6 +76,14 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             return family(Output.of(family));
         }
 
+        public Builder family(String family) {
+            return family(Either.ofLeft(family));
+        }
+
+        public Builder family(SkuFamily family) {
+            return family(Either.ofRight(family));
+        }
+
         public Builder name(Output<SkuName> name) {
             $.name = name;
             return this;

@@ -103,6 +103,14 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(PrivateLinkServiceConnectionStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public ConnectionPropertiesPrivateLinkServiceConnectionStateArgs build() {
             $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
             $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");

@@ -152,6 +152,14 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
             return operator(Output.of(operator));
         }
 
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(WebApplicationFirewallOperator operator) {
+            return operator(Either.ofRight(operator));
+        }
+
         public Builder transforms(@Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms) {
             $.transforms = transforms;
             return this;

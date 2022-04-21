@@ -129,6 +129,14 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
             return actionAfterReboot(Output.of(actionAfterReboot));
         }
 
+        public Builder actionAfterReboot(String actionAfterReboot) {
+            return actionAfterReboot(Either.ofLeft(actionAfterReboot));
+        }
+
+        public Builder actionAfterReboot(ActionAfterReboot actionAfterReboot) {
+            return actionAfterReboot(Either.ofRight(actionAfterReboot));
+        }
+
         public Builder allowModuleOverwrite(@Nullable Output<Boolean> allowModuleOverwrite) {
             $.allowModuleOverwrite = allowModuleOverwrite;
             return this;
@@ -145,6 +153,14 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
 
         public Builder configurationMode(Either<String,ConfigurationMode> configurationMode) {
             return configurationMode(Output.of(configurationMode));
+        }
+
+        public Builder configurationMode(String configurationMode) {
+            return configurationMode(Either.ofLeft(configurationMode));
+        }
+
+        public Builder configurationMode(ConfigurationMode configurationMode) {
+            return configurationMode(Either.ofRight(configurationMode));
         }
 
         public Builder configurationModeFrequencyMins(@Nullable Output<Double> configurationModeFrequencyMins) {

@@ -275,6 +275,14 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
             return this;
         }
 
+        public Builder mwsAuthToken(AzureKeyVaultSecretReferenceResponse mwsAuthToken) {
+            return mwsAuthToken(Either.ofLeft(mwsAuthToken));
+        }
+
+        public Builder mwsAuthToken(SecureStringResponse mwsAuthToken) {
+            return mwsAuthToken(Either.ofRight(mwsAuthToken));
+        }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
@@ -283,6 +291,14 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
         public Builder secretKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey) {
             $.secretKey = secretKey;
             return this;
+        }
+
+        public Builder secretKey(AzureKeyVaultSecretReferenceResponse secretKey) {
+            return secretKey(Either.ofLeft(secretKey));
+        }
+
+        public Builder secretKey(SecureStringResponse secretKey) {
+            return secretKey(Either.ofRight(secretKey));
         }
 
         public Builder sellerID(Object sellerID) {

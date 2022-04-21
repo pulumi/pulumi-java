@@ -114,6 +114,14 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
             return marketplaceSubscriptionStatus(Output.of(marketplaceSubscriptionStatus));
         }
 
+        public Builder marketplaceSubscriptionStatus(String marketplaceSubscriptionStatus) {
+            return marketplaceSubscriptionStatus(Either.ofLeft(marketplaceSubscriptionStatus));
+        }
+
+        public Builder marketplaceSubscriptionStatus(MarketplaceSubscriptionStatus marketplaceSubscriptionStatus) {
+            return marketplaceSubscriptionStatus(Either.ofRight(marketplaceSubscriptionStatus));
+        }
+
         public Builder monitoringStatus(@Nullable Output<Either<String,MonitoringStatus>> monitoringStatus) {
             $.monitoringStatus = monitoringStatus;
             return this;
@@ -121,6 +129,14 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
 
         public Builder monitoringStatus(Either<String,MonitoringStatus> monitoringStatus) {
             return monitoringStatus(Output.of(monitoringStatus));
+        }
+
+        public Builder monitoringStatus(String monitoringStatus) {
+            return monitoringStatus(Either.ofLeft(monitoringStatus));
+        }
+
+        public Builder monitoringStatus(MonitoringStatus monitoringStatus) {
+            return monitoringStatus(Either.ofRight(monitoringStatus));
         }
 
         public Builder planData(@Nullable Output<PlanDataArgs> planData) {

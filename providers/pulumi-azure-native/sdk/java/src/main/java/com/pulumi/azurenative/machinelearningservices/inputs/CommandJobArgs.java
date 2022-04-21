@@ -331,6 +331,14 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
             return identity(Output.of(identity));
         }
 
+        public Builder identity(AmlTokenArgs identity) {
+            return identity(Either.ofLeft(identity));
+        }
+
+        public Builder identity(ManagedIdentityArgs identity) {
+            return identity(Either.ofRight(identity));
+        }
+
         public Builder inputDataBindings(@Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings) {
             $.inputDataBindings = inputDataBindings;
             return this;

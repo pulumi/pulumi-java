@@ -239,6 +239,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return createdByType(Output.of(createdByType));
         }
 
+        public Builder createdByType(String createdByType) {
+            return createdByType(Either.ofLeft(createdByType));
+        }
+
+        public Builder createdByType(CreatedByType createdByType) {
+            return createdByType(Either.ofRight(createdByType));
+        }
+
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             $.lastModifiedAt = lastModifiedAt;
             return this;
@@ -264,6 +272,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder lastModifiedByType(Either<String,CreatedByType> lastModifiedByType) {
             return lastModifiedByType(Output.of(lastModifiedByType));
+        }
+
+        public Builder lastModifiedByType(String lastModifiedByType) {
+            return lastModifiedByType(Either.ofLeft(lastModifiedByType));
+        }
+
+        public Builder lastModifiedByType(CreatedByType lastModifiedByType) {
+            return lastModifiedByType(Either.ofRight(lastModifiedByType));
         }
 
         public Builder location(@Nullable Output<String> location) {

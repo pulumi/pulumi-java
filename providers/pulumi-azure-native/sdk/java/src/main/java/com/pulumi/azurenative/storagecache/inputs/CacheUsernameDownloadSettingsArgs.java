@@ -278,6 +278,14 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
             return usernameSource(Output.of(usernameSource));
         }
 
+        public Builder usernameSource(String usernameSource) {
+            return usernameSource(Either.ofLeft(usernameSource));
+        }
+
+        public Builder usernameSource(UsernameSource usernameSource) {
+            return usernameSource(Either.ofRight(usernameSource));
+        }
+
         public CacheUsernameDownloadSettingsArgs build() {
             $.usernameSource = Codegen.stringProp("usernameSource").left(UsernameSource.class).output().arg($.usernameSource).def("None").getNullable();
             return $;

@@ -122,6 +122,14 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
             return timeframe(Output.of(timeframe));
         }
 
+        public Builder timeframe(String timeframe) {
+            return timeframe(Either.ofLeft(timeframe));
+        }
+
+        public Builder timeframe(TimeframeType timeframe) {
+            return timeframe(Either.ofRight(timeframe));
+        }
+
         public Builder type(Output<Either<String,ExportType>> type) {
             $.type = type;
             return this;
@@ -129,6 +137,14 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
 
         public Builder type(Either<String,ExportType> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ExportType type) {
+            return type(Either.ofRight(type));
         }
 
         public ExportDefinitionArgs build() {

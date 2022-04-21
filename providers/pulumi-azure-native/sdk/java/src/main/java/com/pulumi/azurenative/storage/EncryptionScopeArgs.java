@@ -181,6 +181,14 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
             return source(Output.of(source));
         }
 
+        public Builder source(String source) {
+            return source(Either.ofLeft(source));
+        }
+
+        public Builder source(EncryptionScopeSource source) {
+            return source(Either.ofRight(source));
+        }
+
         public Builder state(@Nullable Output<Either<String,EncryptionScopeState>> state) {
             $.state = state;
             return this;
@@ -188,6 +196,14 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder state(Either<String,EncryptionScopeState> state) {
             return state(Output.of(state));
+        }
+
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(EncryptionScopeState state) {
+            return state(Either.ofRight(state));
         }
 
         public EncryptionScopeArgs build() {

@@ -390,6 +390,14 @@ public final class PartnerRegistrationArgs extends com.pulumi.resources.Resource
             return visibilityState(Output.of(visibilityState));
         }
 
+        public Builder visibilityState(String visibilityState) {
+            return visibilityState(Either.ofLeft(visibilityState));
+        }
+
+        public Builder visibilityState(PartnerRegistrationVisibilityState visibilityState) {
+            return visibilityState(Either.ofRight(visibilityState));
+        }
+
         public PartnerRegistrationArgs build() {
             $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
             return $;

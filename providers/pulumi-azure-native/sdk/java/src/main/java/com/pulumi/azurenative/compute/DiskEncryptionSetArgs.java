@@ -167,6 +167,14 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
             return encryptionType(Output.of(encryptionType));
         }
 
+        public Builder encryptionType(String encryptionType) {
+            return encryptionType(Either.ofLeft(encryptionType));
+        }
+
+        public Builder encryptionType(DiskEncryptionSetType encryptionType) {
+            return encryptionType(Either.ofRight(encryptionType));
+        }
+
         public Builder identity(@Nullable Output<EncryptionSetIdentityArgs> identity) {
             $.identity = identity;
             return this;

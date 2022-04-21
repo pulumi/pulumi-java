@@ -161,6 +161,14 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
             return plan(Output.of(plan));
         }
 
+        public Builder plan(String plan) {
+            return plan(Either.ofLeft(plan));
+        }
+
+        public Builder plan(TablePlanEnum plan) {
+            return plan(Either.ofRight(plan));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

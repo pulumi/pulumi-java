@@ -217,6 +217,14 @@ public final class HubspotLinkedServiceArgs extends com.pulumi.resources.Resourc
             return accessToken(Output.of(accessToken));
         }
 
+        public Builder accessToken(AzureKeyVaultSecretReferenceArgs accessToken) {
+            return accessToken(Either.ofLeft(accessToken));
+        }
+
+        public Builder accessToken(SecureStringArgs accessToken) {
+            return accessToken(Either.ofRight(accessToken));
+        }
+
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
@@ -246,6 +254,14 @@ public final class HubspotLinkedServiceArgs extends com.pulumi.resources.Resourc
 
         public Builder clientSecret(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
             return clientSecret(Output.of(clientSecret));
+        }
+
+        public Builder clientSecret(AzureKeyVaultSecretReferenceArgs clientSecret) {
+            return clientSecret(Either.ofLeft(clientSecret));
+        }
+
+        public Builder clientSecret(SecureStringArgs clientSecret) {
+            return clientSecret(Either.ofRight(clientSecret));
         }
 
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -291,6 +307,14 @@ public final class HubspotLinkedServiceArgs extends com.pulumi.resources.Resourc
 
         public Builder refreshToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> refreshToken) {
             return refreshToken(Output.of(refreshToken));
+        }
+
+        public Builder refreshToken(AzureKeyVaultSecretReferenceArgs refreshToken) {
+            return refreshToken(Either.ofLeft(refreshToken));
+        }
+
+        public Builder refreshToken(SecureStringArgs refreshToken) {
+            return refreshToken(Either.ofRight(refreshToken));
         }
 
         public Builder type(Output<String> type) {

@@ -74,6 +74,14 @@ public final class LabelingJobImagePropertiesArgs extends com.pulumi.resources.R
             return annotationType(Output.of(annotationType));
         }
 
+        public Builder annotationType(String annotationType) {
+            return annotationType(Either.ofLeft(annotationType));
+        }
+
+        public Builder annotationType(ImageAnnotationType annotationType) {
+            return annotationType(Either.ofRight(annotationType));
+        }
+
         public Builder mediaType(Output<Either<String,MediaType>> mediaType) {
             $.mediaType = mediaType;
             return this;
@@ -81,6 +89,14 @@ public final class LabelingJobImagePropertiesArgs extends com.pulumi.resources.R
 
         public Builder mediaType(Either<String,MediaType> mediaType) {
             return mediaType(Output.of(mediaType));
+        }
+
+        public Builder mediaType(String mediaType) {
+            return mediaType(Either.ofLeft(mediaType));
+        }
+
+        public Builder mediaType(MediaType mediaType) {
+            return mediaType(Either.ofRight(mediaType));
         }
 
         public LabelingJobImagePropertiesArgs build() {

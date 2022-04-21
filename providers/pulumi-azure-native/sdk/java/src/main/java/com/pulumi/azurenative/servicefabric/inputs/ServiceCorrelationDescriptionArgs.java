@@ -75,6 +75,14 @@ public final class ServiceCorrelationDescriptionArgs extends com.pulumi.resource
             return scheme(Output.of(scheme));
         }
 
+        public Builder scheme(String scheme) {
+            return scheme(Either.ofLeft(scheme));
+        }
+
+        public Builder scheme(ServiceCorrelationScheme scheme) {
+            return scheme(Either.ofRight(scheme));
+        }
+
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;

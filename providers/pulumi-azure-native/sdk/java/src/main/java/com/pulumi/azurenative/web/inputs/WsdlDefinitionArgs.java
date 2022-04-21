@@ -111,6 +111,14 @@ public final class WsdlDefinitionArgs extends com.pulumi.resources.ResourceArgs 
             return importMethod(Output.of(importMethod));
         }
 
+        public Builder importMethod(String importMethod) {
+            return importMethod(Either.ofLeft(importMethod));
+        }
+
+        public Builder importMethod(WsdlImportMethod importMethod) {
+            return importMethod(Either.ofRight(importMethod));
+        }
+
         public Builder service(@Nullable Output<WsdlServiceArgs> service) {
             $.service = service;
             return this;

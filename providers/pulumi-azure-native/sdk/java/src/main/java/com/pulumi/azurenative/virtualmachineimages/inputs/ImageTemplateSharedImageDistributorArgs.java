@@ -191,6 +191,14 @@ public final class ImageTemplateSharedImageDistributorArgs extends com.pulumi.re
             return storageAccountType(Output.of(storageAccountType));
         }
 
+        public Builder storageAccountType(String storageAccountType) {
+            return storageAccountType(Either.ofLeft(storageAccountType));
+        }
+
+        public Builder storageAccountType(SharedImageStorageAccountType storageAccountType) {
+            return storageAccountType(Either.ofRight(storageAccountType));
+        }
+
         public Builder type(Output<String> type) {
             $.type = type;
             return this;

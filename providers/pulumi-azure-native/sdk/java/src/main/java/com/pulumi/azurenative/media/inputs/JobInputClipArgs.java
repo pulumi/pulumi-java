@@ -133,6 +133,14 @@ public final class JobInputClipArgs extends com.pulumi.resources.ResourceArgs {
             return end(Output.of(end));
         }
 
+        public Builder end(AbsoluteClipTimeArgs end) {
+            return end(Either.ofLeft(end));
+        }
+
+        public Builder end(UtcClipTimeArgs end) {
+            return end(Either.ofRight(end));
+        }
+
         public Builder files(@Nullable Output<List<String>> files) {
             $.files = files;
             return this;
@@ -184,6 +192,14 @@ public final class JobInputClipArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder start(Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> start) {
             return start(Output.of(start));
+        }
+
+        public Builder start(AbsoluteClipTimeArgs start) {
+            return start(Either.ofLeft(start));
+        }
+
+        public Builder start(UtcClipTimeArgs start) {
+            return start(Either.ofRight(start));
         }
 
         public JobInputClipArgs build() {

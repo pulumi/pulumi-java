@@ -248,6 +248,14 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
             return provisioningState(Output.of(provisioningState));
         }
 
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(WorkspaceEntityStatus provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
+        }
+
         public Builder publicNetworkAccessForIngestion(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion) {
             $.publicNetworkAccessForIngestion = publicNetworkAccessForIngestion;
             return this;
@@ -257,6 +265,14 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
             return publicNetworkAccessForIngestion(Output.of(publicNetworkAccessForIngestion));
         }
 
+        public Builder publicNetworkAccessForIngestion(String publicNetworkAccessForIngestion) {
+            return publicNetworkAccessForIngestion(Either.ofLeft(publicNetworkAccessForIngestion));
+        }
+
+        public Builder publicNetworkAccessForIngestion(PublicNetworkAccessType publicNetworkAccessForIngestion) {
+            return publicNetworkAccessForIngestion(Either.ofRight(publicNetworkAccessForIngestion));
+        }
+
         public Builder publicNetworkAccessForQuery(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery) {
             $.publicNetworkAccessForQuery = publicNetworkAccessForQuery;
             return this;
@@ -264,6 +280,14 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder publicNetworkAccessForQuery(Either<String,PublicNetworkAccessType> publicNetworkAccessForQuery) {
             return publicNetworkAccessForQuery(Output.of(publicNetworkAccessForQuery));
+        }
+
+        public Builder publicNetworkAccessForQuery(String publicNetworkAccessForQuery) {
+            return publicNetworkAccessForQuery(Either.ofLeft(publicNetworkAccessForQuery));
+        }
+
+        public Builder publicNetworkAccessForQuery(PublicNetworkAccessType publicNetworkAccessForQuery) {
+            return publicNetworkAccessForQuery(Either.ofRight(publicNetworkAccessForQuery));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {

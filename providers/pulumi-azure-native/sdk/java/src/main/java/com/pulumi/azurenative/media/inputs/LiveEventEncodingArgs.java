@@ -102,6 +102,14 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
             return encodingType(Output.of(encodingType));
         }
 
+        public Builder encodingType(String encodingType) {
+            return encodingType(Either.ofLeft(encodingType));
+        }
+
+        public Builder encodingType(LiveEventEncodingType encodingType) {
+            return encodingType(Either.ofRight(encodingType));
+        }
+
         public Builder keyFrameInterval(@Nullable Output<String> keyFrameInterval) {
             $.keyFrameInterval = keyFrameInterval;
             return this;
@@ -127,6 +135,14 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
 
         public Builder stretchMode(Either<String,StretchMode> stretchMode) {
             return stretchMode(Output.of(stretchMode));
+        }
+
+        public Builder stretchMode(String stretchMode) {
+            return stretchMode(Either.ofLeft(stretchMode));
+        }
+
+        public Builder stretchMode(StretchMode stretchMode) {
+            return stretchMode(Either.ofRight(stretchMode));
         }
 
         public LiveEventEncodingArgs build() {

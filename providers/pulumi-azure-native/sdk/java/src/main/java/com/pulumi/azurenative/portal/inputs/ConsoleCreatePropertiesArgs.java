@@ -90,6 +90,14 @@ public final class ConsoleCreatePropertiesArgs extends com.pulumi.resources.Reso
             return osType(Output.of(osType));
         }
 
+        public Builder osType(String osType) {
+            return osType(Either.ofLeft(osType));
+        }
+
+        public Builder osType(OsType osType) {
+            return osType(Either.ofRight(osType));
+        }
+
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
@@ -97,6 +105,14 @@ public final class ConsoleCreatePropertiesArgs extends com.pulumi.resources.Reso
 
         public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
             return provisioningState(Output.of(provisioningState));
+        }
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
         }
 
         public Builder uri(@Nullable Output<String> uri) {

@@ -144,6 +144,14 @@ public final class DiagnosticsArgs extends com.pulumi.resources.ResourceArgs {
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(ActionRuleStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public Builder type(Output<String> type) {
             $.type = type;
             return this;

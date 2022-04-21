@@ -266,6 +266,14 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
             return this;
         }
 
+        public Builder accountKey(AzureKeyVaultSecretReferenceResponse accountKey) {
+            return accountKey(Either.ofLeft(accountKey));
+        }
+
+        public Builder accountKey(SecureStringResponse accountKey) {
+            return accountKey(Either.ofRight(accountKey));
+        }
+
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
@@ -323,6 +331,14 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
         public Builder servicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential) {
             $.servicePrincipalCredential = servicePrincipalCredential;
             return this;
+        }
+
+        public Builder servicePrincipalCredential(AzureKeyVaultSecretReferenceResponse servicePrincipalCredential) {
+            return servicePrincipalCredential(Either.ofLeft(servicePrincipalCredential));
+        }
+
+        public Builder servicePrincipalCredential(SecureStringResponse servicePrincipalCredential) {
+            return servicePrincipalCredential(Either.ofRight(servicePrincipalCredential));
         }
 
         public Builder servicePrincipalCredentialType(@Nullable String servicePrincipalCredentialType) {

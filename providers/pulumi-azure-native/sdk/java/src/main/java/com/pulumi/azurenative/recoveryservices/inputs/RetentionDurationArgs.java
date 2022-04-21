@@ -88,6 +88,14 @@ public final class RetentionDurationArgs extends com.pulumi.resources.ResourceAr
             return durationType(Output.of(durationType));
         }
 
+        public Builder durationType(String durationType) {
+            return durationType(Either.ofLeft(durationType));
+        }
+
+        public Builder durationType(RetentionDurationType durationType) {
+            return durationType(Either.ofRight(durationType));
+        }
+
         public RetentionDurationArgs build() {
             return $;
         }

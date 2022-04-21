@@ -108,6 +108,14 @@ public final class ResourceSettingsArgs extends com.pulumi.resources.ResourceArg
             return size(Output.of(size));
         }
 
+        public Builder size(String size) {
+            return size(Either.ofLeft(size));
+        }
+
+        public Builder size(ManagedLabVmSize size) {
+            return size(Either.ofRight(size));
+        }
+
         public ResourceSettingsArgs build() {
             $.referenceVm = Objects.requireNonNull($.referenceVm, "expected parameter 'referenceVm' to be non-null");
             return $;

@@ -239,6 +239,14 @@ public final class ImageOSDiskArgs extends com.pulumi.resources.ResourceArgs {
             return storageAccountType(Output.of(storageAccountType));
         }
 
+        public Builder storageAccountType(String storageAccountType) {
+            return storageAccountType(Either.ofLeft(storageAccountType));
+        }
+
+        public Builder storageAccountType(StorageAccountTypes storageAccountType) {
+            return storageAccountType(Either.ofRight(storageAccountType));
+        }
+
         public ImageOSDiskArgs build() {
             $.osState = Objects.requireNonNull($.osState, "expected parameter 'osState' to be non-null");
             $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");

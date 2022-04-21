@@ -200,6 +200,14 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
             return severity(Output.of(severity));
         }
 
+        public Builder severity(String severity) {
+            return severity(Either.ofLeft(severity));
+        }
+
+        public Builder severity(SeverityEnum severity) {
+            return severity(Either.ofRight(severity));
+        }
+
         public Builder supportedCloud(@Nullable Output<Either<String,SupportedCloudEnum>> supportedCloud) {
             $.supportedCloud = supportedCloud;
             return this;
@@ -207,6 +215,14 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
 
         public Builder supportedCloud(Either<String,SupportedCloudEnum> supportedCloud) {
             return supportedCloud(Output.of(supportedCloud));
+        }
+
+        public Builder supportedCloud(String supportedCloud) {
+            return supportedCloud(Either.ofLeft(supportedCloud));
+        }
+
+        public Builder supportedCloud(SupportedCloudEnum supportedCloud) {
+            return supportedCloud(Either.ofRight(supportedCloud));
         }
 
         public CustomAssessmentAutomationArgs build() {

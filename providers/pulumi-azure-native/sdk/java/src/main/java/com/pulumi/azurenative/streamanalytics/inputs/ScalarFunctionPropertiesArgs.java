@@ -107,6 +107,14 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
             return binding(Output.of(binding));
         }
 
+        public Builder binding(AzureMachineLearningWebServiceFunctionBindingArgs binding) {
+            return binding(Either.ofLeft(binding));
+        }
+
+        public Builder binding(JavaScriptFunctionBindingArgs binding) {
+            return binding(Either.ofRight(binding));
+        }
+
         public Builder inputs(@Nullable Output<List<FunctionInputArgs>> inputs) {
             $.inputs = inputs;
             return this;

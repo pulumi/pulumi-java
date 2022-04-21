@@ -246,6 +246,14 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
             return packagePassword(Output.of(packagePassword));
         }
 
+        public Builder packagePassword(AzureKeyVaultSecretReferenceArgs packagePassword) {
+            return packagePassword(Either.ofLeft(packagePassword));
+        }
+
+        public Builder packagePassword(SecureStringArgs packagePassword) {
+            return packagePassword(Either.ofRight(packagePassword));
+        }
+
         public Builder packagePath(@Nullable Output<Object> packagePath) {
             $.packagePath = packagePath;
             return this;
@@ -262,6 +270,14 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
 
         public Builder type(Either<String,SsisPackageLocationType> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(SsisPackageLocationType type) {
+            return type(Either.ofRight(type));
         }
 
         public SSISPackageLocationArgs build() {

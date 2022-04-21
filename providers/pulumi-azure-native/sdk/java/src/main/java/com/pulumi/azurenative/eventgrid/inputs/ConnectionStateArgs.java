@@ -107,6 +107,14 @@ public final class ConnectionStateArgs extends com.pulumi.resources.ResourceArgs
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(PersistedConnectionStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public ConnectionStateArgs build() {
             return $;
         }

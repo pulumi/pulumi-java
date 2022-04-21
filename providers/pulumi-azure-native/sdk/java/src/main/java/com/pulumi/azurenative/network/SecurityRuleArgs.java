@@ -306,6 +306,14 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
             return access(Output.of(access));
         }
 
+        public Builder access(String access) {
+            return access(Either.ofLeft(access));
+        }
+
+        public Builder access(SecurityRuleAccess access) {
+            return access(Either.ofRight(access));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
@@ -381,6 +389,14 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
             return direction(Output.of(direction));
         }
 
+        public Builder direction(String direction) {
+            return direction(Either.ofLeft(direction));
+        }
+
+        public Builder direction(SecurityRuleDirection direction) {
+            return direction(Either.ofRight(direction));
+        }
+
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
@@ -424,6 +440,14 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder protocol(Either<String,SecurityRuleProtocol> protocol) {
             return protocol(Output.of(protocol));
+        }
+
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(SecurityRuleProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {

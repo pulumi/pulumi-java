@@ -58,6 +58,14 @@ public final class DataImportDetailsResponse extends com.pulumi.resources.Invoke
             return this;
         }
 
+        public Builder accountDetails(ManagedDiskDetailsResponse accountDetails) {
+            return accountDetails(Either.ofLeft(accountDetails));
+        }
+
+        public Builder accountDetails(StorageAccountDetailsResponse accountDetails) {
+            return accountDetails(Either.ofRight(accountDetails));
+        }
+
         public DataImportDetailsResponse build() {
             $.accountDetails = Objects.requireNonNull($.accountDetails, "expected parameter 'accountDetails' to be non-null");
             return $;

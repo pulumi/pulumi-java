@@ -230,6 +230,14 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
             return compression(Output.of(compression));
         }
 
+        public Builder compression(String compression) {
+            return compression(Either.ofLeft(compression));
+        }
+
+        public Builder compression(Compression compression) {
+            return compression(Either.ofRight(compression));
+        }
+
         public Builder consumerGroup(Output<String> consumerGroup) {
             $.consumerGroup = consumerGroup;
             return this;
@@ -255,6 +263,14 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
 
         public Builder dataFormat(Either<String,EventHubDataFormat> dataFormat) {
             return dataFormat(Output.of(dataFormat));
+        }
+
+        public Builder dataFormat(String dataFormat) {
+            return dataFormat(Either.ofLeft(dataFormat));
+        }
+
+        public Builder dataFormat(EventHubDataFormat dataFormat) {
+            return dataFormat(Either.ofRight(dataFormat));
         }
 
         public Builder databaseName(Output<String> databaseName) {

@@ -65,6 +65,14 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends com.pulum
             return provider(Output.of(provider));
         }
 
+        public Builder provider(String provider) {
+            return provider(Either.ofLeft(provider));
+        }
+
+        public Builder provider(Provider provider) {
+            return provider(Either.ofRight(provider));
+        }
+
         public AppliancePropertiesInfrastructureConfigArgs build() {
             return $;
         }

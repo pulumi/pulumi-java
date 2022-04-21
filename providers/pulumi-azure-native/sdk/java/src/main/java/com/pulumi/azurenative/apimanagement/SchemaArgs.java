@@ -148,6 +148,14 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
             return schemaType(Output.of(schemaType));
         }
 
+        public Builder schemaType(String schemaType) {
+            return schemaType(Either.ofLeft(schemaType));
+        }
+
+        public Builder schemaType(SchemaType schemaType) {
+            return schemaType(Either.ofRight(schemaType));
+        }
+
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;

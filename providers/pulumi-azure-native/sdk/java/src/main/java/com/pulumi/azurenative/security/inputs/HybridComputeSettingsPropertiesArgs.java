@@ -115,6 +115,14 @@ public final class HybridComputeSettingsPropertiesArgs extends com.pulumi.resour
             return autoProvision(Output.of(autoProvision));
         }
 
+        public Builder autoProvision(String autoProvision) {
+            return autoProvision(Either.ofLeft(autoProvision));
+        }
+
+        public Builder autoProvision(AutoProvision autoProvision) {
+            return autoProvision(Either.ofRight(autoProvision));
+        }
+
         public Builder proxyServer(@Nullable Output<ProxyServerPropertiesArgs> proxyServer) {
             $.proxyServer = proxyServer;
             return this;

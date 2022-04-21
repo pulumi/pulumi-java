@@ -91,6 +91,14 @@ public final class CsvSerializationArgs extends com.pulumi.resources.ResourceArg
             return encoding(Output.of(encoding));
         }
 
+        public Builder encoding(String encoding) {
+            return encoding(Either.ofLeft(encoding));
+        }
+
+        public Builder encoding(Encoding encoding) {
+            return encoding(Either.ofRight(encoding));
+        }
+
         public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
             $.fieldDelimiter = fieldDelimiter;
             return this;

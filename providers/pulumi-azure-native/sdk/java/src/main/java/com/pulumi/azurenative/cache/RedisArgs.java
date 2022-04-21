@@ -255,6 +255,14 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
             return minimumTlsVersion(Output.of(minimumTlsVersion));
         }
 
+        public Builder minimumTlsVersion(String minimumTlsVersion) {
+            return minimumTlsVersion(Either.ofLeft(minimumTlsVersion));
+        }
+
+        public Builder minimumTlsVersion(TlsVersion minimumTlsVersion) {
+            return minimumTlsVersion(Either.ofRight(minimumTlsVersion));
+        }
+
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
@@ -271,6 +279,14 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
         public Builder redisConfiguration(@Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration) {

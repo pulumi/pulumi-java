@@ -260,6 +260,14 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
             return frequency(Output.of(frequency));
         }
 
+        public Builder frequency(String frequency) {
+            return frequency(Either.ofLeft(frequency));
+        }
+
+        public Builder frequency(TumblingWindowFrequency frequency) {
+            return frequency(Either.ofRight(frequency));
+        }
+
         public Builder interval(Output<Integer> interval) {
             $.interval = interval;
             return this;

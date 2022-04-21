@@ -212,6 +212,14 @@ public final class InformixLinkedServiceResponse extends com.pulumi.resources.In
             return this;
         }
 
+        public Builder credential(AzureKeyVaultSecretReferenceResponse credential) {
+            return credential(Either.ofLeft(credential));
+        }
+
+        public Builder credential(SecureStringResponse credential) {
+            return credential(Either.ofRight(credential));
+        }
+
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
@@ -230,6 +238,14 @@ public final class InformixLinkedServiceResponse extends com.pulumi.resources.In
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
+        }
+
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
         }
 
         public Builder type(String type) {

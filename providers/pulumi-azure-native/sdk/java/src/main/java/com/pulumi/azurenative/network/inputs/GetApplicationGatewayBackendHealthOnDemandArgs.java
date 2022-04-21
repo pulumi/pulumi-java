@@ -220,6 +220,14 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
             return this;
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(ApplicationGatewayProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

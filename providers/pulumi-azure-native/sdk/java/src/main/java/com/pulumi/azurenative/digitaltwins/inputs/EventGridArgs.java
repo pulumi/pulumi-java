@@ -157,6 +157,14 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(AuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder deadLetterSecret(@Nullable Output<String> deadLetterSecret) {
             $.deadLetterSecret = deadLetterSecret;
             return this;

@@ -55,6 +55,14 @@ public final class ResourceTypeRegistrationPropertiesFeaturesRuleArgs extends co
             return requiredFeaturesPolicy(Output.of(requiredFeaturesPolicy));
         }
 
+        public Builder requiredFeaturesPolicy(String requiredFeaturesPolicy) {
+            return requiredFeaturesPolicy(Either.ofLeft(requiredFeaturesPolicy));
+        }
+
+        public Builder requiredFeaturesPolicy(FeaturesPolicy requiredFeaturesPolicy) {
+            return requiredFeaturesPolicy(Either.ofRight(requiredFeaturesPolicy));
+        }
+
         public ResourceTypeRegistrationPropertiesFeaturesRuleArgs build() {
             $.requiredFeaturesPolicy = Objects.requireNonNull($.requiredFeaturesPolicy, "expected parameter 'requiredFeaturesPolicy' to be non-null");
             return $;

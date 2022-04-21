@@ -229,6 +229,14 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
             return accessToken(Output.of(accessToken));
         }
 
+        public Builder accessToken(AzureKeyVaultSecretReferenceArgs accessToken) {
+            return accessToken(Either.ofLeft(accessToken));
+        }
+
+        public Builder accessToken(SecureStringArgs accessToken) {
+            return accessToken(Either.ofRight(accessToken));
+        }
+
         public Builder accessTokenSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret) {
             $.accessTokenSecret = accessTokenSecret;
             return this;
@@ -236,6 +244,14 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
 
         public Builder accessTokenSecret(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessTokenSecret) {
             return accessTokenSecret(Output.of(accessTokenSecret));
+        }
+
+        public Builder accessTokenSecret(AzureKeyVaultSecretReferenceArgs accessTokenSecret) {
+            return accessTokenSecret(Either.ofLeft(accessTokenSecret));
+        }
+
+        public Builder accessTokenSecret(SecureStringArgs accessTokenSecret) {
+            return accessTokenSecret(Either.ofRight(accessTokenSecret));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
@@ -294,6 +310,14 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
 
         public Builder consumerSecret(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> consumerSecret) {
             return consumerSecret(Output.of(consumerSecret));
+        }
+
+        public Builder consumerSecret(AzureKeyVaultSecretReferenceArgs consumerSecret) {
+            return consumerSecret(Either.ofLeft(consumerSecret));
+        }
+
+        public Builder consumerSecret(SecureStringArgs consumerSecret) {
+            return consumerSecret(Either.ofRight(consumerSecret));
         }
 
         public Builder description(@Nullable Output<String> description) {

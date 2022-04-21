@@ -105,6 +105,14 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends com.pulumi.resources
             return alwaysEncryptedAkvAuthType(Output.of(alwaysEncryptedAkvAuthType));
         }
 
+        public Builder alwaysEncryptedAkvAuthType(String alwaysEncryptedAkvAuthType) {
+            return alwaysEncryptedAkvAuthType(Either.ofLeft(alwaysEncryptedAkvAuthType));
+        }
+
+        public Builder alwaysEncryptedAkvAuthType(SqlAlwaysEncryptedAkvAuthType alwaysEncryptedAkvAuthType) {
+            return alwaysEncryptedAkvAuthType(Either.ofRight(alwaysEncryptedAkvAuthType));
+        }
+
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             $.credential = credential;
             return this;
@@ -130,6 +138,14 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends com.pulumi.resources
 
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             return servicePrincipalKey(Output.of(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
         public SqlAlwaysEncryptedPropertiesArgs build() {

@@ -153,6 +153,14 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
             return useInVmCreationPermission(Output.of(useInVmCreationPermission));
         }
 
+        public Builder useInVmCreationPermission(String useInVmCreationPermission) {
+            return useInVmCreationPermission(Either.ofLeft(useInVmCreationPermission));
+        }
+
+        public Builder useInVmCreationPermission(UsagePermissionType useInVmCreationPermission) {
+            return useInVmCreationPermission(Either.ofRight(useInVmCreationPermission));
+        }
+
         public Builder usePublicIpAddressPermission(@Nullable Output<Either<String,UsagePermissionType>> usePublicIpAddressPermission) {
             $.usePublicIpAddressPermission = usePublicIpAddressPermission;
             return this;
@@ -160,6 +168,14 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder usePublicIpAddressPermission(Either<String,UsagePermissionType> usePublicIpAddressPermission) {
             return usePublicIpAddressPermission(Output.of(usePublicIpAddressPermission));
+        }
+
+        public Builder usePublicIpAddressPermission(String usePublicIpAddressPermission) {
+            return usePublicIpAddressPermission(Either.ofLeft(usePublicIpAddressPermission));
+        }
+
+        public Builder usePublicIpAddressPermission(UsagePermissionType usePublicIpAddressPermission) {
+            return usePublicIpAddressPermission(Either.ofRight(usePublicIpAddressPermission));
         }
 
         public Builder virtualNetworkPoolName(@Nullable Output<String> virtualNetworkPoolName) {

@@ -224,6 +224,14 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
             return evictionPolicy(Output.of(evictionPolicy));
         }
 
+        public Builder evictionPolicy(String evictionPolicy) {
+            return evictionPolicy(Either.ofLeft(evictionPolicy));
+        }
+
+        public Builder evictionPolicy(VirtualMachineEvictionPolicyTypes evictionPolicy) {
+            return evictionPolicy(Either.ofRight(evictionPolicy));
+        }
+
         public Builder extensionProfile(@Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile) {
             $.extensionProfile = extensionProfile;
             return this;
@@ -267,6 +275,14 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
 
         public Builder priority(Either<String,VirtualMachinePriorityTypes> priority) {
             return priority(Output.of(priority));
+        }
+
+        public Builder priority(String priority) {
+            return priority(Either.ofLeft(priority));
+        }
+
+        public Builder priority(VirtualMachinePriorityTypes priority) {
+            return priority(Either.ofRight(priority));
         }
 
         public Builder scheduledEventsProfile(@Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile) {

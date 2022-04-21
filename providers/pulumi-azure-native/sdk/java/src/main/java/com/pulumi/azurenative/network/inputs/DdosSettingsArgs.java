@@ -109,6 +109,14 @@ public final class DdosSettingsArgs extends com.pulumi.resources.ResourceArgs {
             return protectionCoverage(Output.of(protectionCoverage));
         }
 
+        public Builder protectionCoverage(String protectionCoverage) {
+            return protectionCoverage(Either.ofLeft(protectionCoverage));
+        }
+
+        public Builder protectionCoverage(DdosSettingsProtectionCoverage protectionCoverage) {
+            return protectionCoverage(Either.ofRight(protectionCoverage));
+        }
+
         public DdosSettingsArgs build() {
             return $;
         }

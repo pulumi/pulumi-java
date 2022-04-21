@@ -87,6 +87,14 @@ public final class UpstreamAuthSettingsArgs extends com.pulumi.resources.Resourc
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(UpstreamAuthType type) {
+            return type(Either.ofRight(type));
+        }
+
         public UpstreamAuthSettingsArgs build() {
             return $;
         }

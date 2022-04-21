@@ -175,6 +175,14 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
             return createOption(Output.of(createOption));
         }
 
+        public Builder createOption(String createOption) {
+            return createOption(Either.ofLeft(createOption));
+        }
+
+        public Builder createOption(DiskCreateOptionTypes createOption) {
+            return createOption(Either.ofRight(createOption));
+        }
+
         public Builder diskIOPSReadWrite(@Nullable Output<Double> diskIOPSReadWrite) {
             $.diskIOPSReadWrite = diskIOPSReadWrite;
             return this;

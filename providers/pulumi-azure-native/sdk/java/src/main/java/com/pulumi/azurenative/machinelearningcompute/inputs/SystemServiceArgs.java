@@ -63,6 +63,14 @@ public final class SystemServiceArgs extends com.pulumi.resources.ResourceArgs {
             return systemServiceType(Output.of(systemServiceType));
         }
 
+        public Builder systemServiceType(String systemServiceType) {
+            return systemServiceType(Either.ofLeft(systemServiceType));
+        }
+
+        public Builder systemServiceType(SystemServiceType systemServiceType) {
+            return systemServiceType(Either.ofRight(systemServiceType));
+        }
+
         public SystemServiceArgs build() {
             $.systemServiceType = Objects.requireNonNull($.systemServiceType, "expected parameter 'systemServiceType' to be non-null");
             return $;

@@ -140,6 +140,14 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
             return agentVmSize(Output.of(agentVmSize));
         }
 
+        public Builder agentVmSize(String agentVmSize) {
+            return agentVmSize(Either.ofLeft(agentVmSize));
+        }
+
+        public Builder agentVmSize(AgentVMSizeTypes agentVmSize) {
+            return agentVmSize(Either.ofRight(agentVmSize));
+        }
+
         public Builder masterCount(@Nullable Output<Integer> masterCount) {
             $.masterCount = masterCount;
             return this;
@@ -165,6 +173,14 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
 
         public Builder orchestratorType(Either<String,OrchestratorType> orchestratorType) {
             return orchestratorType(Output.of(orchestratorType));
+        }
+
+        public Builder orchestratorType(String orchestratorType) {
+            return orchestratorType(Either.ofLeft(orchestratorType));
+        }
+
+        public Builder orchestratorType(OrchestratorType orchestratorType) {
+            return orchestratorType(Either.ofRight(orchestratorType));
         }
 
         public Builder systemServices(@Nullable Output<List<SystemServiceArgs>> systemServices) {

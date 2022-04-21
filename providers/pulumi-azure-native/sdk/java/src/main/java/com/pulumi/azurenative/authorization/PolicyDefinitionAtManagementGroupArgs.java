@@ -233,6 +233,14 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
             return policyType(Output.of(policyType));
         }
 
+        public Builder policyType(String policyType) {
+            return policyType(Either.ofLeft(policyType));
+        }
+
+        public Builder policyType(PolicyType policyType) {
+            return policyType(Either.ofRight(policyType));
+        }
+
         public PolicyDefinitionAtManagementGroupArgs build() {
             $.managementGroupId = Objects.requireNonNull($.managementGroupId, "expected parameter 'managementGroupId' to be non-null");
             $.mode = Codegen.stringProp("mode").output().arg($.mode).def("Indexed").getNullable();

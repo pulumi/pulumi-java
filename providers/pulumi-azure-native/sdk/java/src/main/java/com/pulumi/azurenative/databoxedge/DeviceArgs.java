@@ -136,6 +136,14 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
             return dataBoxEdgeDeviceStatus(Output.of(dataBoxEdgeDeviceStatus));
         }
 
+        public Builder dataBoxEdgeDeviceStatus(String dataBoxEdgeDeviceStatus) {
+            return dataBoxEdgeDeviceStatus(Either.ofLeft(dataBoxEdgeDeviceStatus));
+        }
+
+        public Builder dataBoxEdgeDeviceStatus(DataBoxEdgeDeviceStatus dataBoxEdgeDeviceStatus) {
+            return dataBoxEdgeDeviceStatus(Either.ofRight(dataBoxEdgeDeviceStatus));
+        }
+
         public Builder deviceName(@Nullable Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;

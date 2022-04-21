@@ -75,6 +75,14 @@ public final class ClientAccessRightArgs extends com.pulumi.resources.ResourceAr
             return accessPermission(Output.of(accessPermission));
         }
 
+        public Builder accessPermission(String accessPermission) {
+            return accessPermission(Either.ofLeft(accessPermission));
+        }
+
+        public Builder accessPermission(ClientPermissionType accessPermission) {
+            return accessPermission(Either.ofRight(accessPermission));
+        }
+
         public Builder client(Output<String> client) {
             $.client = client;
             return this;

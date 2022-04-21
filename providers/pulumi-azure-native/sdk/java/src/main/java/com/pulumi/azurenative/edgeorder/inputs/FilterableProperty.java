@@ -80,6 +80,14 @@ public final class FilterableProperty extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(SupportedFilterTypes type) {
+            return type(Either.ofRight(type));
+        }
+
         public FilterableProperty build() {
             $.supportedValues = Objects.requireNonNull($.supportedValues, "expected parameter 'supportedValues' to be non-null");
             $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");

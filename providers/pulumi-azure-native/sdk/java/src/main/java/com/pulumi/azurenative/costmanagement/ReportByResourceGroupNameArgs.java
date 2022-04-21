@@ -142,6 +142,14 @@ public final class ReportByResourceGroupNameArgs extends com.pulumi.resources.Re
             return format(Output.of(format));
         }
 
+        public Builder format(String format) {
+            return format(Either.ofLeft(format));
+        }
+
+        public Builder format(FormatType format) {
+            return format(Either.ofRight(format));
+        }
+
         public Builder reportName(@Nullable Output<String> reportName) {
             $.reportName = reportName;
             return this;

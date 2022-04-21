@@ -65,6 +65,14 @@ public final class WindowsOsInfoArgs extends com.pulumi.resources.ResourceArgs {
             return windowsOsState(Output.of(windowsOsState));
         }
 
+        public Builder windowsOsState(String windowsOsState) {
+            return windowsOsState(Either.ofLeft(windowsOsState));
+        }
+
+        public Builder windowsOsState(WindowsOsState windowsOsState) {
+            return windowsOsState(Either.ofRight(windowsOsState));
+        }
+
         public WindowsOsInfoArgs build() {
             return $;
         }

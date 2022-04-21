@@ -63,6 +63,14 @@ public final class ApplicationDeploymentPolicyArgs extends com.pulumi.resources.
             return deploymentMode(Output.of(deploymentMode));
         }
 
+        public Builder deploymentMode(String deploymentMode) {
+            return deploymentMode(Either.ofLeft(deploymentMode));
+        }
+
+        public Builder deploymentMode(DeploymentMode deploymentMode) {
+            return deploymentMode(Either.ofRight(deploymentMode));
+        }
+
         public ApplicationDeploymentPolicyArgs build() {
             $.deploymentMode = Objects.requireNonNull($.deploymentMode, "expected parameter 'deploymentMode' to be non-null");
             return $;

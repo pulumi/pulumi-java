@@ -108,6 +108,14 @@ public final class RoutingPreferenceArgs extends com.pulumi.resources.ResourceAr
             return routingChoice(Output.of(routingChoice));
         }
 
+        public Builder routingChoice(String routingChoice) {
+            return routingChoice(Either.ofLeft(routingChoice));
+        }
+
+        public Builder routingChoice(RoutingChoice routingChoice) {
+            return routingChoice(Either.ofRight(routingChoice));
+        }
+
         public RoutingPreferenceArgs build() {
             return $;
         }

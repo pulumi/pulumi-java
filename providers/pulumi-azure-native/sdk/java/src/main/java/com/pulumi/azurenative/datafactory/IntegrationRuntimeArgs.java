@@ -116,6 +116,14 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
             return properties(Output.of(properties));
         }
 
+        public Builder properties(ManagedIntegrationRuntimeArgs properties) {
+            return properties(Either.ofLeft(properties));
+        }
+
+        public Builder properties(SelfHostedIntegrationRuntimeArgs properties) {
+            return properties(Either.ofRight(properties));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -65,6 +65,14 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
             return eventName(Output.of(eventName));
         }
 
+        public Builder eventName(String eventName) {
+            return eventName(Either.ofLeft(eventName));
+        }
+
+        public Builder eventName(NotificationChannelEventType eventName) {
+            return eventName(Either.ofRight(eventName));
+        }
+
         public EventArgs build() {
             return $;
         }

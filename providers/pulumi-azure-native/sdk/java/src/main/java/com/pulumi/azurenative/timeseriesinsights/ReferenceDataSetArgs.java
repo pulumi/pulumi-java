@@ -136,6 +136,14 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
             return dataStringComparisonBehavior(Output.of(dataStringComparisonBehavior));
         }
 
+        public Builder dataStringComparisonBehavior(String dataStringComparisonBehavior) {
+            return dataStringComparisonBehavior(Either.ofLeft(dataStringComparisonBehavior));
+        }
+
+        public Builder dataStringComparisonBehavior(DataStringComparisonBehavior dataStringComparisonBehavior) {
+            return dataStringComparisonBehavior(Either.ofRight(dataStringComparisonBehavior));
+        }
+
         public Builder environmentName(Output<String> environmentName) {
             $.environmentName = environmentName;
             return this;

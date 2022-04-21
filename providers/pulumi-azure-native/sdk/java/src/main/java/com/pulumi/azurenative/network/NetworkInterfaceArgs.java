@@ -293,6 +293,14 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
             return migrationPhase(Output.of(migrationPhase));
         }
 
+        public Builder migrationPhase(String migrationPhase) {
+            return migrationPhase(Either.ofLeft(migrationPhase));
+        }
+
+        public Builder migrationPhase(NetworkInterfaceMigrationPhase migrationPhase) {
+            return migrationPhase(Either.ofRight(migrationPhase));
+        }
+
         public Builder networkInterfaceName(@Nullable Output<String> networkInterfaceName) {
             $.networkInterfaceName = networkInterfaceName;
             return this;
@@ -318,6 +326,14 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
 
         public Builder nicType(Either<String,NetworkInterfaceNicType> nicType) {
             return nicType(Output.of(nicType));
+        }
+
+        public Builder nicType(String nicType) {
+            return nicType(Either.ofLeft(nicType));
+        }
+
+        public Builder nicType(NetworkInterfaceNicType nicType) {
+            return nicType(Either.ofRight(nicType));
         }
 
         public Builder privateLinkService(@Nullable Output<PrivateLinkServiceArgs> privateLinkService) {

@@ -61,6 +61,14 @@ public final class ApiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
             return serverVersion(Output.of(serverVersion));
         }
 
+        public Builder serverVersion(String serverVersion) {
+            return serverVersion(Either.ofLeft(serverVersion));
+        }
+
+        public Builder serverVersion(ServerVersion serverVersion) {
+            return serverVersion(Either.ofRight(serverVersion));
+        }
+
         public ApiPropertiesArgs build() {
             return $;
         }

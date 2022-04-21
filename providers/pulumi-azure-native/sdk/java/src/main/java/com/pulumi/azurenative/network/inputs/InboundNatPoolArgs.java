@@ -257,6 +257,14 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(TransportProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public InboundNatPoolArgs build() {
             $.backendPort = Objects.requireNonNull($.backendPort, "expected parameter 'backendPort' to be non-null");
             $.frontendPortRangeEnd = Objects.requireNonNull($.frontendPortRangeEnd, "expected parameter 'frontendPortRangeEnd' to be non-null");

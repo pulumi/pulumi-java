@@ -77,6 +77,14 @@ public final class RecommendationConfigurationPropertiesArgs extends com.pulumi.
             return recommendationType(Output.of(recommendationType));
         }
 
+        public Builder recommendationType(String recommendationType) {
+            return recommendationType(Either.ofLeft(recommendationType));
+        }
+
+        public Builder recommendationType(RecommendationType recommendationType) {
+            return recommendationType(Either.ofRight(recommendationType));
+        }
+
         public Builder status(Output<Either<String,RecommendationConfigStatus>> status) {
             $.status = status;
             return this;
@@ -84,6 +92,14 @@ public final class RecommendationConfigurationPropertiesArgs extends com.pulumi.
 
         public Builder status(Either<String,RecommendationConfigStatus> status) {
             return status(Output.of(status));
+        }
+
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(RecommendationConfigStatus status) {
+            return status(Either.ofRight(status));
         }
 
         public RecommendationConfigurationPropertiesArgs build() {

@@ -114,6 +114,14 @@ public final class ScalarFunctionPropertiesResponse extends com.pulumi.resources
             return this;
         }
 
+        public Builder binding(AzureMachineLearningWebServiceFunctionBindingResponse binding) {
+            return binding(Either.ofLeft(binding));
+        }
+
+        public Builder binding(JavaScriptFunctionBindingResponse binding) {
+            return binding(Either.ofRight(binding));
+        }
+
         public Builder etag(String etag) {
             $.etag = etag;
             return this;

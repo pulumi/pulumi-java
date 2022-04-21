@@ -152,6 +152,14 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
+        public Builder retentionPolicy(LongTermRetentionPolicyArgs retentionPolicy) {
+            return retentionPolicy(Either.ofLeft(retentionPolicy));
+        }
+
+        public Builder retentionPolicy(SimpleRetentionPolicyArgs retentionPolicy) {
+            return retentionPolicy(Either.ofRight(retentionPolicy));
+        }
+
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
             $.schedulePolicy = schedulePolicy;
             return this;
@@ -177,6 +185,14 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
 
         public Builder workLoadType(Either<String,WorkloadType> workLoadType) {
             return workLoadType(Output.of(workLoadType));
+        }
+
+        public Builder workLoadType(String workLoadType) {
+            return workLoadType(Either.ofLeft(workLoadType));
+        }
+
+        public Builder workLoadType(WorkloadType workLoadType) {
+            return workLoadType(Either.ofRight(workLoadType));
         }
 
         public AzureFileShareProtectionPolicyArgs build() {

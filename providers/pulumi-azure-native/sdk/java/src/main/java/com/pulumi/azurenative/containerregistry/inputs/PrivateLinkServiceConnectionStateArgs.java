@@ -90,6 +90,14 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
             return actionsRequired(Output.of(actionsRequired));
         }
 
+        public Builder actionsRequired(String actionsRequired) {
+            return actionsRequired(Either.ofLeft(actionsRequired));
+        }
+
+        public Builder actionsRequired(ActionsRequired actionsRequired) {
+            return actionsRequired(Either.ofRight(actionsRequired));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
@@ -106,6 +114,14 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
 
         public Builder status(Either<String,ConnectionStatus> status) {
             return status(Output.of(status));
+        }
+
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(ConnectionStatus status) {
+            return status(Either.ofRight(status));
         }
 
         public PrivateLinkServiceConnectionStateArgs build() {

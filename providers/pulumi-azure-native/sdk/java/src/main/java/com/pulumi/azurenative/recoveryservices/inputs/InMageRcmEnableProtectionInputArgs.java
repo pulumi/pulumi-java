@@ -326,6 +326,14 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
             return licenseType(Output.of(licenseType));
         }
 
+        public Builder licenseType(String licenseType) {
+            return licenseType(Either.ofLeft(licenseType));
+        }
+
+        public Builder licenseType(LicenseType licenseType) {
+            return licenseType(Either.ofRight(licenseType));
+        }
+
         public Builder multiVmGroupName(@Nullable Output<String> multiVmGroupName) {
             $.multiVmGroupName = multiVmGroupName;
             return this;

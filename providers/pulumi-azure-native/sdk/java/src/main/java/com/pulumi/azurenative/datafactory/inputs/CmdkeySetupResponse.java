@@ -98,6 +98,14 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder targetName(Object targetName) {
             $.targetName = targetName;
             return this;

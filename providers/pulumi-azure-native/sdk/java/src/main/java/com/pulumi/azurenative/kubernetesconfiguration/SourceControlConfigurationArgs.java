@@ -315,6 +315,14 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
             return operatorScope(Output.of(operatorScope));
         }
 
+        public Builder operatorScope(String operatorScope) {
+            return operatorScope(Either.ofLeft(operatorScope));
+        }
+
+        public Builder operatorScope(OperatorScopeType operatorScope) {
+            return operatorScope(Either.ofRight(operatorScope));
+        }
+
         public Builder operatorType(@Nullable Output<Either<String,OperatorType>> operatorType) {
             $.operatorType = operatorType;
             return this;
@@ -322,6 +330,14 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
 
         public Builder operatorType(Either<String,OperatorType> operatorType) {
             return operatorType(Output.of(operatorType));
+        }
+
+        public Builder operatorType(String operatorType) {
+            return operatorType(Either.ofLeft(operatorType));
+        }
+
+        public Builder operatorType(OperatorType operatorType) {
+            return operatorType(Either.ofRight(operatorType));
         }
 
         public Builder repositoryUrl(@Nullable Output<String> repositoryUrl) {

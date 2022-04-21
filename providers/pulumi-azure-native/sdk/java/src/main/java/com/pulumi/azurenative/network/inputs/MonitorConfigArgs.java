@@ -219,6 +219,14 @@ public final class MonitorConfigArgs extends com.pulumi.resources.ResourceArgs {
             return profileMonitorStatus(Output.of(profileMonitorStatus));
         }
 
+        public Builder profileMonitorStatus(String profileMonitorStatus) {
+            return profileMonitorStatus(Either.ofLeft(profileMonitorStatus));
+        }
+
+        public Builder profileMonitorStatus(ProfileMonitorStatus profileMonitorStatus) {
+            return profileMonitorStatus(Either.ofRight(profileMonitorStatus));
+        }
+
         public Builder protocol(@Nullable Output<Either<String,MonitorProtocol>> protocol) {
             $.protocol = protocol;
             return this;
@@ -226,6 +234,14 @@ public final class MonitorConfigArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder protocol(Either<String,MonitorProtocol> protocol) {
             return protocol(Output.of(protocol));
+        }
+
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(MonitorProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
         }
 
         public Builder timeoutInSeconds(@Nullable Output<Double> timeoutInSeconds) {

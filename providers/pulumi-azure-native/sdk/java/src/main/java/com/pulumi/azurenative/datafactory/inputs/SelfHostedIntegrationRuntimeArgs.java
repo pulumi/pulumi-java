@@ -101,6 +101,14 @@ public final class SelfHostedIntegrationRuntimeArgs extends com.pulumi.resources
             return linkedInfo(Output.of(linkedInfo));
         }
 
+        public Builder linkedInfo(LinkedIntegrationRuntimeKeyAuthorizationArgs linkedInfo) {
+            return linkedInfo(Either.ofLeft(linkedInfo));
+        }
+
+        public Builder linkedInfo(LinkedIntegrationRuntimeRbacAuthorizationArgs linkedInfo) {
+            return linkedInfo(Either.ofRight(linkedInfo));
+        }
+
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
