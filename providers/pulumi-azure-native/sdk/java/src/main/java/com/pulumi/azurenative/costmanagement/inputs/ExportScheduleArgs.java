@@ -91,6 +91,14 @@ public final class ExportScheduleArgs extends com.pulumi.resources.ResourceArgs 
             return recurrence(Output.of(recurrence));
         }
 
+        public Builder recurrence(String recurrence) {
+            return recurrence(Either.ofLeft(recurrence));
+        }
+
+        public Builder recurrence(RecurrenceType recurrence) {
+            return recurrence(Either.ofRight(recurrence));
+        }
+
         public Builder recurrencePeriod(@Nullable Output<ExportRecurrencePeriodArgs> recurrencePeriod) {
             $.recurrencePeriod = recurrencePeriod;
             return this;
@@ -107,6 +115,14 @@ public final class ExportScheduleArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder status(Either<String,StatusType> status) {
             return status(Output.of(status));
+        }
+
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(StatusType status) {
+            return status(Either.ofRight(status));
         }
 
         public ExportScheduleArgs build() {

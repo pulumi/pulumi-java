@@ -249,6 +249,14 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
             return consumerKey(Output.of(consumerKey));
         }
 
+        public Builder consumerKey(AzureKeyVaultSecretReferenceArgs consumerKey) {
+            return consumerKey(Either.ofLeft(consumerKey));
+        }
+
+        public Builder consumerKey(SecureStringArgs consumerKey) {
+            return consumerKey(Either.ofRight(consumerKey));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
@@ -292,6 +300,14 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
 
         public Builder privateKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> privateKey) {
             return privateKey(Output.of(privateKey));
+        }
+
+        public Builder privateKey(AzureKeyVaultSecretReferenceArgs privateKey) {
+            return privateKey(Either.ofLeft(privateKey));
+        }
+
+        public Builder privateKey(SecureStringArgs privateKey) {
+            return privateKey(Either.ofRight(privateKey));
         }
 
         public Builder type(Output<String> type) {

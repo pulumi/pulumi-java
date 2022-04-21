@@ -143,6 +143,14 @@ public final class SystemDataArgs extends com.pulumi.resources.ResourceArgs {
             return createdByType(Output.of(createdByType));
         }
 
+        public Builder createdByType(String createdByType) {
+            return createdByType(Either.ofLeft(createdByType));
+        }
+
+        public Builder createdByType(IdentityType createdByType) {
+            return createdByType(Either.ofRight(createdByType));
+        }
+
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             $.lastModifiedAt = lastModifiedAt;
             return this;
@@ -168,6 +176,14 @@ public final class SystemDataArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder lastModifiedByType(Either<String,IdentityType> lastModifiedByType) {
             return lastModifiedByType(Output.of(lastModifiedByType));
+        }
+
+        public Builder lastModifiedByType(String lastModifiedByType) {
+            return lastModifiedByType(Either.ofLeft(lastModifiedByType));
+        }
+
+        public Builder lastModifiedByType(IdentityType lastModifiedByType) {
+            return lastModifiedByType(Either.ofRight(lastModifiedByType));
         }
 
         public SystemDataArgs build() {

@@ -205,6 +205,14 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
             return properties(Output.of(properties));
         }
 
+        public Builder properties(K8sOnlineDeploymentArgs properties) {
+            return properties(Either.ofLeft(properties));
+        }
+
+        public Builder properties(ManagedOnlineDeploymentArgs properties) {
+            return properties(Either.ofRight(properties));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

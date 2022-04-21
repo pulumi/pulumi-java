@@ -121,6 +121,14 @@ public final class OsDiskArgs extends com.pulumi.resources.ResourceArgs {
             return osType(Output.of(osType));
         }
 
+        public Builder osType(String osType) {
+            return osType(Either.ofLeft(osType));
+        }
+
+        public Builder osType(OperatingSystemTypes osType) {
+            return osType(Either.ofRight(osType));
+        }
+
         public Builder vhd(@Nullable Output<VirtualHardDiskArgs> vhd) {
             $.vhd = vhd;
             return this;

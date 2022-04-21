@@ -105,6 +105,14 @@ public final class AdditionalWorkspacesPropertiesArgs extends com.pulumi.resourc
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(AdditionalWorkspaceType type) {
+            return type(Either.ofRight(type));
+        }
+
         public Builder workspace(@Nullable Output<String> workspace) {
             $.workspace = workspace;
             return this;

@@ -91,6 +91,14 @@ public final class PlatformPropertiesArgs extends com.pulumi.resources.ResourceA
             return architecture(Output.of(architecture));
         }
 
+        public Builder architecture(String architecture) {
+            return architecture(Either.ofLeft(architecture));
+        }
+
+        public Builder architecture(Architecture architecture) {
+            return architecture(Either.ofRight(architecture));
+        }
+
         public Builder os(Output<Either<String,OS>> os) {
             $.os = os;
             return this;
@@ -100,6 +108,14 @@ public final class PlatformPropertiesArgs extends com.pulumi.resources.ResourceA
             return os(Output.of(os));
         }
 
+        public Builder os(String os) {
+            return os(Either.ofLeft(os));
+        }
+
+        public Builder os(OS os) {
+            return os(Either.ofRight(os));
+        }
+
         public Builder variant(@Nullable Output<Either<String,Variant>> variant) {
             $.variant = variant;
             return this;
@@ -107,6 +123,14 @@ public final class PlatformPropertiesArgs extends com.pulumi.resources.ResourceA
 
         public Builder variant(Either<String,Variant> variant) {
             return variant(Output.of(variant));
+        }
+
+        public Builder variant(String variant) {
+            return variant(Either.ofLeft(variant));
+        }
+
+        public Builder variant(Variant variant) {
+            return variant(Either.ofRight(variant));
         }
 
         public PlatformPropertiesArgs build() {

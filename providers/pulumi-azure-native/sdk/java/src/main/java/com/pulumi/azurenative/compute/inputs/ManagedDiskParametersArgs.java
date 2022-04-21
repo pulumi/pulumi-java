@@ -108,6 +108,14 @@ public final class ManagedDiskParametersArgs extends com.pulumi.resources.Resour
             return storageAccountType(Output.of(storageAccountType));
         }
 
+        public Builder storageAccountType(String storageAccountType) {
+            return storageAccountType(Either.ofLeft(storageAccountType));
+        }
+
+        public Builder storageAccountType(StorageAccountTypes storageAccountType) {
+            return storageAccountType(Either.ofRight(storageAccountType));
+        }
+
         public ManagedDiskParametersArgs build() {
             return $;
         }

@@ -158,6 +158,14 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
             return serverKeyType(Output.of(serverKeyType));
         }
 
+        public Builder serverKeyType(String serverKeyType) {
+            return serverKeyType(Either.ofLeft(serverKeyType));
+        }
+
+        public Builder serverKeyType(ServerKeyType serverKeyType) {
+            return serverKeyType(Either.ofRight(serverKeyType));
+        }
+
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;

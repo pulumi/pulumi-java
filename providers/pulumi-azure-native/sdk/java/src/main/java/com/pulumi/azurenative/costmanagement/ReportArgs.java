@@ -130,6 +130,14 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
             return format(Output.of(format));
         }
 
+        public Builder format(String format) {
+            return format(Either.ofLeft(format));
+        }
+
+        public Builder format(FormatType format) {
+            return format(Either.ofRight(format));
+        }
+
         public Builder reportName(@Nullable Output<String> reportName) {
             $.reportName = reportName;
             return this;

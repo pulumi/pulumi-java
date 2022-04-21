@@ -93,6 +93,14 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
             return defaultAction(Output.of(defaultAction));
         }
 
+        public Builder defaultAction(String defaultAction) {
+            return defaultAction(Either.ofLeft(defaultAction));
+        }
+
+        public Builder defaultAction(DefaultAction defaultAction) {
+            return defaultAction(Either.ofRight(defaultAction));
+        }
+
         public Builder ipRules(@Nullable Output<List<IPRuleArgs>> ipRules) {
             $.ipRules = ipRules;
             return this;

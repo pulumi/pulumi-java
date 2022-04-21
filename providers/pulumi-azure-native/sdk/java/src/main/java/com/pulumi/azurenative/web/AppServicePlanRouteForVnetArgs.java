@@ -195,6 +195,14 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
             return routeType(Output.of(routeType));
         }
 
+        public Builder routeType(String routeType) {
+            return routeType(Either.ofLeft(routeType));
+        }
+
+        public Builder routeType(RouteType routeType) {
+            return routeType(Either.ofRight(routeType));
+        }
+
         public Builder startAddress(@Nullable Output<String> startAddress) {
             $.startAddress = startAddress;
             return this;

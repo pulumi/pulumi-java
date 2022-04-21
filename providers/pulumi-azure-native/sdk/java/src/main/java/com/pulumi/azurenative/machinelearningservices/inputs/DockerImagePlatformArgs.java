@@ -61,6 +61,14 @@ public final class DockerImagePlatformArgs extends com.pulumi.resources.Resource
             return operatingSystemType(Output.of(operatingSystemType));
         }
 
+        public Builder operatingSystemType(String operatingSystemType) {
+            return operatingSystemType(Either.ofLeft(operatingSystemType));
+        }
+
+        public Builder operatingSystemType(OperatingSystemType operatingSystemType) {
+            return operatingSystemType(Either.ofRight(operatingSystemType));
+        }
+
         public DockerImagePlatformArgs build() {
             return $;
         }

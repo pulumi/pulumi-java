@@ -154,6 +154,14 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
             return action(Output.of(action));
         }
 
+        public Builder action(String action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(ActionType action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder enabledState(@Nullable Output<Either<String,CustomRuleEnabledState>> enabledState) {
             $.enabledState = enabledState;
             return this;
@@ -161,6 +169,14 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder enabledState(Either<String,CustomRuleEnabledState> enabledState) {
             return enabledState(Output.of(enabledState));
+        }
+
+        public Builder enabledState(String enabledState) {
+            return enabledState(Either.ofLeft(enabledState));
+        }
+
+        public Builder enabledState(CustomRuleEnabledState enabledState) {
+            return enabledState(Either.ofRight(enabledState));
         }
 
         public Builder matchConditions(Output<List<FrontDoorMatchConditionArgs>> matchConditions) {
@@ -219,6 +235,14 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder ruleType(Either<String,RuleType> ruleType) {
             return ruleType(Output.of(ruleType));
+        }
+
+        public Builder ruleType(String ruleType) {
+            return ruleType(Either.ofLeft(ruleType));
+        }
+
+        public Builder ruleType(RuleType ruleType) {
+            return ruleType(Either.ofRight(ruleType));
         }
 
         public CustomRuleArgs build() {

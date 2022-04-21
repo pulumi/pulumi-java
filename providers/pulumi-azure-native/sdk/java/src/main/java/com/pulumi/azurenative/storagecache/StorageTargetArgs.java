@@ -225,6 +225,14 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
             return provisioningState(Output.of(provisioningState));
         }
 
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ProvisioningStateType provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
@@ -250,6 +258,14 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder targetType(Either<String,StorageTargetType> targetType) {
             return targetType(Output.of(targetType));
+        }
+
+        public Builder targetType(String targetType) {
+            return targetType(Either.ofLeft(targetType));
+        }
+
+        public Builder targetType(StorageTargetType targetType) {
+            return targetType(Either.ofRight(targetType));
         }
 
         public Builder unknown(@Nullable Output<UnknownTargetArgs> unknown) {

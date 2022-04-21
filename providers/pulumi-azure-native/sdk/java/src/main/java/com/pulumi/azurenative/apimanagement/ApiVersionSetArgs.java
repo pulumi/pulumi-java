@@ -208,6 +208,14 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
             return versioningScheme(Output.of(versioningScheme));
         }
 
+        public Builder versioningScheme(String versioningScheme) {
+            return versioningScheme(Either.ofLeft(versioningScheme));
+        }
+
+        public Builder versioningScheme(VersioningScheme versioningScheme) {
+            return versioningScheme(Either.ofRight(versioningScheme));
+        }
+
         public ApiVersionSetArgs build() {
             $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
             $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

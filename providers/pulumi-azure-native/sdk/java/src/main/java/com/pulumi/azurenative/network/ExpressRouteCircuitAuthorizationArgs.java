@@ -151,6 +151,14 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
             return authorizationUseStatus(Output.of(authorizationUseStatus));
         }
 
+        public Builder authorizationUseStatus(String authorizationUseStatus) {
+            return authorizationUseStatus(Either.ofLeft(authorizationUseStatus));
+        }
+
+        public Builder authorizationUseStatus(AuthorizationUseStatus authorizationUseStatus) {
+            return authorizationUseStatus(Either.ofRight(authorizationUseStatus));
+        }
+
         public Builder circuitName(Output<String> circuitName) {
             $.circuitName = circuitName;
             return this;

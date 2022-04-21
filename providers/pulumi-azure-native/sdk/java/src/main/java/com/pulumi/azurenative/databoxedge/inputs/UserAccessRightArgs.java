@@ -75,6 +75,14 @@ public final class UserAccessRightArgs extends com.pulumi.resources.ResourceArgs
             return accessType(Output.of(accessType));
         }
 
+        public Builder accessType(String accessType) {
+            return accessType(Either.ofLeft(accessType));
+        }
+
+        public Builder accessType(ShareAccessType accessType) {
+            return accessType(Either.ofRight(accessType));
+        }
+
         public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;

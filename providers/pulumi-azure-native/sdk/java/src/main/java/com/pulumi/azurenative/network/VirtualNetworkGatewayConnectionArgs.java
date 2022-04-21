@@ -333,6 +333,14 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
             return connectionMode(Output.of(connectionMode));
         }
 
+        public Builder connectionMode(String connectionMode) {
+            return connectionMode(Either.ofLeft(connectionMode));
+        }
+
+        public Builder connectionMode(VirtualNetworkGatewayConnectionMode connectionMode) {
+            return connectionMode(Either.ofRight(connectionMode));
+        }
+
         public Builder connectionProtocol(@Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> connectionProtocol) {
             $.connectionProtocol = connectionProtocol;
             return this;
@@ -342,6 +350,14 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
             return connectionProtocol(Output.of(connectionProtocol));
         }
 
+        public Builder connectionProtocol(String connectionProtocol) {
+            return connectionProtocol(Either.ofLeft(connectionProtocol));
+        }
+
+        public Builder connectionProtocol(VirtualNetworkGatewayConnectionProtocol connectionProtocol) {
+            return connectionProtocol(Either.ofRight(connectionProtocol));
+        }
+
         public Builder connectionType(Output<Either<String,VirtualNetworkGatewayConnectionType>> connectionType) {
             $.connectionType = connectionType;
             return this;
@@ -349,6 +365,14 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
 
         public Builder connectionType(Either<String,VirtualNetworkGatewayConnectionType> connectionType) {
             return connectionType(Output.of(connectionType));
+        }
+
+        public Builder connectionType(String connectionType) {
+            return connectionType(Either.ofLeft(connectionType));
+        }
+
+        public Builder connectionType(VirtualNetworkGatewayConnectionType connectionType) {
+            return connectionType(Either.ofRight(connectionType));
         }
 
         public Builder dpdTimeoutSeconds(@Nullable Output<Integer> dpdTimeoutSeconds) {

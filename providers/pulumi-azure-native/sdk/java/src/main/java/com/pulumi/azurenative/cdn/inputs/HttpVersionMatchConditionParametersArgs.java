@@ -130,6 +130,14 @@ public final class HttpVersionMatchConditionParametersArgs extends com.pulumi.re
             return operator(Output.of(operator));
         }
 
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(HttpVersionOperator operator) {
+            return operator(Either.ofRight(operator));
+        }
+
         public HttpVersionMatchConditionParametersArgs build() {
             $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
             $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");

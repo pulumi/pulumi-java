@@ -230,6 +230,14 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
             return storageLimitExceededBehavior(Output.of(storageLimitExceededBehavior));
         }
 
+        public Builder storageLimitExceededBehavior(String storageLimitExceededBehavior) {
+            return storageLimitExceededBehavior(Either.ofLeft(storageLimitExceededBehavior));
+        }
+
+        public Builder storageLimitExceededBehavior(StorageLimitExceededBehavior storageLimitExceededBehavior) {
+            return storageLimitExceededBehavior(Either.ofRight(storageLimitExceededBehavior));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;

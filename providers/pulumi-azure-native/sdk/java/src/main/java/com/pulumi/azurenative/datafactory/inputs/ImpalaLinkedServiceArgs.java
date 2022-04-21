@@ -285,6 +285,14 @@ public final class ImpalaLinkedServiceArgs extends com.pulumi.resources.Resource
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(ImpalaAuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
@@ -346,6 +354,14 @@ public final class ImpalaLinkedServiceArgs extends com.pulumi.resources.Resource
 
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
+        }
+
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
         }
 
         public Builder port(@Nullable Output<Object> port) {

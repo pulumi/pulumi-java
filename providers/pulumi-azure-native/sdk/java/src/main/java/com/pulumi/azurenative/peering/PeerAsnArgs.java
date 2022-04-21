@@ -152,6 +152,14 @@ public final class PeerAsnArgs extends com.pulumi.resources.ResourceArgs {
             return validationState(Output.of(validationState));
         }
 
+        public Builder validationState(String validationState) {
+            return validationState(Either.ofLeft(validationState));
+        }
+
+        public Builder validationState(ValidationState validationState) {
+            return validationState(Either.ofRight(validationState));
+        }
+
         public PeerAsnArgs build() {
             return $;
         }

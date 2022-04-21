@@ -78,6 +78,14 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends com.p
             return minimalSeverity(Output.of(minimalSeverity));
         }
 
+        public Builder minimalSeverity(String minimalSeverity) {
+            return minimalSeverity(Either.ofLeft(minimalSeverity));
+        }
+
+        public Builder minimalSeverity(MinimalSeverity minimalSeverity) {
+            return minimalSeverity(Either.ofRight(minimalSeverity));
+        }
+
         public Builder state(@Nullable Output<Either<String,State>> state) {
             $.state = state;
             return this;
@@ -85,6 +93,14 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends com.p
 
         public Builder state(Either<String,State> state) {
             return state(Output.of(state));
+        }
+
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(State state) {
+            return state(Either.ofRight(state));
         }
 
         public SecurityContactPropertiesAlertNotificationsArgs build() {

@@ -230,6 +230,14 @@ public final class AzureMLLinkedServiceArgs extends com.pulumi.resources.Resourc
             return apiKey(Output.of(apiKey));
         }
 
+        public Builder apiKey(AzureKeyVaultSecretReferenceArgs apiKey) {
+            return apiKey(Either.ofLeft(apiKey));
+        }
+
+        public Builder apiKey(SecureStringArgs apiKey) {
+            return apiKey(Either.ofRight(apiKey));
+        }
+
         public Builder authentication(@Nullable Output<Object> authentication) {
             $.authentication = authentication;
             return this;
@@ -300,6 +308,14 @@ public final class AzureMLLinkedServiceArgs extends com.pulumi.resources.Resourc
 
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             return servicePrincipalKey(Output.of(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
         public Builder tenant(@Nullable Output<Object> tenant) {

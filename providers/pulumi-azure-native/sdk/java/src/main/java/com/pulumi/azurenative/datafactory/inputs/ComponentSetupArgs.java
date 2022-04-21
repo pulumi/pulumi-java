@@ -101,6 +101,14 @@ public final class ComponentSetupArgs extends com.pulumi.resources.ResourceArgs 
             return licenseKey(Output.of(licenseKey));
         }
 
+        public Builder licenseKey(AzureKeyVaultSecretReferenceArgs licenseKey) {
+            return licenseKey(Either.ofLeft(licenseKey));
+        }
+
+        public Builder licenseKey(SecureStringArgs licenseKey) {
+            return licenseKey(Either.ofRight(licenseKey));
+        }
+
         public Builder type(Output<String> type) {
             $.type = type;
             return this;

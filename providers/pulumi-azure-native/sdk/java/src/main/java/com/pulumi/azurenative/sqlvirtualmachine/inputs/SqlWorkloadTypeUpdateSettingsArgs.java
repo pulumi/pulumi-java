@@ -65,6 +65,14 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends com.pulumi.resource
             return sqlWorkloadType(Output.of(sqlWorkloadType));
         }
 
+        public Builder sqlWorkloadType(String sqlWorkloadType) {
+            return sqlWorkloadType(Either.ofLeft(sqlWorkloadType));
+        }
+
+        public Builder sqlWorkloadType(SqlWorkloadType sqlWorkloadType) {
+            return sqlWorkloadType(Either.ofRight(sqlWorkloadType));
+        }
+
         public SqlWorkloadTypeUpdateSettingsArgs build() {
             return $;
         }

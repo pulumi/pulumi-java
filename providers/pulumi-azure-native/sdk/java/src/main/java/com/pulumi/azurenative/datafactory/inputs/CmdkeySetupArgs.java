@@ -103,6 +103,14 @@ public final class CmdkeySetupArgs extends com.pulumi.resources.ResourceArgs {
             return password(Output.of(password));
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder targetName(Output<Object> targetName) {
             $.targetName = targetName;
             return this;

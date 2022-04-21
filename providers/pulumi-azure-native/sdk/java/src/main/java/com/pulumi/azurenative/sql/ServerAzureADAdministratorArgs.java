@@ -142,6 +142,14 @@ public final class ServerAzureADAdministratorArgs extends com.pulumi.resources.R
             return administratorType(Output.of(administratorType));
         }
 
+        public Builder administratorType(String administratorType) {
+            return administratorType(Either.ofLeft(administratorType));
+        }
+
+        public Builder administratorType(AdministratorType administratorType) {
+            return administratorType(Either.ofRight(administratorType));
+        }
+
         public Builder login(Output<String> login) {
             $.login = login;
             return this;

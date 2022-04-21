@@ -86,6 +86,14 @@ public final class DataDiskStorageTypeInfoArgs extends com.pulumi.resources.Reso
             return storageType(Output.of(storageType));
         }
 
+        public Builder storageType(String storageType) {
+            return storageType(Either.ofLeft(storageType));
+        }
+
+        public Builder storageType(StorageType storageType) {
+            return storageType(Either.ofRight(storageType));
+        }
+
         public DataDiskStorageTypeInfoArgs build() {
             return $;
         }

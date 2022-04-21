@@ -150,6 +150,14 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
             return provisioningAction(Output.of(provisioningAction));
         }
 
+        public Builder provisioningAction(String provisioningAction) {
+            return provisioningAction(Either.ofLeft(provisioningAction));
+        }
+
+        public Builder provisioningAction(ProvisioningAction provisioningAction) {
+            return provisioningAction(Either.ofRight(provisioningAction));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

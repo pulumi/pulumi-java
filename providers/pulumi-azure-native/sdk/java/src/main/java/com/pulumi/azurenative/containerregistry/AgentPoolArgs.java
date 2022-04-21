@@ -186,6 +186,14 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
             return os(Output.of(os));
         }
 
+        public Builder os(String os) {
+            return os(Either.ofLeft(os));
+        }
+
+        public Builder os(OS os) {
+            return os(Either.ofRight(os));
+        }
+
         public Builder registryName(Output<String> registryName) {
             $.registryName = registryName;
             return this;

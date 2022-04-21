@@ -107,6 +107,14 @@ public final class ManagedIdentityPropertiesArgs extends com.pulumi.resources.Re
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ManagedIdentityType type) {
+            return type(Either.ofRight(type));
+        }
+
         public ManagedIdentityPropertiesArgs build() {
             return $;
         }

@@ -92,6 +92,14 @@ public final class SelectAudioTrackByIdArgs extends com.pulumi.resources.Resourc
             return channelMapping(Output.of(channelMapping));
         }
 
+        public Builder channelMapping(String channelMapping) {
+            return channelMapping(Either.ofLeft(channelMapping));
+        }
+
+        public Builder channelMapping(ChannelMapping channelMapping) {
+            return channelMapping(Either.ofRight(channelMapping));
+        }
+
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;

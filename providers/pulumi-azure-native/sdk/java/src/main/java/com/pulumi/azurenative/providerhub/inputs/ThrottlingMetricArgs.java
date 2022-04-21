@@ -92,6 +92,14 @@ public final class ThrottlingMetricArgs extends com.pulumi.resources.ResourceArg
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ThrottlingMetricType type) {
+            return type(Either.ofRight(type));
+        }
+
         public ThrottlingMetricArgs build() {
             $.limit = Objects.requireNonNull($.limit, "expected parameter 'limit' to be non-null");
             $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");

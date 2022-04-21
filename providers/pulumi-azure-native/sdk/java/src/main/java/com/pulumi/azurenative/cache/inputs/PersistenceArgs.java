@@ -112,6 +112,14 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
             return aofFrequency(Output.of(aofFrequency));
         }
 
+        public Builder aofFrequency(String aofFrequency) {
+            return aofFrequency(Either.ofLeft(aofFrequency));
+        }
+
+        public Builder aofFrequency(AofFrequency aofFrequency) {
+            return aofFrequency(Either.ofRight(aofFrequency));
+        }
+
         public Builder rdbEnabled(@Nullable Output<Boolean> rdbEnabled) {
             $.rdbEnabled = rdbEnabled;
             return this;
@@ -128,6 +136,14 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder rdbFrequency(Either<String,RdbFrequency> rdbFrequency) {
             return rdbFrequency(Output.of(rdbFrequency));
+        }
+
+        public Builder rdbFrequency(String rdbFrequency) {
+            return rdbFrequency(Either.ofLeft(rdbFrequency));
+        }
+
+        public Builder rdbFrequency(RdbFrequency rdbFrequency) {
+            return rdbFrequency(Either.ofRight(rdbFrequency));
         }
 
         public PersistenceArgs build() {

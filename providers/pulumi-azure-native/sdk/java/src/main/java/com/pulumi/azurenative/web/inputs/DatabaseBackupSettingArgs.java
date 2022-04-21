@@ -116,6 +116,14 @@ public final class DatabaseBackupSettingArgs extends com.pulumi.resources.Resour
             return databaseType(Output.of(databaseType));
         }
 
+        public Builder databaseType(String databaseType) {
+            return databaseType(Either.ofLeft(databaseType));
+        }
+
+        public Builder databaseType(DatabaseType databaseType) {
+            return databaseType(Either.ofRight(databaseType));
+        }
+
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;

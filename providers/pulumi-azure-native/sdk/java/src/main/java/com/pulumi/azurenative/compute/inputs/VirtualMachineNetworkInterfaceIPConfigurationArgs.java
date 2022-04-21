@@ -210,6 +210,14 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends com
             return privateIPAddressVersion(Output.of(privateIPAddressVersion));
         }
 
+        public Builder privateIPAddressVersion(String privateIPAddressVersion) {
+            return privateIPAddressVersion(Either.ofLeft(privateIPAddressVersion));
+        }
+
+        public Builder privateIPAddressVersion(IPVersions privateIPAddressVersion) {
+            return privateIPAddressVersion(Either.ofRight(privateIPAddressVersion));
+        }
+
         public Builder publicIPAddressConfiguration(@Nullable Output<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
             $.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;

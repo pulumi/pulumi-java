@@ -288,6 +288,14 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
             return sourceType(Output.of(sourceType));
         }
 
+        public Builder sourceType(String sourceType) {
+            return sourceType(Either.ofLeft(sourceType));
+        }
+
+        public Builder sourceType(SourceControlType sourceType) {
+            return sourceType(Either.ofRight(sourceType));
+        }
+
         public Builder status(@Nullable Output<Either<String,EnableStatus>> status) {
             $.status = status;
             return this;
@@ -295,6 +303,14 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder status(Either<String,EnableStatus> status) {
             return status(Output.of(status));
+        }
+
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(EnableStatus status) {
+            return status(Either.ofRight(status));
         }
 
         public Builder tags(@Nullable Output<Map<String,String>> tags) {

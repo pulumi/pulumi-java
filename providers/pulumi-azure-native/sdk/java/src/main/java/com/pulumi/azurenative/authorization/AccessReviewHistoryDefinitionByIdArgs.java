@@ -267,6 +267,14 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends com.pulumi.reso
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(AccessReviewRecurrenceRangeType type) {
+            return type(Either.ofRight(type));
+        }
+
         public AccessReviewHistoryDefinitionByIdArgs build() {
             return $;
         }

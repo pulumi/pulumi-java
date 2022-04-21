@@ -65,6 +65,14 @@ public final class FailoverGroupReadOnlyEndpointArgs extends com.pulumi.resource
             return failoverPolicy(Output.of(failoverPolicy));
         }
 
+        public Builder failoverPolicy(String failoverPolicy) {
+            return failoverPolicy(Either.ofLeft(failoverPolicy));
+        }
+
+        public Builder failoverPolicy(ReadOnlyEndpointFailoverPolicy failoverPolicy) {
+            return failoverPolicy(Either.ofRight(failoverPolicy));
+        }
+
         public FailoverGroupReadOnlyEndpointArgs build() {
             return $;
         }

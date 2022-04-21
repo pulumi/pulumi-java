@@ -63,6 +63,14 @@ public final class DataImportDetailsArgs extends com.pulumi.resources.ResourceAr
             return accountDetails(Output.of(accountDetails));
         }
 
+        public Builder accountDetails(ManagedDiskDetailsArgs accountDetails) {
+            return accountDetails(Either.ofLeft(accountDetails));
+        }
+
+        public Builder accountDetails(StorageAccountDetailsArgs accountDetails) {
+            return accountDetails(Either.ofRight(accountDetails));
+        }
+
         public DataImportDetailsArgs build() {
             $.accountDetails = Objects.requireNonNull($.accountDetails, "expected parameter 'accountDetails' to be non-null");
             return $;

@@ -109,6 +109,14 @@ public final class ResourceSkuArgs extends com.pulumi.resources.ResourceArgs {
             return tier(Output.of(tier));
         }
 
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(SkuTier tier) {
+            return tier(Either.ofRight(tier));
+        }
+
         public ResourceSkuArgs build() {
             $.capacity = Codegen.integerProp("capacity").output().arg($.capacity).def(1).getNullable();
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");

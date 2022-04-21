@@ -87,6 +87,14 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends co
             return protocolType(Output.of(protocolType));
         }
 
+        public Builder protocolType(String protocolType) {
+            return protocolType(Either.ofLeft(protocolType));
+        }
+
+        public Builder protocolType(FirewallPolicyRuleConditionApplicationProtocolType protocolType) {
+            return protocolType(Either.ofRight(protocolType));
+        }
+
         public FirewallPolicyRuleConditionApplicationProtocolArgs build() {
             return $;
         }

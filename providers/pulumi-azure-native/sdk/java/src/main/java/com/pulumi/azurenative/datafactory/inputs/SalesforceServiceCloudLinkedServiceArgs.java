@@ -281,6 +281,14 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends com.pulumi.re
             return password(Output.of(password));
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder securityToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken) {
             $.securityToken = securityToken;
             return this;
@@ -288,6 +296,14 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends com.pulumi.re
 
         public Builder securityToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> securityToken) {
             return securityToken(Output.of(securityToken));
+        }
+
+        public Builder securityToken(AzureKeyVaultSecretReferenceArgs securityToken) {
+            return securityToken(Either.ofLeft(securityToken));
+        }
+
+        public Builder securityToken(SecureStringArgs securityToken) {
+            return securityToken(Either.ofRight(securityToken));
         }
 
         public Builder type(Output<String> type) {

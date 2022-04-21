@@ -65,6 +65,14 @@ public final class SharingProfileArgs extends com.pulumi.resources.ResourceArgs 
             return permissions(Output.of(permissions));
         }
 
+        public Builder permissions(String permissions) {
+            return permissions(Either.ofLeft(permissions));
+        }
+
+        public Builder permissions(GallerySharingPermissionTypes permissions) {
+            return permissions(Either.ofRight(permissions));
+        }
+
         public SharingProfileArgs build() {
             return $;
         }

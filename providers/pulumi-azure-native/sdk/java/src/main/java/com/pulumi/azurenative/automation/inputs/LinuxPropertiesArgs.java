@@ -115,6 +115,14 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
             return includedPackageClassifications(Output.of(includedPackageClassifications));
         }
 
+        public Builder includedPackageClassifications(String includedPackageClassifications) {
+            return includedPackageClassifications(Either.ofLeft(includedPackageClassifications));
+        }
+
+        public Builder includedPackageClassifications(LinuxUpdateClasses includedPackageClassifications) {
+            return includedPackageClassifications(Either.ofRight(includedPackageClassifications));
+        }
+
         public Builder includedPackageNameMasks(@Nullable Output<List<String>> includedPackageNameMasks) {
             $.includedPackageNameMasks = includedPackageNameMasks;
             return this;

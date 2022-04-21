@@ -105,6 +105,14 @@ public final class RtspSourceArgs extends com.pulumi.resources.ResourceArgs {
             return endpoint(Output.of(endpoint));
         }
 
+        public Builder endpoint(TlsEndpointArgs endpoint) {
+            return endpoint(Either.ofLeft(endpoint));
+        }
+
+        public Builder endpoint(UnsecuredEndpointArgs endpoint) {
+            return endpoint(Either.ofRight(endpoint));
+        }
+
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
@@ -121,6 +129,14 @@ public final class RtspSourceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder transport(Either<String,RtspTransport> transport) {
             return transport(Output.of(transport));
+        }
+
+        public Builder transport(String transport) {
+            return transport(Either.ofLeft(transport));
+        }
+
+        public Builder transport(RtspTransport transport) {
+            return transport(Either.ofRight(transport));
         }
 
         public Builder type(Output<String> type) {

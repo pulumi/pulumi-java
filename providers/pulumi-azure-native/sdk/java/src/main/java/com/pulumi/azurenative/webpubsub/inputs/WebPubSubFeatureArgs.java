@@ -93,6 +93,14 @@ public final class WebPubSubFeatureArgs extends com.pulumi.resources.ResourceArg
             return flag(Output.of(flag));
         }
 
+        public Builder flag(String flag) {
+            return flag(Either.ofLeft(flag));
+        }
+
+        public Builder flag(FeatureFlags flag) {
+            return flag(Either.ofRight(flag));
+        }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;

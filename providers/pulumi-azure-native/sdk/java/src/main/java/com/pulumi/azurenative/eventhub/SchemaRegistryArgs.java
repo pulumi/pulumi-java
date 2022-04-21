@@ -142,6 +142,14 @@ public final class SchemaRegistryArgs extends com.pulumi.resources.ResourceArgs 
             return schemaCompatibility(Output.of(schemaCompatibility));
         }
 
+        public Builder schemaCompatibility(String schemaCompatibility) {
+            return schemaCompatibility(Either.ofLeft(schemaCompatibility));
+        }
+
+        public Builder schemaCompatibility(SchemaCompatibility schemaCompatibility) {
+            return schemaCompatibility(Either.ofRight(schemaCompatibility));
+        }
+
         public Builder schemaGroupName(@Nullable Output<String> schemaGroupName) {
             $.schemaGroupName = schemaGroupName;
             return this;
@@ -158,6 +166,14 @@ public final class SchemaRegistryArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder schemaType(Either<String,SchemaType> schemaType) {
             return schemaType(Output.of(schemaType));
+        }
+
+        public Builder schemaType(String schemaType) {
+            return schemaType(Either.ofLeft(schemaType));
+        }
+
+        public Builder schemaType(SchemaType schemaType) {
+            return schemaType(Either.ofRight(schemaType));
         }
 
         public SchemaRegistryArgs build() {

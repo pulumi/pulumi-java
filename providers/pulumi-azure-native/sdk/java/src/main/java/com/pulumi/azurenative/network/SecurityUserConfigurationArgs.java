@@ -143,6 +143,14 @@ public final class SecurityUserConfigurationArgs extends com.pulumi.resources.Re
             return deleteExistingNSGs(Output.of(deleteExistingNSGs));
         }
 
+        public Builder deleteExistingNSGs(String deleteExistingNSGs) {
+            return deleteExistingNSGs(Either.ofLeft(deleteExistingNSGs));
+        }
+
+        public Builder deleteExistingNSGs(DeleteExistingNSGs deleteExistingNSGs) {
+            return deleteExistingNSGs(Either.ofRight(deleteExistingNSGs));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
@@ -186,6 +194,14 @@ public final class SecurityUserConfigurationArgs extends com.pulumi.resources.Re
 
         public Builder securityType(Either<String,SecurityType> securityType) {
             return securityType(Output.of(securityType));
+        }
+
+        public Builder securityType(String securityType) {
+            return securityType(Either.ofLeft(securityType));
+        }
+
+        public Builder securityType(SecurityType securityType) {
+            return securityType(Either.ofRight(securityType));
         }
 
         public SecurityUserConfigurationArgs build() {

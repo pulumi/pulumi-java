@@ -98,6 +98,14 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             return family(Output.of(family));
         }
 
+        public Builder family(String family) {
+            return family(Either.ofLeft(family));
+        }
+
+        public Builder family(SkuFamily family) {
+            return family(Either.ofRight(family));
+        }
+
         public Builder name(Output<Either<String,SkuName>> name) {
             $.name = name;
             return this;
@@ -105,6 +113,14 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder name(Either<String,SkuName> name) {
             return name(Output.of(name));
+        }
+
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(SkuName name) {
+            return name(Either.ofRight(name));
         }
 
         public SkuArgs build() {

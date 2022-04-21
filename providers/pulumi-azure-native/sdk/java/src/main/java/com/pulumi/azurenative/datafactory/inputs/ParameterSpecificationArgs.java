@@ -87,6 +87,14 @@ public final class ParameterSpecificationArgs extends com.pulumi.resources.Resou
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ParameterType type) {
+            return type(Either.ofRight(type));
+        }
+
         public ParameterSpecificationArgs build() {
             $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
             return $;

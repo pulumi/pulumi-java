@@ -91,6 +91,14 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
             return monitoringStatus(Output.of(monitoringStatus));
         }
 
+        public Builder monitoringStatus(String monitoringStatus) {
+            return monitoringStatus(Either.ofLeft(monitoringStatus));
+        }
+
+        public Builder monitoringStatus(MonitoringStatus monitoringStatus) {
+            return monitoringStatus(Either.ofRight(monitoringStatus));
+        }
+
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
@@ -98,6 +106,14 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
 
         public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
             return provisioningState(Output.of(provisioningState));
+        }
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
         }
 
         public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {

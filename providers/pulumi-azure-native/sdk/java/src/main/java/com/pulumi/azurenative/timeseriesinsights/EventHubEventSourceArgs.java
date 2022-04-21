@@ -380,6 +380,14 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(IngressStartAtType type) {
+            return type(Either.ofRight(type));
+        }
+
         public EventHubEventSourceArgs build() {
             $.consumerGroupName = Objects.requireNonNull($.consumerGroupName, "expected parameter 'consumerGroupName' to be non-null");
             $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");

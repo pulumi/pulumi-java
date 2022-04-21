@@ -92,6 +92,14 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
             return this;
         }
 
+        public Builder keyType(String keyType) {
+            return keyType(Either.ofLeft(keyType));
+        }
+
+        public Builder keyType(KeyType keyType) {
+            return keyType(Either.ofRight(keyType));
+        }
+
         public Builder notAfter(@Nullable String notAfter) {
             $.notAfter = notAfter;
             return this;

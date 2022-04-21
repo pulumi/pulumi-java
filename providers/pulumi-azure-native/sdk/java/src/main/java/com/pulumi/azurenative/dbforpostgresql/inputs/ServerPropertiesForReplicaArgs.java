@@ -165,6 +165,14 @@ public final class ServerPropertiesForReplicaArgs extends com.pulumi.resources.R
             return infrastructureEncryption(Output.of(infrastructureEncryption));
         }
 
+        public Builder infrastructureEncryption(String infrastructureEncryption) {
+            return infrastructureEncryption(Either.ofLeft(infrastructureEncryption));
+        }
+
+        public Builder infrastructureEncryption(InfrastructureEncryption infrastructureEncryption) {
+            return infrastructureEncryption(Either.ofRight(infrastructureEncryption));
+        }
+
         public Builder minimalTlsVersion(@Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion) {
             $.minimalTlsVersion = minimalTlsVersion;
             return this;
@@ -174,6 +182,14 @@ public final class ServerPropertiesForReplicaArgs extends com.pulumi.resources.R
             return minimalTlsVersion(Output.of(minimalTlsVersion));
         }
 
+        public Builder minimalTlsVersion(String minimalTlsVersion) {
+            return minimalTlsVersion(Either.ofLeft(minimalTlsVersion));
+        }
+
+        public Builder minimalTlsVersion(MinimalTlsVersionEnum minimalTlsVersion) {
+            return minimalTlsVersion(Either.ofRight(minimalTlsVersion));
+        }
+
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
@@ -181,6 +197,14 @@ public final class ServerPropertiesForReplicaArgs extends com.pulumi.resources.R
 
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccessEnum> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(PublicNetworkAccessEnum publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
         public Builder sourceServerId(Output<String> sourceServerId) {
@@ -217,6 +241,14 @@ public final class ServerPropertiesForReplicaArgs extends com.pulumi.resources.R
 
         public Builder version(Either<String,ServerVersion> version) {
             return version(Output.of(version));
+        }
+
+        public Builder version(String version) {
+            return version(Either.ofLeft(version));
+        }
+
+        public Builder version(ServerVersion version) {
+            return version(Either.ofRight(version));
         }
 
         public ServerPropertiesForReplicaArgs build() {

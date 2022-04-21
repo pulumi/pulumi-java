@@ -91,6 +91,14 @@ public final class ConnectionMonitorTcpConfigurationArgs extends com.pulumi.reso
             return destinationPortBehavior(Output.of(destinationPortBehavior));
         }
 
+        public Builder destinationPortBehavior(String destinationPortBehavior) {
+            return destinationPortBehavior(Either.ofLeft(destinationPortBehavior));
+        }
+
+        public Builder destinationPortBehavior(DestinationPortBehavior destinationPortBehavior) {
+            return destinationPortBehavior(Either.ofRight(destinationPortBehavior));
+        }
+
         public Builder disableTraceRoute(@Nullable Output<Boolean> disableTraceRoute) {
             $.disableTraceRoute = disableTraceRoute;
             return this;

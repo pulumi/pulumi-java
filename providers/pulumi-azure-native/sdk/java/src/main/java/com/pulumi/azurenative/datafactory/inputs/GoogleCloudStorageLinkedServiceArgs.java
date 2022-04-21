@@ -227,6 +227,14 @@ public final class GoogleCloudStorageLinkedServiceArgs extends com.pulumi.resour
             return secretAccessKey(Output.of(secretAccessKey));
         }
 
+        public Builder secretAccessKey(AzureKeyVaultSecretReferenceArgs secretAccessKey) {
+            return secretAccessKey(Either.ofLeft(secretAccessKey));
+        }
+
+        public Builder secretAccessKey(SecureStringArgs secretAccessKey) {
+            return secretAccessKey(Either.ofRight(secretAccessKey));
+        }
+
         public Builder serviceUrl(@Nullable Output<Object> serviceUrl) {
             $.serviceUrl = serviceUrl;
             return this;

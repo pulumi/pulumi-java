@@ -65,6 +65,14 @@ public final class ApplicationManagementPolicyArgs extends com.pulumi.resources.
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(ApplicationManagementMode mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public ApplicationManagementPolicyArgs build() {
             return $;
         }

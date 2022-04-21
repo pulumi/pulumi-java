@@ -112,6 +112,14 @@ public final class NamespaceNetworkRuleSetArgs extends com.pulumi.resources.Reso
             return defaultAction(Output.of(defaultAction));
         }
 
+        public Builder defaultAction(String defaultAction) {
+            return defaultAction(Either.ofLeft(defaultAction));
+        }
+
+        public Builder defaultAction(DefaultAction defaultAction) {
+            return defaultAction(Either.ofRight(defaultAction));
+        }
+
         public Builder ipRules(@Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules) {
             $.ipRules = ipRules;
             return this;

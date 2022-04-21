@@ -286,6 +286,14 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(TransportProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

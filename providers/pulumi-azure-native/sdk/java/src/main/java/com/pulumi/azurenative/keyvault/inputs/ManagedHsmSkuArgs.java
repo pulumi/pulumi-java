@@ -76,6 +76,14 @@ public final class ManagedHsmSkuArgs extends com.pulumi.resources.ResourceArgs {
             return family(Output.of(family));
         }
 
+        public Builder family(String family) {
+            return family(Either.ofLeft(family));
+        }
+
+        public Builder family(ManagedHsmSkuFamily family) {
+            return family(Either.ofRight(family));
+        }
+
         public Builder name(Output<ManagedHsmSkuName> name) {
             $.name = name;
             return this;

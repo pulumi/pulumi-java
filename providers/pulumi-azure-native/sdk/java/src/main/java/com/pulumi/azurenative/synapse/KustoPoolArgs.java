@@ -147,6 +147,14 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
             return engineType(Output.of(engineType));
         }
 
+        public Builder engineType(String engineType) {
+            return engineType(Either.ofLeft(engineType));
+        }
+
+        public Builder engineType(EngineType engineType) {
+            return engineType(Either.ofRight(engineType));
+        }
+
         public Builder kustoPoolName(@Nullable Output<String> kustoPoolName) {
             $.kustoPoolName = kustoPoolName;
             return this;

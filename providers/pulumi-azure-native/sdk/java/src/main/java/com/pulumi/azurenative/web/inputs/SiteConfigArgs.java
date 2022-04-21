@@ -1037,6 +1037,14 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
             return ftpsState(Output.of(ftpsState));
         }
 
+        public Builder ftpsState(String ftpsState) {
+            return ftpsState(Either.ofLeft(ftpsState));
+        }
+
+        public Builder ftpsState(FtpsState ftpsState) {
+            return ftpsState(Either.ofRight(ftpsState));
+        }
+
         public Builder functionAppScaleLimit(@Nullable Output<Integer> functionAppScaleLimit) {
             $.functionAppScaleLimit = functionAppScaleLimit;
             return this;
@@ -1216,6 +1224,14 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
             return minTlsVersion(Output.of(minTlsVersion));
         }
 
+        public Builder minTlsVersion(String minTlsVersion) {
+            return minTlsVersion(Either.ofLeft(minTlsVersion));
+        }
+
+        public Builder minTlsVersion(SupportedTlsVersions minTlsVersion) {
+            return minTlsVersion(Either.ofRight(minTlsVersion));
+        }
+
         public Builder minimumElasticInstanceCount(@Nullable Output<Integer> minimumElasticInstanceCount) {
             $.minimumElasticInstanceCount = minimumElasticInstanceCount;
             return this;
@@ -1382,6 +1398,14 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
             return scmMinTlsVersion(Output.of(scmMinTlsVersion));
         }
 
+        public Builder scmMinTlsVersion(String scmMinTlsVersion) {
+            return scmMinTlsVersion(Either.ofLeft(scmMinTlsVersion));
+        }
+
+        public Builder scmMinTlsVersion(SupportedTlsVersions scmMinTlsVersion) {
+            return scmMinTlsVersion(Either.ofRight(scmMinTlsVersion));
+        }
+
         public Builder scmType(@Nullable Output<Either<String,ScmType>> scmType) {
             $.scmType = scmType;
             return this;
@@ -1389,6 +1413,14 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder scmType(Either<String,ScmType> scmType) {
             return scmType(Output.of(scmType));
+        }
+
+        public Builder scmType(String scmType) {
+            return scmType(Either.ofLeft(scmType));
+        }
+
+        public Builder scmType(ScmType scmType) {
+            return scmType(Either.ofRight(scmType));
         }
 
         public Builder tracingOptions(@Nullable Output<String> tracingOptions) {

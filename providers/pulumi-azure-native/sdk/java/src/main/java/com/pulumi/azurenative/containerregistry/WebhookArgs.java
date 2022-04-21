@@ -239,6 +239,14 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(WebhookStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;

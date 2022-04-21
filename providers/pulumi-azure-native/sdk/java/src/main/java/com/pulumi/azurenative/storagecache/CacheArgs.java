@@ -276,6 +276,14 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
             return provisioningState(Output.of(provisioningState));
         }
 
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ProvisioningStateType provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

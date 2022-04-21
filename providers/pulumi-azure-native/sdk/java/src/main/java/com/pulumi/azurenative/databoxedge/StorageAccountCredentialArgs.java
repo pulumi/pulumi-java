@@ -192,6 +192,14 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
             return accountType(Output.of(accountType));
         }
 
+        public Builder accountType(String accountType) {
+            return accountType(Either.ofLeft(accountType));
+        }
+
+        public Builder accountType(AccountType accountType) {
+            return accountType(Either.ofRight(accountType));
+        }
+
         public Builder alias(Output<String> alias) {
             $.alias = alias;
             return this;
@@ -253,6 +261,14 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
 
         public Builder sslStatus(Either<String,SSLStatus> sslStatus) {
             return sslStatus(Output.of(sslStatus));
+        }
+
+        public Builder sslStatus(String sslStatus) {
+            return sslStatus(Either.ofLeft(sslStatus));
+        }
+
+        public Builder sslStatus(SSLStatus sslStatus) {
+            return sslStatus(Either.ofRight(sslStatus));
         }
 
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {

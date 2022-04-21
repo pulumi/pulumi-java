@@ -76,6 +76,14 @@ public final class SasPolicyArgs extends com.pulumi.resources.ResourceArgs {
             return expirationAction(Output.of(expirationAction));
         }
 
+        public Builder expirationAction(String expirationAction) {
+            return expirationAction(Either.ofLeft(expirationAction));
+        }
+
+        public Builder expirationAction(ExpirationAction expirationAction) {
+            return expirationAction(Either.ofRight(expirationAction));
+        }
+
         public Builder sasExpirationPeriod(Output<String> sasExpirationPeriod) {
             $.sasExpirationPeriod = sasExpirationPeriod;
             return this;

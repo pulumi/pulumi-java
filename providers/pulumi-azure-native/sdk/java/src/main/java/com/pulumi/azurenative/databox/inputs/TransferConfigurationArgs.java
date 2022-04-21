@@ -100,6 +100,14 @@ public final class TransferConfigurationArgs extends com.pulumi.resources.Resour
             return transferConfigurationType(Output.of(transferConfigurationType));
         }
 
+        public Builder transferConfigurationType(String transferConfigurationType) {
+            return transferConfigurationType(Either.ofLeft(transferConfigurationType));
+        }
+
+        public Builder transferConfigurationType(TransferConfigurationType transferConfigurationType) {
+            return transferConfigurationType(Either.ofRight(transferConfigurationType));
+        }
+
         public Builder transferFilterDetails(@Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails) {
             $.transferFilterDetails = transferFilterDetails;
             return this;

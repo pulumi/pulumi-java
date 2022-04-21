@@ -86,6 +86,14 @@ public final class NotificationPreferenceArgs extends com.pulumi.resources.Resou
             return stageName(Output.of(stageName));
         }
 
+        public Builder stageName(String stageName) {
+            return stageName(Either.ofLeft(stageName));
+        }
+
+        public Builder stageName(NotificationStageName stageName) {
+            return stageName(Either.ofRight(stageName));
+        }
+
         public NotificationPreferenceArgs build() {
             $.sendNotification = Codegen.booleanProp("sendNotification").output().arg($.sendNotification).def(true).require();
             $.stageName = Objects.requireNonNull($.stageName, "expected parameter 'stageName' to be non-null");

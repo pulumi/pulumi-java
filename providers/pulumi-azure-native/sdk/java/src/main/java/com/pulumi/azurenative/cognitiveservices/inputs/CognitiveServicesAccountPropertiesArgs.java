@@ -192,6 +192,14 @@ public final class CognitiveServicesAccountPropertiesArgs extends com.pulumi.res
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
+        }
+
         public Builder userOwnedStorage(@Nullable Output<List<UserOwnedStorageArgs>> userOwnedStorage) {
             $.userOwnedStorage = userOwnedStorage;
             return this;

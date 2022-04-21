@@ -79,6 +79,14 @@ public final class DefaultRolloutPropertiesArgs extends com.pulumi.resources.Res
             return provisioningState(Output.of(provisioningState));
         }
 
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
+        }
+
         public Builder specification(@Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification) {
             $.specification = specification;
             return this;

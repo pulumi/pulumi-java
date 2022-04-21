@@ -65,6 +65,14 @@ public final class TIDataConnectorDataTypesIndicatorsArgs extends com.pulumi.res
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(DataTypeState state) {
+            return state(Either.ofRight(state));
+        }
+
         public TIDataConnectorDataTypesIndicatorsArgs build() {
             return $;
         }

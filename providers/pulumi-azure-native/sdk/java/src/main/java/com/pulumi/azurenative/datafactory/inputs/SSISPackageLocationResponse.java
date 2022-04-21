@@ -212,6 +212,14 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
             return this;
         }
 
+        public Builder packagePassword(AzureKeyVaultSecretReferenceResponse packagePassword) {
+            return packagePassword(Either.ofLeft(packagePassword));
+        }
+
+        public Builder packagePassword(SecureStringResponse packagePassword) {
+            return packagePassword(Either.ofRight(packagePassword));
+        }
+
         public Builder packagePath(@Nullable Object packagePath) {
             $.packagePath = packagePath;
             return this;

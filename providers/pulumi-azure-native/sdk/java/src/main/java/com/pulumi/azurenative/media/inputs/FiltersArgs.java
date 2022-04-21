@@ -137,6 +137,14 @@ public final class FiltersArgs extends com.pulumi.resources.ResourceArgs {
             return rotation(Output.of(rotation));
         }
 
+        public Builder rotation(String rotation) {
+            return rotation(Either.ofLeft(rotation));
+        }
+
+        public Builder rotation(Rotation rotation) {
+            return rotation(Either.ofRight(rotation));
+        }
+
         public FiltersArgs build() {
             return $;
         }

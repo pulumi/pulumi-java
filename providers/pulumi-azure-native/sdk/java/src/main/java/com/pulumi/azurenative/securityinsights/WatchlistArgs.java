@@ -471,6 +471,14 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
             return source(Output.of(source));
         }
 
+        public Builder source(String source) {
+            return source(Either.ofLeft(source));
+        }
+
+        public Builder source(Source source) {
+            return source(Either.ofRight(source));
+        }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;

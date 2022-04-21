@@ -198,6 +198,14 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends com.pul
             return expander(Output.of(expander));
         }
 
+        public Builder expander(String expander) {
+            return expander(Either.ofLeft(expander));
+        }
+
+        public Builder expander(Expander expander) {
+            return expander(Either.ofRight(expander));
+        }
+
         public Builder maxEmptyBulkDelete(@Nullable Output<String> maxEmptyBulkDelete) {
             $.maxEmptyBulkDelete = maxEmptyBulkDelete;
             return this;

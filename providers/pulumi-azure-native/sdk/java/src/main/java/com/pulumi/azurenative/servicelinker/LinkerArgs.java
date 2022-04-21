@@ -124,6 +124,14 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
             return clientType(Output.of(clientType));
         }
 
+        public Builder clientType(String clientType) {
+            return clientType(Either.ofLeft(clientType));
+        }
+
+        public Builder clientType(ClientType clientType) {
+            return clientType(Either.ofRight(clientType));
+        }
+
         public Builder linkerName(@Nullable Output<String> linkerName) {
             $.linkerName = linkerName;
             return this;

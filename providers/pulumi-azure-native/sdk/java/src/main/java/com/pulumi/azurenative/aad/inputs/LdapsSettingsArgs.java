@@ -103,6 +103,14 @@ public final class LdapsSettingsArgs extends com.pulumi.resources.ResourceArgs {
             return externalAccess(Output.of(externalAccess));
         }
 
+        public Builder externalAccess(String externalAccess) {
+            return externalAccess(Either.ofLeft(externalAccess));
+        }
+
+        public Builder externalAccess(ExternalAccess externalAccess) {
+            return externalAccess(Either.ofRight(externalAccess));
+        }
+
         public Builder ldaps(@Nullable Output<Either<String,Ldaps>> ldaps) {
             $.ldaps = ldaps;
             return this;
@@ -110,6 +118,14 @@ public final class LdapsSettingsArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder ldaps(Either<String,Ldaps> ldaps) {
             return ldaps(Output.of(ldaps));
+        }
+
+        public Builder ldaps(String ldaps) {
+            return ldaps(Either.ofLeft(ldaps));
+        }
+
+        public Builder ldaps(Ldaps ldaps) {
+            return ldaps(Either.ofRight(ldaps));
         }
 
         public Builder pfxCertificate(@Nullable Output<String> pfxCertificate) {

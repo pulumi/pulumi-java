@@ -217,6 +217,14 @@ public final class IntegrationAccountMapArgs extends com.pulumi.resources.Resour
             return mapType(Output.of(mapType));
         }
 
+        public Builder mapType(String mapType) {
+            return mapType(Either.ofLeft(mapType));
+        }
+
+        public Builder mapType(MapType mapType) {
+            return mapType(Either.ofRight(mapType));
+        }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
             $.metadata = metadata;
             return this;

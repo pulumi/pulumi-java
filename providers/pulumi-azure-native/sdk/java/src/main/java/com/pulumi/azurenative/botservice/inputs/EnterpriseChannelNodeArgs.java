@@ -128,6 +128,14 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(EnterpriseChannelNodeState state) {
+            return state(Either.ofRight(state));
+        }
+
         public EnterpriseChannelNodeArgs build() {
             $.azureLocation = Objects.requireNonNull($.azureLocation, "expected parameter 'azureLocation' to be non-null");
             $.azureSku = Objects.requireNonNull($.azureSku, "expected parameter 'azureSku' to be non-null");

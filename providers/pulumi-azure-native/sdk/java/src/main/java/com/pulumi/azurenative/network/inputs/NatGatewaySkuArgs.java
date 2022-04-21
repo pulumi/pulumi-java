@@ -65,6 +65,14 @@ public final class NatGatewaySkuArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(NatGatewaySkuName name) {
+            return name(Either.ofRight(name));
+        }
+
         public NatGatewaySkuArgs build() {
             return $;
         }

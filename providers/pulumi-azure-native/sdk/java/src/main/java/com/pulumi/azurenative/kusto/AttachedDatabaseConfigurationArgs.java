@@ -182,6 +182,14 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
             return defaultPrincipalsModificationKind(Output.of(defaultPrincipalsModificationKind));
         }
 
+        public Builder defaultPrincipalsModificationKind(String defaultPrincipalsModificationKind) {
+            return defaultPrincipalsModificationKind(Either.ofLeft(defaultPrincipalsModificationKind));
+        }
+
+        public Builder defaultPrincipalsModificationKind(DefaultPrincipalsModificationKind defaultPrincipalsModificationKind) {
+            return defaultPrincipalsModificationKind(Either.ofRight(defaultPrincipalsModificationKind));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;

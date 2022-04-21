@@ -59,6 +59,14 @@ public final class MediaServiceIdentityArgs extends com.pulumi.resources.Resourc
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ManagedIdentityType type) {
+            return type(Either.ofRight(type));
+        }
+
         public MediaServiceIdentityArgs build() {
             $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
             return $;

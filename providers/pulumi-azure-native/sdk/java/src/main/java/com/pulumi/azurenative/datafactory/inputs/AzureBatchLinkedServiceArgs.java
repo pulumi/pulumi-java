@@ -207,6 +207,14 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
             return accessKey(Output.of(accessKey));
         }
 
+        public Builder accessKey(AzureKeyVaultSecretReferenceArgs accessKey) {
+            return accessKey(Either.ofLeft(accessKey));
+        }
+
+        public Builder accessKey(SecureStringArgs accessKey) {
+            return accessKey(Either.ofRight(accessKey));
+        }
+
         public Builder accountName(Output<Object> accountName) {
             $.accountName = accountName;
             return this;

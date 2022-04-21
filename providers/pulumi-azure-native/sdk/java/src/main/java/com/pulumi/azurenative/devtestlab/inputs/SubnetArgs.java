@@ -89,6 +89,14 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
             return allowPublicIp(Output.of(allowPublicIp));
         }
 
+        public Builder allowPublicIp(String allowPublicIp) {
+            return allowPublicIp(Either.ofLeft(allowPublicIp));
+        }
+
+        public Builder allowPublicIp(UsagePermissionType allowPublicIp) {
+            return allowPublicIp(Either.ofRight(allowPublicIp));
+        }
+
         public Builder labSubnetName(@Nullable Output<String> labSubnetName) {
             $.labSubnetName = labSubnetName;
             return this;

@@ -307,6 +307,14 @@ public final class HBaseLinkedServiceResponse extends com.pulumi.resources.Invok
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder port(@Nullable Object port) {
             $.port = port;
             return this;

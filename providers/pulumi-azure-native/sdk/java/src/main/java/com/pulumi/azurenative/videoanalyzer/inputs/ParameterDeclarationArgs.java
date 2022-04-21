@@ -128,6 +128,14 @@ public final class ParameterDeclarationArgs extends com.pulumi.resources.Resourc
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ParameterType type) {
+            return type(Either.ofRight(type));
+        }
+
         public ParameterDeclarationArgs build() {
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");

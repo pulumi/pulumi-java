@@ -154,6 +154,14 @@ public final class X12ValidationOverrideArgs extends com.pulumi.resources.Resour
             return trailingSeparatorPolicy(Output.of(trailingSeparatorPolicy));
         }
 
+        public Builder trailingSeparatorPolicy(String trailingSeparatorPolicy) {
+            return trailingSeparatorPolicy(Either.ofLeft(trailingSeparatorPolicy));
+        }
+
+        public Builder trailingSeparatorPolicy(TrailingSeparatorPolicy trailingSeparatorPolicy) {
+            return trailingSeparatorPolicy(Either.ofRight(trailingSeparatorPolicy));
+        }
+
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
             $.trimLeadingAndTrailingSpacesAndZeroes = trimLeadingAndTrailingSpacesAndZeroes;
             return this;

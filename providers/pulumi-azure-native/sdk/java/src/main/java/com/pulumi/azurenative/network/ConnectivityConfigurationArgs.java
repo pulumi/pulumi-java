@@ -196,6 +196,14 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
             return connectivityTopology(Output.of(connectivityTopology));
         }
 
+        public Builder connectivityTopology(String connectivityTopology) {
+            return connectivityTopology(Either.ofLeft(connectivityTopology));
+        }
+
+        public Builder connectivityTopology(ConnectivityTopology connectivityTopology) {
+            return connectivityTopology(Either.ofRight(connectivityTopology));
+        }
+
         public Builder deleteExistingPeering(@Nullable Output<Either<String,DeleteExistingPeering>> deleteExistingPeering) {
             $.deleteExistingPeering = deleteExistingPeering;
             return this;
@@ -203,6 +211,14 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
 
         public Builder deleteExistingPeering(Either<String,DeleteExistingPeering> deleteExistingPeering) {
             return deleteExistingPeering(Output.of(deleteExistingPeering));
+        }
+
+        public Builder deleteExistingPeering(String deleteExistingPeering) {
+            return deleteExistingPeering(Either.ofLeft(deleteExistingPeering));
+        }
+
+        public Builder deleteExistingPeering(DeleteExistingPeering deleteExistingPeering) {
+            return deleteExistingPeering(Either.ofRight(deleteExistingPeering));
         }
 
         public Builder description(@Nullable Output<String> description) {
@@ -243,6 +259,14 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
 
         public Builder isGlobal(Either<String,IsGlobal> isGlobal) {
             return isGlobal(Output.of(isGlobal));
+        }
+
+        public Builder isGlobal(String isGlobal) {
+            return isGlobal(Either.ofLeft(isGlobal));
+        }
+
+        public Builder isGlobal(IsGlobal isGlobal) {
+            return isGlobal(Either.ofRight(isGlobal));
         }
 
         public Builder networkManagerName(Output<String> networkManagerName) {

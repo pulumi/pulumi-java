@@ -281,6 +281,14 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
             return loggingLevel(Output.of(loggingLevel));
         }
 
+        public Builder loggingLevel(String loggingLevel) {
+            return loggingLevel(Either.ofLeft(loggingLevel));
+        }
+
+        public Builder loggingLevel(BatchLoggingLevel loggingLevel) {
+            return loggingLevel(Either.ofRight(loggingLevel));
+        }
+
         public Builder miniBatchSize(@Nullable Output<Double> miniBatchSize) {
             $.miniBatchSize = miniBatchSize;
             return this;

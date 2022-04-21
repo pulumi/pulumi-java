@@ -112,6 +112,14 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
             return geoRedundantBackup(Output.of(geoRedundantBackup));
         }
 
+        public Builder geoRedundantBackup(String geoRedundantBackup) {
+            return geoRedundantBackup(Either.ofLeft(geoRedundantBackup));
+        }
+
+        public Builder geoRedundantBackup(GeoRedundantBackup geoRedundantBackup) {
+            return geoRedundantBackup(Either.ofRight(geoRedundantBackup));
+        }
+
         public Builder storageAutogrow(@Nullable Output<Either<String,StorageAutogrow>> storageAutogrow) {
             $.storageAutogrow = storageAutogrow;
             return this;
@@ -119,6 +127,14 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder storageAutogrow(Either<String,StorageAutogrow> storageAutogrow) {
             return storageAutogrow(Output.of(storageAutogrow));
+        }
+
+        public Builder storageAutogrow(String storageAutogrow) {
+            return storageAutogrow(Either.ofLeft(storageAutogrow));
+        }
+
+        public Builder storageAutogrow(StorageAutogrow storageAutogrow) {
+            return storageAutogrow(Either.ofRight(storageAutogrow));
         }
 
         public Builder storageMB(@Nullable Output<Integer> storageMB) {

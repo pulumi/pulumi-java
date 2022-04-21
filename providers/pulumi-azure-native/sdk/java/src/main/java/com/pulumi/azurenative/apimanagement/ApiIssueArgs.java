@@ -211,6 +211,14 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(State state) {
+            return state(Either.ofRight(state));
+        }
+
         public Builder title(Output<String> title) {
             $.title = title;
             return this;

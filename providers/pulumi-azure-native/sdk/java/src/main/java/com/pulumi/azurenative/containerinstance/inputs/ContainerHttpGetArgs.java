@@ -130,6 +130,14 @@ public final class ContainerHttpGetArgs extends com.pulumi.resources.ResourceArg
             return scheme(Output.of(scheme));
         }
 
+        public Builder scheme(String scheme) {
+            return scheme(Either.ofLeft(scheme));
+        }
+
+        public Builder scheme(Scheme scheme) {
+            return scheme(Either.ofRight(scheme));
+        }
+
         public ContainerHttpGetArgs build() {
             $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
             return $;

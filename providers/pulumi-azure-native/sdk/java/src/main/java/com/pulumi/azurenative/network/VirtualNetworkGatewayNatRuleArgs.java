@@ -216,6 +216,14 @@ public final class VirtualNetworkGatewayNatRuleArgs extends com.pulumi.resources
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(VpnNatRuleMode mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
@@ -250,6 +258,14 @@ public final class VirtualNetworkGatewayNatRuleArgs extends com.pulumi.resources
 
         public Builder type(Either<String,VpnNatRuleType> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(VpnNatRuleType type) {
+            return type(Either.ofRight(type));
         }
 
         public Builder virtualNetworkGatewayName(Output<String> virtualNetworkGatewayName) {

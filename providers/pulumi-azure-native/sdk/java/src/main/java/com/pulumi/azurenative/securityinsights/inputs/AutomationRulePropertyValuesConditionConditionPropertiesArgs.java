@@ -91,6 +91,14 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
             return operator(Output.of(operator));
         }
 
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(AutomationRulePropertyConditionSupportedOperator operator) {
+            return operator(Either.ofRight(operator));
+        }
+
         public Builder propertyName(@Nullable Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName) {
             $.propertyName = propertyName;
             return this;
@@ -98,6 +106,14 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
 
         public Builder propertyName(Either<String,AutomationRulePropertyConditionSupportedProperty> propertyName) {
             return propertyName(Output.of(propertyName));
+        }
+
+        public Builder propertyName(String propertyName) {
+            return propertyName(Either.ofLeft(propertyName));
+        }
+
+        public Builder propertyName(AutomationRulePropertyConditionSupportedProperty propertyName) {
+            return propertyName(Either.ofRight(propertyName));
         }
 
         public Builder propertyValues(@Nullable Output<List<String>> propertyValues) {

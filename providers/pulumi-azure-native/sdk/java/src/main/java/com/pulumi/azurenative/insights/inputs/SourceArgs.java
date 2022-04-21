@@ -133,6 +133,14 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
             return queryType(Output.of(queryType));
         }
 
+        public Builder queryType(String queryType) {
+            return queryType(Either.ofLeft(queryType));
+        }
+
+        public Builder queryType(QueryType queryType) {
+            return queryType(Either.ofRight(queryType));
+        }
+
         public SourceArgs build() {
             $.dataSourceId = Objects.requireNonNull($.dataSourceId, "expected parameter 'dataSourceId' to be non-null");
             return $;

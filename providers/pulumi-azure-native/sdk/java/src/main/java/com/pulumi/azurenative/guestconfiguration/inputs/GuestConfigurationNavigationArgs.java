@@ -165,6 +165,14 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
             return assignmentType(Output.of(assignmentType));
         }
 
+        public Builder assignmentType(String assignmentType) {
+            return assignmentType(Either.ofLeft(assignmentType));
+        }
+
+        public Builder assignmentType(AssignmentType assignmentType) {
+            return assignmentType(Either.ofRight(assignmentType));
+        }
+
         public Builder configurationParameter(@Nullable Output<List<ConfigurationParameterArgs>> configurationParameter) {
             $.configurationParameter = configurationParameter;
             return this;
@@ -225,6 +233,14 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
 
         public Builder kind(Either<String,Kind> kind) {
             return kind(Output.of(kind));
+        }
+
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(Kind kind) {
+            return kind(Either.ofRight(kind));
         }
 
         public Builder name(@Nullable Output<String> name) {

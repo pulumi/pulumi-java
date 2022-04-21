@@ -87,6 +87,14 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends com.pulumi.r
             return protocolType(Output.of(protocolType));
         }
 
+        public Builder protocolType(String protocolType) {
+            return protocolType(Either.ofLeft(protocolType));
+        }
+
+        public Builder protocolType(AzureFirewallApplicationRuleProtocolType protocolType) {
+            return protocolType(Either.ofRight(protocolType));
+        }
+
         public AzureFirewallApplicationRuleProtocolArgs build() {
             return $;
         }

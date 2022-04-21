@@ -290,6 +290,14 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(DriveState state) {
+            return state(Either.ofRight(state));
+        }
+
         public Builder verboseLogUri(@Nullable Output<String> verboseLogUri) {
             $.verboseLogUri = verboseLogUri;
             return this;

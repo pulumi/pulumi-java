@@ -586,6 +586,14 @@ public final class ThreatIntelligenceIndicatorArgs extends com.pulumi.resources.
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(ThreatIntelligenceResourceKind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder labels(@Nullable Output<List<String>> labels) {
             $.labels = labels;
             return this;

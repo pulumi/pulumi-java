@@ -129,6 +129,14 @@ public final class ConnectionMonitorHttpConfigurationArgs extends com.pulumi.res
             return method(Output.of(method));
         }
 
+        public Builder method(String method) {
+            return method(Either.ofLeft(method));
+        }
+
+        public Builder method(HTTPConfigurationMethod method) {
+            return method(Either.ofRight(method));
+        }
+
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;

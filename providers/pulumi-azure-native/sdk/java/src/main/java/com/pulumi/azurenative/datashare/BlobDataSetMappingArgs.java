@@ -249,6 +249,14 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
             return outputType(Output.of(outputType));
         }
 
+        public Builder outputType(String outputType) {
+            return outputType(Either.ofLeft(outputType));
+        }
+
+        public Builder outputType(OutputType outputType) {
+            return outputType(Either.ofRight(outputType));
+        }
+
         public Builder resourceGroup(Output<String> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;

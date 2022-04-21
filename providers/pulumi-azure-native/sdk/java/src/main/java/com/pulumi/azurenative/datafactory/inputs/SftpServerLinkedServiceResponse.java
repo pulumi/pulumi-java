@@ -292,9 +292,25 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
             return this;
         }
 
+        public Builder passPhrase(AzureKeyVaultSecretReferenceResponse passPhrase) {
+            return passPhrase(Either.ofLeft(passPhrase));
+        }
+
+        public Builder passPhrase(SecureStringResponse passPhrase) {
+            return passPhrase(Either.ofRight(passPhrase));
+        }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
+        }
+
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
         }
 
         public Builder port(@Nullable Object port) {
@@ -305,6 +321,14 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
         public Builder privateKeyContent(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent) {
             $.privateKeyContent = privateKeyContent;
             return this;
+        }
+
+        public Builder privateKeyContent(AzureKeyVaultSecretReferenceResponse privateKeyContent) {
+            return privateKeyContent(Either.ofLeft(privateKeyContent));
+        }
+
+        public Builder privateKeyContent(SecureStringResponse privateKeyContent) {
+            return privateKeyContent(Either.ofRight(privateKeyContent));
         }
 
         public Builder privateKeyPath(@Nullable Object privateKeyPath) {

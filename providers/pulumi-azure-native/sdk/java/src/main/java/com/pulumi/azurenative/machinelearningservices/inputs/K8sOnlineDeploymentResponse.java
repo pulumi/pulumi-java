@@ -273,6 +273,14 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
             return this;
         }
 
+        public Builder scaleSettings(AutoScaleSettingsResponse scaleSettings) {
+            return scaleSettings(Either.ofLeft(scaleSettings));
+        }
+
+        public Builder scaleSettings(ManualScaleSettingsResponse scaleSettings) {
+            return scaleSettings(Either.ofRight(scaleSettings));
+        }
+
         public K8sOnlineDeploymentResponse build() {
             $.endpointComputeType = Codegen.stringProp("endpointComputeType").arg($.endpointComputeType).require();
             $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");

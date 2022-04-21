@@ -203,6 +203,14 @@ public final class BlueprintArgs extends com.pulumi.resources.ResourceArgs {
             return targetScope(Output.of(targetScope));
         }
 
+        public Builder targetScope(String targetScope) {
+            return targetScope(Either.ofLeft(targetScope));
+        }
+
+        public Builder targetScope(BlueprintTargetScope targetScope) {
+            return targetScope(Either.ofRight(targetScope));
+        }
+
         public Builder versions(@Nullable Output<Object> versions) {
             $.versions = versions;
             return this;

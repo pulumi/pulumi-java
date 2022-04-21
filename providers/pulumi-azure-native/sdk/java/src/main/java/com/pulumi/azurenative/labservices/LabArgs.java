@@ -252,6 +252,14 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
             return userAccessMode(Output.of(userAccessMode));
         }
 
+        public Builder userAccessMode(String userAccessMode) {
+            return userAccessMode(Either.ofLeft(userAccessMode));
+        }
+
+        public Builder userAccessMode(LabUserAccessMode userAccessMode) {
+            return userAccessMode(Either.ofRight(userAccessMode));
+        }
+
         public LabArgs build() {
             $.labAccountName = Objects.requireNonNull($.labAccountName, "expected parameter 'labAccountName' to be non-null");
             $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

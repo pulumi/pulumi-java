@@ -202,6 +202,14 @@ public final class AssessmentMetadataInSubscriptionArgs extends com.pulumi.resou
             return assessmentType(Output.of(assessmentType));
         }
 
+        public Builder assessmentType(String assessmentType) {
+            return assessmentType(Either.ofLeft(assessmentType));
+        }
+
+        public Builder assessmentType(AssessmentType assessmentType) {
+            return assessmentType(Either.ofRight(assessmentType));
+        }
+
         public Builder categories(@Nullable Output<List<Either<String,Categories>>> categories) {
             $.categories = categories;
             return this;
@@ -242,6 +250,14 @@ public final class AssessmentMetadataInSubscriptionArgs extends com.pulumi.resou
             return implementationEffort(Output.of(implementationEffort));
         }
 
+        public Builder implementationEffort(String implementationEffort) {
+            return implementationEffort(Either.ofLeft(implementationEffort));
+        }
+
+        public Builder implementationEffort(ImplementationEffort implementationEffort) {
+            return implementationEffort(Either.ofRight(implementationEffort));
+        }
+
         public Builder partnerData(@Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData) {
             $.partnerData = partnerData;
             return this;
@@ -278,6 +294,14 @@ public final class AssessmentMetadataInSubscriptionArgs extends com.pulumi.resou
             return severity(Output.of(severity));
         }
 
+        public Builder severity(String severity) {
+            return severity(Either.ofLeft(severity));
+        }
+
+        public Builder severity(Severity severity) {
+            return severity(Either.ofRight(severity));
+        }
+
         public Builder threats(@Nullable Output<List<Either<String,Threats>>> threats) {
             $.threats = threats;
             return this;
@@ -298,6 +322,14 @@ public final class AssessmentMetadataInSubscriptionArgs extends com.pulumi.resou
 
         public Builder userImpact(Either<String,UserImpact> userImpact) {
             return userImpact(Output.of(userImpact));
+        }
+
+        public Builder userImpact(String userImpact) {
+            return userImpact(Either.ofLeft(userImpact));
+        }
+
+        public Builder userImpact(UserImpact userImpact) {
+            return userImpact(Either.ofRight(userImpact));
         }
 
         public AssessmentMetadataInSubscriptionArgs build() {

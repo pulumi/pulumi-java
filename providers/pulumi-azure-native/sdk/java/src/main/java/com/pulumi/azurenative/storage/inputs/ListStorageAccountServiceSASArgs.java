@@ -346,6 +346,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
             return this;
         }
 
+        public Builder permissions(String permissions) {
+            return permissions(Either.ofLeft(permissions));
+        }
+
+        public Builder permissions(Permissions permissions) {
+            return permissions(Either.ofRight(permissions));
+        }
+
         public Builder protocols(@Nullable HttpProtocol protocols) {
             $.protocols = protocols;
             return this;
@@ -354,6 +362,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
         public Builder resource(@Nullable Either<String,SignedResource> resource) {
             $.resource = resource;
             return this;
+        }
+
+        public Builder resource(String resource) {
+            return resource(Either.ofLeft(resource));
+        }
+
+        public Builder resource(SignedResource resource) {
+            return resource(Either.ofRight(resource));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {

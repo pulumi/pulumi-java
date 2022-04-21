@@ -114,6 +114,14 @@ public final class LogAnalyticsArgs extends com.pulumi.resources.ResourceArgs {
             return logType(Output.of(logType));
         }
 
+        public Builder logType(String logType) {
+            return logType(Either.ofLeft(logType));
+        }
+
+        public Builder logType(LogAnalyticsLogType logType) {
+            return logType(Either.ofRight(logType));
+        }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;

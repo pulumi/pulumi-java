@@ -165,6 +165,14 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
             return provisioningState(Output.of(provisioningState));
         }
 
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(WorkflowProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
+        }
+
         public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
             $.state = state;
             return this;
@@ -172,6 +180,14 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
 
         public Builder state(Either<String,WorkflowState> state) {
             return state(Output.of(state));
+        }
+
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(WorkflowState state) {
+            return state(Either.ofRight(state));
         }
 
         public IntegrationServiceEnvironmentPropertiesArgs build() {

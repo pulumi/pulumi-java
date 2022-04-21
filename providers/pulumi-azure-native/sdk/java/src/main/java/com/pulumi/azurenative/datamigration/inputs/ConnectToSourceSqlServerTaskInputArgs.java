@@ -104,6 +104,14 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
             return checkPermissionsGroup(Output.of(checkPermissionsGroup));
         }
 
+        public Builder checkPermissionsGroup(String checkPermissionsGroup) {
+            return checkPermissionsGroup(Either.ofLeft(checkPermissionsGroup));
+        }
+
+        public Builder checkPermissionsGroup(ServerLevelPermissionsGroup checkPermissionsGroup) {
+            return checkPermissionsGroup(Either.ofRight(checkPermissionsGroup));
+        }
+
         public Builder collectAgentJobs(@Nullable Output<Boolean> collectAgentJobs) {
             $.collectAgentJobs = collectAgentJobs;
             return this;

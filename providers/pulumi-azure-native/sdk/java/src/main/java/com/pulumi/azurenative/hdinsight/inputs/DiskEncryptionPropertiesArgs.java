@@ -127,6 +127,14 @@ public final class DiskEncryptionPropertiesArgs extends com.pulumi.resources.Res
             return encryptionAlgorithm(Output.of(encryptionAlgorithm));
         }
 
+        public Builder encryptionAlgorithm(String encryptionAlgorithm) {
+            return encryptionAlgorithm(Either.ofLeft(encryptionAlgorithm));
+        }
+
+        public Builder encryptionAlgorithm(JsonWebKeyEncryptionAlgorithm encryptionAlgorithm) {
+            return encryptionAlgorithm(Either.ofRight(encryptionAlgorithm));
+        }
+
         public Builder encryptionAtHost(@Nullable Output<Boolean> encryptionAtHost) {
             $.encryptionAtHost = encryptionAtHost;
             return this;

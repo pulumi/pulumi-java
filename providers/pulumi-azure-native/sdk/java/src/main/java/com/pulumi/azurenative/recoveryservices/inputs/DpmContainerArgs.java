@@ -218,6 +218,14 @@ public final class DpmContainerArgs extends com.pulumi.resources.ResourceArgs {
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        public Builder backupManagementType(String backupManagementType) {
+            return backupManagementType(Either.ofLeft(backupManagementType));
+        }
+
+        public Builder backupManagementType(BackupManagementType backupManagementType) {
+            return backupManagementType(Either.ofRight(backupManagementType));
+        }
+
         public Builder canReRegister(@Nullable Output<Boolean> canReRegister) {
             $.canReRegister = canReRegister;
             return this;

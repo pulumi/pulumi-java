@@ -93,6 +93,14 @@ public final class ManagementEventRuleConditionResponse extends com.pulumi.resou
             return this;
         }
 
+        public Builder dataSource(RuleManagementEventDataSourceResponse dataSource) {
+            return dataSource(Either.ofLeft(dataSource));
+        }
+
+        public Builder dataSource(RuleMetricDataSourceResponse dataSource) {
+            return dataSource(Either.ofRight(dataSource));
+        }
+
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

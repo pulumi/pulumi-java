@@ -118,6 +118,14 @@ public final class FaceDetectorPresetArgs extends com.pulumi.resources.ResourceA
             return blurType(Output.of(blurType));
         }
 
+        public Builder blurType(String blurType) {
+            return blurType(Either.ofLeft(blurType));
+        }
+
+        public Builder blurType(BlurType blurType) {
+            return blurType(Either.ofRight(blurType));
+        }
+
         public Builder experimentalOptions(@Nullable Output<Map<String,String>> experimentalOptions) {
             $.experimentalOptions = experimentalOptions;
             return this;
@@ -136,6 +144,14 @@ public final class FaceDetectorPresetArgs extends com.pulumi.resources.ResourceA
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(FaceRedactorMode mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
@@ -152,6 +168,14 @@ public final class FaceDetectorPresetArgs extends com.pulumi.resources.ResourceA
 
         public Builder resolution(Either<String,AnalysisResolution> resolution) {
             return resolution(Output.of(resolution));
+        }
+
+        public Builder resolution(String resolution) {
+            return resolution(Either.ofLeft(resolution));
+        }
+
+        public Builder resolution(AnalysisResolution resolution) {
+            return resolution(Either.ofRight(resolution));
         }
 
         public FaceDetectorPresetArgs build() {

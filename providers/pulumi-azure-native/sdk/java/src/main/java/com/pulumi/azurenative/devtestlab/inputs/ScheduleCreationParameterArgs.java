@@ -215,6 +215,14 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(EnableStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;

@@ -115,6 +115,14 @@ public final class StorageConfigurationSettingsArgs extends com.pulumi.resources
             return diskConfigurationType(Output.of(diskConfigurationType));
         }
 
+        public Builder diskConfigurationType(String diskConfigurationType) {
+            return diskConfigurationType(Either.ofLeft(diskConfigurationType));
+        }
+
+        public Builder diskConfigurationType(DiskConfigurationType diskConfigurationType) {
+            return diskConfigurationType(Either.ofRight(diskConfigurationType));
+        }
+
         public Builder sqlDataSettings(@Nullable Output<SQLStorageSettingsArgs> sqlDataSettings) {
             $.sqlDataSettings = sqlDataSettings;
             return this;
@@ -149,6 +157,14 @@ public final class StorageConfigurationSettingsArgs extends com.pulumi.resources
 
         public Builder storageWorkloadType(Either<String,StorageWorkloadType> storageWorkloadType) {
             return storageWorkloadType(Output.of(storageWorkloadType));
+        }
+
+        public Builder storageWorkloadType(String storageWorkloadType) {
+            return storageWorkloadType(Either.ofLeft(storageWorkloadType));
+        }
+
+        public Builder storageWorkloadType(StorageWorkloadType storageWorkloadType) {
+            return storageWorkloadType(Either.ofRight(storageWorkloadType));
         }
 
         public StorageConfigurationSettingsArgs build() {

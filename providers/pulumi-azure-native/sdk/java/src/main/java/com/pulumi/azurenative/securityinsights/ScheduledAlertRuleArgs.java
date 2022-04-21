@@ -350,6 +350,14 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
             return severity(Output.of(severity));
         }
 
+        public Builder severity(String severity) {
+            return severity(Either.ofLeft(severity));
+        }
+
+        public Builder severity(AlertSeverity severity) {
+            return severity(Either.ofRight(severity));
+        }
+
         public Builder suppressionDuration(Output<String> suppressionDuration) {
             $.suppressionDuration = suppressionDuration;
             return this;

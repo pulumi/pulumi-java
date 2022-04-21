@@ -87,6 +87,14 @@ public final class DeploymentScaleSettingsArgs extends com.pulumi.resources.Reso
             return scaleType(Output.of(scaleType));
         }
 
+        public Builder scaleType(String scaleType) {
+            return scaleType(Either.ofLeft(scaleType));
+        }
+
+        public Builder scaleType(DeploymentScaleType scaleType) {
+            return scaleType(Either.ofRight(scaleType));
+        }
+
         public DeploymentScaleSettingsArgs build() {
             return $;
         }

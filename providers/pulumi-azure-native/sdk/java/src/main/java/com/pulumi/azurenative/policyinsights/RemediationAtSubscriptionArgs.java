@@ -146,6 +146,14 @@ public final class RemediationAtSubscriptionArgs extends com.pulumi.resources.Re
             return resourceDiscoveryMode(Output.of(resourceDiscoveryMode));
         }
 
+        public Builder resourceDiscoveryMode(String resourceDiscoveryMode) {
+            return resourceDiscoveryMode(Either.ofLeft(resourceDiscoveryMode));
+        }
+
+        public Builder resourceDiscoveryMode(ResourceDiscoveryMode resourceDiscoveryMode) {
+            return resourceDiscoveryMode(Either.ofRight(resourceDiscoveryMode));
+        }
+
         public RemediationAtSubscriptionArgs build() {
             return $;
         }

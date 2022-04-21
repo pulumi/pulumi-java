@@ -111,6 +111,14 @@ public final class PolybaseSettingsArgs extends com.pulumi.resources.ResourceArg
             return rejectType(Output.of(rejectType));
         }
 
+        public Builder rejectType(String rejectType) {
+            return rejectType(Either.ofLeft(rejectType));
+        }
+
+        public Builder rejectType(PolybaseSettingsRejectType rejectType) {
+            return rejectType(Either.ofRight(rejectType));
+        }
+
         public Builder rejectValue(@Nullable Output<Object> rejectValue) {
             $.rejectValue = rejectValue;
             return this;

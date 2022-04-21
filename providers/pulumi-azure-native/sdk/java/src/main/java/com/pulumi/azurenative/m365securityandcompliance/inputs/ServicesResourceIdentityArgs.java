@@ -65,6 +65,14 @@ public final class ServicesResourceIdentityArgs extends com.pulumi.resources.Res
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ManagedServiceIdentityType type) {
+            return type(Either.ofRight(type));
+        }
+
         public ServicesResourceIdentityArgs build() {
             return $;
         }

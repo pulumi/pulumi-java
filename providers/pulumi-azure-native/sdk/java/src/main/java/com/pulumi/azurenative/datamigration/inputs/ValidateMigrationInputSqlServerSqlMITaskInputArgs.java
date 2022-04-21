@@ -160,6 +160,14 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends com
             return backupMode(Output.of(backupMode));
         }
 
+        public Builder backupMode(String backupMode) {
+            return backupMode(Either.ofLeft(backupMode));
+        }
+
+        public Builder backupMode(BackupMode backupMode) {
+            return backupMode(Either.ofRight(backupMode));
+        }
+
         public Builder selectedDatabases(Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;

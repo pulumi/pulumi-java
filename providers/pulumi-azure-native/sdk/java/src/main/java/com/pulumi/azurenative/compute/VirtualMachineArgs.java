@@ -438,6 +438,14 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
             return evictionPolicy(Output.of(evictionPolicy));
         }
 
+        public Builder evictionPolicy(String evictionPolicy) {
+            return evictionPolicy(Either.ofLeft(evictionPolicy));
+        }
+
+        public Builder evictionPolicy(VirtualMachineEvictionPolicyTypes evictionPolicy) {
+            return evictionPolicy(Either.ofRight(evictionPolicy));
+        }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
@@ -553,6 +561,14 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder priority(Either<String,VirtualMachinePriorityTypes> priority) {
             return priority(Output.of(priority));
+        }
+
+        public Builder priority(String priority) {
+            return priority(Either.ofLeft(priority));
+        }
+
+        public Builder priority(VirtualMachinePriorityTypes priority) {
+            return priority(Either.ofRight(priority));
         }
 
         public Builder proximityPlacementGroup(@Nullable Output<SubResourceArgs> proximityPlacementGroup) {

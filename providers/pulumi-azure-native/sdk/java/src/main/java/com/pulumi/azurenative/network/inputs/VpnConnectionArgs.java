@@ -408,6 +408,14 @@ public final class VpnConnectionArgs extends com.pulumi.resources.ResourceArgs {
             return vpnConnectionProtocolType(Output.of(vpnConnectionProtocolType));
         }
 
+        public Builder vpnConnectionProtocolType(String vpnConnectionProtocolType) {
+            return vpnConnectionProtocolType(Either.ofLeft(vpnConnectionProtocolType));
+        }
+
+        public Builder vpnConnectionProtocolType(VirtualNetworkGatewayConnectionProtocol vpnConnectionProtocolType) {
+            return vpnConnectionProtocolType(Either.ofRight(vpnConnectionProtocolType));
+        }
+
         public Builder vpnLinkConnections(@Nullable Output<List<VpnSiteLinkConnectionArgs>> vpnLinkConnections) {
             $.vpnLinkConnections = vpnLinkConnections;
             return this;

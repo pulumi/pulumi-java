@@ -404,6 +404,14 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
             return peeringType(Output.of(peeringType));
         }
 
+        public Builder peeringType(String peeringType) {
+            return peeringType(Either.ofLeft(peeringType));
+        }
+
+        public Builder peeringType(ExpressRoutePeeringType peeringType) {
+            return peeringType(Either.ofRight(peeringType));
+        }
+
         public Builder primaryAzurePort(@Nullable Output<String> primaryAzurePort) {
             $.primaryAzurePort = primaryAzurePort;
             return this;
@@ -474,6 +482,14 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
 
         public Builder state(Either<String,ExpressRoutePeeringState> state) {
             return state(Output.of(state));
+        }
+
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(ExpressRoutePeeringState state) {
+            return state(Either.ofRight(state));
         }
 
         public Builder stats(@Nullable Output<ExpressRouteCircuitStatsArgs> stats) {

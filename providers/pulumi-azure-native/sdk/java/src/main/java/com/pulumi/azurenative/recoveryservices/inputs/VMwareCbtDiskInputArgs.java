@@ -122,6 +122,14 @@ public final class VMwareCbtDiskInputArgs extends com.pulumi.resources.ResourceA
             return diskType(Output.of(diskType));
         }
 
+        public Builder diskType(String diskType) {
+            return diskType(Either.ofLeft(diskType));
+        }
+
+        public Builder diskType(DiskAccountType diskType) {
+            return diskType(Either.ofRight(diskType));
+        }
+
         public Builder isOSDisk(Output<String> isOSDisk) {
             $.isOSDisk = isOSDisk;
             return this;

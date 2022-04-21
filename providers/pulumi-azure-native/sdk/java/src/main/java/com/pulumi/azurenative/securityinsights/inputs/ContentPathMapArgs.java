@@ -77,6 +77,14 @@ public final class ContentPathMapArgs extends com.pulumi.resources.ResourceArgs 
             return contentType(Output.of(contentType));
         }
 
+        public Builder contentType(String contentType) {
+            return contentType(Either.ofLeft(contentType));
+        }
+
+        public Builder contentType(ContentType contentType) {
+            return contentType(Either.ofRight(contentType));
+        }
+
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;

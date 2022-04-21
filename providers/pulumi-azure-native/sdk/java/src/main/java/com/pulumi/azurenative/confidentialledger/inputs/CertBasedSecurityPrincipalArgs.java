@@ -86,6 +86,14 @@ public final class CertBasedSecurityPrincipalArgs extends com.pulumi.resources.R
             return ledgerRoleName(Output.of(ledgerRoleName));
         }
 
+        public Builder ledgerRoleName(String ledgerRoleName) {
+            return ledgerRoleName(Either.ofLeft(ledgerRoleName));
+        }
+
+        public Builder ledgerRoleName(LedgerRoleName ledgerRoleName) {
+            return ledgerRoleName(Either.ofRight(ledgerRoleName));
+        }
+
         public CertBasedSecurityPrincipalArgs build() {
             return $;
         }

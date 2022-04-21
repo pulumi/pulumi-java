@@ -474,6 +474,14 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
             return virtualNetworkType(Output.of(virtualNetworkType));
         }
 
+        public Builder virtualNetworkType(String virtualNetworkType) {
+            return virtualNetworkType(Either.ofLeft(virtualNetworkType));
+        }
+
+        public Builder virtualNetworkType(VirtualNetworkType virtualNetworkType) {
+            return virtualNetworkType(Either.ofRight(virtualNetworkType));
+        }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
             $.zones = zones;
             return this;

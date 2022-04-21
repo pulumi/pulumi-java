@@ -77,6 +77,14 @@ public final class LabSupportPropertiesArgs extends com.pulumi.resources.Resourc
             return enabled(Output.of(enabled));
         }
 
+        public Builder enabled(String enabled) {
+            return enabled(Either.ofLeft(enabled));
+        }
+
+        public Builder enabled(EnableStatus enabled) {
+            return enabled(Either.ofRight(enabled));
+        }
+
         public Builder markdown(@Nullable Output<String> markdown) {
             $.markdown = markdown;
             return this;

@@ -65,6 +65,14 @@ public final class FirewallPolicyFilterRuleActionArgs extends com.pulumi.resourc
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(FirewallPolicyFilterRuleActionType type) {
+            return type(Either.ofRight(type));
+        }
+
         public FirewallPolicyFilterRuleActionArgs build() {
             return $;
         }

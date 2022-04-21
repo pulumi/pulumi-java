@@ -244,6 +244,14 @@ public final class DiskPoolArgs extends com.pulumi.resources.ResourceArgs {
             return tier(Output.of(tier));
         }
 
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(DiskPoolTier tier) {
+            return tier(Either.ofRight(tier));
+        }
+
         public DiskPoolArgs build() {
             $.availabilityZones = Objects.requireNonNull($.availabilityZones, "expected parameter 'availabilityZones' to be non-null");
             $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

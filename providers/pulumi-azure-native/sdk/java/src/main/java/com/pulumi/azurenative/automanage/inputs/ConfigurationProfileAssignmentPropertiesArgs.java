@@ -110,6 +110,14 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends com.pulu
             return configurationProfile(Output.of(configurationProfile));
         }
 
+        public Builder configurationProfile(String configurationProfile) {
+            return configurationProfile(Either.ofLeft(configurationProfile));
+        }
+
+        public Builder configurationProfile(ConfigurationProfile configurationProfile) {
+            return configurationProfile(Either.ofRight(configurationProfile));
+        }
+
         public Builder configurationProfilePreferenceId(@Nullable Output<String> configurationProfilePreferenceId) {
             $.configurationProfilePreferenceId = configurationProfilePreferenceId;
             return this;

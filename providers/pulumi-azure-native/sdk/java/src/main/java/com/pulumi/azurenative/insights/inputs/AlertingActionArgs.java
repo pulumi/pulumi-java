@@ -136,6 +136,14 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
             return severity(Output.of(severity));
         }
 
+        public Builder severity(String severity) {
+            return severity(Either.ofLeft(severity));
+        }
+
+        public Builder severity(AlertSeverity severity) {
+            return severity(Either.ofRight(severity));
+        }
+
         public Builder throttlingInMin(@Nullable Output<Integer> throttlingInMin) {
             $.throttlingInMin = throttlingInMin;
             return this;

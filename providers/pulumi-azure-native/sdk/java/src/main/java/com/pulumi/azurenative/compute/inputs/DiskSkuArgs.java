@@ -65,6 +65,14 @@ public final class DiskSkuArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(DiskStorageAccountTypes name) {
+            return name(Either.ofRight(name));
+        }
+
         public DiskSkuArgs build() {
             return $;
         }

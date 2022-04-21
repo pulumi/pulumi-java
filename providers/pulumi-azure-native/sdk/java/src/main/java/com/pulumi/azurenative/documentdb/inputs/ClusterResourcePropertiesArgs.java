@@ -215,6 +215,14 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
             return authenticationMethod(Output.of(authenticationMethod));
         }
 
+        public Builder authenticationMethod(String authenticationMethod) {
+            return authenticationMethod(Either.ofLeft(authenticationMethod));
+        }
+
+        public Builder authenticationMethod(AuthenticationMethod authenticationMethod) {
+            return authenticationMethod(Either.ofRight(authenticationMethod));
+        }
+
         public Builder cassandraVersion(@Nullable Output<String> cassandraVersion) {
             $.cassandraVersion = cassandraVersion;
             return this;
@@ -315,6 +323,14 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
 
         public Builder provisioningState(Either<String,ManagedCassandraProvisioningState> provisioningState) {
             return provisioningState(Output.of(provisioningState));
+        }
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ManagedCassandraProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
         }
 
         public Builder repairEnabled(@Nullable Output<Boolean> repairEnabled) {

@@ -210,6 +210,14 @@ public final class SharePointOnlineListLinkedServiceResponse extends com.pulumi.
             return this;
         }
 
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
+        }
+
         public Builder siteUrl(Object siteUrl) {
             $.siteUrl = siteUrl;
             return this;

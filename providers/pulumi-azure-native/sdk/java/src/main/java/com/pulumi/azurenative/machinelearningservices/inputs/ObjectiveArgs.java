@@ -75,6 +75,14 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
             return goal(Output.of(goal));
         }
 
+        public Builder goal(String goal) {
+            return goal(Either.ofLeft(goal));
+        }
+
+        public Builder goal(Goal goal) {
+            return goal(Either.ofRight(goal));
+        }
+
         public Builder primaryMetric(Output<String> primaryMetric) {
             $.primaryMetric = primaryMetric;
             return this;

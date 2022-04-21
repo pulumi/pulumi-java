@@ -76,6 +76,14 @@ public final class GlobalParameterSpecificationArgs extends com.pulumi.resources
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(GlobalParameterType type) {
+            return type(Either.ofRight(type));
+        }
+
         public Builder value(Output<Object> value) {
             $.value = value;
             return this;

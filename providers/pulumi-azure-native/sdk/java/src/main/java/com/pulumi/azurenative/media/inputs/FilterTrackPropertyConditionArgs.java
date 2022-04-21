@@ -88,6 +88,14 @@ public final class FilterTrackPropertyConditionArgs extends com.pulumi.resources
             return operation(Output.of(operation));
         }
 
+        public Builder operation(String operation) {
+            return operation(Either.ofLeft(operation));
+        }
+
+        public Builder operation(FilterTrackPropertyCompareOperation operation) {
+            return operation(Either.ofRight(operation));
+        }
+
         public Builder property(Output<Either<String,FilterTrackPropertyType>> property) {
             $.property = property;
             return this;
@@ -95,6 +103,14 @@ public final class FilterTrackPropertyConditionArgs extends com.pulumi.resources
 
         public Builder property(Either<String,FilterTrackPropertyType> property) {
             return property(Output.of(property));
+        }
+
+        public Builder property(String property) {
+            return property(Either.ofLeft(property));
+        }
+
+        public Builder property(FilterTrackPropertyType property) {
+            return property(Either.ofRight(property));
         }
 
         public Builder value(Output<String> value) {

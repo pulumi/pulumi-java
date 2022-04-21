@@ -164,6 +164,14 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
             return nicType(Output.of(nicType));
         }
 
+        public Builder nicType(String nicType) {
+            return nicType(Either.ofLeft(nicType));
+        }
+
+        public Builder nicType(NICType nicType) {
+            return nicType(Either.ofRight(nicType));
+        }
+
         public Builder powerOnBoot(@Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot) {
             $.powerOnBoot = powerOnBoot;
             return this;
@@ -171,6 +179,14 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
 
         public Builder powerOnBoot(Either<String,PowerOnBootOption> powerOnBoot) {
             return powerOnBoot(Output.of(powerOnBoot));
+        }
+
+        public Builder powerOnBoot(String powerOnBoot) {
+            return powerOnBoot(Either.ofLeft(powerOnBoot));
+        }
+
+        public Builder powerOnBoot(PowerOnBootOption powerOnBoot) {
+            return powerOnBoot(Either.ofRight(powerOnBoot));
         }
 
         public NetworkInterfaceArgs build() {

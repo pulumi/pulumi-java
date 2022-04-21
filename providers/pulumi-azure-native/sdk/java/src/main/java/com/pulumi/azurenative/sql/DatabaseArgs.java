@@ -423,6 +423,14 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             return catalogCollation(Output.of(catalogCollation));
         }
 
+        public Builder catalogCollation(String catalogCollation) {
+            return catalogCollation(Either.ofLeft(catalogCollation));
+        }
+
+        public Builder catalogCollation(CatalogCollationType catalogCollation) {
+            return catalogCollation(Either.ofRight(catalogCollation));
+        }
+
         public Builder collation(@Nullable Output<String> collation) {
             $.collation = collation;
             return this;
@@ -439,6 +447,14 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder createMode(Either<String,CreateMode> createMode) {
             return createMode(Output.of(createMode));
+        }
+
+        public Builder createMode(String createMode) {
+            return createMode(Either.ofLeft(createMode));
+        }
+
+        public Builder createMode(CreateMode createMode) {
+            return createMode(Either.ofRight(createMode));
         }
 
         public Builder databaseName(@Nullable Output<String> databaseName) {
@@ -475,6 +491,14 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder licenseType(Either<String,DatabaseLicenseType> licenseType) {
             return licenseType(Output.of(licenseType));
+        }
+
+        public Builder licenseType(String licenseType) {
+            return licenseType(Either.ofLeft(licenseType));
+        }
+
+        public Builder licenseType(DatabaseLicenseType licenseType) {
+            return licenseType(Either.ofRight(licenseType));
         }
 
         public Builder location(@Nullable Output<String> location) {
@@ -531,6 +555,14 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             return readScale(Output.of(readScale));
         }
 
+        public Builder readScale(String readScale) {
+            return readScale(Either.ofLeft(readScale));
+        }
+
+        public Builder readScale(DatabaseReadScale readScale) {
+            return readScale(Either.ofRight(readScale));
+        }
+
         public Builder recoverableDatabaseId(@Nullable Output<String> recoverableDatabaseId) {
             $.recoverableDatabaseId = recoverableDatabaseId;
             return this;
@@ -556,6 +588,14 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder requestedBackupStorageRedundancy(Either<String,RequestedBackupStorageRedundancy> requestedBackupStorageRedundancy) {
             return requestedBackupStorageRedundancy(Output.of(requestedBackupStorageRedundancy));
+        }
+
+        public Builder requestedBackupStorageRedundancy(String requestedBackupStorageRedundancy) {
+            return requestedBackupStorageRedundancy(Either.ofLeft(requestedBackupStorageRedundancy));
+        }
+
+        public Builder requestedBackupStorageRedundancy(RequestedBackupStorageRedundancy requestedBackupStorageRedundancy) {
+            return requestedBackupStorageRedundancy(Either.ofRight(requestedBackupStorageRedundancy));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -594,6 +634,14 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             return sampleName(Output.of(sampleName));
         }
 
+        public Builder sampleName(String sampleName) {
+            return sampleName(Either.ofLeft(sampleName));
+        }
+
+        public Builder sampleName(SampleName sampleName) {
+            return sampleName(Either.ofRight(sampleName));
+        }
+
         public Builder secondaryType(@Nullable Output<Either<String,SecondaryType>> secondaryType) {
             $.secondaryType = secondaryType;
             return this;
@@ -601,6 +649,14 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder secondaryType(Either<String,SecondaryType> secondaryType) {
             return secondaryType(Output.of(secondaryType));
+        }
+
+        public Builder secondaryType(String secondaryType) {
+            return secondaryType(Either.ofLeft(secondaryType));
+        }
+
+        public Builder secondaryType(SecondaryType secondaryType) {
+            return secondaryType(Either.ofRight(secondaryType));
         }
 
         public Builder serverName(Output<String> serverName) {

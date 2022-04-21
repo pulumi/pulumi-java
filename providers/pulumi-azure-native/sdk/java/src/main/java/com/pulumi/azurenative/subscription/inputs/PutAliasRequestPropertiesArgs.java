@@ -149,6 +149,14 @@ public final class PutAliasRequestPropertiesArgs extends com.pulumi.resources.Re
             return workload(Output.of(workload));
         }
 
+        public Builder workload(String workload) {
+            return workload(Either.ofLeft(workload));
+        }
+
+        public Builder workload(Workload workload) {
+            return workload(Either.ofRight(workload));
+        }
+
         public PutAliasRequestPropertiesArgs build() {
             return $;
         }

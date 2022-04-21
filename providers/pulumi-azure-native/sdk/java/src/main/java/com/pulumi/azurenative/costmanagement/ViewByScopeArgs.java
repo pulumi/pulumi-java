@@ -214,6 +214,14 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
             return accumulated(Output.of(accumulated));
         }
 
+        public Builder accumulated(String accumulated) {
+            return accumulated(Either.ofLeft(accumulated));
+        }
+
+        public Builder accumulated(AccumulatedType accumulated) {
+            return accumulated(Either.ofRight(accumulated));
+        }
+
         public Builder chart(@Nullable Output<Either<String,ChartType>> chart) {
             $.chart = chart;
             return this;
@@ -221,6 +229,14 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder chart(Either<String,ChartType> chart) {
             return chart(Output.of(chart));
+        }
+
+        public Builder chart(String chart) {
+            return chart(Either.ofLeft(chart));
+        }
+
+        public Builder chart(ChartType chart) {
+            return chart(Either.ofRight(chart));
         }
 
         public Builder dataSet(@Nullable Output<ReportConfigDatasetArgs> dataSet) {
@@ -272,6 +288,14 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
             return metric(Output.of(metric));
         }
 
+        public Builder metric(String metric) {
+            return metric(Either.ofLeft(metric));
+        }
+
+        public Builder metric(MetricType metric) {
+            return metric(Either.ofRight(metric));
+        }
+
         public Builder pivots(@Nullable Output<List<PivotPropertiesArgs>> pivots) {
             $.pivots = pivots;
             return this;
@@ -312,6 +336,14 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
             return timeframe(Output.of(timeframe));
         }
 
+        public Builder timeframe(String timeframe) {
+            return timeframe(Either.ofLeft(timeframe));
+        }
+
+        public Builder timeframe(ReportTimeframeType timeframe) {
+            return timeframe(Either.ofRight(timeframe));
+        }
+
         public Builder type(Output<Either<String,ReportType>> type) {
             $.type = type;
             return this;
@@ -319,6 +351,14 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder type(Either<String,ReportType> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ReportType type) {
+            return type(Either.ofRight(type));
         }
 
         public Builder viewName(@Nullable Output<String> viewName) {

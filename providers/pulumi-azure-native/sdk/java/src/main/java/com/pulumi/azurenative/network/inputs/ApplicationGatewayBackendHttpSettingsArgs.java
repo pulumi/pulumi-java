@@ -270,6 +270,14 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
             return cookieBasedAffinity(Output.of(cookieBasedAffinity));
         }
 
+        public Builder cookieBasedAffinity(String cookieBasedAffinity) {
+            return cookieBasedAffinity(Either.ofLeft(cookieBasedAffinity));
+        }
+
+        public Builder cookieBasedAffinity(ApplicationGatewayCookieBasedAffinity cookieBasedAffinity) {
+            return cookieBasedAffinity(Either.ofRight(cookieBasedAffinity));
+        }
+
         public Builder hostName(@Nullable Output<String> hostName) {
             $.hostName = hostName;
             return this;
@@ -349,6 +357,14 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
 
         public Builder protocol(Either<String,ApplicationGatewayProtocol> protocol) {
             return protocol(Output.of(protocol));
+        }
+
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(ApplicationGatewayProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
         }
 
         public Builder requestTimeout(@Nullable Output<Integer> requestTimeout) {

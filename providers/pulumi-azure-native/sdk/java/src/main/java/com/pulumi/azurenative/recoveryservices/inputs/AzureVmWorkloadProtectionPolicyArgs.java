@@ -181,6 +181,14 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends com.pulumi.resour
             return workLoadType(Output.of(workLoadType));
         }
 
+        public Builder workLoadType(String workLoadType) {
+            return workLoadType(Either.ofLeft(workLoadType));
+        }
+
+        public Builder workLoadType(WorkloadType workLoadType) {
+            return workLoadType(Either.ofRight(workLoadType));
+        }
+
         public AzureVmWorkloadProtectionPolicyArgs build() {
             $.backupManagementType = Codegen.stringProp("backupManagementType").output().arg($.backupManagementType).require();
             return $;

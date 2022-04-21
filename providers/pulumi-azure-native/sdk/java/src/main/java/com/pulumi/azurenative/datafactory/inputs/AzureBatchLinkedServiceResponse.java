@@ -202,6 +202,14 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
             return this;
         }
 
+        public Builder accessKey(AzureKeyVaultSecretReferenceResponse accessKey) {
+            return accessKey(Either.ofLeft(accessKey));
+        }
+
+        public Builder accessKey(SecureStringResponse accessKey) {
+            return accessKey(Either.ofRight(accessKey));
+        }
+
         public Builder accountName(Object accountName) {
             $.accountName = accountName;
             return this;

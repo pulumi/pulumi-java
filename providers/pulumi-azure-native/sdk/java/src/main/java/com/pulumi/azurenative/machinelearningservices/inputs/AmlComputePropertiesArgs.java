@@ -199,6 +199,14 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
             return osType(Output.of(osType));
         }
 
+        public Builder osType(String osType) {
+            return osType(Either.ofLeft(osType));
+        }
+
+        public Builder osType(OsType osType) {
+            return osType(Either.ofRight(osType));
+        }
+
         public Builder remoteLoginPortPublicAccess(@Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess) {
             $.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess;
             return this;
@@ -206,6 +214,14 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
 
         public Builder remoteLoginPortPublicAccess(Either<String,RemoteLoginPortPublicAccess> remoteLoginPortPublicAccess) {
             return remoteLoginPortPublicAccess(Output.of(remoteLoginPortPublicAccess));
+        }
+
+        public Builder remoteLoginPortPublicAccess(String remoteLoginPortPublicAccess) {
+            return remoteLoginPortPublicAccess(Either.ofLeft(remoteLoginPortPublicAccess));
+        }
+
+        public Builder remoteLoginPortPublicAccess(RemoteLoginPortPublicAccess remoteLoginPortPublicAccess) {
+            return remoteLoginPortPublicAccess(Either.ofRight(remoteLoginPortPublicAccess));
         }
 
         public Builder scaleSettings(@Nullable Output<ScaleSettingsArgs> scaleSettings) {
@@ -251,6 +267,14 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
 
         public Builder vmPriority(Either<String,VmPriority> vmPriority) {
             return vmPriority(Output.of(vmPriority));
+        }
+
+        public Builder vmPriority(String vmPriority) {
+            return vmPriority(Either.ofLeft(vmPriority));
+        }
+
+        public Builder vmPriority(VmPriority vmPriority) {
+            return vmPriority(Either.ofRight(vmPriority));
         }
 
         public Builder vmSize(@Nullable Output<String> vmSize) {

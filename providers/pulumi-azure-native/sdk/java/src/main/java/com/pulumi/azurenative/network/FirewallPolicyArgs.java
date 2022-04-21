@@ -347,6 +347,14 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
             return threatIntelMode(Output.of(threatIntelMode));
         }
 
+        public Builder threatIntelMode(String threatIntelMode) {
+            return threatIntelMode(Either.ofLeft(threatIntelMode));
+        }
+
+        public Builder threatIntelMode(AzureFirewallThreatIntelMode threatIntelMode) {
+            return threatIntelMode(Either.ofRight(threatIntelMode));
+        }
+
         public Builder threatIntelWhitelist(@Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist) {
             $.threatIntelWhitelist = threatIntelWhitelist;
             return this;

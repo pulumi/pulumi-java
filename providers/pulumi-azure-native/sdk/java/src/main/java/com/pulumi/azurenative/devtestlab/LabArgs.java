@@ -211,6 +211,14 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
             return environmentPermission(Output.of(environmentPermission));
         }
 
+        public Builder environmentPermission(String environmentPermission) {
+            return environmentPermission(Either.ofLeft(environmentPermission));
+        }
+
+        public Builder environmentPermission(EnvironmentPermission environmentPermission) {
+            return environmentPermission(Either.ofRight(environmentPermission));
+        }
+
         public Builder extendedProperties(@Nullable Output<Map<String,String>> extendedProperties) {
             $.extendedProperties = extendedProperties;
             return this;
@@ -227,6 +235,14 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder labStorageType(Either<String,StorageType> labStorageType) {
             return labStorageType(Output.of(labStorageType));
+        }
+
+        public Builder labStorageType(String labStorageType) {
+            return labStorageType(Either.ofLeft(labStorageType));
+        }
+
+        public Builder labStorageType(StorageType labStorageType) {
+            return labStorageType(Either.ofRight(labStorageType));
         }
 
         public Builder location(@Nullable Output<String> location) {
@@ -280,6 +296,14 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder premiumDataDisks(Either<String,PremiumDataDisk> premiumDataDisks) {
             return premiumDataDisks(Output.of(premiumDataDisks));
+        }
+
+        public Builder premiumDataDisks(String premiumDataDisks) {
+            return premiumDataDisks(Either.ofLeft(premiumDataDisks));
+        }
+
+        public Builder premiumDataDisks(PremiumDataDisk premiumDataDisks) {
+            return premiumDataDisks(Either.ofRight(premiumDataDisks));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {

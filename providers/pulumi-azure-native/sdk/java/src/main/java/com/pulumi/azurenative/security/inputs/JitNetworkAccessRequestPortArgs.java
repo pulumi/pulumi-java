@@ -181,6 +181,14 @@ public final class JitNetworkAccessRequestPortArgs extends com.pulumi.resources.
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(Status status) {
+            return status(Either.ofRight(status));
+        }
+
         public Builder statusReason(Output<Either<String,StatusReason>> statusReason) {
             $.statusReason = statusReason;
             return this;
@@ -188,6 +196,14 @@ public final class JitNetworkAccessRequestPortArgs extends com.pulumi.resources.
 
         public Builder statusReason(Either<String,StatusReason> statusReason) {
             return statusReason(Output.of(statusReason));
+        }
+
+        public Builder statusReason(String statusReason) {
+            return statusReason(Either.ofLeft(statusReason));
+        }
+
+        public Builder statusReason(StatusReason statusReason) {
+            return statusReason(Either.ofRight(statusReason));
         }
 
         public JitNetworkAccessRequestPortArgs build() {

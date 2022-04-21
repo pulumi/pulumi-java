@@ -183,6 +183,14 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(ProbeProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public Builder requestPath(@Nullable Output<String> requestPath) {
             $.requestPath = requestPath;
             return this;

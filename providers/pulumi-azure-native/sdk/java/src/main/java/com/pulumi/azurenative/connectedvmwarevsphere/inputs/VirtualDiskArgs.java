@@ -178,6 +178,14 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
             return diskMode(Output.of(diskMode));
         }
 
+        public Builder diskMode(String diskMode) {
+            return diskMode(Either.ofLeft(diskMode));
+        }
+
+        public Builder diskMode(DiskMode diskMode) {
+            return diskMode(Either.ofRight(diskMode));
+        }
+
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
@@ -194,6 +202,14 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder diskType(Either<String,DiskType> diskType) {
             return diskType(Output.of(diskType));
+        }
+
+        public Builder diskType(String diskType) {
+            return diskType(Either.ofLeft(diskType));
+        }
+
+        public Builder diskType(DiskType diskType) {
+            return diskType(Either.ofRight(diskType));
         }
 
         public Builder name(@Nullable Output<String> name) {

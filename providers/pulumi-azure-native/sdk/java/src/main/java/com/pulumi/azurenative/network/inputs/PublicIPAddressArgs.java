@@ -366,6 +366,14 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
             return migrationPhase(Output.of(migrationPhase));
         }
 
+        public Builder migrationPhase(String migrationPhase) {
+            return migrationPhase(Either.ofLeft(migrationPhase));
+        }
+
+        public Builder migrationPhase(PublicIPAddressMigrationPhase migrationPhase) {
+            return migrationPhase(Either.ofRight(migrationPhase));
+        }
+
         public Builder natGateway(@Nullable Output<NatGatewayArgs> natGateway) {
             $.natGateway = natGateway;
             return this;
@@ -384,6 +392,14 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
             return publicIPAddressVersion(Output.of(publicIPAddressVersion));
         }
 
+        public Builder publicIPAddressVersion(String publicIPAddressVersion) {
+            return publicIPAddressVersion(Either.ofLeft(publicIPAddressVersion));
+        }
+
+        public Builder publicIPAddressVersion(IPVersion publicIPAddressVersion) {
+            return publicIPAddressVersion(Either.ofRight(publicIPAddressVersion));
+        }
+
         public Builder publicIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod) {
             $.publicIPAllocationMethod = publicIPAllocationMethod;
             return this;
@@ -391,6 +407,14 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder publicIPAllocationMethod(Either<String,IPAllocationMethod> publicIPAllocationMethod) {
             return publicIPAllocationMethod(Output.of(publicIPAllocationMethod));
+        }
+
+        public Builder publicIPAllocationMethod(String publicIPAllocationMethod) {
+            return publicIPAllocationMethod(Either.ofLeft(publicIPAllocationMethod));
+        }
+
+        public Builder publicIPAllocationMethod(IPAllocationMethod publicIPAllocationMethod) {
+            return publicIPAllocationMethod(Either.ofRight(publicIPAllocationMethod));
         }
 
         public Builder publicIPPrefix(@Nullable Output<SubResourceArgs> publicIPPrefix) {

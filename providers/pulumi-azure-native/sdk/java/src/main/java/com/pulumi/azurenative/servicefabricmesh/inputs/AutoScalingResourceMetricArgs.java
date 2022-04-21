@@ -86,6 +86,14 @@ public final class AutoScalingResourceMetricArgs extends com.pulumi.resources.Re
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(AutoScalingResourceMetricName name) {
+            return name(Either.ofRight(name));
+        }
+
         public AutoScalingResourceMetricArgs build() {
             $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");

@@ -140,6 +140,14 @@ public final class SimpleSchedulePolicyArgs extends com.pulumi.resources.Resourc
             return scheduleRunFrequency(Output.of(scheduleRunFrequency));
         }
 
+        public Builder scheduleRunFrequency(String scheduleRunFrequency) {
+            return scheduleRunFrequency(Either.ofLeft(scheduleRunFrequency));
+        }
+
+        public Builder scheduleRunFrequency(ScheduleRunType scheduleRunFrequency) {
+            return scheduleRunFrequency(Either.ofRight(scheduleRunFrequency));
+        }
+
         public Builder scheduleRunTimes(@Nullable Output<List<String>> scheduleRunTimes) {
             $.scheduleRunTimes = scheduleRunTimes;
             return this;

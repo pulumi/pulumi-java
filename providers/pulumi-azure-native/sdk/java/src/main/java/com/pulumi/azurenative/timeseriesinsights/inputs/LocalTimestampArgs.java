@@ -78,6 +78,14 @@ public final class LocalTimestampArgs extends com.pulumi.resources.ResourceArgs 
             return format(Output.of(format));
         }
 
+        public Builder format(String format) {
+            return format(Either.ofLeft(format));
+        }
+
+        public Builder format(LocalTimestampFormat format) {
+            return format(Either.ofRight(format));
+        }
+
         public Builder timeZoneOffset(@Nullable Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset) {
             $.timeZoneOffset = timeZoneOffset;
             return this;

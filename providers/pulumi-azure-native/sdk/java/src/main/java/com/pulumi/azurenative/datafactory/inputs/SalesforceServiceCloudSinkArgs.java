@@ -257,6 +257,14 @@ public final class SalesforceServiceCloudSinkArgs extends com.pulumi.resources.R
             return writeBehavior(Output.of(writeBehavior));
         }
 
+        public Builder writeBehavior(String writeBehavior) {
+            return writeBehavior(Either.ofLeft(writeBehavior));
+        }
+
+        public Builder writeBehavior(SalesforceSinkWriteBehavior writeBehavior) {
+            return writeBehavior(Either.ofRight(writeBehavior));
+        }
+
         public SalesforceServiceCloudSinkArgs build() {
             $.type = Codegen.stringProp("type").output().arg($.type).require();
             return $;

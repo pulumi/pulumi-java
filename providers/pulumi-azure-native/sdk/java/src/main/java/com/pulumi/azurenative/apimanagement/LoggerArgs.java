@@ -184,6 +184,14 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
             return loggerType(Output.of(loggerType));
         }
 
+        public Builder loggerType(String loggerType) {
+            return loggerType(Either.ofLeft(loggerType));
+        }
+
+        public Builder loggerType(LoggerType loggerType) {
+            return loggerType(Either.ofRight(loggerType));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

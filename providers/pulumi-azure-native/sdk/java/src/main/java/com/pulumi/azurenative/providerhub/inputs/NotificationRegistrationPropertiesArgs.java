@@ -106,6 +106,14 @@ public final class NotificationRegistrationPropertiesArgs extends com.pulumi.res
             return messageScope(Output.of(messageScope));
         }
 
+        public Builder messageScope(String messageScope) {
+            return messageScope(Either.ofLeft(messageScope));
+        }
+
+        public Builder messageScope(MessageScope messageScope) {
+            return messageScope(Either.ofRight(messageScope));
+        }
+
         public Builder notificationEndpoints(@Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints) {
             $.notificationEndpoints = notificationEndpoints;
             return this;
@@ -128,6 +136,14 @@ public final class NotificationRegistrationPropertiesArgs extends com.pulumi.res
             return notificationMode(Output.of(notificationMode));
         }
 
+        public Builder notificationMode(String notificationMode) {
+            return notificationMode(Either.ofLeft(notificationMode));
+        }
+
+        public Builder notificationMode(NotificationMode notificationMode) {
+            return notificationMode(Either.ofRight(notificationMode));
+        }
+
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
@@ -135,6 +151,14 @@ public final class NotificationRegistrationPropertiesArgs extends com.pulumi.res
 
         public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
             return provisioningState(Output.of(provisioningState));
+        }
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
         }
 
         public NotificationRegistrationPropertiesArgs build() {

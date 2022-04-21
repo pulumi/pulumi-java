@@ -221,6 +221,14 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
             return this;
         }
 
+        public Builder apiKey(AzureKeyVaultSecretReferenceResponse apiKey) {
+            return apiKey(Either.ofLeft(apiKey));
+        }
+
+        public Builder apiKey(SecureStringResponse apiKey) {
+            return apiKey(Either.ofRight(apiKey));
+        }
+
         public Builder authentication(@Nullable Object authentication) {
             $.authentication = authentication;
             return this;
@@ -259,6 +267,14 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
+        }
+
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
         public Builder tenant(@Nullable Object tenant) {

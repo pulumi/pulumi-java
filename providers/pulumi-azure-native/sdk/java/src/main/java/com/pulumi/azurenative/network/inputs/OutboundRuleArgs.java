@@ -220,6 +220,14 @@ public final class OutboundRuleArgs extends com.pulumi.resources.ResourceArgs {
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(LoadBalancerOutboundRuleProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public OutboundRuleArgs build() {
             $.backendAddressPool = Objects.requireNonNull($.backendAddressPool, "expected parameter 'backendAddressPool' to be non-null");
             $.frontendIPConfigurations = Objects.requireNonNull($.frontendIPConfigurations, "expected parameter 'frontendIPConfigurations' to be non-null");

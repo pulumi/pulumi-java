@@ -176,6 +176,14 @@ public final class CapacityDetailsArgs extends com.pulumi.resources.ResourceArgs
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(Mode mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

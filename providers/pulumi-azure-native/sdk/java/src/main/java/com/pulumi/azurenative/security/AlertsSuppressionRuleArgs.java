@@ -179,6 +179,14 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(RuleState state) {
+            return state(Either.ofRight(state));
+        }
+
         public Builder suppressionAlertsScope(@Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope) {
             $.suppressionAlertsScope = suppressionAlertsScope;
             return this;

@@ -128,6 +128,14 @@ public final class SensorArgs extends com.pulumi.resources.ResourceArgs {
             return sensorType(Output.of(sensorType));
         }
 
+        public Builder sensorType(String sensorType) {
+            return sensorType(Either.ofLeft(sensorType));
+        }
+
+        public Builder sensorType(SensorType sensorType) {
+            return sensorType(Either.ofRight(sensorType));
+        }
+
         public Builder tiAutomaticUpdates(@Nullable Output<Boolean> tiAutomaticUpdates) {
             $.tiAutomaticUpdates = tiAutomaticUpdates;
             return this;

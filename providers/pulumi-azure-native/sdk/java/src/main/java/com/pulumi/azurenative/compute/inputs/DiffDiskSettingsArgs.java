@@ -78,6 +78,14 @@ public final class DiffDiskSettingsArgs extends com.pulumi.resources.ResourceArg
             return option(Output.of(option));
         }
 
+        public Builder option(String option) {
+            return option(Either.ofLeft(option));
+        }
+
+        public Builder option(DiffDiskOptions option) {
+            return option(Either.ofRight(option));
+        }
+
         public Builder placement(@Nullable Output<Either<String,DiffDiskPlacement>> placement) {
             $.placement = placement;
             return this;
@@ -85,6 +93,14 @@ public final class DiffDiskSettingsArgs extends com.pulumi.resources.ResourceArg
 
         public Builder placement(Either<String,DiffDiskPlacement> placement) {
             return placement(Output.of(placement));
+        }
+
+        public Builder placement(String placement) {
+            return placement(Either.ofLeft(placement));
+        }
+
+        public Builder placement(DiffDiskPlacement placement) {
+            return placement(Either.ofRight(placement));
         }
 
         public DiffDiskSettingsArgs build() {

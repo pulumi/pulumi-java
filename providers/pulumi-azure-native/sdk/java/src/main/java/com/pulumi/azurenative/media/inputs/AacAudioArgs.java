@@ -164,6 +164,14 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
             return profile(Output.of(profile));
         }
 
+        public Builder profile(String profile) {
+            return profile(Either.ofLeft(profile));
+        }
+
+        public Builder profile(AacAudioProfile profile) {
+            return profile(Either.ofRight(profile));
+        }
+
         public Builder samplingRate(@Nullable Output<Integer> samplingRate) {
             $.samplingRate = samplingRate;
             return this;

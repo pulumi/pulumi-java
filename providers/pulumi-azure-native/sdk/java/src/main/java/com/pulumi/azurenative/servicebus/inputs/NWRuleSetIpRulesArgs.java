@@ -78,6 +78,14 @@ public final class NWRuleSetIpRulesArgs extends com.pulumi.resources.ResourceArg
             return action(Output.of(action));
         }
 
+        public Builder action(String action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(NetworkRuleIPAction action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder ipMask(@Nullable Output<String> ipMask) {
             $.ipMask = ipMask;
             return this;

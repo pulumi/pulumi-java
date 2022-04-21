@@ -545,6 +545,14 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
             return msaAppType(Output.of(msaAppType));
         }
 
+        public Builder msaAppType(String msaAppType) {
+            return msaAppType(Either.ofLeft(msaAppType));
+        }
+
+        public Builder msaAppType(MsaAppType msaAppType) {
+            return msaAppType(Either.ofRight(msaAppType));
+        }
+
         public Builder openWithHint(@Nullable Output<String> openWithHint) {
             $.openWithHint = openWithHint;
             return this;
@@ -570,6 +578,14 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
         public Builder publishingCredentials(@Nullable Output<String> publishingCredentials) {

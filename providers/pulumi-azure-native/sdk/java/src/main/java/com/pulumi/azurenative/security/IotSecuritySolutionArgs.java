@@ -327,6 +327,14 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(SecuritySolutionStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
@@ -343,6 +351,14 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
 
         public Builder unmaskedIpLoggingStatus(Either<String,UnmaskedIpLoggingStatus> unmaskedIpLoggingStatus) {
             return unmaskedIpLoggingStatus(Output.of(unmaskedIpLoggingStatus));
+        }
+
+        public Builder unmaskedIpLoggingStatus(String unmaskedIpLoggingStatus) {
+            return unmaskedIpLoggingStatus(Either.ofLeft(unmaskedIpLoggingStatus));
+        }
+
+        public Builder unmaskedIpLoggingStatus(UnmaskedIpLoggingStatus unmaskedIpLoggingStatus) {
+            return unmaskedIpLoggingStatus(Either.ofRight(unmaskedIpLoggingStatus));
         }
 
         public Builder userDefinedResources(@Nullable Output<UserDefinedResourcesPropertiesArgs> userDefinedResources) {

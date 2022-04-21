@@ -102,6 +102,14 @@ public final class ManagementEventRuleConditionArgs extends com.pulumi.resources
             return dataSource(Output.of(dataSource));
         }
 
+        public Builder dataSource(RuleManagementEventDataSourceArgs dataSource) {
+            return dataSource(Either.ofLeft(dataSource));
+        }
+
+        public Builder dataSource(RuleMetricDataSourceArgs dataSource) {
+            return dataSource(Either.ofRight(dataSource));
+        }
+
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;

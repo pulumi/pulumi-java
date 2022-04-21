@@ -188,6 +188,14 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
             return action(Output.of(action));
         }
 
+        public Builder action(AlertingActionArgs action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(LogToMetricActionArgs action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder autoMitigate(@Nullable Output<Boolean> autoMitigate) {
             $.autoMitigate = autoMitigate;
             return this;
@@ -222,6 +230,14 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
 
         public Builder enabled(Either<String,Enabled> enabled) {
             return enabled(Output.of(enabled));
+        }
+
+        public Builder enabled(String enabled) {
+            return enabled(Either.ofLeft(enabled));
+        }
+
+        public Builder enabled(Enabled enabled) {
+            return enabled(Either.ofRight(enabled));
         }
 
         public Builder location(@Nullable Output<String> location) {

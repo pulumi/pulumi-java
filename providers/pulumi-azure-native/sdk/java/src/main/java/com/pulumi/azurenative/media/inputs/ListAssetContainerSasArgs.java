@@ -119,6 +119,14 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
             return this;
         }
 
+        public Builder permissions(String permissions) {
+            return permissions(Either.ofLeft(permissions));
+        }
+
+        public Builder permissions(AssetContainerPermission permissions) {
+            return permissions(Either.ofRight(permissions));
+        }
+
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

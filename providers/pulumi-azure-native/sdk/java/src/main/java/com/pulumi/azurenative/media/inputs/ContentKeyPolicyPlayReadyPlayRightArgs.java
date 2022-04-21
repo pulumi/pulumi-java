@@ -221,6 +221,14 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.res
             return allowPassingVideoContentToUnknownOutput(Output.of(allowPassingVideoContentToUnknownOutput));
         }
 
+        public Builder allowPassingVideoContentToUnknownOutput(String allowPassingVideoContentToUnknownOutput) {
+            return allowPassingVideoContentToUnknownOutput(Either.ofLeft(allowPassingVideoContentToUnknownOutput));
+        }
+
+        public Builder allowPassingVideoContentToUnknownOutput(ContentKeyPolicyPlayReadyUnknownOutputPassingOption allowPassingVideoContentToUnknownOutput) {
+            return allowPassingVideoContentToUnknownOutput(Either.ofRight(allowPassingVideoContentToUnknownOutput));
+        }
+
         public Builder analogVideoOpl(@Nullable Output<Integer> analogVideoOpl) {
             $.analogVideoOpl = analogVideoOpl;
             return this;

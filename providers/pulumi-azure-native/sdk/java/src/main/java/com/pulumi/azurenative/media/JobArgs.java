@@ -224,6 +224,14 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             return priority(Output.of(priority));
         }
 
+        public Builder priority(String priority) {
+            return priority(Either.ofLeft(priority));
+        }
+
+        public Builder priority(Priority priority) {
+            return priority(Either.ofRight(priority));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -100,6 +100,14 @@ public final class AzureSkuArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(AzureSkuName name) {
+            return name(Either.ofRight(name));
+        }
+
         public Builder tier(Output<Either<String,AzureSkuTier>> tier) {
             $.tier = tier;
             return this;
@@ -107,6 +115,14 @@ public final class AzureSkuArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder tier(Either<String,AzureSkuTier> tier) {
             return tier(Output.of(tier));
+        }
+
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(AzureSkuTier tier) {
+            return tier(Either.ofRight(tier));
         }
 
         public AzureSkuArgs build() {
