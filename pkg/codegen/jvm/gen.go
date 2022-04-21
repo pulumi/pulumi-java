@@ -613,7 +613,14 @@ func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName, fieldN
 
 	// Further helpers for when Output<Either<L, R>> is needed but L or R provided.
 	isEither, t1, t2 := t1.UnEither()
-	if isEither {
+	// We compare fully qualified raw types (with erased generics)
+	// to check if method overloading can be successful
+	areAmbiguousTypes := t1.Type.Equal(t2.Type)
+	if isEither && areAmbiguousTypes {
+		fmt.Printf("WARN: Skipping Either unroll because of ambiguous types: %v vs %v",
+			t1.Type, t2.Type)
+	}
+	if isEither && !areAmbiguousTypes {
 		fprintf(w, "        public Builder %[1]s(%[3]s %[2]s) {\n",
 			setterName, fieldName, t1.ToCode(ctx.imports))
 		fprintf(w, "            return %[1]s(%[3]s.ofLeft(%[2]s));\n",
