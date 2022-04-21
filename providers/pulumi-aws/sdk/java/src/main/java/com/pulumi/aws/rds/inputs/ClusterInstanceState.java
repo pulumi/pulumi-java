@@ -591,6 +591,14 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
             return instanceClass(Output.of(instanceClass));
         }
 
+        public Builder instanceClass(String instanceClass) {
+            return instanceClass(Either.ofLeft(instanceClass));
+        }
+
+        public Builder instanceClass(InstanceType instanceClass) {
+            return instanceClass(Either.ofRight(instanceClass));
+        }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;

@@ -698,6 +698,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return engine(Output.of(engine));
         }
 
+        public Builder engine(String engine) {
+            return engine(Either.ofLeft(engine));
+        }
+
+        public Builder engine(EngineType engine) {
+            return engine(Either.ofRight(engine));
+        }
+
         public Builder engineMode(@Nullable Output<Either<String,EngineMode>> engineMode) {
             $.engineMode = engineMode;
             return this;
@@ -705,6 +713,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder engineMode(Either<String,EngineMode> engineMode) {
             return engineMode(Output.of(engineMode));
+        }
+
+        public Builder engineMode(String engineMode) {
+            return engineMode(Either.ofLeft(engineMode));
+        }
+
+        public Builder engineMode(EngineMode engineMode) {
+            return engineMode(Either.ofRight(engineMode));
         }
 
         public Builder engineVersion(@Nullable Output<String> engineVersion) {

@@ -654,6 +654,14 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
             return metricsGranularity(Output.of(metricsGranularity));
         }
 
+        public Builder metricsGranularity(String metricsGranularity) {
+            return metricsGranularity(Either.ofLeft(metricsGranularity));
+        }
+
+        public Builder metricsGranularity(MetricsGranularity metricsGranularity) {
+            return metricsGranularity(Either.ofRight(metricsGranularity));
+        }
+
         public Builder minElbCapacity(@Nullable Output<Integer> minElbCapacity) {
             $.minElbCapacity = minElbCapacity;
             return this;
