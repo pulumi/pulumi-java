@@ -876,6 +876,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return fargate(Output.of(fargate));
         }
 
+        public Builder fargate(Boolean fargate) {
+            return fargate(Either.ofLeft(fargate));
+        }
+
+        public Builder fargate(FargateProfileArgs fargate) {
+            return fargate(Either.ofRight(fargate));
+        }
+
         public Builder gpu(@Nullable Output<Boolean> gpu) {
             $.gpu = gpu;
             return this;
@@ -1177,6 +1185,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder storageClasses(Either<String,Map<String,StorageClassArgs>> storageClasses) {
             return storageClasses(Output.of(storageClasses));
+        }
+
+        public Builder storageClasses(String storageClasses) {
+            return storageClasses(Either.ofLeft(storageClasses));
+        }
+
+        public Builder storageClasses(Map<String,StorageClassArgs> storageClasses) {
+            return storageClasses(Either.ofRight(storageClasses));
         }
 
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
