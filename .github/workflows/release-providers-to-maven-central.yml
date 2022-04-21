@@ -37,6 +37,9 @@ env:
   # Aka passphrase for the GPG key.
   SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
 
+  GPR_USER: ${{ secrets.GPR_USER }}
+  GPR_TOKEN: ${{ secrets.GPR_TOKEN }}
+
 jobs:
   publish:
     runs-on: ubuntu-latest
